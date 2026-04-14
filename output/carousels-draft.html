@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloggo Carousel Drafts — April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #060810; font-family: 'Inter', sans-serif; padding: 48px 24px 80px; }
+
+.page-header { text-align: center; margin-bottom: 28px; }
+.page-header h1 { font-size: 20px; font-weight: 700; color: #C9A84C; letter-spacing: 0.06em; }
+.page-header p { font-size: 11px; color: #333; margin-top: 4px; }
+
+.note { max-width: 540px; margin: 0 auto 48px; background: #0f1420; border: 1px solid #1e2535; border-radius: 8px; padding: 16px 20px; font-size: 12px; color: #555; line-height: 1.8; }
+.note strong { color: #C9A84C; }
+
+.section-header { text-align: center; margin: 64px 0 20px; }
+.section-header h2 { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A84C; }
+.section-header p { font-size: 11px; color: #2a2f40; margin-top: 3px; }
+
+.slides { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.slide-unit { }
+.slide-num { font-size: 10px; color: #1e2535; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; margin-bottom: 4px; }
+
+/* 1000×1000 slide displayed at 500×500 */
+.sw { width: 500px; height: 500px; overflow: hidden; position: relative; border-radius: 4px; box-shadow: 0 2px 24px rgba(0,0,0,0.8); }
+.s  { position: absolute; top: 0; left: 0; width: 1000px; height: 1000px; transform: scale(0.5); transform-origin: top left; background: #0D1117; overflow: hidden; }
+
+/* Layout */
+.full   { width: 100%; height: 100%; }
+.abs    { position: absolute; inset: 0; }
+.rel    { position: relative; }
+.col    { display: flex; flex-direction: column; }
+.row    { display: flex; flex-direction: row; }
+.center { align-items: center; justify-content: center; text-align: center; }
+.vctr   { justify-content: center; }
+.p60    { padding: 60px; }
+.p70    { padding: 70px; }
+.p80    { padding: 80px; }
+.z2     { position: relative; z-index: 2; }
+
+/* Type */
+.h1  { font-size: 68px; font-weight: 900; color: #fff; line-height: 1.05; }
+.h2  { font-size: 54px; font-weight: 700; color: #fff; line-height: 1.1; }
+.h3  { font-size: 42px; font-weight: 700; color: #fff; line-height: 1.15; }
+.h4  { font-size: 34px; font-weight: 700; color: #fff; line-height: 1.2; }
+.b   { font-size: 30px; font-weight: 400; color: #fff; line-height: 1.55; }
+.sm  { font-size: 24px; font-weight: 400; color: #fff; line-height: 1.55; }
+.lbl { font-size: 18px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+.gold  { color: #C9A84C !important; }
+.muted { color: #888 !important; }
+.dim   { color: #CCCCCC !important; }
+.fade  { opacity: 0.5; }
+.italic{ font-style: italic; }
+
+/* Spacing */
+.mb8{margin-bottom:8px} .mb16{margin-bottom:16px} .mb24{margin-bottom:24px}
+.mb32{margin-bottom:32px} .mb40{margin-bottom:40px} .mb48{margin-bottom:48px}
+.mt16{margin-top:16px} .mt24{margin-top:24px} .mt32{margin-top:32px}
+
+/* Recurring */
+.gold-bar { width: 160px; height: 3px; background: #C9A84C; margin: 28px auto; }
+
+.check-row { display: flex; align-items: flex-start; margin-bottom: 36px; }
+.chk { color: #C9A84C; font-size: 38px; line-height: 1.35; margin-right: 24px; flex-shrink: 0; }
+
+.d-row { display: flex; align-items: center; gap: 10px; width: 100%; }
+.d-box { flex: 1; background: rgba(255,255,255,0.05); border: 1px solid #1e2535; border-radius: 10px; padding: 18px 10px; text-align: center; font-size: 17px; font-weight: 600; color: #777; line-height: 1.4; }
+.d-box span { font-size: 32px; display: block; margin-bottom: 8px; }
+.d-arr { color: #C9A84C; font-size: 26px; flex-shrink: 0; }
+
+/* Cat paw */
+.paw { position: absolute; bottom: 40px; right: 40px; width: 96px; height: auto; z-index: 10; }
+
+/* Placeholders */
+.ph { border: 2px dashed #1a2030; border-radius: 10px; background: rgba(255,255,255,0.02); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; gap: 8px; }
+.ph-ico  { font-size: 48px; opacity: 0.2; }
+.ph-tag  { font-size: 13px; font-weight: 700; color: #242c3f; letter-spacing: 0.1em; text-transform: uppercase; }
+.ph-info { font-size: 13px; color: #1a2535; line-height: 1.6; }
+
+/* Mascot box */
+.mbox { position: absolute; bottom: 40px; left: 40px; width: 200px; height: 200px; border: 2px dashed #181f2e; border-radius: 10px; background: rgba(255,255,255,0.01); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 12px; gap: 5px; z-index: 10; }
+.mbox.right { left: auto; right: 40px; }
+.mbox-tag  { font-size: 12px; font-weight: 700; color: #1e2535; text-transform: uppercase; letter-spacing: 0.1em; }
+.mbox-info { font-size: 11px; color: #161d2a; line-height: 1.5; }
+
+/* Logo */
+.logo-lg { height: 120px; width: auto; }
+.logo-sm { height: 40px; width: auto; }
+
+/* Backgrounds */
+.bg-teal  { background: linear-gradient(135deg, #0D1117 0%, #0a1d2e 100%) !important; }
+.bg-grain { background: #0D1117; position: relative; }
+.bg-grain::before { content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E"); pointer-events:none; }
+
+.overlay       { position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(13,17,23,.5) 0%,rgba(13,17,23,.78) 100%); }
+.overlay-heavy { position:absolute; inset:0; z-index:1; background:rgba(13,17,23,.85); }
+.red-hint      { position:absolute; inset:0; background:rgba(150,18,18,.09); }
+
+/* Photo background placeholder */
+.photo-bg { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:6px; }
+.photo-bg .pb-ico  { font-size:72px; opacity:0.15; }
+.photo-bg .pb-tag  { font-size:14px; font-weight:700; color:#1a2030; letter-spacing:0.1em; text-transform:uppercase; }
+.photo-bg .pb-info { font-size:13px; color:#141b28; line-height:1.5; }
+
+.ul-gold { text-decoration:underline; text-decoration-color:#C9A84C; text-underline-offset:10px; text-decoration-thickness:3px; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>BLOGGO — CAROUSEL DRAFTS</h1>
+  <p>April 2026 &nbsp;·&nbsp; Instagram 1:1 &nbsp;·&nbsp; Slides render at 1000×1000px (displayed at 50%)</p>
+</div>
+
+<div class="note">
+  <strong>Export each slide:</strong> Open in Chrome → Right-click slide → Inspect → In DevTools right-click the <code>.sw</code> element → "Capture node screenshot" → saves at 500×500px. For full 1000px: Chrome DevTools → Device toolbar → set custom 1000×1000 → screenshot.<br><br>
+  <strong>Still needed from you:</strong> 🐱 Drop Higgsfield mascot images into dashed boxes &nbsp;·&nbsp; 📸 App screenshot IMG_6226 &nbsp;·&nbsp; 🧑 Your photo IMG_6373
+</div>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!--  CAROUSEL 1 — BLOGGO: PRIVACY            -->
+<!-- ══════════════════════════════════════════ -->
+
+<div class="section-header">
+  <h2>Carousel 1 — Bloggo Company Page</h2>
+  <p>"Your photos never leave your phone." · Brand Values · Privacy</p>
+</div>
+
+<div class="slides">
+
+  <!-- C1 S1 -->
+  <div class="slide-unit">
+    <div class="slide-num">01 · Hook</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <div class="h2 mb-16">Your photos</div>
+        <div class="h2 ul-gold">never leave your phone.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C1 S2 -->
+  <div class="slide-unit">
+    <div class="slide-num">02 · The Old Way</div>
+    <div class="sw"><div class="s">
+      <div class="full col vctr p60">
+        <div class="b muted mb-40">Most AI apps work like this:</div>
+        <div class="d-row">
+          <div class="d-box"><span>📱</span>Your phone</div>
+          <div class="d-arr">→</div>
+          <div class="d-box"><span>☁️</span>Their server</div>
+          <div class="d-arr">→</div>
+          <div class="d-box"><span>⚙️</span>AI runs</div>
+          <div class="d-arr">→</div>
+          <div class="d-box"><span>✓</span>Result</div>
+        </div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C1 S3 -->
+  <div class="slide-unit">
+    <div class="slide-num">03 · The Problem</div>
+    <div class="sw"><div class="s">
+      <div class="red-hint"></div>
+      <div class="full col center p60 z2">
+        <div class="b mb-32">Your locations.<br>Your faces.<br>Your private moments.</div>
+        <div class="h3 gold">On someone else's server.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C1 S4 -->
+  <div class="slide-unit">
+    <div class="slide-num">04 · The Turn</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <div class="gold-bar"></div>
+        <div class="h2" style="margin:32px 0">Bloggo works<br>differently.</div>
+        <div class="gold-bar"></div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C1 S5 -->
+  <div class="slide-unit">
+    <div class="slide-num">05 · The Solution</div>
+    <div class="sw"><div class="s">
+      <div class="full row">
+        <div class="col vctr p60" style="flex:1.1">
+          <div class="h3 mb-24">Our AI runs entirely on your device.</div>
+          <div class="b muted">On your phone. Offline.</div>
+        </div>
+        <div class="col center" style="flex:0.85;padding:40px 40px 40px 0">
+          <div class="ph" style="width:250px;height:540px">
+            <div class="ph-ico">📱</div>
+            <div class="ph-tag">iPhone Mockup</div>
+            <div class="ph-info">Canva → Device Frames<br>→ iPhone 14 Dark</div>
+          </div>
+        </div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C1 S6 -->
+  <div class="slide-unit">
+    <div class="slide-num">06 · Proof</div>
+    <div class="sw"><div class="s">
+      <div class="full col vctr p60">
+        <div class="check-row"><span class="chk">✓</span><div class="h3"><span class="gold">Never</span> uploaded.</div></div>
+        <div class="check-row"><span class="chk">✓</span><div class="h3"><span class="gold">Never</span> stored remotely.</div></div>
+        <div class="check-row" style="margin-bottom:0"><span class="chk">✓</span><div class="h3"><span class="gold">Never</span> seen by anyone but you.</div></div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C1 S7 -->
+  <div class="slide-unit">
+    <div class="slide-num">07 · The Payoff</div>
+    <div class="sw"><div class="s">
+      <div class="full row">
+        <div class="col vctr p60" style="flex:1.1">
+          <div class="h3">You still get a beautiful, AI-written travel blog.</div>
+        </div>
+        <div class="col center" style="flex:0.85;padding:40px 40px 40px 0">
+          <div class="ph" style="width:260px;height:600px">
+            <div class="ph-ico">📸</div>
+            <div class="ph-tag">App Screenshot</div>
+            <div class="ph-info">IMG_6226<br>Add iPhone frame in Canva</div>
+          </div>
+        </div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C1 S8 -->
+  <div class="slide-unit">
+    <div class="slide-num">08 · Emphasis</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <div class="h1 mb-24">In seconds.</div>
+        <div class="h3 gold">Without the tradeoff.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C1 S9 -->
+  <div class="slide-unit">
+    <div class="slide-num">09 · The Statement</div>
+    <div class="sw"><div class="s bg-grain">
+      <div class="full col center p60 z2">
+        <div class="b dim mb-24">Privacy isn't a setting in Bloggo.</div>
+        <div class="h3 gold">It's how the whole thing works.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C1 S10 -->
+  <div class="slide-unit">
+    <div class="slide-num">10 · CTA</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <img class="logo-lg mb-40" src="file:///C:/Users/yoobi/Downloads/Blogo.png" alt="Bloggo">
+        <div class="h3 mb-16">Join the Bloggo beta</div>
+        <div class="b gold">Link in bio</div>
+      </div>
+      <div class="mbox">
+        <div class="mbox-tag">🐱 Mascot</div>
+        <div class="mbox-info">C1 · Slide 10<br>Sitting, confident smirk<br>See Higgsfield prompt</div>
+      </div>
+    </div></div>
+  </div>
+
+</div><!-- /C1 -->
+
+
+<!-- ══════════════════════════════════════════ -->
+<!--  CAROUSEL 2 — BLOGGO: MEMORIES           -->
+<!-- ══════════════════════════════════════════ -->
+
+<div class="section-header">
+  <h2>Carousel 2 — Bloggo Company Page</h2>
+  <p>"5 travel memories you've already lost." · The Problem</p>
+</div>
+
+<div class="slides">
+
+  <!-- C2 S1 -->
+  <div class="slide-unit">
+    <div class="slide-num">01 · Hook</div>
+    <div class="sw"><div class="s">
+      <div class="photo-bg abs">
+        <div class="pb-ico">🌅</div>
+        <div class="pb-tag">Travel Photo BG</div>
+        <div class="pb-info">Unsplash: "travel golden hour empty street"<br>Full bleed · dark gradient overlay</div>
+      </div>
+      <div class="overlay"></div>
+      <div class="full col z2 p60" style="justify-content:flex-end">
+        <div class="h2">5 travel memories<br>you've already lost.</div>
+      </div>
+      <div class="mbox" style="bottom:40px;left:40px;z-index:10">
+        <div class="mbox-tag">🐱 Mascot</div>
+        <div class="mbox-info">C2 · Slide 1<br>Peeking from bottom<br>Wide curious eyes</div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- C2 S2 -->
+  <div class="slide-unit">
+    <div class="slide-num">02 · Transition</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <div class="h3 muted mb-24">Not the photos.</div>
+        <div class="h2">The story behind them.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C2 S3 -->
+  <div class="slide-unit">
+    <div class="slide-num">03 · Memory #1</div>
+    <div class="sw"><div class="s">
+      <div class="full row">
+        <div class="col vctr p60" style="flex:1.15">
+          <div class="lbl gold mb-16">#1 —</div>
+          <div class="h4 mb-16">The restaurant name.</div>
+          <div class="b muted">You remember the food.<br>You can't remember<br>where it was.</div>
+        </div>
+        <div class="col center" style="flex:0.85;padding:40px 40px 40px 0">
+          <div class="ph" style="width:100%;height:480px">
+            <div class="ph-ico">🍽️</div>
+            <div class="ph-tag">Restaurant Photo</div>
+            <div class="ph-info">Unsplash:<br>"restaurant warm bokeh<br>interior dark"</div>
+          </div>
+        </div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C2 S4 -->
+  <div class="slide-unit">
+    <div class="slide-num">04 · Memory #2</div>
+    <div class="sw"><div class="s">
+      <div class="full row">
+        <div class="col vctr p60" style="flex:1.15">
+          <div class="lbl gold mb-16">#2 —</div>
+          <div class="h4 mb-16">The day it happened.</div>
+          <div class="b muted">Was that Tuesday in Rome<br>or Thursday?<br>Your camera roll doesn't say.</div>
+        </div>
+        <div class="col center" style="flex:0.85;padding:40px 40px 40px 0">
+          <div class="ph" style="width:100%;height:480px">
+            <div class="ph-ico">🏛️</div>
+            <div class="ph-tag">City Aerial Photo</div>
+            <div class="ph-info">Unsplash:<br>"European city aerial<br>Rome blurred"</div>
+          </div>
+        </div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C2 S5 -->
+  <div class="slide-unit">
+    <div class="slide-num">05 · Memory #3</div>
+    <div class="sw"><div class="s">
+      <div class="photo-bg abs" style="opacity:.3">
+        <div class="pb-ico">📔</div>
+        <div class="pb-tag">Journal Background</div>
+        <div class="pb-info">Unsplash: "open blank notebook dark moody"</div>
+      </div>
+      <div class="full col center p80 z2">
+        <div class="lbl gold mb-24">#3 —</div>
+        <div class="h4 mb-16">The caption you meant to write.</div>
+        <div class="b muted mb-16">You were going to do it later.</div>
+        <div class="h4 italic dim">Later never came.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C2 S6 -->
+  <div class="slide-unit">
+    <div class="slide-num">06 · Memory #4</div>
+    <div class="sw"><div class="s">
+      <div class="full row">
+        <div class="col vctr p60" style="flex:1.15">
+          <div class="lbl gold mb-16">#4 —</div>
+          <div class="h4 mb-16">Who else was there.</div>
+          <div class="b muted">A face in the background.<br>A stranger who<br>became a story.</div>
+        </div>
+        <div class="col center" style="flex:0.85;padding:40px 40px 40px 0">
+          <div class="ph" style="width:100%;height:480px">
+            <div class="ph-ico">🚶</div>
+            <div class="ph-tag">Travel People</div>
+            <div class="ph-info">Unsplash:<br>"travel candid people<br>golden hour backs"</div>
+          </div>
+        </div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C2 S7 -->
+  <div class="slide-unit">
+    <div class="slide-num">07 · Memory #5</div>
+    <div class="sw"><div class="s">
+      <div class="photo-bg abs" style="opacity:.2">
+        <div class="pb-ico">🌄</div>
+        <div class="pb-tag">Emotional Travel Photo</div>
+        <div class="pb-info">Unsplash: "travel sunset emotional wide<br>mountain golden hour cinematic"</div>
+      </div>
+      <div class="overlay-heavy"></div>
+      <div class="full col center p80 z2">
+        <div class="lbl gold mb-24">#5 —</div>
+        <div class="h4 mb-16">Why you took that photo.</div>
+        <div class="b muted mb-16">The feeling. The reason.</div>
+        <div class="b fade">Fading with every month<br>that passes.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C2 S8 -->
+  <div class="slide-unit">
+    <div class="slide-num">08 · Aha Moment</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <div class="h3 dim mb-24">Photos preserve the moment.</div>
+        <div class="h2">They don't preserve<br>the meaning.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+      <div class="mbox">
+        <div class="mbox-tag">🐱 Mascot</div>
+        <div class="mbox-info">C2 · Slide 8<br>Paw on chin, thinking<br>See Higgsfield prompt</div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- C2 S9 -->
+  <div class="slide-unit">
+    <div class="slide-num">09 · Solution</div>
+    <div class="sw"><div class="s">
+      <div class="full row">
+        <div class="col vctr p60" style="flex:1.1">
+          <div class="h3">Bloggo writes the story while the memory is still fresh.</div>
+        </div>
+        <div class="col center" style="flex:0.85;padding:40px 40px 40px 0">
+          <div class="ph" style="width:260px;height:580px">
+            <div class="ph-ico">📸</div>
+            <div class="ph-tag">App Screenshot</div>
+            <div class="ph-info">IMG_6226<br>Trip blog view<br>Add iPhone frame</div>
+          </div>
+        </div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C2 S10 -->
+  <div class="slide-unit">
+    <div class="slide-num">10 · CTA</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <img class="logo-lg mb-40" src="file:///C:/Users/yoobi/Downloads/Blogo.png" alt="Bloggo">
+        <div class="h3 mb-16">Join the Bloggo beta</div>
+        <div class="b gold">Link in bio</div>
+      </div>
+      <div class="mbox">
+        <div class="mbox-tag">🐱 Mascot</div>
+        <div class="mbox-info">C2 · Slide 10<br>Reuse C1 Slide 10 image<br>Same pose</div>
+      </div>
+    </div></div>
+  </div>
+
+</div><!-- /C2 -->
+
+
+<!-- ══════════════════════════════════════════ -->
+<!--  CAROUSEL 3 — PERSONAL BRAND: FOUNDER    -->
+<!-- ══════════════════════════════════════════ -->
+
+<div class="section-header">
+  <h2>Carousel 3 — Personal Brand Page</h2>
+  <p>"5 things I learned building an AI-powered iOS app." · Product Builder · No mascot</p>
+</div>
+
+<div class="slides">
+
+  <!-- C3 S1 -->
+  <div class="slide-unit">
+    <div class="slide-num">01 · Hook</div>
+    <div class="sw"><div class="s bg-grain">
+      <div class="full col center p60 z2">
+        <div class="lbl gold mb-24">Founder Lessons</div>
+        <div class="h2">5 things I learned building an AI-powered iOS app.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C3 S2 -->
+  <div class="slide-unit">
+    <div class="slide-num">02 · Credibility</div>
+    <div class="sw"><div class="s">
+      <div class="full row">
+        <div class="col center" style="flex:0.9;padding:50px 20px 50px 50px">
+          <div class="ph" style="width:270px;height:270px;border-radius:50%;margin-bottom:20px">
+            <div class="ph-ico">🧑</div>
+            <div class="ph-tag" style="font-size:11px">Your Photo</div>
+            <div class="ph-info" style="font-size:11px">IMG_6373<br>Crop to circle in Canva</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <img class="logo-sm" src="file:///C:/Users/yoobi/Downloads/Blogo.png" alt="Bloggo">
+            <span class="sm muted">Bloggo</span>
+          </div>
+        </div>
+        <div class="col vctr" style="flex:1.1;padding:50px 50px 50px 20px">
+          <div class="sm mb-24">I'm the co-founder of Bloggo — an app that turns your travel photos into a blog using on-device AI.</div>
+          <div class="sm muted">Here's what building it taught me.</div>
+        </div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C3 S3 -->
+  <div class="slide-unit">
+    <div class="slide-num">03 · Lesson #1</div>
+    <div class="sw"><div class="s">
+      <div class="full col vctr p60">
+        <div class="lbl gold mb-24">#1 —</div>
+        <div class="h3 mb-16">On-device AI is 10× harder than cloud AI.</div>
+        <div class="h3 gold">And 10× more worth it.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C3 S4 -->
+  <div class="slide-unit">
+    <div class="slide-num">04 · Lesson #2</div>
+    <div class="sw"><div class="s bg-teal">
+      <div class="full col center p60">
+        <div class="lbl gold mb-24">#2 —</div>
+        <div class="h3">The feature users love most is never the feature you spent the most time on.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C3 S5 -->
+  <div class="slide-unit">
+    <div class="slide-num">05 · Lesson #3</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <div class="lbl gold mb-24">#3 —</div>
+        <div class="h4 mb-16">Submitting to the App Store doesn't mean you're done.</div>
+        <div class="h3 italic">It means the waiting begins.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C3 S6 -->
+  <div class="slide-unit">
+    <div class="slide-num">06 · Lesson #4</div>
+    <div class="sw"><div class="s">
+      <div class="full col vctr p60">
+        <div class="lbl gold mb-24">#4 —</div>
+        <div class="h3">Your first 10 users will tell you more than 10,000 survey responses.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C3 S7 -->
+  <div class="slide-unit">
+    <div class="slide-num">07 · Lesson #5</div>
+    <div class="sw"><div class="s bg-teal">
+      <div class="full col center p60">
+        <div class="lbl gold mb-24">#5 —</div>
+        <div class="h4 mb-16">You will rewrite the thing you're most proud of. Twice.</div>
+        <div class="h3 gold">That's how you know it's getting better.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C3 S8 -->
+  <div class="slide-unit">
+    <div class="slide-num">08 · Buildup</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <div class="h3 dim italic">None of this was in any book I read.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C3 S9 -->
+  <div class="slide-unit">
+    <div class="slide-num">09 · Payoff</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <div class="h2">All of it was in the build.</div>
+      </div>
+      <img class="paw" src="file:///C:/Users/yoobi/OneDrive/Desktop/First%20Episod/Cat%20related%20graphics%20PNG/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div></div>
+  </div>
+
+  <!-- C3 S10 -->
+  <div class="slide-unit">
+    <div class="slide-num">10 · CTA</div>
+    <div class="sw"><div class="s">
+      <div class="full col center p60">
+        <div class="ph" style="width:160px;height:160px;border-radius:50%;margin-bottom:40px">
+          <div class="ph-ico" style="font-size:44px">🧑</div>
+          <div class="ph-tag" style="font-size:10px">Your Photo</div>
+          <div class="ph-info" style="font-size:10px">IMG_6373 · circle crop</div>
+        </div>
+        <div class="h4 mb-16">Follow for more of the journey —</div>
+        <div class="h3 gold">we're just getting started.</div>
+      </div>
+    </div></div>
+  </div>
+
+</div><!-- /C3 -->
+
+</body>
+</html>
