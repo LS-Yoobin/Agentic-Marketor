@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//y/Yoobin/app/**)",
+      "Read(//y/Yoobin/components/**)",
+      "Bash(C:\\\\Users\\\\yoobi\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\superpowers\\\\5.0.5\\\\scripts\\\\start-server.sh --project-dir \"y:/Yoobin\")",
+      "Bash(ls \"C:\\\\\\\\Users\\\\\\\\yoobi\\\\\\\\.claude\\\\\\\\plugins\\\\\\\\cache\\\\\\\\claude-plugins-official\\\\\\\\superpowers\\\\\\\\5.0.5\\\\\\\\scripts\\\\\\\\\")",
+      "Bash(cygpath -u 'C:\\\\Users\\\\yoobi')",
+      "Bash(ls \"$\\(cygpath -u 'C:\\\\Users\\\\yoobi'\\)/.claude/plugins/cache/claude-plugins-official/\")",
+      "Bash(ls \"$\\(cygpath -u 'C:\\\\Users\\\\yoobi'\\)/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.5/scripts/\")",
+      "Bash(ls \"$\\(cygpath -u 'C:\\\\Users\\\\yoobi'\\)/.claude/plugins/cache/claude-plugins-official/superpowers/\")",
+      "Bash(ls \"$\\(cygpath -u 'C:\\\\Users\\\\yoobi'\\)/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.5/\")",
+      "Bash(claude mcp:*)",
+      "mcp__notion-personal__API-post-search",
+      "mcp__notion-personal__API-post-page",
+      "mcp__notion__API-patch-page",
+      "mcp__notion__API-post-page",
+      "mcp__notion__API-retrieve-a-database",
+      "mcp__notion-personal__API-retrieve-a-database",
+      "mcp__notion__API-query-data-source",
+      "mcp__notion-personal__API-query-data-source",
+      "mcp__notion__API-post-search"
+    ]
+  }
+}
