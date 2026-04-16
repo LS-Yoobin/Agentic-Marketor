@@ -275,64 +275,22 @@ This is the exact same loop that powered:
 **Key lesson:** When your app's output is inherently beautiful and shareable, users become your distribution channel
 
 ### 4.4 Instagram
-**What they did at launch:**
-- Launched October 2010 — reached **1 million users in 3 months**, 10 million within a year
-- Seeded with creative influencers and photographers on Twitter before launch
-- Filters solved the key user problem: made amateur photos look professional → gave users confidence to share
-- Hashtags (#TBT being early viral) created community and search discovery
-- Cross-posting to Twitter/Facebook built viral loop: Instagram photos seen on other networks → drove downloads
-**Key growth mechanics:**
-- Filters as social proof (your photos look good → you want to share → others see → they download)
-- Social graph import from Twitter/Facebook on signup — instant network, instant value
-**Key lesson:** Remove the embarrassment barrier — make users look good immediately, and they will share
+Seeded with photographers and influencers pre-launch. Filters made amateur photos look great, removing the embarrassment barrier and giving users confidence to share. Cross-posting to Twitter/Facebook created a viral loop.
 
 ### 4.5 Google Photos
-**What they did at launch:**
-- Launched at Google I/O 2015 — massive earned media from developer conference + Walt Mossberg (Recode) called it "best in cloud photo storage"
-- **Unlimited free photo storage** as the core offer — frictionless, compelling reason to switch
-- Pre-installed on Android phones — distribution without user choice
-- AI-powered features (face recognition, auto-albums, memory surfacing) were genuinely differentiated
-- Decoupled from Google+ — started fresh without social baggage
-**Growth:** 100M users in 5 months; 200M in 1 year; 500M in 2 years; 1 billion by 2019 (4 years)
-**Key lesson:** Utility-first with a radical free offer can overcome any competition; pre-existing distribution channels (Android) are decisive
+Launched at Google I/O with massive press coverage. Offered unlimited free storage as the core hook — frictionless, compelling reason to switch. Pre-installed on Android gave instant distribution.
 
 ### 4.6 BeReal
-**What they did at launch:**
-- Launched college ambassador program January 2022 — paid students $30/referral, $50 for download + review
-- Hosted parties at campuses (Harvard etc.) where admission required downloading the app + adding 5 friends
-- Word-of-mouth spread on TikTok in early 2022 — drove explosive organic growth
-- 7.67M downloads in 2022; 1.7M downloads in a single week (July 11, 2022)
-- Named iPhone App of the Year 2022
-**Key mechanics:**
-- **Reciprocity loop:** You must post to see others' posts — creates mandatory participation
-- ~70% of users post every day (extraordinary retention for a social app)
-- US = 35% of downloads, UK = 17%, France = 10%
-**Key lesson:** Friction-as-feature can drive engagement when reciprocity is built into the core mechanic
+College ambassador program paid students per referral. Hosted campus parties where entry required downloading the app and adding friends. Organic TikTok word-of-mouth drove explosive growth in 2022.
 
 ### 4.7 Airbnb
-**Early growth:**
-- Initially struggled — went door-to-door in NYC, created fake listings to look active
-- **Craigslist integration hack** — scraped Craigslist listings and auto-posted Airbnb listings there, driving massive early supply and demand
-- Grew from 21,000 guest arrivals in 2009 to 80M+ in 2016
-- Referral program v2.0 drove **300% increase in bookings and signups**
-- Physical photography of listings improved quality, driving host confidence and conversion
-- International expansion: market presence drove **2x faster sustained growth**
-**Key lesson:** Do things that don't scale early; solve for supply before demand; referrals compound
+Did things that don't scale — went door-to-door in NYC, created listings manually to look active. Craigslist integration hack cross-posted listings to drive early supply and demand. Referral program drove 300% increase in bookings.
 
 ### 4.8 Strava
-**Growth:** 180M users across 185 countries; $1.5B valuation
-**Key mechanics:**
-- Engineered virality into product DNA: every workout generates a **shareable route map image**, perfectly formatted for Instagram
-- "If it's not on Strava, it didn't happen" — cultural identity around the platform
-- 2.23% engagement per post (vs Facebook's 0.15%)
-- 14 billion kudos given in 2025 — lightweight social validation that drives daily return
-- Clubs and community features create obligation to return
-**Key lesson:** Make the output of app usage inherently shareable and socially prestigious
+Every workout auto-generates a shareable route map image formatted for Instagram — virality built into the product output. "If it's not on Strava, it didn't happen" became a cultural identity.
 
-### 4.9 TikTok (Virality Mechanic)
-- Every TikTok video carries a watermark — when clips spread to Twitter/Instagram, viewers see the TikTok logo
-- This drove **6.4 new users for every 1 user acquired via traditional marketing**
-**Key lesson:** Watermarked shareable outputs are one of the most cost-efficient distribution mechanics ever invented
+### 4.9 TikTok
+Every video carries a watermark. When clips spread to Twitter/Instagram, viewers saw the TikTok logo — driving 6.4 new users for every 1 acquired via traditional marketing.
 
 ---
 

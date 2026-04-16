@@ -1,0 +1,264 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+
+body { background: #0d0d0d; margin: 0; padding: 0; }
+h2 { font-family: 'Jost', sans-serif; color: #fff; text-align: center; margin: 28px 0 4px; font-size: 20px; font-weight: 700; }
+.subtitle { font-family: 'Jost', sans-serif; color: #666; text-align: center; font-size: 13px; margin-bottom: 8px; }
+
+.section-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px; font-weight: 700;
+  color: #138EFF; letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 28px 0 12px;
+}
+
+.section-desc {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px; color: #555;
+  text-align: center; margin-bottom: 16px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 0 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #161616;
+  border: 1.5px solid #222;
+  border-radius: 12px;
+  padding: 18px;
+  width: 260px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.card:hover { border-color: #138EFF; background: #0f1a2a; }
+.card.selected { border-color: #138EFF; background: #0a1a2e; box-shadow: 0 0 0 2px rgba(19,142,255,0.25); }
+.card.selected::after {
+  content: '✓ Selected';
+  position: absolute; top: 10px; right: 10px;
+  background: #138EFF; color: #fff;
+  font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 700;
+  padding: 3px 7px; border-radius: 20px; letter-spacing: 0.5px;
+}
+
+.card-format {
+  display: inline-block;
+  font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 20px;
+  margin-bottom: 10px;
+}
+.fmt-1 { background: rgba(89,224,197,0.15); color: #59E0C5; }
+.fmt-3 { background: rgba(19,142,255,0.15); color: #138EFF; }
+.fmt-8 { background: rgba(255,130,60,0.15); color: #FF823C; }
+
+.card-hook {
+  font-family: 'Chewy', cursive;
+  font-size: 20px; color: #fff; line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.card-meta {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px; color: #555;
+  line-height: 1.5;
+}
+
+.card-meta span {
+  display: inline-block;
+  background: #1e1e1e; border-radius: 4px;
+  padding: 2px 6px; margin: 2px 2px 2px 0;
+  color: #888; font-size: 10px;
+}
+
+.card-angle {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px; color: #444;
+  margin-top: 8px; font-style: italic;
+  line-height: 1.4;
+}
+
+.divider {
+  width: 80%; height: 1px;
+  background: #1a1a1a;
+  margin: 8px auto 0;
+}
+
+.multi-select-hint {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px; color: #444;
+  text-align: center; margin-top: 24px;
+  padding-bottom: 40px;
+}
+</style>
+
+<h2>Carousel Batch — Bloggo</h2>
+<p class="subtitle">Select all the carousels you want built. Optimized for organic reach, pain points, and authority.</p>
+
+<div style="max-width:900px;margin:0 auto;">
+
+  <!-- 1-SLIDE -->
+  <div class="section-label">1-Slide Posts — Single Powerful Statement</div>
+  <div class="section-desc">High sharability. One idea, zero friction. Best for saves + shares.</div>
+  <div class="grid" id="grid-1" data-multiselect>
+
+    <div class="card" data-choice="1a" onclick="toggleSelect(this)">
+      <div class="card-format fmt-1">1 Slide</div>
+      <div class="card-hook">"Your camera roll isn't a photo album.<br>It's an unfinished story."</div>
+      <div class="card-meta">
+        <span>WTF Hook</span><span>Pain Point</span><span>Save-worthy</span>
+      </div>
+      <div class="card-angle">Reframes what photos actually are. Strong share trigger.</div>
+    </div>
+
+    <div class="card" data-choice="1b" onclick="toggleSelect(this)">
+      <div class="card-format fmt-1">1 Slide</div>
+      <div class="card-hook">"The best travel journal is the one you never had to write."</div>
+      <div class="card-meta">
+        <span>Contrarian</span><span>Product benefit</span><span>Shareable</span>
+      </div>
+      <div class="card-angle">Directly sells the core value prop without selling. High shareability.</div>
+    </div>
+
+    <div class="card" data-choice="1c" onclick="toggleSelect(this)">
+      <div class="card-format fmt-1">1 Slide</div>
+      <div class="card-hook">"Photos preserve the moment.<br>Bloggo preserves the meaning."</div>
+      <div class="card-meta">
+        <span>Brand statement</span><span>Emotional</span><span>Save-worthy</span>
+      </div>
+      <div class="card-angle">Clean, quotable, on-brand. Works as a pinned post.</div>
+    </div>
+
+    <div class="card" data-choice="1d" onclick="toggleSelect(this)">
+      <div class="card-format fmt-1">1 Slide</div>
+      <div class="card-hook">"2,000 photos from your last trip.<br>0 stories written."</div>
+      <div class="card-meta">
+        <span>Stat + Pain</span><span>Relatable</span><span>Comment trigger</span>
+      </div>
+      <div class="card-angle">Relatable guilt. Gets "this is literally me" comments = reach boost.</div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 3-5 SLIDES -->
+  <div class="section-label">3–5 Slide Posts — Quick Punchy Series</div>
+  <div class="section-desc">Best for retention. Each slide earns the next. Short enough to finish.</div>
+  <div class="grid" id="grid-3" data-multiselect>
+
+    <div class="card" data-choice="3a" onclick="toggleSelect(this)">
+      <div class="card-format fmt-3">3–5 Slides</div>
+      <div class="card-hook">"What happens when you try to write about a trip 6 months later"</div>
+      <div class="card-meta">
+        <span>Story</span><span>Relatable</span><span>Fear + humor</span>
+      </div>
+      <div class="card-angle">Slide-by-slide recreation of the painful "I forgot everything" moment. High relatability = saves + DMs.</div>
+    </div>
+
+    <div class="card" data-choice="3b" onclick="toggleSelect(this)">
+      <div class="card-format fmt-3">3–5 Slides</div>
+      <div class="card-hook">"3 types of travel memory.<br>Only 1 survives."</div>
+      <div class="card-meta">
+        <span>Curiosity</span><span>Education</span><span>Authority</span>
+      </div>
+      <div class="card-angle">Visual → Emotional → Contextual. Contextual fades fastest. Bloggo captures all three.</div>
+    </div>
+
+    <div class="card" data-choice="3c" onclick="toggleSelect(this)">
+      <div class="card-format fmt-3">3–5 Slides</div>
+      <div class="card-hook">"Your phone already knows where you've been."</div>
+      <div class="card-meta">
+        <span>WTF Hook</span><span>Product education</span><span>Privacy angle</span>
+      </div>
+      <div class="card-angle">GPS + timestamps already exist in your photos. Bloggo reads them — on device, privately. Tech-curious angle.</div>
+    </div>
+
+    <div class="card" data-choice="3d" onclick="toggleSelect(this)">
+      <div class="card-format fmt-3">3–5 Slides</div>
+      <div class="card-hook">"Stop making photo albums.<br>Do this instead."</div>
+      <div class="card-meta">
+        <span>Contrarian</span><span>Direct CTA</span><span>High reach</span>
+      </div>
+      <div class="card-angle">Challenges existing behavior. "Albums = dead. Blogs = alive." Drives installs.</div>
+    </div>
+
+    <div class="card" data-choice="3e" onclick="toggleSelect(this)">
+      <div class="card-format fmt-3">3–5 Slides</div>
+      <div class="card-hook">"The restaurant you loved in Lisbon.<br>Gone from memory in 90 days."</div>
+      <div class="card-meta">
+        <span>Fear + Specificity</span><span>Scroll stopper</span><span>Relatable</span>
+      </div>
+      <div class="card-angle">Specific + personal = scroll stop. Works because everyone has a "Lisbon restaurant" moment.</div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 8-10 SLIDES -->
+  <div class="section-label">8–10 Slide Posts — Authority Builders</div>
+  <div class="section-desc">Saves algorithm gold. Deep engagement. Builds follower trust over time.</div>
+  <div class="grid" id="grid-8" data-multiselect>
+
+    <div class="card" data-choice="8a" onclick="toggleSelect(this)">
+      <div class="card-format fmt-8">8–10 Slides</div>
+      <div class="card-hook">"Your camera roll is a graveyard of stories you'll never tell."</div>
+      <div class="card-meta">
+        <span>Fear/WTF Hook</span><span>Deep pain</span><span>Save-bait</span>
+      </div>
+      <div class="card-angle">Goes through every type of forgotten memory: sounds, smells, faces, feelings. Builds to Bloggo as the fix. Strong emotion → saves.</div>
+    </div>
+
+    <div class="card" data-choice="8b" onclick="toggleSelect(this)">
+      <div class="card-format fmt-8">8–10 Slides</div>
+      <div class="card-hook">"I built an AI that reads your camera roll.<br>Here's what it found."</div>
+      <div class="card-meta">
+        <span>Story Hook</span><span>Founder voice</span><span>Authority</span>
+      </div>
+      <div class="card-angle">Founder POV. What trip data actually looks like. How GPS + time = a story. Builds trust + curiosity about the product.</div>
+    </div>
+
+    <div class="card" data-choice="8c" onclick="toggleSelect(this)">
+      <div class="card-format fmt-8">8–10 Slides</div>
+      <div class="card-hook">"The blank page problem isn't writer's block.<br>It's the wrong tool."</div>
+      <div class="card-meta">
+        <span>Contrarian</span><span>Education</span><span>Deep authority</span>
+      </div>
+      <div class="card-angle">Reframes the travel writing problem entirely. Builds intellectual authority. Bloggo = the right tool. Strong save signal.</div>
+    </div>
+
+    <div class="card" data-choice="8d" onclick="toggleSelect(this)">
+      <div class="card-format fmt-8">8–10 Slides</div>
+      <div class="card-hook">"Your trip is already written.<br>Here's how to find it."</div>
+      <div class="card-meta">
+        <span>Curiosity Hook</span><span>Product walkthrough</span><span>Reach driver</span>
+      </div>
+      <div class="card-angle">Step-by-step of how Bloggo works — framed as discovery, not a tutorial. Best for new follower education.</div>
+    </div>
+
+    <div class="card" data-choice="8e" onclick="toggleSelect(this)">
+      <div class="card-format fmt-8">8–10 Slides</div>
+      <div class="card-hook">"Why I stopped trying to write about my trips."</div>
+      <div class="card-meta">
+        <span>Story Hook</span><span>Relatable journey</span><span>Conversion</span>
+      </div>
+      <div class="card-angle">Personal narrative arc: tried journaling → failed → photos piled up → built Bloggo. Emotional + relatable. High conversion.</div>
+    </div>
+
+  </div>
+
+</div>
+
+<p class="multi-select-hint">Select as many as you want — I'll build all of them as ready-to-screenshot HTML.</p>

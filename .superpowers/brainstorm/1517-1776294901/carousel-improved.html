@@ -1,0 +1,259 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+
+body { background: #111; margin: 0; padding: 0; }
+
+h2 { font-family: system-ui; color: #fff; text-align: center; margin: 24px 0 4px; font-size: 18px; }
+.subtitle { font-family: system-ui; color: #888; text-align: center; font-size: 13px; margin-bottom: 24px; }
+
+.carousel-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 0 20px 40px;
+}
+
+.slide-label {
+  font-family: system-ui;
+  font-size: 10px;
+  color: #555;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.slide {
+  width: 360px;
+  height: 450px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Shared elements */
+.accent-bar { position:absolute; left:0; top:0; bottom:0; width:6px; background:rgba(19,142,255,0.12); }
+.right-grad { position:absolute; right:0; top:0; bottom:0; width:42%; background:linear-gradient(to left,rgba(19,142,255,0.05),transparent); pointer-events:none; }
+.dot-bg { position:absolute; top:0;left:0;right:0;bottom:0; background-image:radial-gradient(circle,rgba(19,142,255,0.08) 1.5px,transparent 1.5px); background-size:24px 24px; pointer-events:none; }
+.radial-bg { position:absolute; top:50%;left:50%;transform:translate(-50%,-50%); width:240px;height:240px; background:radial-gradient(circle,rgba(19,142,255,0.07),transparent 70%); border-radius:50%; pointer-events:none; }
+
+.bloggo-mark { position:absolute; bottom:22px; left:20px; font-family:'Chewy',cursive; font-size:18px; color:rgba(19,142,255,0.6); z-index:10; }
+
+.paw-ph {
+  position:absolute; bottom:10px; right:14px;
+  width:52px; height:52px;
+  border:2px dashed rgba(0,0,0,0.15);
+  border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; z-index:10;
+}
+
+.mascot-ph {
+  position:absolute;
+  width:100px; height:100px;
+  border:2px dashed rgba(19,142,255,0.35);
+  border-radius:18px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:9px; color:rgba(19,142,255,0.6);
+  text-align:center; font-family:system-ui; line-height:1.4;
+  background:rgba(19,142,255,0.03);
+  z-index:10;
+}
+
+.gfx-badge {
+  position:absolute; top:8px; right:8px;
+  background:rgba(255,200,0,0.92);
+  color:#000; font-size:8.5px; font-family:system-ui; font-weight:700;
+  padding:4px 7px; border-radius:5px; z-index:20;
+  text-transform:uppercase; letter-spacing:0.4px;
+  max-width:130px; line-height:1.4;
+}
+
+.grad-text {
+  background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* Slide-specific layouts */
+.slide-center {
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  padding:36px; box-sizing:border-box;
+}
+
+.slide-left {
+  display:flex; flex-direction:column; justify-content:center;
+  padding:32px 32px 60px 44px; box-sizing:border-box;
+}
+
+.label-tag {
+  font-family:'Jost',sans-serif; font-weight:700;
+  font-size:13px; color:#138EFF;
+  letter-spacing:2.5px; text-transform:uppercase;
+  margin-bottom:16px;
+}
+
+.body-text {
+  font-family:'Jost',sans-serif; font-size:27px;
+  color:#1A1A1A; line-height:1.55; margin:0;
+}
+
+.sub-text {
+  font-family:'Jost',sans-serif; font-size:22px;
+  color:#6B7280; font-style:italic;
+  margin-top:14px; line-height:1.4;
+}
+</style>
+
+<h2>Improved Carousel — "5 Things That Disappear"</h2>
+<p class="subtitle">Rebuilt to brand spec — white bg, Bloggo blue, bold keywords, gradient text. Yellow badges = graphics needed.</p>
+
+<div class="carousel-wrap">
+
+  <!-- SLIDE 1 — HOOK -->
+  <div class="slide-label">Slide 1 — Hook</div>
+  <div class="slide slide-center">
+    <div class="dot-bg"></div>
+    <div style="position:relative;z-index:2;text-align:center;">
+      <div style="font-family:'Chewy',cursive;font-size:64px;line-height:0.95;color:#1A1A1A;">5 things</div>
+      <div style="font-family:'Chewy',cursive;font-size:58px;line-height:0.95;color:#138EFF;margin-top:6px;">disappear</div>
+      <div style="font-family:'Chewy',cursive;font-size:28px;line-height:1.25;color:#1A1A1A;margin-top:14px;">from your travel memories<br>faster than you think</div>
+    </div>
+    <div class="mascot-ph" style="bottom:16px;left:16px;"><span>🐱 Cat<br>curious,<br>surrounded<br>by ?'s</span></div>
+    <div class="gfx-badge">Cat: looking up at floating question marks — confused, playful energy</div>
+  </div>
+
+  <!-- SLIDE 2 — TRANSITION -->
+  <div class="slide-label">Slide 2 — Transition</div>
+  <div class="slide slide-center">
+    <div style="position:relative;z-index:2;text-align:center;">
+      <div class="grad-text" style="font-family:'Jost',sans-serif;font-weight:400;font-style:italic;font-size:28px;line-height:1.3;">Not the big moments...</div>
+      <div class="grad-text" style="font-family:'Jost',sans-serif;font-weight:700;font-size:50px;line-height:1.1;margin-top:10px;">The small ones.</div>
+    </div>
+    <div class="mascot-ph" style="bottom:48px;right:16px;width:86px;height:86px;"><span>🐱 Cat<br>tiny &<br>still</span></div>
+    <div class="bloggo-mark">Bloggo</div>
+    <div class="paw-ph">🐾</div>
+    <div class="gfx-badge">Cat: small, sitting quietly — conveys "small moments" theme</div>
+  </div>
+
+  <!-- SLIDE 3 — #1 SOUNDS -->
+  <div class="slide-label">Slide 3 — #1 Sounds</div>
+  <div class="slide slide-left">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div style="position:relative;z-index:2;">
+      <div class="label-tag">#1 — Sounds</div>
+      <p class="body-text">The noise of <strong>that market.</strong></p>
+      <p class="body-text" style="margin-top:4px;">The rain on <strong>that window.</strong></p>
+      <p class="sub-text">Gone in weeks.</p>
+    </div>
+    <div class="bloggo-mark">Bloggo</div>
+    <div class="paw-ph">🐾</div>
+  </div>
+
+  <!-- SLIDE 4 — #2 SMELLS -->
+  <div class="slide-label">Slide 4 — #2 Smells</div>
+  <div class="slide slide-left">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div style="position:relative;z-index:2;">
+      <div class="label-tag">#2 — Smells</div>
+      <p class="body-text">The bread from <strong>that bakery.</strong></p>
+      <p class="body-text" style="margin-top:4px;">The sea air <strong>that morning.</strong></p>
+      <p class="sub-text">Memory can't hold it.</p>
+    </div>
+    <div class="bloggo-mark">Bloggo</div>
+    <div class="paw-ph">🐾</div>
+  </div>
+
+  <!-- SLIDE 5 — #3 SEQUENCE -->
+  <div class="slide-label">Slide 5 — #3 The Sequence</div>
+  <div class="slide slide-left">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div style="position:relative;z-index:2;">
+      <div class="label-tag">#3 — The Sequence</div>
+      <p class="body-text">Which day did <strong>that happen?</strong></p>
+      <p class="sub-text" style="margin-top:16px;">Was it before or after<br>the train?</p>
+    </div>
+    <div class="bloggo-mark">Bloggo</div>
+    <div class="paw-ph">🐾</div>
+  </div>
+
+  <!-- SLIDE 6 — #4 FEELING -->
+  <div class="slide-label">Slide 6 — #4 The Feeling</div>
+  <div class="slide slide-left">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div style="position:relative;z-index:2;">
+      <div class="label-tag">#4 — The Feeling</div>
+      <p class="body-text">Not the emotion —</p>
+      <p class="body-text" style="margin-top:4px;">the <strong>specific texture</strong></p>
+      <p class="body-text" style="margin-top:4px;">of <strong>how it felt</strong> to be there.</p>
+    </div>
+    <div class="bloggo-mark">Bloggo</div>
+    <div class="paw-ph">🐾</div>
+  </div>
+
+  <!-- SLIDE 7 — #5 REASON -->
+  <div class="slide-label">Slide 7 — #5 The Reason</div>
+  <div class="slide slide-left">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div style="position:relative;z-index:2;">
+      <div class="label-tag">#5 — The Reason</div>
+      <p class="body-text">Why you <strong>took that photo.</strong></p>
+      <p class="sub-text" style="margin-top:14px;">It made sense then.<br>Now it's just a frame.</p>
+    </div>
+    <div class="bloggo-mark">Bloggo</div>
+    <div class="paw-ph">🐾</div>
+  </div>
+
+  <!-- SLIDE 8 — INSIGHT / SAVE-BAIT -->
+  <div class="slide-label">Slide 8 — Insight (save-bait)</div>
+  <div class="slide slide-center">
+    <div class="radial-bg"></div>
+    <div style="position:relative;z-index:2;text-align:center;">
+      <div style="font-family:'Jost',sans-serif;font-size:24px;color:#6B7280;line-height:1.5;">Photos preserve<br>the moment.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:34px;color:#1A1A1A;line-height:1.35;margin-top:18px;">They don't preserve<br><span style="color:#138EFF;">the meaning.</span></div>
+    </div>
+    <div class="mascot-ph" style="bottom:48px;right:14px;width:86px;height:86px;"><span>🐱 Cat<br>watching<br>butterfly</span></div>
+    <div class="bloggo-mark">Bloggo</div>
+    <div class="paw-ph">🐾</div>
+    <div class="gfx-badge">Cat: watching a butterfly float away — "meaning slipping" visual</div>
+  </div>
+
+  <!-- SLIDE 9 — BRIDGE -->
+  <div class="slide-label">Slide 9 — Bridge (product)</div>
+  <div class="slide slide-center">
+    <div style="position:relative;z-index:2;text-align:center;">
+      <div style="font-family:'Jost',sans-serif;font-size:28px;color:#1A1A1A;line-height:1.4;">Bloggo gives your photos</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:32px;color:#138EFF;line-height:1.3;margin-top:6px;">the value they deserve.</div>
+      <div style="margin-top:22px;width:150px;height:90px;background:#f0f6ff;border-radius:14px;border:1.5px solid rgba(19,142,255,0.2);margin-left:auto;margin-right:auto;display:flex;align-items:center;justify-content:center;font-family:system-ui;font-size:10px;color:#138EFF;font-weight:600;">📱 App screenshot here</div>
+    </div>
+    <div class="bloggo-mark">Bloggo</div>
+    <div class="paw-ph">🐾</div>
+  </div>
+
+  <!-- SLIDE 10 — CTA -->
+  <div class="slide-label">Slide 10 — CTA</div>
+  <div class="slide slide-center">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;position:relative;z-index:2;">
+      <div style="width:54px;height:54px;background:linear-gradient(135deg,#138EFF,#59E0C5);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;">📷</div>
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1;">Bloggo</div>
+    </div>
+    <div style="text-align:center;position:relative;z-index:2;">
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.05;">Your trips.</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.05;margin-top:4px;">Now a story.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3.5px;text-transform:uppercase;margin-top:20px;">BETA IN BIO</div>
+    </div>
+    <div class="mascot-ph" style="bottom:16px;left:16px;width:86px;height:86px;"><span>🐱 Cat<br>waving/<br>excited</span></div>
+    <div class="gfx-badge">Cat: waving or pumped up — inviting CTA energy</div>
+  </div>
+
+</div>
