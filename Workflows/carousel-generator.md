@@ -100,6 +100,7 @@ Follow `docs/marketing/Carasoul.md` exactly:
 | Content slides | Left-aligned with blue accent bar (slides 3–8) |
 | Bloggo watermark | Bottom-left, slides 2–9 only |
 | Cat paw | Bottom-right, slides 2–9 only — `<img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">` |
+| App icon (CTA slide) | Use the real logo PNG — `<img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">` — **never use the gradient+emoji placeholder** |
 | Mascot placeholder | **Do NOT** use `.mp` dashed placeholder boxes inside slides. Graphics are described in `.gfx-note` blocks only. |
 | Graphics notes | **Do NOT** place graphic descriptions inside the slide. Instead, add a `.gfx-note` div INSIDE the `.sw` wrapper, AFTER the `.slide` closing tag. See format below. |
 
@@ -108,7 +109,7 @@ Slide preview size for screenshotting: **360 × 450px** (maintains 4:5 ratio).
 ### Cat Paw CSS
 
 ```css
-.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.55}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
 ```
 
 ---
@@ -160,7 +161,7 @@ The hook slide (Slide 1) text often wraps badly at large Chewy sizes inside the 
 .st{font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-top:18px;line-height:1.4;position:relative;z-index:2}
 .cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
 .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
-.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.55}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
 ```
 
 ### Graphic Note Format
