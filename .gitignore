@@ -1,0 +1,21 @@
+# Superpowers internal session files
+.superpowers/
+
+# Executables
+*.exe
+*.msi
+*.dmg
+
+# Large video files
+*.mp4
+*.mov
+*.avi
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / env
+node_modules/
+.env
+.env.local
