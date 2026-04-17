@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloggo 1-Slide — Already Written</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#F0F0F0;display:flex;flex-direction:column;align-items:center;padding:40px 20px;font-family:'Jost',sans-serif;gap:24px}
+  .sw{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#888;letter-spacing:1.5px;text-transform:uppercase;align-self:flex-start;max-width:360px}
+  .slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px}
+
+  /* 1-slide specific */
+  .tb{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#138EFF,#59E0C5);z-index:10}
+  .dq{position:absolute;font-size:220px;color:rgba(19,142,255,0.04);line-height:1;top:-15px;left:0;right:0;text-align:center;pointer-events:none;z-index:0;font-family:Georgia,serif;user-select:none}
+  .main-text{position:relative;z-index:2;text-align:center}
+  .st{font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-top:18px;line-height:1.4;position:relative;z-index:2;text-align:center}
+  .cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* dot pattern */
+  .dot-bg{position:absolute;top:0;left:0;right:0;bottom:0;z-index:0;opacity:0.04;background-image:radial-gradient(#138EFF 1.5px,transparent 1.5px);background-size:36px 36px}
+
+  /* gfx note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="sw">
+  <div class="sn">1-Slide — WTF Hook · Friday Angle</div>
+  <div class="slide">
+    <div class="tb"></div>
+    <div class="dot-bg"></div>
+    <div class="dq">"</div>
+
+    <div class="main-text">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Your trip blog</div>
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1.1;margin-top:4px;">is already</div>
+      <div style="font-family:'Chewy',cursive;font-size:68px;color:#138EFF;line-height:0.95;margin-top:2px;">WRITTEN.</div>
+    </div>
+
+    <div class="st">You just haven't opened the app yet.</div>
+    <div class="cb">BETA IN BIO</div>
+
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Cat mascot (Spunky) sitting beside a glowing phone screen showing a finished travel blog, looking proud and relaxed. Higgsfield prompt: "Black cartoon cat sitting next to a glowing phone screen displaying a travel blog, soft warm lighting, white background, minimal flat illustration style, cat looks content and proud."</div>
+</div>
+
+</body>
+</html>
