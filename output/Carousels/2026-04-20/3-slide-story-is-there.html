@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloggo — 5 Slides — That trip is still waiting</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F0F2F5;display:flex;flex-direction:column;align-items:center;padding:30px 20px;font-family:'Jost',sans-serif;gap:16px}
+.sw{display:flex;flex-direction:column;align-items:center;width:360px;gap:6px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;text-align:center}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden}
+
+/* ── Hook slide (S1) ── */
+.s1{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px}
+.s1-dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
+
+/* ── Transition slide (S2) ── */
+.s2{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px}
+.grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:30px;text-align:center;line-height:1.3}
+
+/* ── Content slides (S3) ── */
+.s3{display:flex;flex-direction:column;justify-content:center;padding:40px 36px 40px 52px;position:relative}
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+.lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.body{font-family:'Jost',sans-serif;font-weight:400;font-size:26px;color:#1A1A1A;line-height:1.4}
+.body b{font-weight:700}
+.sub{font-family:'Jost',sans-serif;font-size:15px;color:#6B7280;font-style:italic;margin-top:12px;line-height:1.4}
+
+/* ── Insight slide (S4) — centered ── */
+.s4{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px;background:radial-gradient(ellipse at center,rgba(19,142,255,0.04) 0%,transparent 70%)}
+.ins-top{font-family:'Jost',sans-serif;font-weight:400;font-size:24px;color:#6B7280;text-align:center;line-height:1.3}
+.ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:34px;color:#1A1A1A;text-align:center;line-height:1.2;margin-top:10px}
+
+/* ── CTA slide (S5) ── */
+.s5{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px;gap:12px}
+.logo-row{display:flex;align-items:center;gap:14px}
+.logo-row img{width:52px;height:52px;object-fit:contain;border-radius:14px}
+.logo-name{font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1}
+.cta-h{font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;text-align:center;line-height:1.15;margin-top:4px}
+.cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:8px}
+
+/* ── Recurring ── */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;width:360px;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{width:360px;padding:10px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.8}
+.brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ SLIDE 1 — HOOK ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide s1">
+    <div class="s1-dot"></div>
+    <div style="text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">That trip</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.05;margin-top:4px">is still</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:2px">waiting.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky sitting very still, looking at a distant horizon, quiet wistful energy, soft afternoon light. Higgsfield AI prompt: "Cute black cartoon cat sitting alone on a hillside looking at a glowing horizon, quiet wistful mood, soft sunset light, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ SLIDE 2 — TRANSITION ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="grad">The story never left<br>your camera roll.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> Spunky sitting very small and still on a white slide, quiet centered energy. Higgsfield AI prompt: "Tiny cute black cartoon cat sitting perfectly still, centered, minimal white background, quiet energy, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ SLIDE 3 — CONTENT ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide s3">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Every photo</div>
+    <div class="body">A <b>time</b>.<br>A <b>place</b>.<br>A <b>moment</b>.</div>
+    <div class="sub">That's already a timeline.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ═══════════════ SLIDE 4 — INSIGHT ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 4 — Insight</div>
+  <div class="slide s4">
+    <div class="ins-top">The story was always there.</div>
+    <div class="ins-bot">Bloggo just reads it.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Spunky sitting beside a glowing open book or journal, calm insight energy. Higgsfield AI prompt: "Cute black cartoon cat sitting beside a glowing open book, warm ambient light, calm contemplative mood, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ SLIDE 5 — CTA ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 5 — CTA</div>
+  <div class="slide s5">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span class="logo-name">Bloggo</span>
+    </div>
+    <div class="cta-h">Your story<br>is ready.</div>
+    <div class="cta-link">LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Spunky waving excitedly with welcoming energy, holding a small phone showing a blog. Higgsfield AI prompt: "Cute black cartoon cat waving with excitement, holding a tiny glowing phone showing a travel blog, welcoming friendly mood, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ BRIEF ═══════════════ -->
+<div class="brief">
+  <b>Hook Type:</b> Aspirational / Curiosity<br>
+  <b>Notion Destination:</b> notion → Bloggo Content Engine<br>
+  <b>Caption:</b> That trip you loved? It's still in your camera roll — waiting to become a story. Bloggo reads your photos and writes the blog for you. No blank page. No writing. Beta in bio.<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky on hillside watching horizon; Slide 2 — Spunky small and still; Slide 4 — Spunky beside glowing journal; Slide 5 — Spunky waving with phone
+</div>
+
+</body>
+</html>
