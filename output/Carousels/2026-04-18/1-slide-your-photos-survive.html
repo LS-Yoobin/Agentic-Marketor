@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>1-Slide: Your Photos Survive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:14px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(89,224,197,0.2);color:#0d8a6a}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.08) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0}
+.zz{position:relative;z-index:2}
+.tb{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#138EFF,#59E0C5);z-index:10}
+.dq{position:absolute;font-size:220px;color:rgba(19,142,255,0.04);line-height:1;top:-15px;left:0;right:0;text-align:center;pointer-events:none;z-index:0;font-family:Georgia,serif;user-select:none}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.st{font-family:'Jost',sans-serif;font-size:13px;color:#9CA3AF;font-style:italic;margin-top:16px;line-height:1.6;position:relative;z-index:2;max-width:240px}
+.cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:9px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
+.div{height:1px;background:rgba(19,142,255,0.15);margin:14px 0;position:relative;z-index:2;width:40px;align-self:center}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.dl-btn{position:absolute;top:25px;right:8px;z-index:100;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity 0.2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+.caption-block{max-width:360px;margin:16px auto 0;padding:16px;background:#F8FAFF;border:1px solid rgba(19,142,255,0.15);border-radius:10px;font-family:'Jost',sans-serif}
+.caption-platform{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:6px}
+.caption-text{font-size:12px;color:#374151;line-height:1.7;margin:0}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head><body>
+<div style="text-align:center;margin:0 0 16px;">
+  <button onclick="saveAllSlides()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3);">Save All Slides</button>
+</div>
+<div class="meta">
+  <h1>Your photos don't need Bloggo to survive. Your stories might.</h1>
+  <div class="sub">Honest Hook · Urgency · Export CTA</div>
+  <span class="fmt">1 Slide</span>
+</div>
+<div class="carousel">
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 1 — Hook</div>
+    <div class="slide">
+      <div class="tb"></div>
+      <div class="dot"></div>
+      <div class="dq">&ldquo;</div>
+      <div class="c">
+        <div class="zz" style="display:flex;flex-direction:column;align-items:center;">
+          <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;line-height:1.4;">Your photos don't need Bloggo</div>
+          <div style="font-family:'Chewy',cursive;font-size:54px;color:#1A1A1A;line-height:0.95;margin-top:4px;">to survive.</div>
+          <div class="div"></div>
+          <div style="font-family:'Chewy',cursive;font-size:54px;color:#138EFF;line-height:0.95;">Your stories</div>
+          <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#1A1A1A;line-height:1.3;margin-top:6px;font-weight:700;">might.</div>
+          <div class="st">Export them once. They're yours — with or without us.</div>
+          <div class="cb">5 export formats · link in bio</div>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat sitting next to a split image — left side shows a calm camera roll (safe, glowing), right side shows a glowing exported PDF. Cat pointing at the PDF side with an encouraging look. Higgsfield AI: "black cat sitting beside a split visual, left is a glowing phone camera roll, right is a printed glowing PDF book, cat gesturing toward the PDF, encouraging expression, white background"</div>
+  </div>
+</div>
+<div class="brief"><strong>Hook type:</strong> Honest / Contrarian — disarms the fear by naming it, then reframes export as the power move<br><strong>Target emotion:</strong> Surprise → clarity → urgency to export<br><strong>Why this works:</strong> Acknowledges the real limitation (stories need exporting) without hiding it. Converts honesty into a reason to act now.<br><strong>Notion destination:</strong> notion → Bloggo Content Engine<br><strong>Supporting Graphics:</strong> Slide 1 — Cat beside split visual: safe camera roll vs glowing exported PDF.</div>
+<div class="sw" style="flex-direction:column;align-items:center;">
+  <div class="caption-block">
+    <div class="caption-platform">Instagram</div>
+    <p class="caption-text">
+      Your photos don't need Bloggo to survive. They're in your camera roll — they were there before us, they'll be there after.<br><br>
+      But the stories Bloggo writes? The narratives, the captions, the blogs? Those are different. Export them — as a PDF, a video, social slides — and they're yours forever. Don't export them, and they live inside the app.<br><br>
+      That's why we built 5 ways to take your stories with you. Link in bio.<br><br>
+      #travelblog #dataownership #bloggo
+    </p>
+    <div class="caption-platform" style="margin-top:16px;">TikTok</div>
+    <p class="caption-text">
+      Honest answer: your photos will always be yours. They're in your camera roll. But the stories Bloggo generates? Export them — PDF, video, slides — and they're yours forever. That's why we built 5 ways out. Link in bio.<br><br>
+      #travelblog #dataownership #bloggo
+    </p>
+  </div>
+</div>
+<script>
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/\s+/g,'-').toLowerCase();
+  var zip=new JSZip();
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    var canvas=await html2canvas(slides[i],{scale:3,useCORS:true,backgroundColor:'#ffffff'});
+    var blob=await new Promise(function(r){canvas.toBlob(r,'image/png');});
+    zip.file('slide-'+(i+1)+'.png',blob);
+  }
+  var zipBlob=await zip.generateAsync({type:'blob'});
+  saveAs(zipBlob,title+'-slides.zip');
+  btn.textContent=orig;
+  btn.disabled=false;
+}
+function saveSlide(btn){
+  var slide=btn.parentElement.querySelector('.slide');
+  btn.style.opacity='0';
+  html2canvas(slide,{scale:3,useCORS:true,backgroundColor:'#ffffff'}).then(function(canvas){
+    var a=document.createElement('a');
+    a.download=document.title.replace(/\s+/g,'-').toLowerCase()+'-slide.png';
+    a.href=canvas.toDataURL('image/png');
+    a.click();
+    btn.style.opacity='';
+  });
+}
+</script>
+</body></html>
