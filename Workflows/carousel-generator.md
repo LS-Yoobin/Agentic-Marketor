@@ -106,6 +106,75 @@ Follow `docs/marketing/Carasoul.md` exactly:
 
 Slide preview size for screenshotting: **360 × 450px** (maintains 4:5 ratio).
 
+### Slide Download Button
+
+Every carousel HTML file must include `html2canvas` and a hover download button on each slide. When the user hovers over a slide, a **"Save PNG"** button appears in the top-right corner. Clicking it captures that slide as a PNG and downloads it.
+
+**Add to `<head>`:**
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+```
+
+**Add "Save All Slides" button directly after `<body>`, before `.meta` div:**
+```html
+<div style="text-align:center;margin:0 0 16px;">
+  <button onclick="saveAllSlides()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3);">Save All Slides</button>
+</div>
+```
+
+**Add to CSS:**
+```css
+.sw{position:relative}
+.dl-btn{position:absolute;top:8px;right:8px;z-index:20;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity 0.2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+```
+
+**Add this button inside every `.sw` wrapper, before the `.slide` div:**
+```html
+<button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+```
+
+**Add this script before `</body>`:**
+```html
+<script>
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/\s+/g,'-').toLowerCase();
+  var zip=new JSZip();
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    var canvas=await html2canvas(slides[i],{scale:3,useCORS:true,backgroundColor:'#ffffff'});
+    var blob=await new Promise(function(r){canvas.toBlob(r,'image/png');});
+    zip.file('slide-'+(i+1)+'.png',blob);
+  }
+  var zipBlob=await zip.generateAsync({type:'blob'});
+  saveAs(zipBlob,title+'-slides.zip');
+  btn.textContent=orig;
+  btn.disabled=false;
+}
+function saveSlide(btn){
+  var slide = btn.parentElement.querySelector('.slide');
+  btn.style.opacity='0';
+  html2canvas(slide,{scale:3,useCORS:true,backgroundColor:'#ffffff'}).then(function(canvas){
+    var a=document.createElement('a');
+    a.download=document.title.replace(/\s+/g,'-').toLowerCase()+'-slide.png';
+    a.href=canvas.toDataURL('image/png');
+    a.click();
+    btn.style.opacity='';
+  });
+}
+</script>
+```
+
+**CRITICAL — never add `data-html2canvas-ignore` to images.** Some AI-generated versions of this script add `imgs.forEach(img => img.setAttribute('data-html2canvas-ignore','true'))` before the `html2canvas` call. This causes all `<img>` elements (including the Bloggo icon and cat paw) to be invisible in the saved PNG. Do not include those lines. Images are already base64 data URLs after `inline-images.js` runs — they render without any workarounds.
+
+`scale:3` renders at 3× resolution (1080×1350px) — crisp for Instagram.
+
 ### Cat Paw CSS
 
 ```css
@@ -152,7 +221,8 @@ The hook slide (Slide 1) text often wraps badly at large Chewy sizes inside the 
 | Subtitle tagline | `.st` | Jost italic, 15px, `#9CA3AF`, below the main quote |
 | CTA badge | `.cb` | Blue outlined pill, Jost 700, `#138EFF`, "BETA IN BIO" or similar |
 | Bloggo watermark | `.bm` | Bottom-left, Chewy, `rgba(19,142,255,0.6)` |
-| Cat paw | `.pw` | Bottom-right, PNG |
+
+> **No cat paw on 1-slide posts.** The `.pw` element must NOT appear in 1-slide files.
 
 **Required CSS additions for 1-sliders:**
 ```css
@@ -161,7 +231,6 @@ The hook slide (Slide 1) text often wraps badly at large Chewy sizes inside the 
 .st{font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-top:18px;line-height:1.4;position:relative;z-index:2}
 .cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
 .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
-.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
 ```
 
 ### Graphic Note Format
@@ -205,6 +274,46 @@ Include the Higgsfield prompt as a `.gfx-note` block **below** each slide in the
 
 ---
 
+## Social Media Captions
+
+Every carousel HTML file must include a **caption block** displayed below the final slide, inside the `.sw` wrapper.
+
+Generate **two caption versions** — one for Instagram, one for TikTok. Each caption:
+- Opens with a strong **hook line** (mirrors the carousel's Slide 1 hook)
+- 2–4 sentences explaining how Bloggo solves the problem shown in the carousel
+- Ends with a **CTA** (e.g. "Link in bio to try Bloggo." / "Download Bloggo — link in bio.")
+- Exactly **3 hashtags** — specific and relevant (e.g. `#travelblog #travelphotography #bloggo`)
+- No jargon, active voice, benefit-first — same brand rules as copy
+
+### Caption HTML Block
+
+Add this block inside the `.sw` wrapper, AFTER the last `.slide` or `.gfx-note`:
+
+```html
+<div class="caption-block">
+  <div class="caption-platform">Instagram</div>
+  <p class="caption-text">
+    [Instagram caption text here]<br><br>
+    #hashtag1 #hashtag2 #bloggo
+  </p>
+  <div class="caption-platform" style="margin-top:16px;">TikTok</div>
+  <p class="caption-text">
+    [TikTok caption text here]<br><br>
+    #hashtag1 #hashtag2 #bloggo
+  </p>
+</div>
+```
+
+### Caption CSS (include in every file)
+
+```css
+.caption-block{max-width:360px;margin:16px auto 0;padding:16px;background:#F8FAFF;border:1px solid rgba(19,142,255,0.15);border-radius:10px;font-family:'Jost',sans-serif}
+.caption-platform{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:6px}
+.caption-text{font-size:12px;color:#374151;line-height:1.7;margin:0}
+```
+
+---
+
 ## Output Files
 
 Name each file clearly:
@@ -225,6 +334,18 @@ output/Carousels/2026-04-15/
   8-slide-graveyard-of-stories.html
   8-slide-stopped-writing.html
 ```
+
+---
+
+## Post-Generation: Inline Images
+
+After saving all carousel HTML files, run this script to replace relative image paths with inline base64 data URLs. This is required for the "Save All Slides" button to work — html2canvas cannot load local file paths from `file://` but can read inline data URLs.
+
+```bash
+node scripts/inline-images.js output/Carousels/[TODAY'S DATE]/
+```
+
+Do not skip this step. Without it, only Slide 1 will save in the ZIP (slide 1 has no images; slides 2–10 do).
 
 ---
 
@@ -252,7 +373,7 @@ Before saving each carousel HTML file:
 - [ ] Blue accent bar on left-aligned slides
 - [ ] 1–3 keywords bolded per content slide
 - [ ] No slide exceeds 10 words
-- [ ] Cat paw PNG on slides 2–9 bottom-right (not emoji)
+- [ ] Cat paw PNG on slides 2–9 bottom-right (not emoji) — **multi-slide posts only**
 - [ ] Bloggo watermark on slides 2–9 bottom-left
 - [ ] No `.mp` dashed placeholder boxes inside any slide
 - [ ] Higgsfield prompts as `.gfx-note` blocks BELOW each mascot slide (not inside the slide)
@@ -261,6 +382,10 @@ Before saving each carousel HTML file:
 - [ ] Brand voice check passed (no jargon, active voice, benefit-first)
 - [ ] CTA is one action only
 - [ ] `.brief` box includes "Supporting Graphics:" section listing each slide that needs a graphic (or "None — text only")
+- [ ] `html2canvas` CDN script in `<head>`
+- [ ] `.dl-btn` CSS present
+- [ ] "Save PNG" button inside every `.sw` wrapper
+- [ ] `saveSlide()` script present before `</body>`
 
 **Hook slide (Slide 1) typography:**
 - [ ] Long setup phrases use Jost italic at 18–20px, not large Chewy
@@ -273,12 +398,22 @@ Before saving each carousel HTML file:
 - [ ] Subtitle tagline (`.st`) present
 - [ ] CTA badge (`.cb`) present
 - [ ] Bloggo watermark (`.bm`) present
-- [ ] Cat paw PNG (`.pw`) present
+- [ ] **No cat paw** — `.pw` must NOT appear on 1-slide posts
+
+**Captions (all carousels):**
+- [ ] Caption block present below final slide
+- [ ] Instagram version included
+- [ ] TikTok version included
+- [ ] Exactly 3 hashtags per platform
+- [ ] Hook line mirrors Slide 1
+- [ ] CTA present in caption
+- [ ] Brand voice: active, benefit-first, no jargon
 
 **Per run (4 carousels):**
 - [ ] 1 × 1-slide post generated
 - [ ] 1 × 3–5 slide post generated
 - [ ] 2 × 8–10 slide posts generated (different hook angles)
+- [ ] `node scripts/inline-images.js output/Carousels/[DATE]/` run after all files saved
 
 ---
 

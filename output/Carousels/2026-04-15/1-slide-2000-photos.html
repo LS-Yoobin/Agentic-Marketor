@@ -19,11 +19,19 @@ body{background:#f0f0f0;padding:24px 16px 40px}
 .tb{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#138EFF,#59E0C5);z-index:10}
 .dq{position:absolute;font-size:220px;color:rgba(19,142,255,0.04);line-height:1;top:-15px;left:0;right:0;text-align:center;pointer-events:none;z-index:0;font-family:Georgia,serif;user-select:none}
 .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
-.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
 .st{font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-top:18px;line-height:1.4;position:relative;z-index:2}
 .cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
-</style></head><body>
-<div class="meta">
+
+.sw{position:relative!important}
+.dl-btn{position:absolute;top:25px;right:8px;z-index:100;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity 0.2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+</style><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head><body>
+<div style="text-align:center;margin:0 0 16px;">
+  <button onclick="saveAllSlides()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3);">Save All Slides</button>
+</div><div class="meta">
   <h1>2,000 photos from your last trip. 0 stories written.</h1>
   <div class="sub">1d · Stat + Pain · Relatable</div>
   <span class="fmt">1 Slide</span>
@@ -46,9 +54,71 @@ body{background:#f0f0f0;padding:24px 16px 40px}
         </div>
       </div>
       <div class="bm">Bloggo</div>
-      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
     </div>
   </div>
 </div>
 <div class="brief"><strong>Caption CTA:</strong> You're not lazy. The tools were wrong. Bloggo turns your camera roll into a story automatically — no writing, no blank page. Beta in bio.<br><br><strong>Hook type:</strong> Stat + pain point<br><strong>Target emotion:</strong> "This is literally me" → comment + save<br><strong>Supporting Graphics:</strong> None — text only</div>
+<script>
+async function captureSlide(slide){
+  var gtEls=Array.from(slide.querySelectorAll('.gt'));
+  gtEls.forEach(function(el){
+    var isItalic=el.style.fontStyle==='italic'||window.getComputedStyle(el).fontStyle==='italic';
+    el.style.webkitTextFillColor=isItalic?'#6DD5FA':'#3BBAFF';el.style.color=isItalic?'#6DD5FA':'#3BBAFF';
+    el.style.webkitBackgroundClip='unset';
+    el.style.backgroundClip='unset';
+    el.style.background='none';
+  });
+  var canvas=await html2canvas(slide,{scale:4,backgroundColor:'#ffffff',logging:false});
+  gtEls.forEach(function(el){
+    el.style.webkitTextFillColor='';el.style.color='';
+    el.style.webkitBackgroundClip='';
+    el.style.backgroundClip='';
+    el.style.background='';
+  });
+  return canvas;
+}
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/s+/g,'-').toLowerCase().substring(0,50);
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    try{
+      var canvas=await captureSlide(slides[i]);
+      var a=document.createElement('a');
+      a.download=title+'-slide-'+(i+1)+'.png';
+      a.href=canvas.toDataURL('image/png');
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      await new Promise(function(r){setTimeout(r,600);});
+    }catch(e){console.warn('Slide '+(i+1)+':',e);}
+  }
+  btn.textContent=orig;
+  btn.disabled=false;
+}
+document.querySelectorAll('.sw').forEach(function(sw){
+  var btn=document.createElement('button');
+  btn.className='dl-btn';
+  btn.textContent='Save PNG';
+  btn.onclick=async function(){
+    var slide=sw.querySelector('.slide');
+    btn.style.opacity='0';
+    try{
+      var canvas=await captureSlide(slide);
+      var a=document.createElement('a');
+      a.download=document.title.replace(/s+/g,'-').toLowerCase()+'-slide.png';
+      a.href=canvas.toDataURL('image/png');
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }catch(e){console.warn(e);}
+    btn.style.opacity='';
+  };
+  sw.appendChild(btn);
+});
+</script>
+
 </body></html>
