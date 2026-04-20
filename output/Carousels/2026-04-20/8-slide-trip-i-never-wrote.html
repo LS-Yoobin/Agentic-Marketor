@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloggo — 10 Slides — I swore I'd write it up (Story Hook)</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F0F2F5;display:flex;flex-direction:column;align-items:center;padding:30px 20px;font-family:'Jost',sans-serif;gap:16px}
+.sw{display:flex;flex-direction:column;align-items:center;width:360px;gap:6px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;text-align:center}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden}
+
+/* ── Hook (S1) ── */
+.s1{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px}
+
+/* ── Transition (S2) ── */
+.s2{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px}
+.grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:27px;text-align:center;line-height:1.35}
+
+/* ── Left-aligned content (S3,S4,S6,S7,S8) ── */
+.sl{display:flex;flex-direction:column;justify-content:center;padding:40px 36px 40px 52px;position:relative}
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+.lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.body{font-family:'Jost',sans-serif;font-weight:400;font-size:28px;color:#1A1A1A;line-height:1.4}
+.body b{font-weight:700}
+.sub{font-family:'Jost',sans-serif;font-size:15px;color:#6B7280;font-style:italic;margin-top:12px;line-height:1.4}
+
+/* ── Centered content (S5) ── */
+.sc{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px;background:radial-gradient(ellipse at center,rgba(19,142,255,0.04) 0%,transparent 65%)}
+.sc-big{font-family:'Chewy',cursive;font-size:52px;color:#138EFF;text-align:center;line-height:1}
+.sc-sub{font-family:'Jost',sans-serif;font-size:18px;color:#6B7280;font-style:italic;text-align:center;margin-top:14px;line-height:1.4}
+
+/* ── Insight (S9) ── */
+.s9{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px}
+.ins-top{font-family:'Jost',sans-serif;font-weight:400;font-size:23px;color:#6B7280;text-align:center;line-height:1.3}
+.ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:36px;color:#1A1A1A;text-align:center;line-height:1.15;margin-top:10px}
+
+/* ── CTA (S10) ── */
+.s10{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px;gap:12px}
+.logo-row{display:flex;align-items:center;gap:14px}
+.logo-name{font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1}
+.cta-h{font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;text-align:center;line-height:1.2;margin-top:4px}
+.cta-accent{font-family:'Chewy',cursive;font-size:34px;color:#138EFF;text-align:center;line-height:1.1}
+.cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:8px}
+
+/* ── Recurring ── */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{width:360px;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{width:360px;padding:10px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.8}
+.brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ SLIDE 1 — HOOK ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Story)</div>
+  <div class="slide s1">
+    <div style="text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">I swore</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.05;margin-top:4px">I'd write</div>
+      <div style="font-family:'Chewy',cursive;font-size:68px;color:#138EFF;line-height:0.9;margin-top:4px">it up.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky staring at a blank open notebook, conflicted expression, pen in paw, soft warm light. Higgsfield AI prompt: "Cute black cartoon cat staring at a blank open notebook on a desk, pen in paw, conflicted expression, soft warm light, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ SLIDE 2 — TRANSITION ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="grad">Every traveler says this.<br><b>Almost none do.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> Spunky sitting very small and still, quiet centered energy. Higgsfield AI prompt: "Tiny cute black cartoon cat sitting perfectly still, minimal white background, quiet relatable mood, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ SLIDE 3 — CONTENT ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">After every trip</div>
+    <div class="body">You took<br>600 <b>photos</b>.</div>
+    <div class="sub">Every single time.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ═══════════════ SLIDE 4 — CONTENT ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Then came home</div>
+    <div class="body">You wrote<br><b>zero</b> words.</div>
+    <div class="sub">Also every single time.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ═══════════════ SLIDE 5 — CENTERED CONTENT ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content (centered)</div>
+  <div class="slide sc">
+    <div class="sc-big">6 months<br>later.</div>
+    <div class="sc-sub">The details start to disappear.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Spunky watching a butterfly float away, slightly reaching for it, memory-fading mood. Higgsfield AI prompt: "Cute black cartoon cat watching a glowing butterfly float away, gently reaching out one paw, soft melancholy mood, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ SLIDE 6 — CONTENT ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">What fades first</div>
+    <div class="body">The <b>restaurant</b>.<br>The hostel name.<br>The best <b>moment</b>.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ═══════════════ SLIDE 7 — CONTENT ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">The truth</div>
+    <div class="body">Your photos<br><b>carry</b> the whole story.</div>
+    <div class="sub">You just can't read them yet.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ═══════════════ SLIDE 8 — CONTENT ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">The fix</div>
+    <div class="body">Bloggo <b>reads</b><br>what's already<br>there.</div>
+    <div class="sub">In under 60 seconds.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Spunky looking at a glowing phone screen showing a beautiful travel blog, delighted expression. Higgsfield AI prompt: "Cute black cartoon cat looking at a glowing phone screen displaying a travel blog, delighted and amazed expression, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ SLIDE 9 — INSIGHT ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight (save-bait)</div>
+  <div class="slide s9">
+    <div class="ins-top">The story was always there.</div>
+    <div class="ins-bot">You just needed<br>to start.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting beside a glowing open journal, calm insight energy, soft warm light. Higgsfield AI prompt: "Cute black cartoon cat sitting beside an open glowing travel journal, calm and wise expression, warm soft light, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ SLIDE 10 — CTA ═══════════════ -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide s10">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span class="logo-name">Bloggo</span>
+    </div>
+    <div class="cta-h">Join the beta.</div>
+    <div class="cta-accent">Write nothing.</div>
+    <div class="cta-link">LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky waving excitedly with open welcoming arms. Higgsfield AI prompt: "Cute black cartoon cat waving excitedly with open welcoming arms, happy energetic mood, illustrated flat style, no text."</div>
+</div>
+
+<!-- ═══════════════ BRIEF ═══════════════ -->
+<div class="brief">
+  <b>Hook Type:</b> Story<br>
+  <b>Notion Destination:</b> notion → Bloggo Content Engine<br>
+  <b>Caption:</b> "I swore I'd write it up." — every traveler. Almost none do. Six months later the details are gone. Your photos carry the whole story. Bloggo reads them and writes your blog in seconds. No writing. No blank page. Beta in bio.<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky with blank notebook; Slide 2 — Spunky small and still; Slide 5 — Spunky watching butterfly float away; Slide 8 — Spunky looking at blog on phone; Slide 9 — Spunky beside glowing journal; Slide 10 — Spunky waving
+</div>
+
+</body>
+</html>
