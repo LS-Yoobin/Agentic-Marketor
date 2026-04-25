@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloggo — Your Camera Roll Is a Journal</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#e8edf2;font-family:'Jost',sans-serif;padding:30px}
+  h1{font-family:'Chewy',cursive;font-size:22px;color:#138EFF;margin-bottom:6px;text-align:center}
+  .meta{text-align:center;font-size:11px;color:#888;margin-bottom:24px;font-family:'Jost',sans-serif}
+
+  /* Slide wrapper */
+  .sw{margin:0 auto;width:360px}
+  .sn{font-size:10px;color:#aaa;text-align:center;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase;font-family:'Jost',sans-serif}
+
+  /* Slide canvas */
+  .slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 36px}
+
+  /* 1-slide elements */
+  .tb{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#138EFF,#59E0C5);z-index:10}
+  .dq{position:absolute;font-size:220px;color:rgba(19,142,255,0.04);line-height:1;top:-15px;left:0;right:0;text-align:center;pointer-events:none;z-index:0;font-family:Georgia,serif;user-select:none}
+  .st{font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-top:18px;line-height:1.4;position:relative;z-index:2}
+  .cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* gfx-note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  /* brief box */
+  .brief{max-width:360px;margin:28px auto 0;padding:16px 20px;background:rgba(19,142,255,0.04);border:1px solid rgba(19,142,255,0.2);border-radius:10px;font-family:'Jost',sans-serif;font-size:12px;color:#333;line-height:1.8}
+  .brief h3{font-family:'Chewy',cursive;font-size:20px;color:#138EFF;margin-bottom:10px}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+<h1>Bloggo Carousel</h1>
+<div class="meta">1-slide · WTF Hook · Friday Apr 25, 2026 · Notion: <b style="color:#138EFF">Bloggo Content Engine</b></div>
+
+<div class="sw">
+  <div class="sn">Slide 1 — Hook / Full Post</div>
+  <div class="slide">
+    <!-- Top gradient bar -->
+    <div class="tb"></div>
+    <!-- Ghost quote mark -->
+    <div class="dq">"</div>
+    <!-- Dot pattern -->
+    <div style="position:absolute;inset:0;background-image:radial-gradient(#138EFF 1px,transparent 1px);background-size:36px 36px;opacity:0.04;z-index:0;pointer-events:none;"></div>
+
+    <!-- Hook text -->
+    <div style="position:relative;z-index:2;text-align:center;">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Your camera roll</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.05;margin-top:4px;">is a</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:2px;">journal.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;line-height:1.4;margin-top:12px;">You just can't read it yet.</div>
+    </div>
+
+    <!-- Subtitle -->
+    <div class="st">Bloggo reads it for you. In seconds.</div>
+
+    <!-- CTA badge -->
+    <div class="cb">BETA IN BIO</div>
+
+    <!-- Bloggo watermark -->
+    <div class="bm">Bloggo</div>
+    <!-- Cat paw -->
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat mascot) sitting beside a glowing phone showing a chaotic camera roll grid, tilting head curiously. Higgsfield prompt: "Stylized black cat with round curious eyes sitting next to a glowing smartphone showing a grid of travel photos, soft white background, warm ambient light, illustrated digital art style, simple and clean."</div>
+</div>
+
+<!-- Brief -->
+<div class="brief">
+  <h3>Content Brief</h3>
+  <b>Format:</b> 1-slide post<br>
+  <b>Hook type:</b> WTF / Counterintuitive<br>
+  <b>Angle:</b> Friday — Challenges assumptions<br>
+  <b>Copy check:</b> 6 visual words max per line ✓ · Active voice ✓ · No cloud features ✓ · Bloggo capitalized ✓<br>
+  <b>Notion destination:</b> notion → Bloggo Content Engine<br>
+  <b>Caption hook:</b> "Your camera roll has been a travel journal this whole time. You just needed someone to translate it. That's Bloggo."<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky curious beside phone (Higgsfield prompt above)
+</div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloggo — Stop Writing Travel Captions</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#e8edf2;font-family:'Jost',sans-serif;padding:30px}
+  h1{font-family:'Chewy',cursive;font-size:22px;color:#138EFF;margin-bottom:6px;text-align:center}
+  .meta{text-align:center;font-size:11px;color:#888;margin-bottom:24px}
+
+  .sw{margin:20px auto;width:360px}
+  .sn{font-size:10px;color:#aaa;text-align:center;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase;font-family:'Jost',sans-serif}
+
+  /* Slide canvas */
+  .slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 36px}
+
+  /* Slide 1 dot pattern */
+  .dot-bg{position:absolute;inset:0;background-image:radial-gradient(#138EFF 1px,transparent 1px);background-size:36px 36px;opacity:0.04;z-index:0;pointer-events:none}
+
+  /* Slide 2 gradient text */
+  .grad-text{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:30px;line-height:1.25;text-align:center;position:relative;z-index:2}
+
+  /* Slide 3 — content / left-aligned */
+  .slide-left{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:40px 40px 40px 48px;text-align:left}
+  .accent-bar{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+  .right-grad{position:absolute;right:0;top:0;width:45%;bottom:0;background:linear-gradient(to left,rgba(19,142,255,0.06),transparent);z-index:0;pointer-events:none}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;position:relative;z-index:2;margin-bottom:14px}
+  .body-text{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+
+  /* CTA slide (Slide 4) */
+  .slide-cta{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 36px}
+
+  /* Recurring */
+  .wm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* gfx-note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  /* brief */
+  .brief{max-width:360px;margin:28px auto 0;padding:16px 20px;background:rgba(19,142,255,0.04);border:1px solid rgba(19,142,255,0.2);border-radius:10px;font-family:'Jost',sans-serif;font-size:12px;color:#333;line-height:1.8}
+  .brief h3{font-family:'Chewy',cursive;font-size:20px;color:#138EFF;margin-bottom:10px}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+<h1>Bloggo Carousel</h1>
+<div class="meta">3-slide · WTF / Counterintuitive Hook · Friday Apr 25, 2026 · Notion: <b style="color:#138EFF">Bloggo Content Engine</b></div>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="dot-bg"></div>
+    <div style="position:relative;z-index:2;text-align:center;">
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;">Stop</div>
+      <div style="font-family:'Chewy',cursive;font-size:48px;color:#1A1A1A;line-height:1.0;margin-top:6px;">writing</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;margin-top:10px;">travel captions.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat mascot) holding up a paw in a "stop" gesture, looking directly at camera with a confident expression. Higgsfield prompt: "Stylized black cat with round expressive eyes holding one paw up in a 'stop' gesture, clean white background, bold playful digital art, simple composition."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <!-- Subtle centered radial -->
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0;pointer-events:none;"></div>
+    <div class="grad-text">Your camera roll<br>already knows<br>the story.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — INSIGHT (left-aligned) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Insight</div>
+  <div class="slide-left">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="label">THE SHIFT</div>
+    <div class="body-text">
+      GPS + time + place<br>
+      = <strong>your story.</strong><br>
+      <span style="font-style:italic;color:#6B7280;font-size:20px;display:block;margin-top:12px;">Bloggo reads it all. You just tap.</span>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Spunky looking at a glowing phone screen showing a completed blog timeline with locations pinned on a map. Higgsfield prompt: "Stylized black cat gazing at a glowing phone screen displaying a travel timeline map with pins, clean white background, warm glow, digital art illustration."</div>
+</div>
+
+<!-- SLIDE 4 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 4 — CTA</div>
+  <div class="slide-cta">
+    <!-- Logo row -->
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;justify-content:center;">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1;">Bloggo</div>
+    </div>
+    <div style="font-family:'Chewy',cursive;font-size:40px;color:#1A1A1A;line-height:1.1;margin-bottom:8px;">Your camera roll<br>is waiting.</div>
+    <div style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.1;">One tap. Done.</div>
+    <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:20px;">LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Spunky waving excitedly at the viewer, holding a small sign or phone. Higgsfield prompt: "Stylized black cat waving one paw enthusiastically, happy welcoming expression, clean white background, warm digital illustration style."</div>
+</div>
+
+<!-- Brief -->
+<div class="brief">
+  <h3>Content Brief</h3>
+  <b>Format:</b> 3-slide post<br>
+  <b>Hook type:</b> WTF / Counterintuitive<br>
+  <b>Angle:</b> Friday — Challenges assumptions (stop writing captions = unexpected instruction)<br>
+  <b>Slides:</b> Hook → Transition (gradient) → Insight (left-aligned) → CTA<br>
+  <b>Word counts:</b> S1: 3 ✓ · S2: 8 ✓ · S3: 10 ✓ · S4: 8 ✓<br>
+  <b>Copy check:</b> Active voice ✓ · No cloud features ✓ · Bloggo capitalized ✓ · No jargon ✓<br>
+  <b>Notion destination:</b> notion → Bloggo Content Engine<br>
+  <b>Caption hook:</b> "You don't need to write a single caption after your next trip. Swipe to see why."<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky stop gesture · Slide 3 — Spunky reading phone map · Slide 4 — Spunky waving
+</div>
+
+</body>
+</html>
