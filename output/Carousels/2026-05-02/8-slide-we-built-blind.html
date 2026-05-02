@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-Slide — We Built a Travel App and Never Saw a Photo</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;padding:30px;font-family:'Jost',sans-serif}
+  h1{font-family:'Jost',sans-serif;font-size:13px;color:#6B7280;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
+  .sw{display:flex;flex-direction:column;align-items:center;margin-bottom:28px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;margin-bottom:6px;letter-spacing:0.5px}
+  .slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;padding:44px 36px;display:flex;flex-direction:column;justify-content:center}
+
+  /* Slide 1 — Hook centered */
+  .s1{align-items:center;text-align:center}
+  .hook-setup{font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4}
+  .hook-mid{font-family:'Chewy',cursive;font-size:46px;color:#1A1A1A;line-height:1.05;margin-top:6px}
+  .hook-hero{font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:0.95;margin-top:4px}
+  .hook-end{font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:10px}
+
+  /* Slide 2 — Transition */
+  .s2{align-items:center;text-align:center}
+  .grad-text{font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.4;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+  /* Content slides */
+  .content-slide{align-items:flex-start}
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;position:relative;z-index:2}
+  .body-text{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+  .body-text b{font-weight:700}
+  .sub-text{font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:12px;line-height:1.4;position:relative;z-index:2}
+
+  /* Slide 9 — Insight */
+  .s9{align-items:center;text-align:center}
+  .insight-top{font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;line-height:1.4;margin-bottom:14px}
+  .insight-bottom{font-family:'Jost',sans-serif;font-weight:700;font-size:30px;color:#1A1A1A;line-height:1.25}
+  .insight-bottom span{color:#138EFF}
+
+  /* Slide 10 — CTA */
+  .s10{align-items:center;text-align:center}
+  .cta-logo-row{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:18px}
+  .cta-app-name{font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1}
+  .cta-headline{font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.2;margin-bottom:6px}
+  .cta-accent{font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.2;margin-bottom:16px}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase}
+
+  /* Recurring */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  .gfx-note{max-width:360px;margin:6px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  .brief{max-width:360px;margin:10px auto 0;padding:10px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+  .brief b{color:#1A1A1A;font-weight:700}
+</style>
+</head>
+<body>
+<h1>8-Slide — We Built Blind · 2026-05-02 · Hook: Contrarian/Curiosity</h1>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Contrarian)</div>
+  <div class="slide s1">
+    <div class="hook-setup">We built a travel app.</div>
+    <div class="hook-mid">We've never</div>
+    <div class="hook-hero">seen a photo.</div>
+    <div class="hook-end">Not one. On purpose.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky with paws over eyes, playfully "looking away" from a phone screen showing photos — exaggerated, humorous gesture of deliberately not looking. Higgsfield prompt: "A small black cartoon cat playfully covering its eyes with both paws, phone next to it showing photo thumbnails, deliberately looking away, white background, blue accent lighting, digital illustration, humorous intentional mood."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="grad-text">Here's why we built it<br>that way — and why<br>it <b>matters to you.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — Content -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The decision</div>
+    <div class="body-text">We decided: Bloggo's<br>AI runs <b>on your phone.</b></div>
+    <div class="sub-text">Before we wrote a single line of code.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — Content -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">What that means</div>
+    <div class="body-text">Your photos <b>never travel</b><br>to our servers.</div>
+    <div class="sub-text">Not to train models. Not to improve the app.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — Content -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The tradeoff</div>
+    <div class="body-text">It made building<br><b>harder for us.</b></div>
+    <div class="sub-text">On-device AI is a real engineering constraint.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — Content -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The payoff</div>
+    <div class="body-text">Your <b>memories</b><br>stay only yours.</div>
+    <div class="sub-text">Your face. Your location. Your story.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — Content -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">No server needed</div>
+    <div class="body-text">Trip detected. Blog written.<br><b>All on your device.</b></div>
+    <div class="sub-text">In under 60 seconds.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — Content -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">What you get</div>
+    <div class="body-text">A <b>real travel blog.</b><br>Zero privacy cost.</div>
+    <div class="sub-text">That's the whole point.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT / SAVE-BAIT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide s9">
+    <div class="insight-top">The best feature<br>isn't the AI writing your blog.</div>
+    <div class="insight-bottom">It's that the AI<br><span>never leaves your phone.</span></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting beside a glowing phone with a lock icon and a small travel blog visible on screen. Calm, settled posture — sense of completeness. Higgsfield prompt: "A small black cartoon cat sitting contentedly beside a phone showing a completed travel blog with a small lock icon overlay, calm satisfied expression, white background, soft blue glow, digital illustration, peaceful complete mood."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide s10">
+    <div class="cta-logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div class="cta-app-name">Bloggo</div>
+    </div>
+    <div class="cta-headline">Your trips. Your stories.</div>
+    <div class="cta-accent">Your phone. Always.</div>
+    <div class="cta-link">Join the beta · Link in bio</div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky waving with open arms beside the Bloggo icon, happy welcoming energy. Higgsfield prompt: "A small black cartoon cat waving joyfully with both arms open, warm welcoming expression, beside a glowing app icon, white background, blue accent light, digital illustration, friendly inviting mood."</div>
+</div>
+
+<div class="brief">
+  <b>Brief — 8-slide-we-built-blind.html</b><br>
+  <b>Angle:</b> Privacy differentiator — Contrarian/Curiosity hook<br>
+  <b>Slides:</b> 10 (Hook → Transition → 6 content → Insight → CTA)<br>
+  <b>Hook type:</b> Contrarian — "We built a travel app and never saw a photo"<br>
+  <b>Notion:</b> notion → Bloggo Content Engine<br>
+  <b>Caption note:</b> "We've been building Bloggo for months. We've never seen a single user photo. Not one. That's not a bug — it's the whole architecture. Our AI runs entirely on your device. No servers. No data collection. Just a beautiful travel blog that stays on your phone. Swipe to understand why this was a hard choice worth making. Beta in bio."<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky covering eyes (deliberately not looking) · Slide 9 — Spunky beside phone with lock icon · Slide 10 — Spunky waving welcome
+</div>
+
+</body>
+</html>
