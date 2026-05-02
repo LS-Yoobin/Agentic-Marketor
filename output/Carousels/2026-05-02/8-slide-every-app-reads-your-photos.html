@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-Slide — Every Travel App Reads Your Photos</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;padding:30px;font-family:'Jost',sans-serif}
+  h1{font-family:'Jost',sans-serif;font-size:13px;color:#6B7280;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
+  .sw{display:flex;flex-direction:column;align-items:center;margin-bottom:28px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;margin-bottom:6px;letter-spacing:0.5px}
+  .slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;padding:44px 36px;display:flex;flex-direction:column;justify-content:center}
+
+  /* Slide 1 — Hook centered */
+  .s1{align-items:center;text-align:center}
+  .hook-setup{font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4}
+  .hook-hero{font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.95;margin-top:8px}
+  .hook-end{font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:10px}
+
+  /* Slide 2 — Transition (gradient, centered) */
+  .s2{align-items:center;text-align:center}
+  .grad-text{font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.35;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+  /* Slides 3–7 — Content left-aligned */
+  .content-slide{align-items:flex-start}
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;position:relative;z-index:2}
+  .body-text{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+  .body-text b{font-weight:700}
+  .sub-text{font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:12px;line-height:1.4;position:relative;z-index:2}
+
+  /* Slide 8 — Insight centered */
+  .s8{align-items:center;text-align:center}
+  .insight-top{font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;line-height:1.4;margin-bottom:14px}
+  .insight-bottom{font-family:'Jost',sans-serif;font-weight:700;font-size:32px;color:#1A1A1A;line-height:1.2}
+  .insight-bottom span{color:#138EFF}
+
+  /* Slide 9 — CTA */
+  .s9{align-items:center;text-align:center}
+  .cta-logo-row{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:18px}
+  .cta-app-name{font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1}
+  .cta-headline{font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.2;margin-bottom:6px}
+  .cta-accent{font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.2;margin-bottom:16px}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase}
+
+  /* Recurring */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  .gfx-note{max-width:360px;margin:6px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  .brief{max-width:360px;margin:10px auto 0;padding:10px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+  .brief b{color:#1A1A1A;font-weight:700}
+</style>
+</head>
+<body>
+<h1>8-Slide — Every Travel App Reads Your Photos · 2026-05-02 · Hook: Fear/WTF</h1>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Fear/WTF)</div>
+  <div class="slide s1">
+    <div class="hook-setup">Every travel app</div>
+    <div class="hook-hero">reads</div>
+    <div class="hook-end">your photos. Most send them to a server.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky staring at overflowing notifications/upload arrows coming off a phone screen — concerned expression, surrounded by floating camera icons. Higgsfield prompt: "A small black cartoon cat surrounded by floating photo icons and upload arrows, wide alarmed eyes, white background, blue accent lighting, digital illustration, anxious but curious mood."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="grad-text">Here's what happens<br>to your photos<br>when you don't notice.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — Content -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The reality</div>
+    <div class="body-text">You open a travel app.<br>It asks for <b>photo access.</b></div>
+    <div class="sub-text">You tap "Allow." You move on.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — Content -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">What happens next</div>
+    <div class="body-text">Those photos go to<br>a <b>server you've never heard of.</b></div>
+    <div class="sub-text">So AI can process them. Remotely.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — Content -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The tradeoff</div>
+    <div class="body-text">Your <b>faces, locations,</b><br>and moments — stored elsewhere.</div>
+    <div class="sub-text">For features you may never use.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — Content (Shift) -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content (Shift)</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The question</div>
+    <div class="body-text">Does a travel app<br><b>need your photos</b> on their server?</div>
+    <div class="sub-text">We asked ourselves the same thing.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — Content (Answer) -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content (Answer)</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The answer</div>
+    <div class="body-text">It doesn't.<br>AI runs <b>on your phone.</b></div>
+    <div class="sub-text">Your photos never leave. By design.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — INSIGHT / SAVE-BAIT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Insight</div>
+  <div class="slide s8">
+    <div class="insight-top">Privacy isn't a toggle.<br>It's a design decision.</div>
+    <div class="insight-bottom">We made it<br><span>before writing line one.</span></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Spunky sitting beside a glowing open journal/book, calm and thoughtful, one paw on the journal. Conveys intentionality and care. Higgsfield prompt: "A small black cartoon cat sitting beside a glowing open book, paw resting on the page, calm and thoughtful expression, soft blue ambient light, white background, digital illustration style, quiet intentional mood."</div>
+</div>
+
+<!-- SLIDE 9 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 9 — CTA</div>
+  <div class="slide s9">
+    <div class="cta-logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div class="cta-app-name">Bloggo</div>
+    </div>
+    <div class="cta-headline">Your photos.</div>
+    <div class="cta-accent">Your phone. Full stop.</div>
+    <div class="cta-link">Join the beta · Link in bio</div>
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky waving excitedly with a welcoming body posture beside the Bloggo logo. Open, joyful energy. Higgsfield prompt: "A small black cartoon cat waving joyfully with both paws up, welcoming expression, beside a softly glowing app icon, white background, blue accent lighting, digital illustration, inviting friendly mood."</div>
+</div>
+
+<div class="brief">
+  <b>Brief — 8-slide-every-app-reads-your-photos.html</b><br>
+  <b>Angle:</b> Privacy differentiator — Fear/WTF hook<br>
+  <b>Slides:</b> 9 (Hook → Transition → 5 content → Insight → CTA)<br>
+  <b>Notion:</b> notion → Bloggo Content Engine<br>
+  <b>Caption note:</b> "Most travel apps ask for photo access and silently upload them to process on their servers. Bloggo is different. We built the AI to run entirely on your device — because you shouldn't have to choose between a great travel blog and your privacy. Swipe to understand the difference. Beta in bio."<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky alarmed by upload arrows · Slide 8 — Spunky beside glowing journal · Slide 9 — Spunky waving
+</div>
+
+</body>
+</html>
