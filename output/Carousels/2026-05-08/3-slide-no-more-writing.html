@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>3-Slide: You don't need to write anymore.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:14px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(89,224,197,0.2);color:#0d8a6a}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+
+/* Hook slide layout */
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.07) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0}
+.zz{position:relative;z-index:2}
+
+/* Slide 2 — Transition gradient text */
+.s2{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 36px;text-align:center;height:100%;position:relative}
+.gt{font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.25;background:linear-gradient(135deg,#138EFF,#3BBAFF,#6DD5FA,#59E0C5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:2}
+.s2sub{font-family:'Jost',sans-serif;font-size:14px;color:#9CA3AF;font-style:italic;margin-top:12px;line-height:1.5;position:relative;z-index:2}
+
+/* Content slides — left aligned */
+.cl{padding:36px 28px;height:100%;display:flex;flex-direction:column;justify-content:center;position:relative}
+.bar{position:absolute;left:0;top:28px;bottom:28px;width:4px;background:#138EFF;border-radius:0 4px 4px 0}
+.clh{font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;position:relative;z-index:2}
+.clb{font-family:'Jost',sans-serif;font-size:22px;font-weight:700;color:#1A1A1A;line-height:1.3;position:relative;z-index:2}
+.clb em{color:#138EFF;font-style:normal}
+
+/* CTA slide */
+.ctac{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative;background:#fff}
+.ctatop{font-family:'Chewy',cursive;font-size:32px;color:#1A1A1A;line-height:1.2;position:relative;z-index:2}
+.ctabrand{font-family:'Chewy',cursive;font-size:50px;color:#138EFF;line-height:1;margin:8px 0;position:relative;z-index:2}
+.ctasub{font-family:'Jost',sans-serif;font-size:14px;color:#6B7280;margin-bottom:20px;font-style:italic;position:relative;z-index:2}
+.ctabtn{display:inline-block;font-family:'Chewy',cursive;font-size:18px;color:#fff;background:#138EFF;padding:10px 28px;border-radius:40px;letter-spacing:1px;position:relative;z-index:2}
+
+/* Shared */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+</style></head><body>
+
+<div class="meta">
+  <h1>You don't need to write anymore.</h1>
+  <div class="sub">3–4 Slide · Counterintuitive Hook · Relatable · Friday · Bloggo</div>
+  <span class="fmt">4 Slides</span>
+</div>
+
+<div class="carousel">
+
+  <!-- Slide 1 — Hook -->
+  <div class="sw">
+    <div class="sn">Slide 1 — Hook</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="c">
+        <div class="zz">
+          <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;">Stop feeling guilty.</div>
+          <div style="font-family:'Chewy',cursive;font-size:48px;color:#1A1A1A;line-height:1.05;margin-top:8px;">You don't</div>
+          <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;">need to</div>
+          <div style="font-family:'Chewy',cursive;font-size:64px;color:#1A1A1A;line-height:0.9;">write.</div>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the black cat sitting with a crumpled piece of paper at its feet, looking relieved and unburdened. Peaceful expression. White background. Higgsfield prompt: "A small black cartoon cat sitting beside crumpled writing paper, looking relieved and free. Light, clean white background. Whimsical illustration style. No text."</div>
+  </div>
+
+  <!-- Slide 2 — Transition -->
+  <div class="sw">
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="s2">
+        <div class="gt">The blank page was never your job.</div>
+        <div class="s2sub">Your photos already hold the whole story. Bloggo reads them.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 3 — Content -->
+  <div class="sw">
+    <div class="sn">Slide 3 — Content</div>
+    <div class="slide">
+      <div class="bar"></div>
+      <div class="dot"></div>
+      <div class="cl">
+        <div class="clh">How it works</div>
+        <div class="clb">Bloggo reads your <em>photos</em>.<br>Finds your <em>trips</em>.<br>Builds your <em>blog</em>.<br>You approve it.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 3 — Graphic:</b> Spunky the black cat looking at a glowing iPhone screen showing a beautiful travel blog. Cat looks impressed and happy. Higgsfield prompt: "A small black cartoon cat looking at a glowing phone screen that displays a colorful travel blog. Cat has wide, delighted eyes. Clean white background. Whimsical illustration."</div>
+  </div>
+
+  <!-- Slide 4 — CTA -->
+  <div class="sw">
+    <div class="sn">Slide 4 — CTA</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="ctac">
+        <div class="ctatop">Try it free.</div>
+        <div class="ctabrand">Bloggo</div>
+        <div class="ctasub">Your stories, without the blank page.</div>
+        <div class="ctabtn">Beta in bio</div>
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;margin-top:16px;position:relative;z-index:2;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Brief -->
+  <div class="sw">
+    <div class="brief">
+      <strong>Carousel Brief — 3-Slide: "You don't need to write anymore."</strong><br>
+      Type: 4 Slides · Hook Type: Counterintuitive · Relatable Moment · Friday<br>
+      Notion: <strong>notion → Bloggo Content Engine</strong><br>
+      Caption direction: "The blank page is the reason most trips go undocumented. Bloggo removes it completely. Your photos already have the story — Bloggo finds it."<br>
+      Supporting Graphics: Slide 1 — Spunky relieved (crumpled paper), Slide 3 — Spunky looking at phone blog
+    </div>
+  </div>
+
+</div>
+</body></html>

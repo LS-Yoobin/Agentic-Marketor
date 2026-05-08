@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>8-Slide: Your photos are lying.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:14px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(89,224,197,0.2);color:#0d8a6a}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.07) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0}
+
+/* Hook */
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative}
+.zz{position:relative;z-index:2}
+
+/* Slide 2 transition */
+.s2{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 36px;text-align:center;height:100%;position:relative}
+.gt{font-family:'Jost',sans-serif;font-weight:700;font-size:24px;line-height:1.3;background:linear-gradient(135deg,#138EFF,#3BBAFF,#6DD5FA,#59E0C5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:2}
+.s2sub{font-family:'Jost',sans-serif;font-size:14px;color:#9CA3AF;font-style:italic;margin-top:12px;line-height:1.5;position:relative;z-index:2}
+
+/* Content — left aligned */
+.cl{padding:36px 28px 36px 32px;height:100%;display:flex;flex-direction:column;justify-content:center;position:relative}
+.bar{position:absolute;left:0;top:28px;bottom:28px;width:4px;background:#138EFF;border-radius:0 4px 4px 0}
+.clnum{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;position:relative;z-index:2}
+.clb{font-family:'Jost',sans-serif;font-size:21px;font-weight:700;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+.clb em{color:#138EFF;font-style:normal}
+.cls{font-family:'Jost',sans-serif;font-size:14px;color:#6B7280;margin-top:10px;line-height:1.5;font-style:italic;position:relative;z-index:2}
+
+/* Insight slide */
+.ins{padding:36px 32px;height:100%;display:flex;flex-direction:column;justify-content:center;position:relative;text-align:center}
+.insh{font-family:'Chewy',cursive;font-size:28px;color:#138EFF;margin-bottom:12px;position:relative;z-index:2}
+.insb{font-family:'Jost',sans-serif;font-size:20px;font-weight:700;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+.insb em{color:#138EFF;font-style:normal}
+
+/* CTA */
+.ctac{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative;background:#fff}
+.ctatop{font-family:'Chewy',cursive;font-size:28px;color:#1A1A1A;line-height:1.2;position:relative;z-index:2}
+.ctabrand{font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1;margin:8px 0;position:relative;z-index:2}
+.ctasub{font-family:'Jost',sans-serif;font-size:14px;color:#6B7280;margin-bottom:20px;font-style:italic;position:relative;z-index:2}
+.ctabtn{display:inline-block;font-family:'Chewy',cursive;font-size:18px;color:#fff;background:#138EFF;padding:10px 28px;border-radius:40px;letter-spacing:1px;position:relative;z-index:2}
+
+/* Shared */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+</style></head><body>
+
+<div class="meta">
+  <h1>Your photos are lying.</h1>
+  <div class="sub">10-Slide · WTF / Fear Hook · Authority Builder · Friday · Bloggo</div>
+  <span class="fmt">10 Slides</span>
+</div>
+
+<div class="carousel">
+
+  <!-- Slide 1 — Hook -->
+  <div class="sw">
+    <div class="sn">Slide 1 — Hook</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="c">
+        <div class="zz">
+          <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">You have 3,000 travel photos.</div>
+          <div style="font-family:'Chewy',cursive;font-size:42px;color:#1A1A1A;line-height:1.05;margin-top:8px;">But your photos</div>
+          <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.88;">are lying</div>
+          <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1;">to you.</div>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the black cat surrounded by floating photos that look perfectly happy but have small cracks in them, like fractured memories. Confused, slightly suspicious cat expression. Higgsfield prompt: "A small black cartoon cat surrounded by floating polaroid photos that have hairline cracks running through them like fractured glass. Cat looks puzzled and slightly suspicious. White background, soft light."</div>
+  </div>
+
+  <!-- Slide 2 — Transition -->
+  <div class="sw">
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="s2">
+        <div class="gt">Photos capture moments. Not stories. There's a difference — and it matters.</div>
+        <div class="s2sub">Keep swiping to see what your camera roll is actually missing.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 3 — Content -->
+  <div class="sw">
+    <div class="sn">Slide 3 — Content</div>
+    <div class="slide">
+      <div class="bar"></div>
+      <div class="dot"></div>
+      <div class="cl">
+        <div class="clnum">The lie #1</div>
+        <div class="clb">A photo says<br>"I was <em>there</em>."<br>But not why it <em>mattered</em>.</div>
+        <div class="cls">The context disappears the moment you press shutter.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 4 — Content -->
+  <div class="sw">
+    <div class="sn">Slide 4 — Content</div>
+    <div class="slide">
+      <div class="bar"></div>
+      <div class="dot"></div>
+      <div class="cl">
+        <div class="clnum">The lie #2</div>
+        <div class="clb">Photos look like <em>memories</em>.<br>But they're just<br><em>evidence</em> you were there.</div>
+        <div class="cls">Evidence without emotion is just noise.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 4 — Graphic:</b> Spunky staring at a photo, but the photo only shows a blurry, faded outline of a place. Cat looks a little sad. Higgsfield prompt: "A small black cartoon cat holding a polaroid photo that has faded almost completely, barely showing a destination. The cat looks melancholy and a little lost. White background."</div>
+  </div>
+
+  <!-- Slide 5 — Content -->
+  <div class="sw">
+    <div class="sn">Slide 5 — Content</div>
+    <div class="slide">
+      <div class="bar"></div>
+      <div class="dot"></div>
+      <div class="cl">
+        <div class="clnum">The lie #3</div>
+        <div class="clb">You scroll back<br>and think you <em>remember</em>.<br>But 80% is <em>gone</em>.</div>
+        <div class="cls">Within 7 days, most episodic memory fades without narration.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 6 — Content -->
+  <div class="sw">
+    <div class="sn">Slide 6 — Content</div>
+    <div class="slide">
+      <div class="bar"></div>
+      <div class="dot"></div>
+      <div class="cl">
+        <div class="clnum">The lie #4</div>
+        <div class="clb">You think you'll<br>write it <em>later</em>.<br>"Later" never comes.</div>
+        <div class="cls">The trip joins the backlog. The backlog becomes a graveyard.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 6 — Graphic:</b> Spunky sitting next to a tall stack of notebooks with dust on them, one tiny cobweb in the corner. Looks sheepish. Higgsfield prompt: "A small black cartoon cat sitting next to a towering dusty stack of journals and notebooks with a small cobweb. Cat looks sheepish and guilty. White background, warm light."</div>
+  </div>
+
+  <!-- Slide 7 — Content -->
+  <div class="sw">
+    <div class="sn">Slide 7 — Content</div>
+    <div class="slide">
+      <div class="bar"></div>
+      <div class="dot"></div>
+      <div class="cl">
+        <div class="clnum">The lie #5</div>
+        <div class="clb">Photos feel like<br>enough. But you <em>know</em><br>something's missing.</div>
+        <div class="cls">That nagging feeling? That's the story your photos can't tell.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 8 — Content -->
+  <div class="sw">
+    <div class="sn">Slide 8 — Content</div>
+    <div class="slide">
+      <div class="bar"></div>
+      <div class="dot"></div>
+      <div class="cl">
+        <div class="clnum">What photos miss</div>
+        <div class="clb">The <em>smell</em> of the market.<br>The <em>3am hunger</em>.<br>The feeling that<br>it was <em>real</em>.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 8 — Graphic:</b> Spunky reaching toward a floating butterfly that represents a fading memory, gently, not catching it. Wistful mood. Higgsfield prompt: "A small black cartoon cat gently reaching toward a glowing butterfly that floats away. Soft melancholy mood. White background with soft warm light."</div>
+  </div>
+
+  <!-- Slide 9 — Insight -->
+  <div class="sw">
+    <div class="sn">Slide 9 — Insight</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="ins">
+        <div class="insh">The fix</div>
+        <div class="insb">Bloggo reads<br>your <em>photos</em><br>and writes back<br>the <em>story</em> they hold.</div>
+        <div style="font-family:'Jost',sans-serif;font-size:14px;color:#6B7280;margin-top:12px;font-style:italic;position:relative;z-index:2;">On-device. Private. No writing needed.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting beside a glowing open book with travel stories flowing out. Cat looks content and proud. Higgsfield prompt: "A small black cartoon cat sitting next to a glowing open book with colorful travel stories rising out of it. Cat looks content and proud. White background, warm golden glow."</div>
+  </div>
+
+  <!-- Slide 10 — CTA -->
+  <div class="sw">
+    <div class="sn">Slide 10 — CTA</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="ctac">
+        <div class="ctatop">Stop letting your photos lie.</div>
+        <div class="ctabrand">Bloggo</div>
+        <div class="ctasub">Turns camera rolls into real stories. On-device. Private.</div>
+        <div class="ctabtn">Beta in bio!</div>
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;margin-top:16px;position:relative;z-index:2;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Brief -->
+  <div class="sw">
+    <div class="brief">
+      <strong>Carousel Brief — 8-Slide: "Your photos are lying."</strong><br>
+      Type: 10 Slides · Hook Type: WTF / Fear · Authority Builder · Friday<br>
+      Notion: <strong>notion → Bloggo Content Engine</strong><br>
+      Caption direction: "The 5 lies your camera roll tells you every day — and the one thing that fixes all of them."<br>
+      Supporting Graphics: Slide 1 — Spunky + cracked photos, Slide 4 — faded polaroid, Slide 6 — dusty notebook stack, Slide 8 — reaching for butterfly, Slide 9 — glowing story book
+    </div>
+  </div>
+
+</div>
+</body></html>
