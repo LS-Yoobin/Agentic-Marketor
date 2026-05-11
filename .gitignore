@@ -19,3 +19,7 @@ Thumbs.db
 node_modules/
 .env
 .env.local
+
+# OAuth credentials (never commit)
+credentials.json
+token.json
