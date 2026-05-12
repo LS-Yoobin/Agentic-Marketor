@@ -5,21 +5,15 @@ import pyautogui
 
 pyautogui.FAILSAFE = False
 
-# Lazy imports - these will be imported on first use to allow mocking
-AudioUtilities = None
-IAudioEndpointVolume = None
-CLSCTX_ALL = None
-
-
-def _ensure_audio_imports():
-    """Lazy load audio imports on first use."""
-    global AudioUtilities, IAudioEndpointVolume, CLSCTX_ALL
-    if AudioUtilities is None:
-        from pycaw.pycaw import AudioUtilities as AU, IAudioEndpointVolume as IAE
-        from comtypes import CLSCTX_ALL as CLSCTX
-        AudioUtilities = AU
-        IAudioEndpointVolume = IAE
-        CLSCTX_ALL = CLSCTX
+# Module-level imports for audio — will be mocked in tests
+try:
+    from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+    from comtypes import CLSCTX_ALL
+except Exception:
+    # Allow tests to mock these even if comtypes fails to load
+    AudioUtilities = None
+    IAudioEndpointVolume = None
+    CLSCTX_ALL = None
 
 
 def open_app(name: str) -> str:
@@ -33,8 +27,6 @@ def type_text(text: str) -> str:
 
 
 def adjust_volume(level: int) -> str:
-    _ensure_audio_imports()
-
     level = max(0, min(100, level))
     devices = AudioUtilities.GetSpeakers()
     interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
