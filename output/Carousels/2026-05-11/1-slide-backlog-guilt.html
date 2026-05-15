@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>1-Slide — Your Camera Roll Is a Confession</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111827;font-family:'Jost',sans-serif;padding:24px 16px}
+.brief{max-width:360px;margin:0 auto 14px;background:#0f172a;border:1px solid rgba(19,142,255,.25);border-radius:10px;padding:14px;font-size:11px;color:rgba(255,255,255,.7);line-height:1.75}
+.brief h3{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#138EFF;margin-bottom:8px}
+.brief p{margin-bottom:3px}
+.brief b{color:#fff}
+.cap{max-width:360px;margin:0 auto 14px;background:#0f172a;border:1px solid rgba(19,142,255,.25);border-radius:10px;padding:14px}
+.cap-lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#138EFF;margin-bottom:6px}
+.cap-txt{font-size:11px;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:12px}
+.sa{text-align:center;margin:0 auto 18px;max-width:360px}
+.sa button{background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,.3)}
+.sw{position:relative;width:360px;margin:0 auto 4px}
+.sn{font-size:9px;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;text-align:center}
+.slide{width:360px;height:450px;overflow:hidden;position:relative;background:#FFFFFF}
+.dl-btn{position:absolute;top:8px;right:8px;z-index:20;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.tb{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#138EFF,#59E0C5);z-index:10}
+.dq{position:absolute;font-size:220px;color:rgba(19,142,255,0.04);line-height:1;top:-10px;left:0;right:0;text-align:center;pointer-events:none;z-index:0;font-family:Georgia,serif;user-select:none}
+.st{font-family:'Jost',sans-serif;font-size:14px;color:#9CA3AF;font-style:italic;margin-top:16px;line-height:1.45;position:relative;z-index:2;text-align:center;padding:0 20px}
+.cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
+.bm{position:absolute;bottom:14px;left:16px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:2px auto 12px;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <h3>Content Brief</h3>
+  <p><b>Notion:</b> notion → Bloggo Content Engine</p>
+  <p><b>Type:</b> 1-Slide Post — Single Powerful Statement</p>
+  <p><b>Angle:</b> Pain Point — Photo Backlog Guilt (Monday)</p>
+  <p><b>Hook Type:</b> WTF / Emotional Truth</p>
+  <p><b>Caption:</b> Instagram + TikTok below</p>
+  <p><b>Supporting Graphics:</b> Slide 1 — Spunky sitting beside a messy pile of Polaroid photos, guilty expression, paw over face. See gfx-note below.</p>
+</div>
+
+<div class="cap">
+  <div class="cap-lbl">Instagram Caption</div>
+  <p class="cap-txt">You were there. You took 600 photos. You never told the story.<br><br>That trip deserves more than a camera roll. Bloggo turns your existing photos into a real travel blog — no writing, no organizing, no blank page. 60 seconds. On your device. Privately.<br><br>Beta access is open. Link in bio.<br><br>#travelblog #travelphotos #travelmemories #bloggo #travelapp #iphonetravel #photoorganizer</p>
+  <div class="cap-lbl">TikTok Caption</div>
+  <p class="cap-txt">Your camera roll is already a confession of every trip you forgot to document. Bloggo fixes that. Comment "blog" for early access. #travelblog #bloggo #travelapp #iphonetravel</p>
+</div>
+
+<div class="sa"><button onclick="saveSlide()">Save Slide PNG</button></div>
+
+<div class="sw">
+  <div class="sn">Slide 1 — Quote</div>
+  <button class="dl-btn" onclick="saveSlide()">Save PNG</button>
+  <div class="slide">
+    <!-- Top gradient bar -->
+    <div class="tb"></div>
+    <!-- Ghost quote mark decoration -->
+    <div class="dq">"</div>
+    <!-- Dot pattern background -->
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none"></div>
+    <!-- Content -->
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 28px 60px">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;text-align:center;position:relative;z-index:2">Your camera roll</div>
+      <div style="font-family:'Chewy',cursive;font-size:40px;color:#1A1A1A;line-height:1.05;margin-top:4px;position:relative;z-index:2;text-align:center">is a</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:0.95;margin-top:2px;position:relative;z-index:2;text-align:center;letter-spacing:-0.5px">confession.</div>
+      <div class="st">You were there. You had the shots.<br>You never told the story.</div>
+      <div class="cb">BETA IN BIO</div>
+    </div>
+    <!-- Watermark -->
+    <div class="bm">Bloggo</div>
+    <!-- Cat paw -->
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (the black cat mascot) sitting beside a scattered pile of Polaroid photos, looking guilty with one paw covering face, warm white background. <b>Higgsfield prompt:</b> a melancholy black cartoon cat sitting beside a messy scattered pile of polaroid travel photos, guilty expression, one paw over face, soft warm white studio background, editorial photography style, warm ambient lighting.</div>
+</div>
+
+<script>
+async function saveSlide() {
+  const slide = document.querySelector('.slide');
+  const canvas = await html2canvas(slide, {scale:3, useCORS:true, allowTaint:true, backgroundColor:'#ffffff'});
+  canvas.toBlob(b => saveAs(b, '1-slide-backlog-guilt.png'));
+}
+</script>
+</body>
+</html>

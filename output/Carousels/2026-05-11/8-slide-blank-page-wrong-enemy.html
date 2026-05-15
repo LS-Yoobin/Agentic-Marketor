@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>8-Slide — The Blank Page Is Not Your Problem</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111827;font-family:'Jost',sans-serif;padding:24px 16px}
+.brief{max-width:360px;margin:0 auto 14px;background:#0f172a;border:1px solid rgba(19,142,255,.25);border-radius:10px;padding:14px;font-size:11px;color:rgba(255,255,255,.7);line-height:1.75}
+.brief h3{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#138EFF;margin-bottom:8px}
+.brief p{margin-bottom:3px}
+.brief b{color:#fff}
+.cap{max-width:360px;margin:0 auto 14px;background:#0f172a;border:1px solid rgba(19,142,255,.25);border-radius:10px;padding:14px}
+.cap-lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#138EFF;margin-bottom:6px}
+.cap-txt{font-size:11px;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:12px}
+.sa{text-align:center;margin:0 auto 18px;max-width:360px}
+.sa button{background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,.3)}
+.sw{position:relative;width:360px;margin:0 auto 4px}
+.sn{font-size:9px;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;text-align:center}
+.slide{width:360px;height:450px;overflow:hidden;position:relative;background:#FFFFFF}
+.dl-btn{position:absolute;top:8px;right:8px;z-index:20;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.bm{position:absolute;bottom:14px;left:16px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.accent{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+.rgrad{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none}
+.gfx-note{max-width:360px;margin:2px auto 12px;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <h3>Content Brief</h3>
+  <p><b>Notion:</b> notion → Bloggo Content Engine</p>
+  <p><b>Type:</b> 10-Slide Post — Deep Authority Builder</p>
+  <p><b>Angle:</b> Pain Point — Photo Backlog Guilt (Monday) · Contrarian framing</p>
+  <p><b>Hook Type:</b> Contrarian — challenges "blank page anxiety" narrative</p>
+  <p><b>Supporting Graphics:</b> Slide 1 — Spunky staring at blank notebook, frustrated. Slide 9 — Spunky beside glowing blog. Slide 10 — Spunky waving. See gfx-notes below.</p>
+</div>
+
+<div class="cap">
+  <div class="cap-lbl">Instagram Caption</div>
+  <p class="cap-txt">Everyone talks about "blank page anxiety" in travel blogging. They're wrong about what it actually is.<br><br>The problem isn't writing. It's starting from nothing. And your camera roll is not nothing — it's everything.<br><br>Here's the reframe that changes how you document every trip. Save this.<br><br>Bloggo reads your camera roll and turns it into a complete travel blog — no blank page, 60 seconds, on your device. Link in bio.<br><br>#travelblog #travelphotography #travelmemories #travelapp #bloggo #iphonetravel #traveltips #photographylovers</p>
+  <div class="cap-lbl">TikTok Caption</div>
+  <p class="cap-txt">Hot take: your blank page problem is actually a starting point problem. And Bloggo fixes the starting point. Comment "story" for early access. #traveltok #travelblog #bloggo #travelapp</p>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides</button></div>
+
+<!-- SLIDE 1: HOOK (Contrarian) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-bottom:8px">the problem</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-bottom:4px">isn't</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.0;margin-bottom:16px">writing.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#9CA3AF;line-height:1.4">it's starting from nothing.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the black cat mascot staring at an empty open notebook with a pen beside it, frustrated expression, paw on chin, white background. <b>Higgsfield prompt:</b> a frustrated black cartoon cat sitting at a desk staring at an empty open notebook, pen beside it, paw on chin thinking expression, white background, soft editorial lighting, whimsical illustration style.</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 280px 280px at 50% 50%,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:700;line-height:1.3;text-align:center;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Here's what<br><b>actually</b> steals<br>your travel memories.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: CONTENT — THE RITUAL -->
+<div class="sw">
+  <div class="sn">Slide 3 — The Ritual</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">THE RITUAL</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">You open a doc.<br><b style="font-weight:700">Stare</b> at it.<br>Close it.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:14px;line-height:1.4">every single trip. every single time.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: CONTENT — THE WAIT -->
+<div class="sw">
+  <div class="sn">Slide 4 — The Wait</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">THE WAIT</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">Six months pass.<br><b style="font-weight:700">Guilt</b> compounds.<br>Stories vanish.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:14px;line-height:1.4">the "i'll write it later" trap.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5: CONTENT — CENTERED (visual variety) — THE FADE -->
+<div class="sw">
+  <div class="sn">Slide 5 — The Fade</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 260px 260px at 50% 50%,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:18px">THE FADE</div>
+      <div style="font-family:'Jost',sans-serif;font-size:29px;font-weight:400;color:#1A1A1A;line-height:1.3">The emotion stays.</div>
+      <div style="width:36px;height:2px;background:rgba(19,142,255,0.2);margin:16px auto"></div>
+      <div style="font-family:'Jost',sans-serif;font-size:29px;font-weight:700;color:#1A1A1A;line-height:1.3">The <span style="color:#138EFF">names</span><br>blur out.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6: CONTENT — THE TRAP -->
+<div class="sw">
+  <div class="sn">Slide 6 — The Trap</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">THE TRAP</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">Starting from <b style="font-weight:700">nothing</b><br>is the wrong<br>starting point.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7: CONTENT — THE TRUTH -->
+<div class="sw">
+  <div class="sn">Slide 7 — The Truth</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">THE TRUTH</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">Your photos already<br>have time, place,<br><b style="font-weight:700">every stop.</b></div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:14px;line-height:1.4">the story is already in there.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8: CONTENT — THE SHIFT -->
+<div class="sw">
+  <div class="sn">Slide 8 — The Shift</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">THE SHIFT</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">Your camera roll<br>is <b style="font-weight:700">not</b> empty.<br>It's full.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:14px;line-height:1.4">you have everything you need.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9: INSIGHT (Save-bait) -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 280px 280px at 50% 50%,rgba(19,142,255,0.06),transparent);z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-size:24px;font-weight:400;color:#6B7280;line-height:1.35;margin-bottom:14px">Stop starting from zero.</div>
+      <div style="width:36px;height:2px;background:rgba(19,142,255,0.3);margin-bottom:14px"></div>
+      <div style="font-family:'Jost',sans-serif;font-size:30px;font-weight:700;color:#1A1A1A;line-height:1.25"><span style="color:#138EFF">Your story</span><br>already exists.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky the black cat mascot sitting beside a glowing open travel blog on a laptop, calm satisfied expression, paw on heart, white background. <b>Higgsfield prompt:</b> a calm satisfied black cartoon cat sitting beside a glowing open travel blog on laptop, paw on chest, soft warm light, white background, editorial illustration style.</div>
+</div>
+
+<!-- SLIDE 10: CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.03) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;text-align:center">
+      <!-- Logo row -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px">
+        <div style="font-family:'Chewy',cursive;font-size:46px;color:#138EFF;line-height:1">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:32px;color:#1A1A1A;line-height:1.2;margin-bottom:6px">Your camera roll is</div>
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1;margin-bottom:18px">already a blog.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#138EFF;border:1.5px solid rgba(19,142,255,0.35);padding:5px 14px;border-radius:20px">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky the black cat mascot waving enthusiastically at the camera, happy expression, white background. <b>Higgsfield prompt:</b> a happy enthusiastic black cartoon cat waving at camera with one paw raised, big smile, welcoming expression, white background, soft studio lighting, editorial photography style.</div>
+</div>
+
+<script>
+async function saveSlide(btn) {
+  const slide = btn.closest('.sw').querySelector('.slide');
+  const label = btn.closest('.sw').querySelector('.sn').textContent.trim().replace(/\s+/g,'-').toLowerCase();
+  const canvas = await html2canvas(slide, {scale:3, useCORS:true, allowTaint:true, backgroundColor:'#ffffff'});
+  canvas.toBlob(b => saveAs(b, `8-slide-blank-page-${label}.png`));
+}
+async function saveAllSlides() {
+  const zip = new JSZip();
+  const wrappers = document.querySelectorAll('.sw');
+  for (let i = 0; i < wrappers.length; i++) {
+    const slide = wrappers[i].querySelector('.slide');
+    if (!slide) continue;
+    const label = wrappers[i].querySelector('.sn').textContent.trim().replace(/\s+/g,'-').toLowerCase();
+    const canvas = await html2canvas(slide, {scale:3, useCORS:true, allowTaint:true, backgroundColor:'#ffffff'});
+    const blob = await new Promise(r => canvas.toBlob(r));
+    zip.file(`slide-${i+1}-${label}.png`, blob);
+  }
+  const content = await zip.generateAsync({type:'blob'});
+  saveAs(content, '8-slide-blank-page-wrong-enemy.zip');
+}
+</script>
+</body>
+</html>
