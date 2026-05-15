@@ -27,7 +27,7 @@ Agents pass work to each other automatically via shared briefing files. The foun
 2. **Required** — approve the final batch in Notion
 
 ### Trigger Model: Hybrid
-- **4AM cron daily:** Trend Scout + Idea Generator run in parallel
+- **4AM cron daily:** Trend Scout runs first (writes brief), then Idea Generator reads that brief and runs. Sequential, not parallel — Idea Generator depends on Trend Scout's output.
 - **Manual command:** `/run-marketing-team` fires the full content creation pipeline
 
 ---
@@ -35,33 +35,34 @@ Agents pass work to each other automatically via shared briefing files. The foun
 ## The 8 Roles
 
 ### 1. Trend Scout `[NEW]`
-- **Trigger:** 4AM cron daily, runs in parallel with Idea Generator
+- **Trigger:** 4AM cron daily, runs first — Idea Generator waits for its output
 - **Searches:** Viral travel hooks, TikTok/IG creator formats, AI/on-device AI news, competitor moves (Google Photos, Day One, Polarsteps), founder/startup discourse
 - **Outputs:** Top 5 ranked trend signals, top 3 competitor moves, 3 ready-to-use hook angles, 1 format recommendation
 - **Writes:** `briefings/trend-brief-YYYY-MM-DD.md`
 - **Read by:** Idea Generator + Content Strategist
 
 ### 2. Idea Generator `[UPGRADE — was: overnight-idea-generator.md]`
-- **Trigger:** 4AM cron daily, runs in parallel with Trend Scout
+- **Trigger:** 4AM cron daily, runs after Trend Scout completes (reads today's brief as first step)
+- **Implementation:** Stays as `Workflows/overnight-idea-generator.md` (upgraded workflow file, not a new skill). The cron invokes the Trend Scout skill first, then invokes this workflow.
 - **Change from current:** Now reads today's trend brief before generating ideas, grounding all 10 ideas in current trends rather than evergreen angles only
 - **Still does:** Pillar audit in Notion, generates 5 Yoobin + 5 Bloggo ideas, pushes to both Notion idea banks, saves morning briefing to `briefings/`
 
 ### 3. Content Strategist `[NEW]`
 - **Trigger:** First step of `/run-marketing-team`
 - **Reads:** Today's trend brief + Notion pillar bank (gap audit) + recent performance data + current launch phase
-- **Decides:** Which 11 pieces to create this week (format, pillar, account, priority order)
+- **Decides:** Which 11 pieces to create this week (format, pillar, account, priority order). 11 = posting cadence: Bloggo (2 Reels + 2 Carousels + 2 LinkedIn = 6) + Yoobin (2 Reels + 1 Carousel + 2 LinkedIn = 5).
 - **Writes:** `briefings/content-plan-YYYY-MM-DD.md`
-- **Read by:** Copywriter subagents + Carousel Generator
+- **Read by:** Copywriter subagents (Yoobin + Bloggo) + Carousel Generator subagent
 
 ### 4. Copywriter — Yoobin `[UPGRADE — was: Content Engine.md]`
-- **Trigger:** Parallel subagent, fired by `/run-marketing-team` after Strategist completes
+- **Trigger:** Inline parallel subagent spawned by `run-marketing-team.md` after Strategist completes. Not a standalone skill — uses `Workflows/Content Engine.md` as its playbook.
 - **Change from current:** Now reads content plan from Strategist rather than operating independently. Produces only the pieces assigned to the Yoobin personal brand account.
 - **Still does:** Reels, Carousels, LinkedIn posts in founder voice; applies active launch phase CTA
 
 ### 5. Copywriter — Bloggo `[UPGRADE — was: Content Engine.md]`
-- **Trigger:** Parallel subagent, fired simultaneously with Copywriter — Yoobin
+- **Trigger:** Inline parallel subagent spawned by `run-marketing-team.md` simultaneously with Copywriter — Yoobin. Not a standalone skill — uses `Workflows/Content Engine.md` as its playbook.
 - **Change from current:** Same as above but for the Bloggo company account voice
-- **Carousel Generator** runs as a third parallel subagent alongside both Copywriters
+- **Carousel Generator** runs as a third inline parallel subagent alongside both Copywriters, using `Workflows/carousel-generator.md` as its playbook
 
 ### 6. Creative Director / Brand Guardian `[NEW]`
 - **Trigger:** After all Copywriter subagents complete; reviews the full batch
@@ -71,7 +72,8 @@ Agents pass work to each other automatically via shared briefing files. The foun
   - 20–27: REVISE — rewrites hook or restructures, re-grades
   - Below 20: REWRITE — scraps and rewrites from scratch, re-grades
 - **Also checks:** Brand voice violations (banned words, passive voice, cloud features, Android mentions), correct CTA for active launch phase
-- **Writes:** `briefings/batch-YYYY-MM-DD.md` with all grades and notes
+- **Reads:** `briefings/batch-raw-YYYY-MM-DD.md` (written by Copywriters)
+- **Writes:** `briefings/batch-approved-YYYY-MM-DD.md` with all grades, fixes, and notes
 - **Nothing reaches Notion until it scores 28+**
 
 ### 7. Calendar Manager `[NEW]`
@@ -93,33 +95,33 @@ Agents pass work to each other automatically via shared briefing files. The foun
 ## Full Pipeline Flow
 
 ```
-OVERNIGHT — 4AM CRON
-├── Trend Scout subagent     ── parallel ──┐
-└── Idea Generator subagent  ─────────────┘
+OVERNIGHT — 4AM CRON (sequential)
+Trend Scout skill
         ↓ briefings/trend-brief-YYYY-MM-DD.md
+Idea Generator workflow (reads today's brief)
         ↓ briefings/morning-briefing-YYYY-MM-DD.md
         ↓ Notion idea banks (both)
 
 YOU TYPE: /run-marketing-team
         ↓
-Content Strategist
+Content Strategist skill
         ↓ briefings/content-plan-YYYY-MM-DD.md
         ↓
-Copywriter — Yoobin  ── parallel ──┐
-Copywriter — Bloggo  ──────────────┤
-Carousel Generator   ──────────────┘
-        ↓ briefings/batch-YYYY-MM-DD.md (raw)
+[subagent] Copywriter — Yoobin  ── parallel ──┐
+[subagent] Copywriter — Bloggo  ──────────────┤
+[subagent] Carousel Generator   ──────────────┘
+        ↓ briefings/batch-raw-YYYY-MM-DD.md
         ↓
-Creative Director (grades + fixes all pieces)
-        ↓ briefings/batch-YYYY-MM-DD.md (approved)
+Creative Director skill (grades + fixes all pieces)
+        ↓ briefings/batch-approved-YYYY-MM-DD.md
         ↓
-Calendar Manager → Notion (both DBs)
+Calendar Manager skill → Notion (both DBs)
         ↓
 YOU APPROVE BATCH IN NOTION ✓
 
 ON-DEMAND
-/analyze-performance [post] → Performance Analyst
-/repurpose [post]           → Repurpose Agent → Creative Director → Notion
+/analyze-performance [post] → Performance Analyst skill
+/repurpose [post]           → Repurpose Agent skill → Creative Director → Notion
 ```
 
 ---
@@ -162,7 +164,8 @@ Location: `briefings/` (new folder)
 |------|-----------|---------|
 | `trend-brief-YYYY-MM-DD.md` | Trend Scout | Idea Generator, Content Strategist |
 | `content-plan-YYYY-MM-DD.md` | Content Strategist | All Copywriter subagents |
-| `batch-YYYY-MM-DD.md` | Copywriters → Creative Director | Calendar Manager, founder |
+| `batch-raw-YYYY-MM-DD.md` | Copywriter subagents | Creative Director |
+| `batch-approved-YYYY-MM-DD.md` | Creative Director (after grading) | Calendar Manager, founder |
 
 ### New Top-Level Files
 | File | Purpose |
@@ -207,9 +210,9 @@ Content routing rule (unchanged): personal brand content → `notion-personal`, 
 
 | Time | What runs | Produces |
 |------|-----------|---------|
-| 4AM daily | Trend Scout + Idea Generator (parallel) | `briefings/trend-brief-YYYY-MM-DD.md` + 10 new Notion ideas |
+| 4AM daily | Trend Scout (skill) then Idea Generator (workflow) — sequential | `briefings/trend-brief-YYYY-MM-DD.md` + `briefings/morning-briefing-YYYY-MM-DD.md` + 10 new Notion ideas |
 
-The existing overnight cron is updated from its current time to 4AM and its prompt updated to invoke both Trend Scout and Idea Generator as parallel subagents.
+The existing overnight cron is updated to 4AM. Its prompt is updated to: (1) invoke the Trend Scout skill, (2) then invoke the Idea Generator workflow. Sequential order is required because Idea Generator reads the trend brief produced by Trend Scout.
 
 ---
 
