@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-Slide — GPS + Time = Your Trip Story (Curiosity Hook)</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#E8E8E8;display:flex;flex-direction:column;align-items:center;padding:24px;font-family:'Jost',sans-serif}
+  .sw{display:flex;flex-direction:column;align-items:center;margin-bottom:28px;width:360px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;text-align:center}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+
+  /* Hook slide — centered */
+  .s-hook{align-items:center;text-align:center;padding:40px 32px}
+
+  /* Transition slide — centered */
+  .s-trans{align-items:center;text-align:center;padding:40px 32px}
+
+  /* Content slides — left aligned */
+  .s-content{align-items:flex-start;text-align:left;padding:40px 32px 40px 44px}
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+
+  /* Insight slide — centered */
+  .s-insight{align-items:center;text-align:center;padding:40px 32px}
+  .crad{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(19,142,255,0.05),transparent 70%);pointer-events:none}
+
+  /* CTA slide */
+  .s-cta{align-items:center;text-align:center;padding:40px 32px}
+
+  /* Gradient text */
+  .gt{font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.35;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+  /* Watermark + paw */
+  .bm{position:absolute;bottom:16px;left:16px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* Content elements */
+  .lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+  .body{font-family:'Jost',sans-serif;font-weight:400;font-size:21px;color:#1A1A1A;line-height:1.45}
+  .sub{font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:10px;line-height:1.4}
+  .body b{font-weight:700}
+
+  /* Insight two-tier */
+  .ins-top{font-family:'Jost',sans-serif;font-weight:400;font-size:22px;color:#6B7280;line-height:1.3}
+  .ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:32px;color:#1A1A1A;line-height:1.2;margin-top:10px}
+
+  /* CTA */
+  .logo-row{display:flex;align-items:center;gap:12px;margin-bottom:16px;justify-content:center}
+  .cta-h{font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.2}
+  .cta-acc{font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.2}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:14px}
+
+  /* Dot background */
+  .dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
+
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  .brief{max-width:360px;margin:16px auto 0;padding:10px 14px;background:#f8f9fa;border:1px solid #e0e0e0;border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#555;line-height:1.7}
+  .brief b{color:#1A1A1A;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK (Curiosity) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide s-hook">
+    <div class="dots"></div>
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Your trip is already</div>
+    <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1.1;margin-top:6px;">written.</div>
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;margin-top:10px;line-height:1.4;">You just can't read it yet.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky sitting very small and still, staring at a floating open book with a curious expression. Quiet, contemplative energy. Higgsfield prompt: "A small sleek black cat with bright eyes sitting still, staring at a floating open glowing journal, white background, soft cinematic lighting, contemplative mood, minimal style."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s-trans">
+    <div class="gt">Every photo you take<br>is hiding <b>a story inside it.</b><br>Here's how Bloggo finds it.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide s-content">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">What Bloggo reads</div>
+    <div class="body">Every photo has a <b>GPS coordinate</b>.</div>
+    <div class="sub">The exact place you stood when you took it.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide s-content">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">What Bloggo reads</div>
+    <div class="body">Every photo has a <b>timestamp</b>.</div>
+    <div class="sub">The exact moment you were there.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CONTENT (centered — no accent bar per spec) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide s-insight">
+    <div class="crad"></div>
+    <div class="body" style="text-align:center;">GPS + time = <b>a complete timeline</b>.</div>
+    <div class="sub" style="text-align:center;margin-top:14px;">That timeline is already your trip journal.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide s-content">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">What Bloggo does</div>
+    <div class="body">Bloggo groups your photos by <b>day and place</b>.</div>
+    <div class="sub">No folders. No tagging. Automatic.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide s-content">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">What Bloggo does</div>
+    <div class="body">Then it <b>writes the narrative</b>.</div>
+    <div class="sub">On your device. No typing. No cloud.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Insight / Save-Bait</div>
+  <div class="slide s-insight">
+    <div class="crad"></div>
+    <div class="ins-top">The problem was never writing.</div>
+    <div class="ins-bot">It was starting from a blank page.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Spunky sitting next to a glowing open journal, one paw gently resting on an open page. Calm, warm expression. Insight energy. Higgsfield prompt: "A black cat with soft bright eyes sitting beside a glowing open journal on a white surface, one paw gently on the page, warm cinematic lighting, peaceful and insightful mood."</div>
+</div>
+
+<!-- SLIDE 9 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 9 — CTA</div>
+  <div class="slide s-cta">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span style="font-family:'Chewy',cursive;font-size:40px;color:#138EFF;">Bloggo</span>
+    </div>
+    <div class="cta-h">Your trips deserve</div>
+    <div class="cta-acc">real stories.</div>
+    <div class="cta-link">JOIN THE BETA — LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky waving with excitement, welcoming body language, small Bloggo logo visible. Higgsfield prompt: "An excited black cat waving one paw in a welcoming gesture, bright curious eyes, white clean background, cheerful editorial style, soft warm lighting."</div>
+</div>
+
+<!-- BRIEF -->
+<div class="brief">
+  <b>Carousel Brief — 8-slide-gps-timestamp-story</b><br>
+  <b>Angle:</b> Product Education (Tuesday) — Curiosity hook angle<br>
+  <b>Hook Type:</b> Curiosity — "Your trip is already written"<br>
+  <b>Notion:</b> notion → Bloggo Content Engine<br>
+  <b>Caption CTA:</b> "Most people don't know this: every photo in your camera roll has a GPS coordinate and a timestamp baked in. That's already a travel journal. Bloggo reads it — and turns it into a real story. On your device. In under 60 seconds. 🐾 Beta link in bio."<br>
+  <b>Supporting Graphics:</b> Slide 1 needs Spunky (curious, staring at floating book). Slide 8 needs Spunky (calm, next to glowing journal). Slide 9 needs Spunky (excited wave). Slides 2–7 are text only.
+</div>
+
+</body>
+</html>
