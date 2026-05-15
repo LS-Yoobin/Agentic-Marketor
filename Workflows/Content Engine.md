@@ -88,7 +88,23 @@
 
 Run these steps in order for every content batch.
 
-### Step 0 — Read Active Launch Phase
+### Step 0 — Read Content Plan from Strategist
+
+Check for today's content plan: `briefings/content-plan-[TODAY'S DATE].md`
+
+If today's plan exists:
+- Read it fully. Your job is to write ONLY the pieces assigned to your account (Yoobin or Bloggo — whichever you were dispatched for).
+- Do NOT generate new ideas. The Strategist has already decided what gets made.
+- Use the hook angles, core ideas, and "why now" context from the plan as your creative brief for each piece.
+- Skip to Step 1 (Read Active Launch Phase) — the active phase and CTA are already in the plan, but confirm from the Launch Phase Modifier section for consistency.
+
+If today's plan does NOT exist (standalone/manual run):
+- Continue to Step 1 as normal. Generate ideas independently following the full workflow.
+- Note at top of batch output: "⚠️ No content plan found — running standalone content creation"
+
+---
+
+### Step 1 — Read Active Launch Phase
 Read the `Current phase` line above. Apply the matching CTA from the Launch Phase Modifier table to every piece of content in this run. Do not proceed without confirming the active phase.
 
 ---
