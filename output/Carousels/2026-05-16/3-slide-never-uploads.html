@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bloggo — Never Uploads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#F0F0F0;display:flex;flex-direction:column;align-items:center;padding:24px;font-family:'Jost',sans-serif;gap:12px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:16px}
+.sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;text-transform:uppercase;letter-spacing:1.5px;padding:4px 0}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column}
+/* Slide 2 gradient text */
+.grad-text{background:linear-gradient(to right,#138EFF,#3BBAFF,#6DD5FA,#59E0C5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* Content slides 3–8 left-aligned */
+.slide-content-left{padding:36px 32px;align-items:flex-start;justify-content:center}
+.accent-bar{width:4px;height:100%;background:#138EFF;position:absolute;left:0;top:0;bottom:0}
+.left-body{padding-left:20px;position:relative;z-index:2}
+/* Watermark + paw on slides 2–9 */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* CTA slide 10 */
+.cta-wrap{text-align:center;padding:0 36px}
+/* gfx notes */
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:12px 16px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.8;margin-top:8px;width:360px}
+.brief h3{font-size:12px;font-weight:700;color:#138EFF;margin-bottom:6px;letter-spacing:0.5px}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide" style="justify-content:center;padding:0 36px;text-align:center;">
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">We built a travel app.</div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.1;margin-top:6px;">We've</div>
+    <div style="font-family:'Chewy',cursive;font-size:62px;color:#138EFF;line-height:0.9;">never seen</div>
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;margin-top:8px;">a single user photo.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the cat with paws over eyes, turning away from a glowing phone screen — playful, not sinister. Higgsfield prompt: "Cute black cat mascot covering its eyes with both paws, turning away from a glowing smartphone screen, playful and lighthearted, white background with soft blue accents, flat digital illustration"</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide" style="justify-content:center;padding:0 40px;text-align:center;">
+    <div style="font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-bottom:12px;">Here's why that's rare.</div>
+    <div style="font-family:'Jost',sans-serif;font-size:22px;font-weight:700;line-height:1.4;" class="grad-text">Most travel apps upload<br>your photos the moment<br>you tap "create blog."</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — No mascot graphic needed.</b> Text-only gradient slide.</div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide slide-content-left" style="align-items:flex-start;">
+    <div class="accent-bar"></div>
+    <div class="left-body">
+      <div style="font-family:'Jost',sans-serif;font-size:13px;color:#9CA3AF;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">The difference</div>
+      <div style="font-family:'Jost',sans-serif;font-size:20px;color:#1A1A1A;line-height:1.5;">Bloggo's AI runs entirely<br><strong>on your device.</strong></div>
+      <div style="font-family:'Jost',sans-serif;font-size:16px;color:#4B5563;line-height:1.6;margin-top:14px;">No server. No upload.<br>No one sees your <strong>memories.</strong><br>Not even us.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Spunky sitting next to a phone with a lock icon — calm, settled, guardian energy. Higgsfield prompt: "Small black cat mascot sitting beside a glowing locked smartphone, serene and protective expression, minimal white background, blue accent tones, flat illustration"</div>
+</div>
+
+<!-- SLIDE 4 — CTA (Chewy font) -->
+<div class="sw">
+  <div class="sn">Slide 4 — CTA</div>
+  <div class="slide" style="justify-content:center;text-align:center;padding:0 32px;">
+    <div class="cta-wrap">
+      <div style="font-family:'Jost',sans-serif;font-size:14px;color:#9CA3AF;font-style:italic;margin-bottom:12px;">Your memories. Your phone.</div>
+      <div style="font-family:'Chewy',cursive;font-size:48px;color:#138EFF;line-height:1.0;margin-bottom:8px;">Zero uploads.</div>
+      <div style="font-family:'Chewy',cursive;font-size:28px;color:#1A1A1A;line-height:1.1;margin-bottom:20px;">Ever.</div>
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;margin-bottom:10px;display:block;margin-left:auto;margin-right:auto;">
+      <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;">BETA LINK IN BIO ↑</div>
+    </div>
+  </div>
+</div>
+
+<div class="brief">
+  <h3>Content Brief — 4-Slide Carousel</h3>
+  <strong>Hook Type:</strong> Contrarian / Privacy<br>
+  <strong>Angle:</strong> Privacy Differentiator (Saturday)<br>
+  <strong>Caption:</strong> We built a travel blog app and have never seen a single user photo. That's not an accident — it's the whole point. Bloggo's AI runs on-device. Zero uploads. Your trip stays on your phone. Beta link in bio.<br>
+  <strong>Notion Destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — Spunky covering eyes (gfx-note), Slide 3 — Spunky with locked phone (gfx-note)
+</div>
+
+</body>
+</html>
