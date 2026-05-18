@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>8-10 Slide — brain-deletes-trips</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#EBEBEB;padding:30px;font-family:'Jost',sans-serif}
+.sw{width:360px;margin:0 auto 28px}
+.sn{font-family:monospace;font-size:10px;color:#aaa;margin-bottom:4px;text-align:center}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden}
+/* recurring */
+.bm{position:absolute;bottom:14px;left:14px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:34px;height:auto;z-index:10;opacity:0.9}
+/* gfx-note */
+.gfx-note{max-width:360px;margin:3px auto 0;padding:7px 10px;background:rgba(19,142,255,0.04);border:1px dashed rgba(19,142,255,0.25);border-radius:5px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+/* SLIDE 1: HOOK */
+.s-hook{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 30px 60px;height:100%}
+.dot-bg{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px;z-index:0;pointer-events:none}
+.hook-inner{position:relative;z-index:2}
+/* SLIDE 2: TRANSITION */
+.s-trans{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 30px 60px;height:100%}
+.grad-text{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:27px;line-height:1.45;position:relative;z-index:2}
+/* SLIDES 3-8: CONTENT */
+.s-content{display:flex;flex-direction:column;justify-content:center;padding:30px 30px 70px 48px;height:100%;position:relative}
+.accent-bar{position:absolute;left:0;top:0;bottom:0;width:6px;background:rgba(19,142,255,0.12)}
+.right-glow{position:absolute;right:0;top:0;bottom:0;width:42%;background:linear-gradient(to right,transparent,rgba(19,142,255,0.05));z-index:0;pointer-events:none}
+.s-label{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;position:relative;z-index:2}
+.s-body{font-family:'Jost',sans-serif;font-size:24px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+.s-body b{font-weight:700}
+/* SLIDE 9: INSIGHT */
+.s-insight{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 30px 70px;height:100%}
+.radial-bg{position:absolute;inset:0;background:radial-gradient(circle at center,rgba(19,142,255,0.05) 0%,transparent 65%);z-index:0;pointer-events:none}
+.ins-top{font-family:'Jost',sans-serif;font-size:18px;color:#6B7280;line-height:1.5;position:relative;z-index:2}
+.ins-bot{font-family:'Jost',sans-serif;font-size:26px;font-weight:700;color:#1A1A1A;line-height:1.25;margin-top:12px;position:relative;z-index:2}
+/* SLIDE 10: CTA */
+.s-cta{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;height:100%}
+.logo-row{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.logo-name{font-family:'Chewy',cursive;font-size:30px;color:#138EFF}
+.cta-h{font-family:'Chewy',cursive;font-size:24px;color:#1A1A1A;line-height:1.25;margin-bottom:4px}
+.cta-a{font-family:'Chewy',cursive;font-size:22px;color:#138EFF;line-height:1.25;margin-bottom:16px}
+.cta-lnk{font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<!-- ===== SLIDE 1: HOOK ===== -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook · Fear</div>
+  <div class="slide">
+    <div class="dot-bg"></div>
+    <div class="s-hook">
+      <div class="hook-inner">
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;">Your brain</div>
+        <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:4px;">deletes</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:8px;">your trips.</div>
+      </div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky staring at a butterfly floating away, slightly reaching out one paw — melancholic expression, memory-fading energy. Higgsfield AI prompt: "A sleek black cat watching a glowing butterfly drift away, one paw slightly raised reaching for it, white minimal background, soft warm lighting, gentle melancholy mood, flat illustration."</div>
+</div>
+
+<!-- ===== SLIDE 2: TRANSITION ===== -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition · Gradient text</div>
+  <div class="slide">
+    <div class="s-trans">
+      <div class="grad-text">Here's what happens<br>after every trip.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ===== SLIDE 3: CONTENT ===== -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content · Day 1</div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="s-content">
+      <div class="s-label">Day 1</div>
+      <div class="s-body">You still remember<br><b>everything</b>. Every detail.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ===== SLIDE 4: CONTENT ===== -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content · Week 1</div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="s-content">
+      <div class="s-label">Week 1</div>
+      <div class="s-body">The restaurant name<br>is <b>gone</b>.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ===== SLIDE 5: CONTENT ===== -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content · Month 3</div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="s-content">
+      <div class="s-label">Month 3</div>
+      <div class="s-body">The vibe feels <b>blurry</b>.<br>Details fade.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ===== SLIDE 6: CONTENT ===== -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content · Month 6</div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="s-content">
+      <div class="s-label">Month 6</div>
+      <div class="s-body">Those photos make<br><b>no sense</b> anymore.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ===== SLIDE 7: CONTENT ===== -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content · Year 2</div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="s-content">
+      <div class="s-label">Year 2</div>
+      <div class="s-body">The trip <b>might as well</b><br>never have happened.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ===== SLIDE 8: CONTENT ===== -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content · The Shift</div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="s-content">
+      <div class="s-label">But</div>
+      <div class="s-body">Your photos hold<br><b>every detail</b>. Still.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ===== SLIDE 9: INSIGHT ===== -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight · Save-worthy</div>
+  <div class="slide">
+    <div class="radial-bg"></div>
+    <div class="s-insight">
+      <div class="ins-top">The story is still in there.</div>
+      <div class="ins-bot"><b>Bloggo</b> can read it.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting beside a glowing open journal/book, warm light radiating from the pages, calm and serene expression. Higgsfield AI prompt: "A black cat sitting next to a glowing open book with warm amber light radiating from its pages, calm and wise expression, white minimal background, flat illustration, cozy save-worthy energy."</div>
+</div>
+
+<!-- ===== SLIDE 10: CTA ===== -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA · Chewy</div>
+  <div class="slide">
+    <div class="s-cta">
+      <div class="logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <span class="logo-name">Bloggo</span>
+      </div>
+      <div class="cta-h">Blog it before it fades.</div>
+      <div class="cta-a">Your trip deserves a story.</div>
+      <div class="cta-lnk">BETA IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky waving excitedly with both paws, welcoming energy, standing next to the Bloggo app icon. Higgsfield AI prompt: "A cheerful black cat waving both paws enthusiastically, big smile energy, white minimal background, flat illustration, bright welcoming mood."</div>
+</div>
+
+<!-- ===== BRIEF ===== -->
+<div style="max-width:360px;margin:20px auto 0;padding:14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7">
+  <strong style="color:#138EFF;font-size:12px">CAROUSEL BRIEF — 8-slide-brain-deletes-trips.html</strong><br>
+  <strong>Type:</strong> 10-Slide Authority Builder<br>
+  <strong>Hook Type:</strong> Fear / Pain<br>
+  <strong>Angle:</strong> Monday — Memory loss timeline (Day 1 → Year 2)<br>
+  <strong>Notion Destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Caption direction:</strong> "Your brain isn't designed to hold trip memories. Here's the exact timeline of how it all disappears — and one tap that changes that. Save this for your next trip."<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — Spunky watching butterfly fade · Slide 9 — Spunky beside glowing journal · Slide 10 — Spunky waving
+</div>
+
+</body>
+</html>
