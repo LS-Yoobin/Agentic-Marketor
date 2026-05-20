@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Built for One Person — Bloggo 5-Slider</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400&family=Chewy&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F3F4F6;padding:24px 16px 48px;font-family:'Jost',sans-serif}
+.meta{text-align:center;margin-bottom:16px}
+.meta h1{font-size:14px;color:#333;font-weight:700}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(89,224,197,0.2);color:#0d8a6a}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative;z-index:2}
+.cl{display:flex;flex-direction:column;justify-content:center;padding:32px 28px 32px 36px;height:100%;position:relative;z-index:2}
+.bar{position:absolute;left:0;top:0;bottom:0;width:4px;background:#138EFF;z-index:1}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:16px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+.dl-btn{display:block;margin:0 auto 16px;background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3)}
+</style>
+</head>
+<body>
+<button class="dl-btn" onclick="saveAllSlides()">Save All Slides</button>
+<div class="meta">
+  <h1>I built Bloggo for one person.</h1>
+  <div class="sub">5-Slider · Founder Story · Wednesday · 2026-05-20</div>
+  <span class="fmt">5 Slides</span>
+</div>
+<div class="carousel">
+
+  <!-- SLIDE 1 — HOOK -->
+  <div class="sw">
+    <div class="sn">Slide 1 — Hook</div>
+    <div class="slide" id="s1">
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:40px;position:relative;z-index:2;">
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;">I built Bloggo</div>
+        <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1.0;margin-top:8px;">for</div>
+        <div style="font-family:'Chewy',cursive;font-size:60px;color:#138EFF;line-height:0.95;margin-top:2px;">one person.</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat sitting very small and still, staring up quietly at a single floating photo in a vast empty space, contemplative expression. Higgsfield AI prompt: "small black cat sitting alone in a vast white space, staring up at one glowing travel photo floating above it, quiet contemplative mood, soft blue ambient light, minimal emotional aesthetic"</div>
+  </div>
+
+  <!-- SLIDE 2 — TRANSITION -->
+  <div class="sw">
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="slide" id="s2">
+      <div class="c">
+        <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:24px;line-height:1.5;text-align:center;background:linear-gradient(90deg,#138EFF,#3BBAFF,#6DD5FA,#59E0C5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Three years of travel.<br>Zero stories written.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 3 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 3 — Content</div>
+    <div class="slide" id="s3">
+      <div class="bar"></div>
+      <div class="cl">
+        <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:400;color:#1A1A1A;line-height:1.45;">
+          That person had<br><b style="color:#138EFF;">2,400 photos.</b><br>Zero stories.
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 4 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 4 — Content</div>
+    <div class="slide" id="s4">
+      <div class="bar"></div>
+      <div class="cl">
+        <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:400;color:#1A1A1A;line-height:1.45;">
+          So I built<br>the tool <b style="color:#138EFF;">I</b> needed.
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 5 — CTA -->
+  <div class="sw">
+    <div class="sn">Slide 5 — CTA</div>
+    <div class="slide" id="s5">
+      <div class="c">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;margin-bottom:20px;">
+        <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.2;text-align:center;">Now it's yours.</div>
+        <div style="font-family:'Chewy',cursive;font-size:32px;color:#138EFF;margin-top:6px;text-align:center;">Try Bloggo!</div>
+        <div style="font-family:'Jost',sans-serif;font-size:12px;color:#9CA3AF;letter-spacing:2px;text-transform:uppercase;margin-top:16px;">BETA IN BIO</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 5 — Graphic:</b> Black cat waving warmly with one paw raised, welcoming gentle smile, soft white background. Higgsfield AI prompt: "black cat waving with one paw raised, gentle welcoming smile, soft white clean background, warm friendly vibe, minimal illustration"</div>
+  </div>
+
+</div>
+<div class="brief">
+  <strong>Caption CTA:</strong> Three years of travel. Not a single story written. I built Bloggo for myself — the person with 2,400 photos and zero blogs. Now it's yours. Beta in bio.<br><br>
+  <strong>Hook type:</strong> Founder story / relatable confession<br>
+  <strong>Target emotion:</strong> Recognition → empathy → trust → follow<br>
+  <strong>Notion destination:</strong> notion-personal → YOOBIN Content Engine<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — Cat sitting alone, staring at a floating travel photo. Slide 5 — Cat waving warmly.
+</div>
+<script>
+var ids=['s1','s2','s3','s4','s5'];
+async function saveAllSlides(){
+  var zip=new JSZip();
+  for(var i=0;i<ids.length;i++){
+    var canvas=await html2canvas(document.getElementById(ids[i]),{scale:4,backgroundColor:'#ffffff',logging:false});
+    var blob=await new Promise(function(r){canvas.toBlob(r,'image/png')});
+    zip.file('slide-'+(i+1)+'.png',blob);
+  }
+  var content=await zip.generateAsync({type:'blob'});
+  saveAs(content,'3-slide-built-for-one-person.zip');
+}
+</script>
+</body>
+</html>
