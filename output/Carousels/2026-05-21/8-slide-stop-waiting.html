@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=360">
+<title>8-Slide — Stop Waiting to Launch (Contrarian Hook)</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#E5E7EB;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:24px;gap:16px;font-family:sans-serif}
+  .sw{display:flex;flex-direction:column;align-items:center}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px}
+
+  /* Watermark & Paw */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* Slide 2 gradient */
+  .grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+  /* Content slides (left-aligned) */
+  .cs{align-items:flex-start;padding:40px 28px 56px 44px}
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+  .lbl{font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+  .bt{font-family:'Jost',sans-serif;font-size:38px;font-weight:400;color:#1A1A1A;line-height:1.2}
+  .bt b{font-weight:700}
+  .sub{font-family:'Jost',sans-serif;font-size:16px;font-style:italic;color:#6B7280;margin-top:12px;line-height:1.4}
+
+  /* Insight slide (centered) */
+  .insight-slide{align-items:center;justify-content:center;text-align:center;padding:48px 36px}
+
+  /* CTA slide */
+  .cta-slide{align-items:center;justify-content:center;text-align:center;padding:40px 32px}
+  .logo-row{display:flex;align-items:center;gap:12px;margin-bottom:20px;justify-content:center}
+
+  /* gfx-note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  /* brief box */
+  .brief{max-width:360px;margin:16px auto 0;padding:12px 16px;background:#fff;border:1px solid rgba(19,142,255,0.2);border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: HOOK — Contrarian -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Contrarian)</div>
+  <div class="slide" style="text-align:center;padding:50px 36px">
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Stop waiting to</div>
+    <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:6px;">launch.</div>
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;line-height:1.4;margin-top:14px;">Perfect is a trap.<br>Here's why it kills startups.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the cat frozen mid-jump, paused in the air, looking unsure whether to land — floating in hesitation. Higgsfield prompt: "A small black cartoon cat frozen mid-leap in the air, wide uncertain eyes, confused expression, suspended in hesitation, clean white background, illustrated soft style"</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide" style="text-align:center;padding:48px 36px">
+    <div style="font-family:'Jost',sans-serif;font-size:32px;font-weight:700;line-height:1.35;" class="grad">Most founders die waiting.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Truth 1</div>
+    <div class="bt"><b>Perfect</b><br>never ships.</div>
+    <div class="sub">"One more feature" never ends.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Truth 2</div>
+    <div class="bt"><b>Ugly</b> ships<br>change everything.</div>
+    <div class="sub">Feedback beats assumptions.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Truth 3</div>
+    <div class="bt">Your first users<br>don't want <b>polish.</b></div>
+    <div class="sub">They want proof it exists.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Truth 4</div>
+    <div class="bt">Every week you wait,<br><b>they ship.</b></div>
+    <div class="sub">The window is always smaller than you think.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7: INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Insight</div>
+  <div class="slide insight-slide">
+    <div style="font-family:'Jost',sans-serif;font-size:22px;font-weight:400;color:#6B7280;line-height:1.4;margin-bottom:10px;">You don't need perfect.</div>
+    <div style="font-family:'Jost',sans-serif;font-size:44px;font-weight:700;color:#1A1A1A;line-height:1.1;">You need<br><span style="color:#138EFF;">shipped.</span></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 7 — Graphic:</b> Spunky the cat holding a small cardboard "shipped" box with a big proud grin, rocket sticker on the side. Higgsfield prompt: "A small black cartoon cat proudly holds a tiny cardboard shipping box with a rocket sticker, big triumphant smile, confetti in the air, white background, illustrated playful style"</div>
+</div>
+
+<!-- SLIDE 8: CTA -->
+<div class="sw">
+  <div class="sn">Slide 8 — CTA</div>
+  <div class="slide cta-slide">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;">Bloggo</span>
+    </div>
+    <div style="font-family:'Chewy',cursive;font-size:40px;color:#1A1A1A;line-height:1.2;">We shipped early.</div>
+    <div style="font-family:'Chewy',cursive;font-size:40px;color:#138EFF;line-height:1.2;">Join the beta!</div>
+    <div style="font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:18px;">LINK IN BIO</div>
+  </div>
+</div>
+
+<!-- CONTENT BRIEF -->
+<div class="brief">
+  <b>Carousel Brief: 8-slide-stop-waiting</b><br>
+  <b>Hook Type:</b> Contrarian<br>
+  <b>Angle:</b> Wednesday — Founder/Builder Story<br>
+  <b>Notion Destination:</b> notion-personal → YOOBIN Content Engine<br>
+  <b>Slides:</b> 8<br>
+  <b>Supporting Graphics:</b><br>
+  — Slide 1: Cat frozen mid-jump in hesitation<br>
+  — Slide 7: Cat holding a "shipped" box triumphantly
+</div>
+
+</body>
+</html>
