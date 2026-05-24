@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Stop saving photos. Start saving stories — Bloggo 10-Slide</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:14px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(19,142,255,0.12);color:#138EFF}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative}
+.lc{padding:28px 28px 60px 44px;text-align:left;height:100%;display:flex;flex-direction:column;justify-content:center;position:relative}
+.ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to right,transparent,rgba(19,142,255,0.05));pointer-events:none;z-index:0}
+.rdl{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);pointer-events:none;z-index:0}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.08) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0}
+.lb{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;position:relative;z-index:2}
+.bt{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+.bt b{font-weight:700}
+.its{font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:8px;position:relative;z-index:2}
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:28px;line-height:1.3;position:relative;z-index:2;text-align:center}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.zz{position:relative;z-index:2}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+.dl-btn{position:absolute;top:25px;right:8px;z-index:100;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity 0.2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head><body>
+<div style="text-align:center;margin:0 0 16px">
+  <button onclick="saveAllSlides()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3)">Save All Slides</button>
+</div>
+<div class="meta">
+  <h1>Stop saving photos. Start saving stories.</h1>
+  <div class="sub">10-Slide · Contrarian/Aspirational Hook · Sunday · notion → Bloggo Content Engine</div>
+  <span class="fmt">8–10 Slides</span>
+</div>
+<div class="carousel">
+
+  <!-- Slide 1 — Hook -->
+  <div class="sw">
+    <div class="sn">Slide 1 — Hook (Contrarian)</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="c">
+        <div class="zz">
+          <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9">Stop</div>
+          <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.5;margin-top:8px">saving photos.</div>
+          <div style="font-family:'Chewy',cursive;font-size:48px;color:#1A1A1A;line-height:1.05;margin-top:10px">Start saving</div>
+          <div style="font-family:'Chewy',cursive;font-size:54px;color:#138EFF;line-height:0.95;margin-top:2px">stories.</div>
+        </div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat throwing phone behind its back, turning toward an open glowing journal instead. Expression: confident, decisive, a clear pivot. Higgsfield AI prompt: "black cat turning away from phone toward open glowing journal, confident decisive expression, dramatic lighting, the feeling of choosing something better"</div>
+  </div>
+
+  <!-- Slide 2 — Transition -->
+  <div class="sw">
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="slide">
+      <div class="c">
+        <div class="zz">
+          <div class="gt">Albums close.<br>Stories last forever.</div>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 3 — Content (left, accent bar) -->
+  <div class="sw">
+    <div class="sn">Slide 3 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="lc">
+        <div class="lb">The truth</div>
+        <div class="bt">Photos capture <b>the moment</b>.<br>Not the <b>meaning</b>.</div>
+        <div class="its">You were there. But your photo can't tell anyone why it mattered.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 4 — Content (left, accent bar) -->
+  <div class="sw">
+    <div class="sn">Slide 4 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="lc">
+        <div class="lb">The proof</div>
+        <div class="bt">Your album sits <b>unopened</b>.<br>For months.</div>
+        <div class="its">The photos are there. Nobody opens photo albums anymore.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 5 — Centered (no accent bar) -->
+  <div class="sw">
+    <div class="sn">Slide 5 — Content (Centered)</div>
+    <div class="slide">
+      <div class="rdl"></div>
+      <div class="c">
+        <div class="zz">
+          <div style="font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.35;font-weight:700">What if photos were<br>just the beginning?</div>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 6 — Content (left, accent bar) -->
+  <div class="sw">
+    <div class="sn">Slide 6 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="lc">
+        <div class="lb">The shift</div>
+        <div class="bt">A story has a <b>beginning</b>.<br>A <b>middle</b>. An end.</div>
+        <div class="its">Photos are just evidence. Stories are memories.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 7 — Content (left, accent bar) -->
+  <div class="sw">
+    <div class="sn">Slide 7 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="lc">
+        <div class="lb">The build</div>
+        <div class="bt">Bloggo <b>structures your trip</b><br>into one.</div>
+        <div class="its">Beginning, middle, end. Written for you.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 8 — Content (left, accent bar) -->
+  <div class="sw">
+    <div class="sn">Slide 8 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="lc">
+        <div class="lb">One tap</div>
+        <div class="bt">Tap once. <b>Full blog</b>.<br>No writing.</div>
+        <div class="its">Your photos already had the story inside them.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 9 — Insight -->
+  <div class="sw">
+    <div class="sn">Slide 9 — Insight (Save-Worthy)</div>
+    <div class="slide">
+      <div class="c">
+        <div class="zz">
+          <div style="font-family:'Jost',sans-serif;font-size:24px;color:#6B7280;line-height:1.4">Photos are evidence.</div>
+          <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:38px;color:#1A1A1A;line-height:1.15;margin-top:10px">Stories are memories.</div>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat sitting beside a butterfly — one side shows scattered photos, the other side shows an open story blog. The butterfly represents the transformation. Higgsfield AI prompt: "black cat sitting beside butterfly, one side scattered photos the other side open glowing blog, transformation metaphor, clean soft light"</div>
+  </div>
+
+  <!-- Slide 10 — CTA -->
+  <div class="sw">
+    <div class="sn">Slide 10 — CTA</div>
+    <div class="slide">
+      <div class="c">
+        <div class="zz">
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:18px">
+            <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+            <span style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF">Bloggo</span>
+          </div>
+          <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.15">Start saving</div>
+          <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1.15">stories.</div>
+          <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:16px">LINK IN BIO</div>
+        </div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 10 — Graphic:</b> Black cat proudly holding an open travel blog, inviting the viewer in. Expression: warm, proud, welcoming. Higgsfield AI prompt: "black cat holding open glowing travel blog toward viewer, proud warm welcoming expression, clean white background"</div>
+  </div>
+
+</div>
+<div class="brief">
+  <strong>Caption CTA:</strong> You don't need more photos. You need one story. Bloggo turns your camera roll into a real travel blog — on your device, privately, in seconds. Link in bio.<br><br>
+  <strong>Hook type:</strong> Contrarian + Aspirational — challenges default behavior (saving photos) and offers a better vision<br>
+  <strong>Target emotion:</strong> Challenge → recognition → aspiration → action<br>
+  <strong>Notion destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — Cat turning from phone to journal, decisive. Slide 9 — Cat with butterfly/transformation metaphor. Slide 10 — Cat holding open travel blog.
+</div>
+<script>
+async function captureSlide(slide){
+  var gtEls=Array.from(slide.querySelectorAll('.gt'));
+  gtEls.forEach(function(el){el.style.webkitTextFillColor='#3BBAFF';el.style.color='#3BBAFF';el.style.webkitBackgroundClip='unset';el.style.backgroundClip='unset';el.style.background='none';});
+  var canvas=await html2canvas(slide,{scale:4,backgroundColor:'#ffffff',logging:false});
+  gtEls.forEach(function(el){el.style.webkitTextFillColor='';el.style.color='';el.style.webkitBackgroundClip='';el.style.backgroundClip='';el.style.background='';});
+  return canvas;
+}
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');var title=document.title.replace(/\s+/g,'-').toLowerCase().substring(0,50);
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    try{var canvas=await captureSlide(slides[i]);var a=document.createElement('a');a.download=title+'-slide-'+(i+1)+'.png';a.href=canvas.toDataURL('image/png');document.body.appendChild(a);a.click();document.body.removeChild(a);await new Promise(function(r){setTimeout(r,600);});}catch(e){console.warn('Slide '+(i+1)+':',e);}
+  }
+  btn.textContent=orig;btn.disabled=false;
+}
+document.querySelectorAll('.sw').forEach(function(sw){
+  var btn=document.createElement('button');btn.className='dl-btn';btn.textContent='Save PNG';
+  btn.onclick=async function(){var slide=sw.querySelector('.slide');btn.style.opacity='0';
+    try{var canvas=await captureSlide(slide);var a=document.createElement('a');a.download=document.title.replace(/\s+/g,'-').toLowerCase()+'-slide.png';a.href=canvas.toDataURL('image/png');document.body.appendChild(a);a.click();document.body.removeChild(a);}catch(e){console.warn(e);}
+    btn.style.opacity='';};
+  sw.appendChild(btn);
+});
+</script>
+</body></html>
