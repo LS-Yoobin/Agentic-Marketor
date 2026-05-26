@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>10-Slide: What Bloggo Detects</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:14px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(89,224,197,0.2);color:#0d8a6a}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative;z-index:2}
+.cl{display:flex;flex-direction:column;justify-content:center;padding:50px 44px 50px 56px;height:100%;position:relative;z-index:2}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.08) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0}
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none;z-index:0}
+.cg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.04) 0%,transparent 70%);pointer-events:none;z-index:0}
+.lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px}
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.wm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.dl-btn{position:absolute;top:25px;right:8px;z-index:100;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity 0.2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.6}
+.brief strong{color:#b38a00}
+.caption-block{max-width:360px;margin:16px auto 0;padding:16px;background:#F8FAFF;border:1px solid rgba(19,142,255,0.15);border-radius:10px;font-family:'Jost',sans-serif}
+.caption-platform{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:6px}
+.caption-text{font-size:12px;color:#374151;line-height:1.7;margin:0}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head><body>
+<div style="text-align:center;margin:0 0 16px;">
+  <button onclick="saveAllSlides()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3);">Save All Slides</button>
+</div>
+<div class="meta">
+  <h1>What Bloggo detects in your camera roll</h1>
+  <div class="sub">Product Deep Dive · Curiosity Hook · Tuesday · 2026-05-26</div>
+  <span class="fmt">10 Slides</span>
+</div>
+<div class="carousel">
+
+  <!-- Slide 1 — Hook (Curiosity) -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 1 — Hook</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="c">
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">What hides inside</div>
+        <div style="font-family:'Chewy',cursive;font-size:58px;color:#1A1A1A;line-height:0.95;margin-top:6px;">your camera</div>
+        <div style="font-family:'Chewy',cursive;font-size:58px;color:#138EFF;line-height:0.95;">roll.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#9CA3AF;margin-top:14px;line-height:1.5;">More than you think.<br>Bloggo reads all of it.</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat with curious wide eyes peering into a glowing camera roll interface on a phone, multiple photo tiles floating around with tiny GPS pins and clocks. Higgsfield AI: "black cat peering curiously at a glowing phone showing a grid of travel photos, small GPS pins floating above each photo, wide curious eyes, soft white minimal background"</div>
+  </div>
+
+  <!-- Slide 2 — Transition -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="slide">
+      <div class="cg"></div>
+      <div class="c">
+        <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.3;max-width:265px;" class="gt">More than photos.<br>Bloggo reads<br>the <strong>data</strong> inside.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 3 — Content: GPS -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 3 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="cl">
+        <div class="lbl">GPS</div>
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">Every photo stores<br>your <strong>exact coordinates</strong>.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:12px;line-height:1.4;">Every café. Every beach.<br>Every overlook. Logged.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 4 — Content: Timestamp -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 4 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="cl">
+        <div class="lbl">TIMESTAMP</div>
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">When you arrived.<br>How long you <strong>stayed</strong>.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:12px;line-height:1.4;">Time + date on every photo.<br>Bloggo builds your timeline.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 5 — Content: Trip Detection -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 5 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="cl">
+        <div class="lbl">TRIP DETECTION</div>
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">Distance from home<br>marks <strong>where your trip begins</strong>.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:12px;line-height:1.4;">No check-in required.<br>Bloggo finds the boundary.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 6 — Content: Photo Clusters -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 6 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="cl">
+        <div class="lbl">PHOTO CLUSTERS</div>
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">Nearby photos cluster<br>into <strong>places you visited</strong>.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:12px;line-height:1.4;">Restaurant. Hotel. Landmark.<br>Grouped automatically.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 7 — Content: Reverse Geocoding -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 7 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="cl">
+        <div class="lbl">REVERSE GEOCODING</div>
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">Bloggo <strong>names</strong> every<br>restaurant, hotel, landmark.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:12px;line-height:1.4;">Coordinates → real place names.<br>On your device. Privately.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 8 — Content: Computer Vision -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 8 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="cl">
+        <div class="lbl">ON-DEVICE VISION</div>
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">AI <strong>sees</strong> what's in<br>each photo — privately.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:12px;line-height:1.4;">Food. Architecture. Scenery.<br>Your phone. Your data.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- Slide 9 — Insight / Save-Bait -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 9 — Insight</div>
+    <div class="slide">
+      <div class="cg"></div>
+      <div class="c">
+        <div style="font-family:'Jost',sans-serif;font-weight:400;font-size:32px;color:#6B7280;line-height:1.2;margin-bottom:10px;">Your story<br>was already there.</div>
+        <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:44px;color:#1A1A1A;line-height:1.1;">Bloggo<br>just found it.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat sitting beside an open glowing journal, looking at it with a calm, satisfied expression — as if the story was always there. Higgsfield AI: "black cat sitting beside a glowing open journal book, calm satisfied expression, soft golden light, white minimal background, cozy and warm"</div>
+  </div>
+
+  <!-- Slide 10 — CTA -->
+  <div class="sw">
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="sn">Slide 10 — CTA</div>
+    <div class="slide">
+      <div class="cg"></div>
+      <div class="c">
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:22px;">
+          <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+          <span style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1;">Bloggo</span>
+        </div>
+        <div style="font-family:'Chewy',cursive;font-size:40px;color:#1A1A1A;line-height:1.1;">Try Bloggo free.</div>
+        <div style="font-family:'Chewy',cursive;font-size:32px;color:#138EFF;line-height:1.1;margin-top:6px;">Your trip is waiting.</div>
+        <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:22px;">BETA IN BIO</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 10 — Graphic:</b> Black cat waving both paws in a welcoming gesture, big friendly energy, beside a glowing phone showing a finished travel blog. Higgsfield AI: "black cat waving both front paws enthusiastically, sitting next to a glowing iPhone showing a colorful travel blog, bright white background, joyful welcoming energy"</div>
+  </div>
+
+</div>
+
+<div class="brief">
+  <strong>Carousel Brief</strong><br>
+  Format: 10-Slide · Angle: Product Deep Dive (What Bloggo Detects) · 2026-05-26<br>
+  Hook Type: Curiosity · Hook: "What hides inside your camera roll."<br>
+  Notion Destination: <strong>notion → Bloggo Content Engine</strong><br>
+  <strong>Supporting Graphics:</strong><br>
+  · Slide 1 — Cat peering at glowing phone with floating GPS pins<br>
+  · Slide 9 — Cat beside glowing open journal<br>
+  · Slide 10 — Cat waving beside phone showing travel blog
+</div>
+
+<div class="caption-block">
+  <div class="caption-platform">Instagram Caption</div>
+  <p class="caption-text">Most people don't know what's hiding inside every photo they take. GPS coordinates. Exact timestamps. Distance from home. Photo clusters. Real place names.<br><br>Bloggo reads all of it — on your device, privately — and turns it into a full travel blog in under 60 seconds.<br><br>Your camera roll already has everything. You just needed something that could read it.<br><br>Beta in bio. Try it free.</p>
+</div>
+
+<script>
+async function saveSlide(btn) {
+  const sw = btn.closest('.sw');
+  const slide = sw.querySelector('.slide');
+  const sn = sw.querySelector('.sn').textContent.trim();
+  const canvas = await html2canvas(slide, {scale:3,useCORS:true,backgroundColor:'#ffffff'});
+  const link = document.createElement('a');
+  link.download = sn.replace(/[^a-z0-9]/gi,'-').toLowerCase()+'.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
+async function saveAllSlides() {
+  const zip = new JSZip();
+  const sws = document.querySelectorAll('.sw');
+  for(let i=0;i<sws.length;i++){
+    const slide = sws[i].querySelector('.slide');
+    const sn = sws[i].querySelector('.sn').textContent.trim();
+    const canvas = await html2canvas(slide,{scale:3,useCORS:true,backgroundColor:'#ffffff'});
+    const name = (i+1)+'-'+sn.replace(/[^a-z0-9]/gi,'-').toLowerCase()+'.png';
+    zip.file(name,canvas.toDataURL('image/png').split(',')[1],{base64:true});
+  }
+  const blob = await zip.generateAsync({type:'blob'});
+  saveAs(blob,'8-slide-what-bloggo-detects.zip');
+}
+</script>
+</body></html>
