@@ -392,9 +392,10 @@ On demand:    /repurpose → adapts winning posts to 2 new formats
 |------|---------|
 | `docs/marketing/strategy-compass.md` | Strategic north star — founder writes, all agents read |
 | `docs/marketing/yoobin-voice.md` | Voice authenticity anchor — founder writes, Yoobin-facing agents read |
-| `meetings/` folder | Meeting notes raw material |
+| `meetings/.gitkeep` | Creates the meetings/ folder in git |
 | `meetings/README.md` | Note format guide for the folder |
-| `briefings/weekly-review-YYYY-MM-DD.md` | Generated each Monday by the review cron |
+| `~/.claude/plugins/bloggo-marketing/skills/weekly-review/SKILL.md` | New `/weekly-review` skill — the agent that runs at 8AM Monday |
+| `briefings/weekly-review-YYYY-MM-DD.md` | Generated each Monday by the review cron (output, not tracked) |
 
 ### Modify (existing)
 | File | Change |
