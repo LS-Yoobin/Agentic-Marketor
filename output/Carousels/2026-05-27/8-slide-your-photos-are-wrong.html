@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Photos Are Wrong — Bloggo</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F0F0F0;display:flex;flex-direction:column;align-items:center;padding:30px;gap:20px;font-family:'Jost',sans-serif}
+.sw{width:360px}
+.sn{font-family:'Jost',sans-serif;font-size:11px;color:#999;text-align:center;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase}
+
+/* Base slide */
+.slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:36px 32px}
+
+/* Slide 1 — Hook (WTF / Contrarian) */
+.h-setup{font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;position:relative;z-index:2;text-align:center}
+.h-bridge{font-family:'Chewy',cursive;font-size:40px;color:#1A1A1A;line-height:1.0;margin-top:6px;position:relative;z-index:2;text-align:center}
+.h-hero{font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;position:relative;z-index:2;text-align:center}
+
+/* Slide 2 — Transition (gradient text, Jost) */
+.s2-text{font-family:'Jost',sans-serif;font-size:23px;font-weight:700;line-height:1.4;background:linear-gradient(to right,#138EFF,#3BBAFF,#6DD5FA,#59E0C5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;padding:0 18px}
+
+/* Content slides (3–8) — Left-aligned, Jost */
+.cs{justify-content:center;align-items:flex-start;padding:40px 32px 50px 44px}
+.ab{position:absolute;left:0;top:0;bottom:0;width:5px;background:#138EFF}
+.slide-label{font-family:'Jost',sans-serif;font-size:10px;color:rgba(19,142,255,0.45);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:18px}
+.ct{font-family:'Jost',sans-serif;font-size:30px;color:#1A1A1A;line-height:1.3;font-weight:400;text-align:left}
+.ct b{color:#138EFF;font-weight:700}
+.ct-lg{font-size:36px}
+
+/* Slide 9 — Insight (centered, Jost) */
+.ins{justify-content:center;align-items:center;text-align:center;padding:36px 30px}
+.ins-pre{font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-bottom:14px;letter-spacing:0.5px}
+.ins-text{font-family:'Jost',sans-serif;font-size:23px;font-weight:700;color:#1A1A1A;line-height:1.35;padding:0 8px}
+.ins-text span{color:#138EFF}
+
+/* Slide 10 — CTA (Chewy, one action) */
+.cta{justify-content:center;align-items:center;text-align:center}
+.cta-logo{margin-bottom:14px}
+.cta-h{font-family:'Chewy',cursive;font-size:28px;color:#1A1A1A;line-height:1.2;margin-bottom:6px}
+.cta-sub{font-family:'Chewy',cursive;font-size:21px;color:#6B7280;margin-bottom:18px;line-height:1.3}
+.cta-btn{font-family:'Chewy',cursive;font-size:20px;color:#FFFFFF;background:#138EFF;padding:11px 28px;border-radius:30px;display:inline-block}
+
+/* Shared */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:16px auto 0;padding:14px;background:#fff;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#555;line-height:1.8;border:1px solid #e0e8f5}
+.brief b{color:#138EFF}
+.brief hr{border:none;border-top:1px solid #e8e8e8;margin:8px 0}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK (WTF / Contrarian) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook · WTF / Contrarian</div>
+  <div class="slide">
+    <div class="h-setup">Your travel photos are</div>
+    <div class="h-bridge">a</div>
+    <div class="h-hero">lie.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat staring directly at viewer with wide knowing eyes, sitting in front of a big pile of glowing phone screens all showing beautiful travel photos, expression: "I know something you don't." Higgsfield AI prompt: "Cute black cat staring directly into camera with wide knowing eyes, sitting in front of multiple glowing phone screens showing colorful travel photos, confident and mysterious expression, cinematic, dark background, 4:5 portrait ratio"</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION (Gradient text, watermark + paw) -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="s2-text">Not the photos.<br>What you did after.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="slide-label">Reality Check</div>
+    <div class="ct ct-lg">You took<br><b>800 photos.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="slide-label">The Truth</div>
+    <div class="ct ct-lg">You posted<br><b>3.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="slide-label">What Happened</div>
+    <div class="ct">The other 797?<br><b>Gone.</b> Not from your camera.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Black cat watching a small butterfly float away slightly out of reach, one paw gently raised toward it, wistful expression. Higgsfield AI prompt: "Cute black cat sitting still, watching a small glowing butterfly float away slightly out of reach, one paw gently raised, wistful melancholy mood, soft warm light, minimal background, cinematic, 4:5 portrait ratio"</div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="slide-label">The Fix</div>
+    <div class="ct">Bloggo turns all 800<br>into a <b>story.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT (Privacy) -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="slide-label">On Your Phone</div>
+    <div class="ct">On-device AI. <b>Privately.</b><br>Photos never leave.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide cs">
+    <div class="ab"></div>
+    <div class="slide-label">Zero Effort</div>
+    <div class="ct">No writing.<br>Your photos <b>already know.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Black cat looking at a phone screen showing a fully assembled travel blog, amazed and delighted expression, glowing warm light. Higgsfield AI prompt: "Cute black cat looking with wide amazed eyes at a glowing phone screen displaying a fully formatted travel blog with beautiful photos, warm blue light, white minimal background, cinematic, 4:5 portrait ratio"</div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT (Save-bait, centered, Jost, watermark + paw) -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide ins">
+    <div class="ins-pre">the reframe</div>
+    <div class="ins-text">The photo didn't fail you.<br><span>The format did.</span></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 10 — CTA (Chewy, app icon, one action) -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide cta">
+    <div class="cta-logo">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+    </div>
+    <div class="cta-h">Change the format.</div>
+    <div class="cta-sub">Your camera roll has<br>800 stories waiting.</div>
+    <div class="cta-btn">Beta in Bio!</div>
+  </div>
+</div>
+
+<div class="brief" style="width:360px">
+  <b>Carousel Brief</b><br>
+  <hr>
+  Type: 8-Slide Post · Slides: Hook → Transition → 6 Content → Insight → CTA<br>
+  Date: 2026-05-27 · Wednesday Angle: Founder/Builder (Contrarian Truth)<br>
+  Hook Type: WTF / Contrarian — challenges what "sharing a trip" means<br>
+  Hook Slug: your-photos-are-wrong<br>
+  <hr>
+  <b>Caption draft:</b><br>
+  "Your travel photos are lying to you. You took 800. You posted 3. The other 797 aren't lost — they're just in the wrong format. Bloggo fixes that 👇"<br>
+  <hr>
+  <b>Notion destination:</b> notion → Bloggo Content Engine<br>
+  <b>Posted from:</b> Bloggo's account (product education via contrarian hook)<br>
+  <hr>
+  <b>Supporting Graphics:</b><br>
+  Slide 1 — Cat staring into camera in front of glowing phones (gfx-note after slide 1)<br>
+  Slide 5 — Cat watching butterfly float away (gfx-note after slide 5)<br>
+  Slide 8 — Cat amazed at phone showing finished blog (gfx-note after slide 8)
+</div>
+
+</body>
+</html>

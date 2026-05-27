@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forgot the Trip — Bloggo</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F0F0F0;display:flex;flex-direction:column;align-items:center;padding:30px;gap:20px;font-family:'Jost',sans-serif}
+.sw{width:360px}
+.sn{font-family:'Jost',sans-serif;font-size:11px;color:#999;text-align:center;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase}
+
+/* Base slide */
+.slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:36px 32px;text-align:center}
+
+/* Slide 1 — Hook typography */
+.h-setup{font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;position:relative;z-index:2}
+.h-hero{font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:6px;position:relative;z-index:2}
+.h-end{font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;margin-top:10px;position:relative;z-index:2}
+
+/* Slide 2 — Transition with gradient text */
+.s2-text{font-family:'Jost',sans-serif;font-size:25px;font-weight:700;line-height:1.35;background:linear-gradient(to right,#138EFF,#3BBAFF,#6DD5FA,#59E0C5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;padding:0 16px}
+
+/* Slide 3 — CTA (Chewy font, app icon, one action) */
+.cta-logo{margin-bottom:14px}
+.cta-headline{font-family:'Chewy',cursive;font-size:30px;color:#1A1A1A;line-height:1.2;margin-bottom:6px}
+.cta-sub{font-family:'Chewy',cursive;font-size:22px;color:#6B7280;line-height:1.3;margin-bottom:18px}
+.cta-btn{font-family:'Chewy',cursive;font-size:20px;color:#FFFFFF;background:#138EFF;padding:11px 28px;border-radius:30px;display:inline-block;letter-spacing:0.5px}
+
+/* Shared */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:16px auto 0;padding:14px;background:#fff;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#555;line-height:1.8;border:1px solid #e0e8f5}
+.brief b{color:#138EFF}
+.brief hr{border:none;border-top:1px solid #e8e8e8;margin:8px 0}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="h-setup">I came home from</div>
+    <div class="h-hero">Bali</div>
+    <div class="h-end">and remembered nothing.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat sitting beside a massive overflowing pile of unsorted printed photos on a white table, looking confused and small, warm soft light. Higgsfield AI prompt: "Cute black cat sitting beside a chaotic pile of scattered travel photos overflowing off a white table, looking overwhelmed and lost, warm neutral lighting, cinematic, minimal, 4:5 portrait ratio"</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION (gradient text, watermark + paw) -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="s2-text">That blank feeling is why I built Bloggo.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — INSIGHT + CTA (Chewy font, app icon, one action — no watermark/paw on CTA slide) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Insight + CTA</div>
+  <div class="slide">
+    <div class="cta-logo">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+    </div>
+    <div class="cta-headline">Your photos already<br>tell the story.</div>
+    <div class="cta-sub">Bloggo just lets them.</div>
+    <div class="cta-btn">Beta in Bio!</div>
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Black cat sitting proudly next to a glowing phone showing a beautiful travel blog layout, satisfied expression, warm blue accent lighting, white background. Higgsfield AI prompt: "Cute black cat sitting proudly beside a glowing smartphone screen displaying a beautiful travel blog with photos, soft blue accent lighting, minimal white background, 4:5 portrait ratio, cinematic"</div>
+</div>
+
+<div class="brief" style="width:360px">
+  <b>Carousel Brief</b><br>
+  <hr>
+  Type: 3-Slide Post · Slides: Hook → Transition → Insight/CTA<br>
+  Date: 2026-05-27 · Wednesday Angle: Founder/Builder Story (Relatable Moment)<br>
+  Hook Type: Story — personal origin moment<br>
+  Hook Slug: forgot-the-trip<br>
+  <hr>
+  <b>Caption draft:</b><br>
+  "Came home from Bali with 800 photos. Zero story. That gap is why I spent the last year building Bloggo. Your camera roll already has everything — it just needs to be turned into something. Beta coming soon. Link in bio."<br>
+  <hr>
+  <b>Notion destination:</b> notion-personal → YOOBIN Content Engine<br>
+  <b>Posted from:</b> Yoobin's personal account (founder origin story)<br>
+  <hr>
+  <b>Supporting Graphics:</b><br>
+  Slide 1 — Cat overwhelmed by pile of photos (see gfx-note)<br>
+  Slide 3 — Cat beside glowing blog screen (see gfx-note)
+</div>
+
+</body>
+</html>
