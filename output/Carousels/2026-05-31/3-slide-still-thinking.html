@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3-Slide: 3 Years Later — Still Thinking About It</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:14px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(89,224,197,0.2);color:#0d8a6a}
+.sa{text-align:center;margin:0 0 16px}
+.sa button{background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3)}
+.sw{position:relative;width:360px;margin:0 auto 8px}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;text-align:center}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:16px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+.dl-btn{position:absolute;top:25px;right:8px;z-index:100;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity 0.2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+</style>
+</head>
+<body>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides</button></div>
+
+<div class="meta">
+  <h1>3 years later. Still thinking about it.</h1>
+  <div class="sub">Sunday · Aspirational · 3-Slide</div>
+  <span class="fmt">3 Slides</span>
+</div>
+
+<!-- CAPTION -->
+<div class="brief" style="background:#f0f7ff;border-color:#138EFF;margin-bottom:16px">
+  <strong>Instagram Caption:</strong><br>
+  You know the trip. You can still feel it. But you never wrote it down — and now the details are starting to blur. Bloggo turns your camera roll into that story before it fades. No writing. Just tap.<br><br>
+  Link in bio for early access.<br><br>
+  #travelmemories #travelblog #buildingablog #bloggo #travelstory
+</div>
+
+<div style="max-width:360px;margin:0 auto">
+
+<!-- SLIDE 1: HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <!-- Subtle dot pattern -->
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.07) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0"></div>
+    <!-- Content -->
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:36px 32px">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">3 years later.</div>
+      <div style="font-family:'Chewy',cursive;font-size:68px;color:#138EFF;line-height:0.95;margin-top:10px">Still</div>
+      <div style="font-family:'Chewy',cursive;font-size:48px;color:#1A1A1A;line-height:1;margin-top:4px">thinking about it.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#9CA3AF;margin-top:20px;line-height:1.5">You know the one.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat sitting very still on a windowsill, staring out at a distant landscape with soft dreamy eyes. Nostalgic, quiet energy. Higgsfield AI prompt: "black cat sitting on windowsill, gazing out at a blurred travel landscape, dreamy soft light, nostalgic mood, cinematic wide shot"</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.04) 0%,transparent 70%);pointer-events:none;z-index:0"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 32px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:28px;line-height:1.25">
+        <span class="gt">That trip is still</span>
+      </div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:28px;line-height:1.25;margin-top:4px">
+        <span class="gt">in your camera roll.</span>
+      </div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:20px;line-height:1.5">Untouched. Waiting.<br>No story yet.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: INSIGHT + CTA -->
+<div class="sw">
+  <div class="sn">Slide 3 — Insight / CTA</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 28px;position:relative">
+      <!-- Logo row -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px">
+        <div style="font-family:'Chewy',cursive;font-size:42px;color:#138EFF;line-height:1">Bloggo</div>
+      </div>
+      <!-- CTA headline -->
+      <div style="font-family:'Chewy',cursive;font-size:40px;color:#1A1A1A;line-height:1.1;margin-bottom:8px">Write it before</div>
+      <div style="font-family:'Chewy',cursive;font-size:40px;color:#138EFF;line-height:1.1">it fades.</div>
+      <!-- Sub -->
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:24px">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Black cat waving a paw warmly, sitting next to a glowing open journal with soft blue light. Welcoming, hopeful energy. Higgsfield AI prompt: "black cat waving paw, sitting beside glowing open travel journal, soft blue glow, warm welcoming mood, clean white background"</div>
+</div>
+
+</div>
+
+<div class="brief">
+  <strong>Hook type:</strong> Story / Aspirational<br>
+  <strong>Notion destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Target emotion:</strong> Wistful recognition → urgency to act<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — Cat staring out window at blurry travel landscape. Slide 3 — Cat waving beside a glowing open journal.
+</div>
+
+<script>
+async function captureSlide(slide){
+  var gtEls=Array.from(slide.querySelectorAll('.gt'));
+  gtEls.forEach(function(el){
+    el.style.webkitTextFillColor='#3BBAFF';
+    el.style.color='#3BBAFF';
+    el.style.webkitBackgroundClip='unset';
+    el.style.backgroundClip='unset';
+    el.style.background='none';
+  });
+  var canvas=await html2canvas(slide,{scale:4,backgroundColor:'#ffffff',logging:false,useCORS:true});
+  gtEls.forEach(function(el){
+    el.style.webkitTextFillColor='';
+    el.style.color='';
+    el.style.webkitBackgroundClip='';
+    el.style.backgroundClip='';
+    el.style.background='';
+  });
+  return canvas;
+}
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/\s+/g,'-').toLowerCase().substring(0,50);
+  var zip=new JSZip();
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    try{
+      var canvas=await captureSlide(slides[i]);
+      var blob=await new Promise(function(r){canvas.toBlob(r,'image/png');});
+      zip.file('slide-'+(i+1)+'.png',blob);
+    }catch(e){console.error(e);}
+  }
+  var zipBlob=await zip.generateAsync({type:'blob'});
+  saveAs(zipBlob,title+'-slides.zip');
+  btn.textContent=orig;
+  btn.disabled=false;
+}
+function saveSlide(btn){
+  var slide=btn.parentElement.querySelector('.slide');
+  btn.style.opacity='0';
+  captureSlide(slide).then(function(canvas){
+    var a=document.createElement('a');
+    a.download=document.title.replace(/\s+/g,'-').toLowerCase()+'-slide.png';
+    a.href=canvas.toDataURL('image/png');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    btn.style.opacity='';
+  });
+}
+</script>
+</body>
+</html>
