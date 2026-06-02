@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloggo — 3-Slide: Memories You Won't Tell</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;padding:24px;gap:8px;font-family:sans-serif}
+h1{font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.sw{width:360px;margin-bottom:4px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#9CA3AF;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden}
+/* Shared recurring */
+.wm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* Slide 1 — Hook */
+.s1-inner{position:relative;z-index:2;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 36px}
+.dots{position:absolute;inset:0;background-image:radial-gradient(circle,#138EFF 1px,transparent 1px);background-size:36px 36px;opacity:0.04;pointer-events:none}
+/* Slide 2 — Transition */
+.s2-inner{position:relative;z-index:2;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 40px 70px}
+.gr{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;line-height:1.3}
+/* Slides 3–4 — Content (left-aligned) */
+.s3-inner{position:relative;z-index:2;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:40px 32px 70px 52px}
+.ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none}
+.lbl{font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;position:relative;z-index:2}
+.body{font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;position:relative;z-index:2}
+/* Slide 4 — Insight (centered) */
+.s4-inner{position:relative;z-index:2;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 40px 70px}
+.ins-top{font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;line-height:1.4;margin-bottom:10px;position:relative;z-index:2}
+.ins-bot{font-family:'Jost',sans-serif;font-size:34px;font-weight:700;color:#1A1A1A;line-height:1.2;position:relative;z-index:2}
+.radial{position:absolute;inset:0;background:radial-gradient(circle at center,rgba(19,142,255,0.05) 0%,transparent 70%);pointer-events:none}
+/* Slide 5 — CTA */
+.s5-inner{position:relative;z-index:2;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 40px}
+/* gfx-note */
+.gfx-note{max-width:360px;margin:4px 0 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+/* brief */
+.brief{width:360px;margin:16px 0 0;padding:14px 16px;background:#fff;border:1.5px solid rgba(19,142,255,0.2);border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.8}
+.brief h3{font-size:11px;font-weight:700;color:#138EFF;margin-bottom:6px;letter-spacing:1px;text-transform:uppercase}
+.brief ul{padding-left:14px}
+</style>
+</head>
+<body>
+
+<h1>3–5 Slide — Memories You Won't Tell — 2026-06-02</h1>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="dots"></div>
+    <div class="s1-inner">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">You took</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;margin-top:4px">847 photos.</div>
+      <div style="font-family:'Chewy',cursive;font-size:48px;color:#1A1A1A;line-height:1.0;margin-top:6px">Zero captions.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky staring at an overflowing camera roll on a phone screen, wide curious eyes, slight overwhelm. Higgsfield prompt: "Cute black cat mascot looking at a glowing smartphone with thousands of photos overflowing off the screen, curious overwhelmed expression, white background, clean illustration."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="s2-inner">
+      <div class="gr" style="font-size:34px">Here's what that<br>actually costs you.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="s3-inner">
+      <div class="lbl">THE COST</div>
+      <div class="body">6 months later,<br>the <strong>names fade</strong>.<br>The <strong>feeling</strong> goes.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Insight</div>
+  <div class="slide">
+    <div class="radial"></div>
+    <div class="s4-inner">
+      <div class="ins-top">The story was always<br>in your camera roll.</div>
+      <div class="ins-bot">You just needed<br>someone to <strong>read it</strong>.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Spunky sitting next to a glowing open journal or blog, peaceful expression, warm soft light. Higgsfield prompt: "Cute black cat mascot sitting beside a glowing open travel journal or blog, calm contented expression, soft warm light, white background, clean illustration style."</div>
+</div>
+
+<!-- SLIDE 5 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 5 — CTA</div>
+  <div class="slide">
+    <div class="s5-inner">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <span style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1">Bloggo</span>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.2;margin-bottom:6px">Reads your photos.</div>
+      <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1.2;margin-bottom:22px">Writes the story.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Spunky waving excitedly, welcoming gesture, next to a phone showing a Bloggo blog. Higgsfield prompt: "Cute black cat mascot waving with an excited welcoming expression, holding a phone showing a beautiful travel blog, white background, clean bright illustration style."</div>
+</div>
+
+<div class="brief">
+  <h3>Content Brief</h3>
+  <ul>
+    <li><b>Format:</b> 3–5 Slide Post (5 slides)</li>
+    <li><b>Angle:</b> Pain point — photo backlog guilt / memory cost (Monday rotation)</li>
+    <li><b>Hook type:</b> Fear / Relatable</li>
+    <li><b>Caption:</b> "You know the feeling. A trip you loved, photos you took, a story you never told. Bloggo fixes that in under a minute. Beta link in bio."</li>
+    <li><b>Notion destination:</b> notion → Bloggo Content Engine</li>
+    <li><b>Supporting Graphics:</b> Slide 1 — Spunky staring at overflowing camera roll | Slide 4 — Spunky with glowing journal | Slide 5 — Spunky waving with phone</li>
+  </ul>
+</div>
+
+</body>
+</html>
