@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9-Slide — Your Camera Knows More</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f0f0f0;font-family:'Jost',sans-serif;padding:30px}
+  .brief{max-width:360px;background:#fff;border:1px solid #ddd;border-radius:8px;padding:14px 16px;margin-bottom:24px;font-size:11px;line-height:1.7;color:#333}
+  .brief b{color:#138EFF}
+
+  .sw{max-width:360px;margin:0 auto 32px}
+  .sn{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#9CA3AF;margin-bottom:6px}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;border-radius:4px}
+
+  /* Slide 1 — Hook (WTF/Contrarian) */
+  .s1{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+  .s1-dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0}
+
+  /* Slide 2 — Transition */
+  .s2{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+  .s2-grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.35;position:relative;z-index:2}
+
+  /* Content slides 3-7 — Left-aligned */
+  .sc{display:flex;flex-direction:column;justify-content:center;padding:30px 28px 30px 44px}
+  .sc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .sc::after{content:'';position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent)}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;position:relative;z-index:2}
+  .body{font-family:'Jost',sans-serif;font-weight:400;font-size:30px;color:#1A1A1A;line-height:1.3;position:relative;z-index:2}
+  .body b{font-weight:700}
+  .italic{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:10px;position:relative;z-index:2;line-height:1.4}
+
+  /* Slide 8 — Insight (centered) */
+  .s8{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+  .s8-radial{position:absolute;inset:0;background:radial-gradient(circle at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0}
+  .s8-top{font-family:'Jost',sans-serif;font-weight:400;font-size:21px;color:#6B7280;line-height:1.4;position:relative;z-index:2}
+  .s8-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:32px;color:#1A1A1A;line-height:1.2;margin-top:12px;position:relative;z-index:2}
+
+  /* Slide 9 — CTA */
+  .s9{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+
+  /* Recurring */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+  .logo-row{display:flex;align-items:center;gap:14px;margin-bottom:18px;position:relative;z-index:2}
+  .cta-h1{font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.1;position:relative;z-index:2}
+  .cta-h2{font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.1;margin-top:2px;position:relative;z-index:2}
+  .link-bio{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:3px;margin-top:16px;position:relative;z-index:2}
+
+  /* gfx note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <b>Carousel: Your Camera Knows More Than You (9-Slide)</b><br>
+  Hook: "Your camera roll knows more than you do."<br>
+  Hook Type: WTF / Contrarian<br>
+  Slides: 9 (Hook → Transition → 5 Content → Insight → CTA)<br>
+  Angle: Tuesday — Product Education<br>
+  Notion: <b>notion → Bloggo Content Engine</b><br>
+  <br>
+  <b>Supporting Graphics:</b><br>
+  Slide 1: Cat staring at camera roll — slightly reaching, curious. Slide 8: Cat sitting next to glowing journal, satisfied. Slide 9: Cat waving.
+</div>
+
+<!-- SLIDE 1 — HOOK (WTF/Contrarian) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide s1">
+    <div class="s1-dot"></div>
+    <div style="position:relative;z-index:2;text-align:center;">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Your camera roll</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:0.95;margin-top:4px;">knows more</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:0.95;margin-top:4px;">than you do.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat sitting and staring at an overflowing camera roll, slightly reaching toward it with one paw. Curious, slightly alarmed expression. Higgsfield prompt: "A small black cat sitting and reaching one paw toward a large glowing phone screen showing hundreds of travel photos, curious and slightly alarmed expression, white background, minimal illustration style."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="s2-grad">Most apps ignore what<br>your photos are already saying.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — text-only transition slide.</div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide sc">
+    <div class="label">Reality Check</div>
+    <div class="body"><b>500 photos.</b><br>One trip. Zero stories.</div>
+    <div class="italic">The photos exist.<br>The story doesn't — yet.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> None — text-only content slide.</div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide sc">
+    <div class="label">What's in every photo</div>
+    <div class="body">A <b>GPS</b> coordinate.<br>A timestamp.<br>A place.</div>
+    <div class="italic">Your phone logged it all.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> None — text-only content slide.</div>
+</div>
+
+<!-- SLIDE 5 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide sc">
+    <div class="label">What that means</div>
+    <div class="body">That's already a<br><b>travel diary.</b></div>
+    <div class="italic">You just can't read it<br>in the format it's in.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> None — text-only content slide.</div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide sc">
+    <div class="label">What Bloggo does</div>
+    <div class="body">Bloggo reads it.<br>In under <b>60 seconds.</b></div>
+    <div class="italic">From tap to blog.<br>No writing. No organizing.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 6 — Graphic:</b> None — text-only content slide.</div>
+</div>
+
+<!-- SLIDE 7 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide sc">
+    <div class="label">On your device</div>
+    <div class="body"><b>Zero writing.</b><br>Zero blank page.<br>Zero uploads.</div>
+    <div class="italic">All AI stays on your phone.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 7 — Graphic:</b> None — text-only content slide.</div>
+</div>
+
+<!-- SLIDE 8 — INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Insight</div>
+  <div class="slide s8">
+    <div class="s8-radial"></div>
+    <div class="s8-top">The story was never missing.</div>
+    <div class="s8-bot">You just needed<br>Bloggo to find it.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Black cat sitting next to a glowing open journal, calm and satisfied — the insight moment. Higgsfield prompt: "A small black cat sitting beside a softly glowing open travel journal, peaceful and content expression, warm ambient light, white background, minimal illustration style."</div>
+</div>
+
+<!-- SLIDE 9 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 9 — CTA</div>
+  <div class="slide s9">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;">Bloggo</span>
+    </div>
+    <div class="cta-h1">Find your story now.</div>
+    <div class="cta-h2">Tap to Blog.</div>
+    <div class="link-bio">Beta — link in bio</div>
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat mascot bottom-left, waving at viewer with excited welcoming energy. Higgsfield prompt: "A small black cat waving enthusiastically at the viewer, joyful and welcoming, white background, minimal illustration style."</div>
+</div>
+
+</body>
+</html>
