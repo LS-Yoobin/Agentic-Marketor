@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3–5 Slide: Building Bloggo Broke Me — Yoobin Personal Brand</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:32px;font-family:'Jost',sans-serif}
+
+.brief{max-width:360px;margin:0 auto 24px;padding:14px 16px;background:#fff;border:1.5px solid rgba(19,142,255,0.2);border-radius:10px;font-size:11px;line-height:1.8;color:#555}
+.brief h3{font-size:11px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+
+.sw{max-width:360px;margin:0 auto 32px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px}
+
+/* Base slide */
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden}
+
+/* Recurring watermark + paw (slides 2–last-1) */
+.bm{position:absolute;bottom:18px;left:14px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+/* Accent bar and right gradient (left-aligned content slides) */
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0}
+
+/* Slide 1 — Hook */
+.s1{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:44px 32px 52px;text-align:center;
+  background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);
+  background-size:36px 36px;
+}
+
+/* Slide 2 — Transition */
+.s2{
+  display:flex;align-items:center;justify-content:center;
+  padding:44px 36px;
+  background-image:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);
+}
+.grad{
+  font-family:'Jost',sans-serif;font-weight:700;font-size:30px;line-height:1.35;text-align:center;
+  background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* Slide 3 — Content (left-aligned) */
+.s3{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:44px 24px 56px 22px;text-align:left;
+}
+.lbl{font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;position:relative;z-index:2}
+.body{font-family:'Jost',sans-serif;font-size:32px;font-weight:400;color:#1A1A1A;line-height:1.25;position:relative;z-index:2}
+.body b{font-weight:700}
+
+/* Slide 4 — Insight (centered) */
+.s4{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:44px 36px 56px;text-align:center;
+  background-image:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);
+}
+
+/* Slide 5 — CTA */
+.s5{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:44px 32px;text-align:center;
+  background-image:radial-gradient(ellipse at center,rgba(19,142,255,0.06) 0%,transparent 65%);
+}
+
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <h3>Carousel Brief</h3>
+  <b>Type:</b> 5-Slide Post (compressed 3–5 formula)<br>
+  <b>Date:</b> 2026-06-10 · Wednesday — Founder Story angle<br>
+  <b>Hook:</b> "Building Bloggo broke me — in the best way."<br>
+  <b>Hook Type:</b> Story<br>
+  <b>Notion Destination:</b> notion-personal → YOOBIN Content Engine<br>
+  <b>Supporting Graphics:</b> Slide 1 (hook — Spunky cracking/breaking), Slide 4 (insight — Spunky with journal), Slide 5 (CTA — Spunky waving)
+</div>
+
+<!-- Slide 1 — Hook -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide s1">
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4">Building Bloggo</div>
+    <div style="font-family:'Chewy',cursive;font-size:68px;color:#1A1A1A;line-height:1;margin-top:6px">broke me</div>
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:10px">in the best way.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat) sitting surrounded by scattered sticky notes and code printouts, slightly frazzled but with a small proud smile. Higgsfield AI prompt: "Cute black cartoon cat surrounded by scattered sticky notes and papers, slightly frazzled but proud expression, cozy desk setup, warm soft lighting, minimalist illustration style, white background."</div>
+</div>
+
+<!-- Slide 2 — Transition -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="grad">Here's what <b>building</b><br>actually taught me.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- Slide 3 — Content -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide s3">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Lesson 01</div>
+    <div class="body"><b>Shipping ugly</b><br>beats designing<br>perfect.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- Slide 4 — Insight -->
+<div class="sw">
+  <div class="sn">Slide 4 — Insight / Save-Worthy</div>
+  <div class="slide s4">
+    <div style="font-family:'Jost',sans-serif;font-size:22px;color:#6B7280;line-height:1.4;margin-bottom:10px">The app isn't done.</div>
+    <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:44px;color:#1A1A1A;line-height:1.1">Neither am I.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Spunky sitting quietly next to a glowing journal or open notebook, peaceful and reflective expression. Higgsfield AI prompt: "Cute black cartoon cat sitting beside a glowing open journal, soft warm light, reflective calm expression, minimalist flat illustration, white background, Bloggo brand style."</div>
+</div>
+
+<!-- Slide 5 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 5 — CTA</div>
+  <div class="slide s5">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1">Bloggo</span>
+    </div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.15;text-align:center">Follow the build.</div>
+    <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;text-transform:uppercase;letter-spacing:3px;margin-top:18px">More Coming!</div>
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Spunky waving excitedly with an open, welcoming pose, cheerful expression. Higgsfield AI prompt: "Cute black cartoon cat waving excitedly, welcoming open body language, cheerful bright expression, white background, minimalist illustration, Bloggo brand style."</div>
+</div>
+
+</body>
+</html>
