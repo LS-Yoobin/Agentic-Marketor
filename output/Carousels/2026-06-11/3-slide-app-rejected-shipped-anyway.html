@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3-5 Slide — App rejected. I shipped anyway.</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#e5e5e5;display:flex;flex-direction:column;align-items:center;padding:40px 20px;font-family:'Jost',sans-serif;gap:24px}
+  .sw{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:44px 32px}
+  .slide.center{align-items:center;text-align:center}
+  /* Accent bar */
+  .ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12)}
+  /* Right gradient */
+  .rg{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+  /* Dot texture slide 1 */
+  .dot-bg{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
+  /* Watermark */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  /* Cat paw */
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+  /* Gradient text */
+  .grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  /* Label */
+  .lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;position:relative;z-index:2}
+  /* Body */
+  .body{font-family:'Jost',sans-serif;font-size:28px;color:#1A1A1A;line-height:1.25;position:relative;z-index:2}
+  .body b{font-weight:700}
+  /* Sub italic */
+  .sub{font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:10px;line-height:1.4;position:relative;z-index:2}
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  .brief{max-width:360px;margin:10px auto 0;padding:12px 14px;background:#f8f9ff;border:1px solid rgba(19,142,255,0.2);border-radius:8px;font-family:'Jost',sans-serif;font-size:10px;color:#444;line-height:1.7}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide center">
+    <div class="dot-bg"></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:2px;position:relative;z-index:2;">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">App</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;">rejected.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;margin-top:10px;">I shipped it</div>
+      <div style="font-family:'Chewy',cursive;font-size:56px;color:#1A1A1A;line-height:0.95;">anyway.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the cat sitting in front of a red "REJECTED" stamp, arms crossed, chin up, defiant but calm. Higgsfield AI prompt: "Animated black cat character sitting proudly in front of a large red rejection stamp, arms confidently crossed, slight smile, white background, flat design, bold line art style."</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide center">
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:28px;line-height:1.2;" class="grad">Here's what I learned.</div>
+      <div class="sub">Most builders quit here. I didn't.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Lesson 01</div>
+    <div class="body"><b>Rejection</b> is a revision note.<br>Not a verdict.</div>
+    <div class="sub">Apple's reviewers caught a UI edge case. I fixed it the same day.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Lesson 02</div>
+    <div class="body">Real <b>users</b> taught me more than 6 months of polishing.</div>
+    <div class="sub">The feedback I feared became the product.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5: INSIGHT + CTA -->
+<div class="sw">
+  <div class="sn">Slide 5 — Insight / CTA</div>
+  <div class="slide center" style="background:#FFFFFF;align-items:center;">
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div style="font-family:'Chewy',cursive;font-size:40px;color:#138EFF;line-height:1.1;">Follow the build.</div>
+      <div style="font-family:'Chewy',cursive;font-size:28px;color:#1A1A1A;line-height:1.1;">More coming daily.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:4px;">LINK IN BIO</div>
+    </div>
+  </div>
+</div>
+
+<div class="brief">
+  <b>Carousel Brief</b><br>
+  <b>Type:</b> 3–5 Slide Post (5 slides)<br>
+  <b>Hook:</b> "App rejected. I shipped anyway." — Story/Contrarian<br>
+  <b>Angle:</b> Wednesday — Founder/Builder Story<br>
+  <b>Notion Destination:</b> notion-personal → YOOBIN Content Engine<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky with rejection stamp (see gfx-note). Slides 2–4: text only.
+</div>
+
+</body>
+</html>

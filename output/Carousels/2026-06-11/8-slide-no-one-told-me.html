@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>8-Slide — Nobody warned me about this.</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#e5e5e5;display:flex;flex-direction:column;align-items:center;padding:40px 20px;font-family:'Jost',sans-serif;gap:24px}
+  .sw{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:44px 32px}
+  .slide.center{align-items:center;text-align:center}
+  .ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12)}
+  .rg{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+  .dot-bg{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+  .grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;position:relative;z-index:2}
+  .body{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.3;position:relative;z-index:2}
+  .body b{font-weight:700}
+  .sub{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:10px;line-height:1.4;position:relative;z-index:2}
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  .brief{max-width:360px;margin:10px auto 0;padding:12px 14px;background:#f8f9ff;border:1px solid rgba(19,142,255,0.2);border-radius:8px;font-family:'Jost',sans-serif;font-size:10px;color:#444;line-height:1.7}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: HOOK (WTF / Fear) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide center">
+    <div class="dot-bg"></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;z-index:2;">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Nobody warned me</div>
+      <div style="font-family:'Chewy',cursive;font-size:62px;color:#138EFF;line-height:0.9;">about</div>
+      <div style="font-family:'Chewy',cursive;font-size:56px;color:#1A1A1A;line-height:0.95;">building iOS.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the cat staring wide-eyed at a very long App Store review checklist, looking overwhelmed but leaning forward. Higgsfield AI prompt: "Animated black cat character with wide surprised eyes reading an extremely long scrolling checklist document, mouth slightly open in surprise, white background, clean flat illustration style."</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide center">
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.2;" class="grad">5 brutal truths.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.2;" class="grad">From building Bloggo.</div>
+      <div class="sub" style="margin-top:12px;">So you don't learn them the hard way.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: TRUTH 1 -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Truth 01</div>
+    <div class="body"><b>Review</b> takes 7 days.<br>Not 24 hours.</div>
+    <div class="sub">Plan your launch around App Store timelines. Not your timeline.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: TRUTH 2 -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Truth 02</div>
+    <div class="body"><b>Users</b> ignore features you spent weeks on.</div>
+    <div class="sub">Ship the simplest version. Watch where they actually tap.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5: TRUTH 3 -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Truth 03</div>
+    <div class="body"><b>Privacy</b> is now a selling point.<br>Not a given.</div>
+    <div class="sub">Your users notice when AI runs on-device. Lead with it.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6: TRUTH 4 -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Truth 04</div>
+    <div class="body">Your <b>camera roll</b> is the best product demo.</div>
+    <div class="sub">Don't show features. Show the moment before and after.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7: TRUTH 5 -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">Truth 05</div>
+    <div class="body">You'll <b>rewrite</b> 40% of it<br>before launch.</div>
+    <div class="sub">That's not failure. That's learning with a compiler.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8: CONTENT (bridge) -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">And yet</div>
+    <div class="body">None of it matters if you <b>don't ship.</b></div>
+    <div class="sub">The builder who shipped a messy v1 beat the one who planned a perfect v3.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9: INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide center">
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;">
+      <div style="font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;line-height:1.3;">The founder who</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:34px;color:#1A1A1A;line-height:1.1;"><b>shipped</b> beats</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:34px;color:#138EFF;line-height:1.1;"><b>the one who planned.</b></div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting peacefully next to a glowing open journal with small star sparkles around it. Higgsfield AI prompt: "Animated black cat character sitting contentedly next to a glowing open book/journal, small gold star sparkles in the air, warm satisfied expression, white background, soft flat illustration."</div>
+</div>
+
+<!-- SLIDE 10: CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide center">
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px;">
+        <div style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1;">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.1;margin-top:4px;">Follow the build.</div>
+      <div style="font-family:'Chewy',cursive;font-size:30px;color:#138EFF;line-height:1.1;">More drops daily!</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:6px;">LINK IN BIO</div>
+    </div>
+  </div>
+</div>
+
+<div class="brief">
+  <b>Carousel Brief</b><br>
+  <b>Type:</b> 8–10 Slide Post (10 slides) — Hook A: WTF / Fear<br>
+  <b>Hook:</b> "Nobody warned me about building iOS." — WTF / Fear<br>
+  <b>Angle:</b> Wednesday — Founder/Builder Story<br>
+  <b>Notion Destination:</b> notion-personal → YOOBIN Content Engine<br>
+  <b>Supporting Graphics:</b><br>
+  · Slide 1 — Spunky overwhelmed by App Store checklist (see gfx-note)<br>
+  · Slide 9 — Spunky next to glowing journal (see gfx-note)<br>
+  · Slides 2–8, 10 — text only
+</div>
+
+</body>
+</html>
