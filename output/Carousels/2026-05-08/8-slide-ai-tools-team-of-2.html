@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Stack. Team of 2.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Inter',sans-serif}
+.meta h1{font-size:14px;color:#ccc;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#555;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(0,255,127,0.12);color:#00FF7F}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;width:360px}
+.sn{font-family:'Inter',sans-serif;font-size:9px;color:#444;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#0D1117;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.5);border-radius:6px}
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative}
+.l{display:flex;flex-direction:column;justify-content:center;padding:32px 32px 64px 44px;height:100%;position:relative}
+.ab{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,transparent 5%,rgba(0,255,127,0.45) 40%,rgba(0,255,127,0.45) 60%,transparent 95%);z-index:2}
+.rb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:220px;height:220px;background:radial-gradient(circle,rgba(0,255,127,0.07),transparent 70%);border-radius:50%;pointer-events:none}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,255,127,0.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;z-index:0}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;color:rgba(0,255,127,0.5);z-index:10;letter-spacing:1px}
+.zz{position:relative;z-index:2}
+.ml{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;position:relative;z-index:2}
+.ml.green{color:#00FF7F}
+.mh{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#FFFFFF;line-height:1.3;margin-bottom:0;position:relative;z-index:2}
+.dv{height:1px;background:linear-gradient(to right,rgba(0,255,127,0.6),rgba(0,255,127,0.15));margin:14px 0;position:relative;z-index:2}
+.wb{font-family:'Inter',sans-serif;font-size:14px;color:#9CA3AF;font-style:italic;line-height:1.6;position:relative;z-index:2}
+.tl{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#00FF7F;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;position:relative;z-index:2}
+.dl-btn{position:absolute;top:24px;right:0;z-index:20;background:#00FF7F;color:#0D1117;border:none;border-radius:20px;padding:5px 12px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.sa{text-align:center;margin:0 0 16px}
+.sa button{background:#00FF7F;color:#0D1117;border:none;border-radius:24px;padding:10px 28px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 18px rgba(0,255,127,.3)}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+<div class="meta">
+  <h1>We're a team of 2. Here's the AI stack that lets us punch above our weight.</h1>
+  <div class="sub">Yoobin Personal Brand · Builder Stack · May 8</div>
+  <span class="fmt">Instagram Carousel · 12 Slides · 1080×1350</span>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides</button></div>
+
+<div class="carousel">
+
+  <!-- SLIDE 1: HOOK -->
+  <div class="sw">
+    <div class="sn">Slide 1 of 11 — Hook</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:110px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-4px;transform:rotate(-8deg);user-select:none;pointer-events:none;z-index:1;line-height:1;">TOOLS.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="c">
+        <div class="zz">
+          <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#00FF7F;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;">BUILDER STACK · TEAM OF 2</div>
+          <div style="font-family:'Inter',sans-serif;font-size:28px;font-weight:700;color:#FFFFFF;line-height:1.2;margin-bottom:16px;">We're a team of 2. Here's the AI stack that lets us punch above our weight.</div>
+          <div style="width:44px;height:2px;background:#00FF7F;margin:0 auto 16px;box-shadow:0 0 8px rgba(0,255,127,0.5);"></div>
+          <div style="font-family:'Inter',sans-serif;font-size:16px;color:#9CA3AF;font-style:italic;line-height:1.55;max-width:270px;">No big team. No agency. Just these tools. And a product people actually want.</div>
+        </div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: CLAUDE -->
+  <div class="sw">
+    <div class="sn">Slide 2 of 11 — Claude</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">CLAUDE.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">TOOL 01</div>
+        <div class="ml">THE TOOL</div>
+        <div class="mh">Claude. My actual co-founder.</div>
+        <div class="dv"></div>
+        <div class="ml green">WHY IT'S IN THE STACK</div>
+        <div class="wb">Code. Copy. Strategy. Feature specs. System prompts. If I'm building something, Claude is in the room.</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: CURSOR -->
+  <div class="sw">
+    <div class="sn">Slide 3 of 11 — Cursor</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">CODE.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">TOOL 02</div>
+        <div class="ml">THE TOOL</div>
+        <div class="mh">Cursor. The IDE that thinks with you.</div>
+        <div class="dv"></div>
+        <div class="ml green">WHY IT'S IN THE STACK</div>
+        <div class="wb">AI-native coding environment. It doesn't just autocomplete. It understands what you're trying to build.</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: NOTION -->
+  <div class="sw">
+    <div class="sn">Slide 4 of 11 — Notion</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">WRITE.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">TOOL 03</div>
+        <div class="ml">THE TOOL</div>
+        <div class="mh">Notion. Content Engine. Scripts. Team.</div>
+        <div class="dv"></div>
+        <div class="ml green">WHY IT'S IN THE STACK</div>
+        <div class="wb">Our content pipeline, scripting workspace, and team collaboration hub. Every idea, brief, and decision lives here. Not in someone's DMs.</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: JIRA -->
+  <div class="sw">
+    <div class="sn">Slide 5 of 11 — Jira</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">TRACK.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">TOOL 04</div>
+        <div class="ml">THE TOOL</div>
+        <div class="mh">Jira. Where ideation becomes execution.</div>
+        <div class="dv"></div>
+        <div class="ml green">WHY IT'S IN THE STACK</div>
+        <div class="wb">This is where ideas get pressure-tested. We treat every ticket like a prompt. Specific, contextual, output-focused. A vague ticket ships a vague feature.</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: GITHUB -->
+  <div class="sw">
+    <div class="sn">Slide 6 of 11 — GitHub</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">BUILD.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">TOOL 05</div>
+        <div class="ml">THE TOOL</div>
+        <div class="mh">GitHub. Where the product lives.</div>
+        <div class="dv"></div>
+        <div class="ml green">WHY IT'S IN THE STACK</div>
+        <div class="wb">Version control, code review, project boards. Every feature branch, every PR, every release. The whole history of Bloggo is here.</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: HEROKU -->
+  <div class="sw">
+    <div class="sn">Slide 7 of 11 — Heroku</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">SHIP.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">TOOL 06</div>
+        <div class="ml">THE TOOL</div>
+        <div class="mh">Heroku. Backend, deployed.</div>
+        <div class="dv"></div>
+        <div class="ml green">WHY IT'S IN THE STACK</div>
+        <div class="wb">Our cloud platform for backend services. No server headaches. (Vercel is worth knowing too. Instant frontend deploys, zero config. Different tools, different jobs.)</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: AWS -->
+  <div class="sw">
+    <div class="sn">Slide 8 of 12 — AWS</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">CLOUD.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">TOOL 07</div>
+        <div class="ml">THE TOOL</div>
+        <div class="mh">AWS. The infrastructure underneath.</div>
+        <div class="dv"></div>
+        <div class="ml green">WHY IT'S IN THE STACK</div>
+        <div class="wb">Cloud services, storage, backend infrastructure. The foundation that scales when Bloggo does. You don't notice it until you need it.</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: MONGODB -->
+  <div class="sw">
+    <div class="sn">Slide 9 of 12 — MongoDB</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">DATA.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">TOOL 08</div>
+        <div class="ml">THE TOOL</div>
+        <div class="mh">MongoDB. Where the data lives.</div>
+        <div class="dv"></div>
+        <div class="ml green">WHY IT'S IN THE STACK</div>
+        <div class="wb">Flexible, fast, and scales with us. Every user, every blog, every trip — stored and queryable without fighting a rigid schema. The database that doesn't slow down your thinking.</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: CONTENT SUITE -->
+  <div class="sw">
+    <div class="sn">Slide 10 of 12 — Content Suite</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">CREATE.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">TOOL 09</div>
+        <div class="ml">THE TOOLS</div>
+        <div class="mh">Higgsfield. Canva. CapCut. Premiere.</div>
+        <div class="dv"></div>
+        <div class="ml green">WHY THEY'RE IN THE STACK</div>
+        <div class="wb">Our full content creation suite. AI video, graphics, quick edits, full production. Looks like we have a creative team. We don't.</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: REAL INSIGHT -->
+  <div class="sw">
+    <div class="sn">Slide 11 of 12 — Real Insight</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-family:'Inter',sans-serif;font-size:100px;font-weight:700;color:rgba(0,255,127,0.04);letter-spacing:-3px;user-select:none;pointer-events:none;z-index:1;line-height:1;">EDGE.</div>
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="tl">THE REAL INSIGHT</div>
+        <div class="ml">THE QUESTION</div>
+        <div class="mh">The question isn't 'how big is your team?'</div>
+        <div class="dv"></div>
+        <div class="ml green">THE ANSWER</div>
+        <div class="wb">It's 'how well do you use your tools?' Two people with the right stack can outship a team of ten.</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: CTA -->
+  <div class="sw">
+    <div class="sn">Slide 12 of 12 — CTA</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="rb"></div>
+      <div class="c">
+        <div class="zz">
+          <div style="font-family:'Inter',sans-serif;font-size:26px;font-weight:700;color:#FFFFFF;line-height:1.25;margin-bottom:16px;">What's the one tool you couldn't build without?</div>
+          <div style="width:44px;height:2px;background:#00FF7F;margin:0 auto 16px;box-shadow:0 0 8px rgba(0,255,127,0.5);"></div>
+          <div style="font-family:'Inter',sans-serif;font-size:16px;color:#9CA3AF;font-style:italic;line-height:1.6;margin-bottom:20px;max-width:260px;">Drop it below. I'm always looking for what I'm missing.</div>
+          <div style="font-family:'Inter',sans-serif;font-size:18px;font-weight:700;color:#00FF7F;letter-spacing:0.5px;text-shadow:0 0 20px rgba(0,255,127,0.3);">Follow @yoobinseo</div>
+        </div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/\s+/g,'-').toLowerCase();
+  var zip=new JSZip();
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    var canvas=await html2canvas(slides[i],{scale:3,useCORS:true,backgroundColor:'#0D1117'});
+    var blob=await new Promise(function(r){canvas.toBlob(r,'image/png');});
+    zip.file('slide-'+(i+1)+'.png',blob);
+  }
+  var zipBlob=await zip.generateAsync({type:'blob'});
+  saveAs(zipBlob,title+'-slides.zip');
+  btn.textContent=orig;
+  btn.disabled=false;
+}
+function saveSlide(btn){
+  var slide=btn.parentElement.querySelector('.slide');
+  btn.style.opacity='0';
+  html2canvas(slide,{scale:3,useCORS:true,backgroundColor:'#0D1117'}).then(function(canvas){
+    var a=document.createElement('a');
+    a.download=document.title.replace(/\s+/g,'-').toLowerCase()+'-slide-'+Date.now()+'.png';
+    a.href=canvas.toDataURL('image/png');
+    a.click();
+    btn.style.opacity='';
+  });
+}
+</script>
+</body>
+</html>

@@ -27,8 +27,9 @@ Outcome-first hook → personal frustration → discovery → explanation → pa
 
 ### Slide 2 — The frustration (concrete)
 **Label:** THE PROBLEM
-**Headline:** "My app is called Bloggo. It's iOS only. The brand voice is warm, not corporate. Don't use jargon."
-**Subtext:** Close the chat. Open a new one. Start over.
+**Headline (quote block):** "My app is called Bloggo. It's iOS only. The brand voice is warm, not corporate. Don't use jargon."
+**Quote styling:** Rendered as a styled blockquote — neon green (#00FF7F) left border (3–4px), slight left indent, italic text in #D1D5DB, contained in a rounded dark card (#161B22). Not a code block, not plain body text.
+**Subtext (below quote card):** Close the chat. Open a new one. Start over.
 
 ### Slide 3 — The discovery
 **Label:** THE TURNING POINT
@@ -42,7 +43,9 @@ Outcome-first hook → personal frustration → discovery → explanation → pa
 
 ### Slide 5 — What I put in mine
 **Label:** WHAT'S IN MINE
-**List items (styled as bullet points):**
+**Layout:** Left-aligned with accent sidebar bar. Uses the accent sidebar bar decoration.
+**List items — styled as neon bullet rows:**
+Each item renders as a horizontal row: neon green bullet (•, #00FF7F, bold) on the left, item text in white (#FFFFFF, 16px) beside it. Rows are stacked vertically with 14px gap between them.
 - What Bloggo is and who it's for
 - My brand voice rules (what to say, what to avoid)
 - Output format preferences
@@ -55,8 +58,10 @@ Outcome-first hook → personal frustration → discovery → explanation → pa
 
 ### Slide 7 — How to set it up
 **Label:** HOW TO DO IT
-**Steps (numbered list):**
-1. Create a file called `CLAUDE.md` in your project
+**Layout:** Left-aligned with accent sidebar bar.
+**Steps — styled as large numbered rows:**
+Each step: large neon green step number (32px bold, #00FF7F) on the left, step text in white (16px) to the right, stacked vertically with 20px gap. Numbers are visually dominant — they're the anchor for scanning.
+1. Create a file called `CLAUDE.md` in your project root
 2. Write what you want Claude to always know
 3. That's it.
 
@@ -71,12 +76,16 @@ Outcome-first hook → personal frustration → discovery → explanation → pa
 
 - **Background:** #0D1117 (dark navy)
 - **Accent color:** #00FF7F (neon green)
-- **Font:** Inter (700 bold for headlines, 400 for subtext)
-- **Layout:** Mix of centered slides (hook, discovery, CTA) and left-aligned with accent bar (explanation, list slides)
-- **Decorative elements:** dot grid overlay, radial glow, large ghost text watermark, accent sidebar bar
-- **Branding:** `@yoobinseo` bottom-left on every slide
-- **Slide counter:** small label above each slide (e.g. "Slide 1 of 8")
-- **Export:** HTML file with "Save All Slides" button (html2canvas + JSZip)
+- **Font:** Inter — import via `https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&display=swap`. Fallback stack: `'Inter', -apple-system, BlinkMacSystemFont, sans-serif`.
+- **Font weights:** 700 bold for headlines, 400 regular for subtext/body, 10px uppercase letter-spaced for labels
+- **Layout:** Centered slides (slides 1, 3, 6, 8) — content centered horizontally and vertically. Left-aligned slides (slides 2, 4, 5, 7) — content left-aligned with accent sidebar bar on the left edge.
+- **Accent sidebar bar:** 4px wide vertical bar on the left edge of the slide, gradient from transparent at top/bottom to rgba(0,255,127,0.45) in the middle.
+- **Dot grid overlay:** `radial-gradient(circle, rgba(0,255,127,0.06) 1px, transparent 1px)` at 28px × 28px, covers full slide, z-index 0.
+- **Radial glow:** Centered on slide (top 50%, left 50%), 220×220px circle, `radial-gradient(circle, rgba(0,255,127,0.07), transparent 70%)`. Behind content, z-index 1.
+- **Ghost text watermark:** Large (100–110px), ultra-light opacity (rgba(0,255,127,0.04)), bold, positioned bottom-right, slightly rotated (-8deg), behind all content. Text content: "CLAUDE.MD" on slides 1–4; "MEMORY." on slides 5–8.
+- **Slide counter:** Format "Slide X of 8" — 9px, #444, uppercase, letter-spacing 2px, displayed above the slide card.
+- **Branding:** `@yoobinseo` — bottom-left, 12px, bold, rgba(0,255,127,0.5), z-index 10.
+- **Export:** HTML file with "Save All Slides" button using html2canvas + JSZip + FileSaver.js (CDN). Per-slide "Save PNG" button appears on hover.
 
 ## Content Series Context
 

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I Was Wrong About Almost Everything — Before & After Co-Founder</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Inter',sans-serif}
+.meta h1{font-size:14px;color:#ccc;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#555;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(0,255,127,0.12);color:#00FF7F}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;width:360px}
+.sn{font-family:'Inter',sans-serif;font-size:9px;color:#444;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#0D1117;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.5);border-radius:6px}
+
+/* Shared layout helpers */
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative}
+.rb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:220px;height:220px;background:radial-gradient(circle,rgba(0,255,127,0.07),transparent 70%);border-radius:50%;pointer-events:none}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,255,127,0.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;z-index:0}
+.zz{position:relative;z-index:2}
+.gd{color:#00FF7F}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;color:rgba(0,255,127,0.5);z-index:10;letter-spacing:1px}
+
+/* Stacked BEFORE/AFTER layout */
+.stack{display:flex;flex-direction:column;height:100%;padding:28px 36px 64px 36px;position:relative}
+.before-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:12px;position:relative;z-index:2}
+.bl{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+.bq{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#FFFFFF;font-style:italic;line-height:1.4}
+.div-line{height:1px;background:linear-gradient(to right,rgba(0,255,127,0.6),rgba(0,255,127,0.15));margin:0;flex-shrink:0;position:relative;z-index:2}
+.after-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:14px;position:relative;z-index:2}
+/* subtle glow behind AFTER section */
+.after-wrap::before{content:'';position:absolute;bottom:-10px;left:-20px;width:200px;height:160px;background:radial-gradient(ellipse,rgba(0,255,127,0.06),transparent 70%);pointer-events:none;z-index:0}
+.al{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#00FF7F;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;position:relative;z-index:1}
+.at{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#FFFFFF;line-height:1.45;position:relative;z-index:1}
+.at em{color:#00FF7F;font-style:normal}
+
+/* Slide number badge */
+.dl-btn{position:absolute;top:24px;right:0;z-index:20;background:#00FF7F;color:#0D1117;border:none;border-radius:20px;padding:5px 12px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+
+/* Bottom bits */
+.sa{text-align:center;margin:0 0 16px}
+.sa button{background:#00FF7F;color:#0D1117;border:none;border-radius:24px;padding:10px 28px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 18px rgba(0,255,127,.3)}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#001a0d;border:1px solid #003a1a;border-radius:8px;font-family:'Inter',sans-serif;font-size:11px;color:#888;line-height:1.5}
+.brief strong{color:#00FF7F}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+<div class="meta">
+  <h1>I Was Wrong About Almost Everything</h1>
+  <div class="sub">Yoobin Personal Brand · Co-Founder Truths · Before &amp; After · May 7</div>
+  <span class="fmt">Instagram Carousel · 8 Slides · 1080×1350</span>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides</button></div>
+
+<div class="carousel">
+
+  <!-- SLIDE 1: HOOK -->
+  <div class="sw">
+    <div class="sn">Slide 1 of 8 — Hook</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <!-- Decorative oversized background word -->
+      <div style="position:absolute;top:52%;left:50%;transform:translate(-42%,-50%) rotate(-10deg);font-family:'Inter',sans-serif;font-size:108px;font-weight:700;color:rgba(0,255,127,0.045);letter-spacing:-4px;white-space:nowrap;pointer-events:none;z-index:1;user-select:none;line-height:1;">WRONG.</div>
+      <!-- Dot grid -->
+      <div class="dot"></div>
+      <!-- Left accent bar -->
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,transparent 5%,rgba(0,255,127,0.45) 40%,rgba(0,255,127,0.45) 60%,transparent 95%);z-index:2;"></div>
+      <!-- Content layer -->
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:36px 36px 48px 44px;z-index:3;">
+        <!-- Tag -->
+        <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#00FF7F;letter-spacing:3px;text-transform:uppercase;margin-bottom:22px;">CO-FOUNDER · REALITY</div>
+        <!-- Small italic lead-in -->
+        <div style="font-family:'Inter',sans-serif;font-size:16px;font-style:italic;color:#9CA3AF;line-height:1.2;margin-bottom:6px;">I thought I knew</div>
+        <!-- Hero oversized text -->
+        <div style="font-family:'Inter',sans-serif;font-size:52px;font-weight:700;color:#FFFFFF;line-height:0.98;letter-spacing:-2px;margin-bottom:22px;">what founding<br>meant.</div>
+        <!-- Green short divider -->
+        <div style="width:44px;height:2px;background:#00FF7F;margin-bottom:18px;box-shadow:0 0 8px rgba(0,255,127,0.5);"></div>
+        <!-- Truth line in green -->
+        <div style="font-family:'Inter',sans-serif;font-size:21px;font-weight:700;color:#00FF7F;line-height:1.35;text-shadow:0 0 20px rgba(0,255,127,0.2);">I was wrong about<br>almost all of it.</div>
+        <!-- Swipe prompt -->
+        <div style="font-family:'Inter',sans-serif;font-size:11px;color:#9CA3AF;font-style:italic;margin-top:20px;">5 before → after truths</div>
+      </div>
+      <div class="bm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: MISTAKE #1 — DISTRIBUTION -->
+  <div class="sw">
+    <div class="sn">Slide 2 of 8 — Mistake #1: Distribution</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div class="stack">
+        <div class="before-wrap">
+          <div class="bl">BEFORE FOUNDING</div>
+          <div class="bq">"Build something great.<br>People will find it."</div>
+        </div>
+        <div class="div-line"></div>
+        <div class="after-wrap">
+          <div class="al">AFTER</div>
+          <div class="at">Nobody is coming to find you.<br><em>You</em> are the distribution.<br>Every single day.</div>
+        </div>
+        <div class="bm">@yoobinseo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: MISTAKE #2 — READINESS -->
+  <div class="sw">
+    <div class="sn">Slide 3 of 8 — Mistake #2: Readiness</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div class="stack">
+        <div class="before-wrap">
+          <div class="bl">BEFORE FOUNDING</div>
+          <div class="bq">"We need to wait<br>until it's ready."</div>
+        </div>
+        <div class="div-line"></div>
+        <div class="after-wrap">
+          <div class="al">AFTER</div>
+          <div class="at">It's never ready.<br><em>Shipping</em> is how<br>you get ready.</div>
+        </div>
+        <div class="bm">@yoobinseo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: MISTAKE #3 — EFFORT -->
+  <div class="sw">
+    <div class="sn">Slide 4 of 8 — Mistake #3: Effort</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div class="stack">
+        <div class="before-wrap">
+          <div class="bl">BEFORE FOUNDING</div>
+          <div class="bq">"Outworking everyone<br>is the strategy."</div>
+        </div>
+        <div class="div-line"></div>
+        <div class="after-wrap">
+          <div class="al">AFTER</div>
+          <div class="at">Working harder on<br>the <em>wrong things</em><br>just burns you out faster.</div>
+        </div>
+        <div class="bm">@yoobinseo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: MISTAKE #4 — THE IDEA -->
+  <div class="sw">
+    <div class="sn">Slide 5 of 8 — Mistake #4: The Idea</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div class="stack">
+        <div class="before-wrap">
+          <div class="bl">BEFORE FOUNDING</div>
+          <div class="bq">"Having the right idea<br>is the hard part."</div>
+        </div>
+        <div class="div-line"></div>
+        <div class="after-wrap">
+          <div class="al">AFTER</div>
+          <div class="at">The idea is <em>5%.</em><br>Obsession and showing up<br>when you want to quit<br>is everything else.</div>
+        </div>
+        <div class="bm">@yoobinseo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: MISTAKE #5 — PERSPECTIVE -->
+  <div class="sw">
+    <div class="sn">Slide 6 of 8 — Mistake #5: Perspective</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div class="stack">
+        <div class="before-wrap">
+          <div class="bl">BEFORE FOUNDING</div>
+          <div class="bq">"Taking a step back<br>means falling behind."</div>
+        </div>
+        <div class="div-line"></div>
+        <div class="after-wrap">
+          <div class="al">AFTER</div>
+          <div class="at">You can't see clearly<br>from inside the problem.<br><em>Perspective</em> is the work.</div>
+        </div>
+        <div class="bm">@yoobinseo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: SAVE-DRIVER -->
+  <div class="sw">
+    <div class="sn">Slide 7 of 8 — Save Driver</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div class="c">
+        <div class="rb"></div>
+        <div class="zz">
+          <div style="font-family:'Inter',sans-serif;font-size:18px;font-weight:400;color:#FFFFFF;line-height:1.6;margin-bottom:20px;">Your growth isn't being held back<br>by the market, the competition,<br>or the timing.</div>
+          <div style="width:60%;height:1px;background:linear-gradient(to right,rgba(0,255,127,0.6),rgba(0,255,127,0.1));margin:0 auto 20px;"></div>
+          <div style="font-family:'Inter',sans-serif;font-size:26px;font-weight:700;color:#00FF7F;line-height:1.3;text-shadow:0 0 24px rgba(0,255,127,0.3);">It's being held back<br>by how you think.</div>
+        </div>
+        <div class="bm">@yoobinseo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: CLOSE — STILL HERE -->
+  <div class="sw">
+    <div class="sn">Slide 8 of 8 — Close</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide">
+      <div class="c">
+        <div class="dot"></div>
+        <div class="zz" style="width:100%">
+          <div style="font-family:'Inter',sans-serif;font-size:16px;color:#9CA3AF;margin-bottom:20px;">After all of it —</div>
+          <div style="font-family:'Inter',sans-serif;font-size:72px;font-weight:700;color:#00FF7F;line-height:1;letter-spacing:-1px;text-shadow:0 0 40px rgba(0,255,127,0.35);">STILL<br>HERE.</div>
+          <div style="font-family:'Inter',sans-serif;font-size:16px;color:#FFFFFF;line-height:1.6;margin-top:22px;">Not one regret.<br>Every mistake was the education.<br><span style="color:#9CA3AF;font-style:italic;">Follow — I share the journey as it happens.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="brief">
+  <strong>Notion destination:</strong> notion-personal → YOOBIN Content Engine<br>
+  <strong>Hook:</strong> "I thought I knew what founding meant. I was wrong about almost all of it."<br>
+  <strong>Format:</strong> Stacked BEFORE/AFTER per slide · Neon green (#00FF7F) on dark (#0D1117)<br>
+  <strong>5 Mistakes covered:</strong> Distribution · Readiness · Effort · The Idea · Perspective<br>
+  <strong>Save-driver (Slide 7):</strong> "Your growth isn't held back by the market — it's held back by how you think."<br>
+  <strong>Close (Slide 8):</strong> STILL HERE. — defiant, earned, screenshot bait
+</div>
+
+<script>
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/\s+/g,'-').toLowerCase();
+  var zip=new JSZip();
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    var canvas=await html2canvas(slides[i],{scale:3,useCORS:true,backgroundColor:'#0D1117'});
+    var blob=await new Promise(function(r){canvas.toBlob(r,'image/png');});
+    zip.file('slide-'+(i+1)+'.png',blob);
+  }
+  var zipBlob=await zip.generateAsync({type:'blob'});
+  saveAs(zipBlob,title+'-slides.zip');
+  btn.textContent=orig;
+  btn.disabled=false;
+}
+function saveSlide(btn){
+  var slide=btn.parentElement.querySelector('.slide');
+  btn.style.opacity='0';
+  html2canvas(slide,{scale:3,useCORS:true,backgroundColor:'#0D1117'}).then(function(canvas){
+    var a=document.createElement('a');
+    a.download=document.title.replace(/\s+/g,'-').toLowerCase()+'-slide-'+Date.now()+'.png';
+    a.href=canvas.toDataURL('image/png');
+    a.click();
+    btn.style.opacity='';
+  });
+}
+</script>
+</body>
+</html>

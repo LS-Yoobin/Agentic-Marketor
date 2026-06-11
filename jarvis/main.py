@@ -1,26 +1,31 @@
 import sys
 import threading
 import numpy as np
-from PyQt6.QtWidgets import QApplication
-
 from jarvis import config
 from jarvis.transcriber import Transcriber
 from jarvis.speaker import Speaker
 from jarvis.listener import Listener
 from jarvis.brain import Brain
-from jarvis.overlay import Overlay
 from jarvis.tools import build_tool_registry
 
 
 def main():
-    app = QApplication(sys.argv)
-
     print("Initialising Jarvis...")
+    print("Loading transcriber...")
     transcriber = Transcriber(model_size=config.WHISPER_MODEL)
+    print("Loading speaker...")
     speaker = Speaker(voice=config.TTS_VOICE)
-    overlay = Overlay()
+    print("Loading tools...")
     tool_registry = build_tool_registry()
+    print("Loading brain...")
     brain = Brain(api_key=config.ANTHROPIC_API_KEY, tool_registry=tool_registry)
+    print("All components loaded.")
+
+    from PyQt6.QtWidgets import QApplication
+    from jarvis.overlay import Overlay
+    app = QApplication(sys.argv)
+    print("Loading overlay...")
+    overlay = Overlay()
 
     def on_audio_ready(audio: np.ndarray):
         overlay.signals.set_listening.emit(False)

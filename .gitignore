@@ -23,3 +23,15 @@ node_modules/
 # OAuth credentials (never commit)
 credentials.json
 token.json
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Obsidian workspace config
+.obsidian/
+
+# Scheduled task lock files
+*.lock

@@ -1,9 +1,7 @@
 import threading
-import queue
 import numpy as np
 import sounddevice as sd
 import keyboard
-from openwakeword.model import Model as WakeWordModel
 
 SAMPLE_RATE = 16000
 CHUNK_SIZE = 1280  # 80ms at 16kHz
@@ -84,13 +82,14 @@ class Listener:
 
     def _start_wake_word_listener(self):
         try:
+            from openwakeword.model import Model as WakeWordModel
             self._wakeword_model = WakeWordModel(
                 wakeword_models=["hey_jarvis"],
                 inference_framework="onnx"
             )
             threading.Thread(target=self._wake_word_loop, daemon=True).start()
         except Exception as e:
-            print(f"Wake word unavailable ({e}). Use hotkey {self._hotkey} instead.")
+            print(f"Wake word unavailable. Use hotkey {self._hotkey} to activate.")
 
     def _wake_word_loop(self):
         def callback(indata, frames, time, status):
