@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Highlight Reel Isn't Your Trip It's What Survived</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111827;font-family:'Jost',sans-serif;padding:24px 16px}
+.cap{max-width:360px;margin:0 auto 20px;padding:16px;background:#0f172a;border:1px solid rgba(26,136,248,.3);border-radius:10px}
+.cap-lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#1a88f8;margin-bottom:6px}
+.cap-txt{font-size:11.5px;color:rgba(255,255,255,.75);line-height:1.75;margin:0 0 14px}
+.cap-txt:last-child{margin-bottom:0}
+.sa{text-align:center;margin:0 0 20px}
+.sa button{background:#1a88f8;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(26,136,248,.35)}
+.sw{position:relative;width:360px;margin:0 auto 8px}
+.sn{font-size:9px;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;text-align:center}
+.slide{width:360px;height:450px;overflow:hidden;position:relative}
+.pano{position:absolute;top:0;height:100%;pointer-events:none;z-index:0}
+.wm{position:absolute;bottom:14px;left:16px;font-family:'Chewy',cursive;font-size:15px;color:rgba(255,255,255,.22);z-index:10;letter-spacing:1px}
+.dl-btn{position:absolute;top:8px;right:8px;z-index:20;background:#1a88f8;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+</style>
+</head>
+<body>
+
+<div class="cap">
+  <div class="cap-lbl">Instagram</div>
+  <p class="cap-txt">Your highlight reel isn't the trip. It's what survived the edit. The real trip — the wrong turns, the quiet dinners, the unplanned moments — that's what Bloggo captures. Not just the photos you kept. The story of all of them. Link in bio for early access. #travelblog #travelmemories #bloggo</p>
+  <div class="cap-lbl">TikTok</div>
+  <p class="cap-txt">Your camera roll shows the highlights. Your memory fills in the rest. 6 months later — neither tells the true story. Bloggo does. Comment "Bloggo" for access. #traveltok #travelblog #bloggo</p>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides</button></div>
+
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="pano" style="width:1080px;left:0;background:radial-gradient(ellipse 440px 380px at 80px 110px,rgba(14,165,233,.65) 0%,transparent 55%),radial-gradient(ellipse 380px 520px at 480px 290px,rgba(26,136,248,.52) 0%,transparent 50%),radial-gradient(ellipse 400px 280px at 860px 200px,rgba(6,182,212,.48) 0%,transparent 45%),radial-gradient(ellipse 320px 460px at 710px 380px,rgba(15,118,110,.4) 0%,transparent 40%),radial-gradient(ellipse 560px 170px at 290px 430px,rgba(16,185,129,.4) 0%,transparent 35%),#080c1e"></div>
+    <div class="wm">Bloggo</div>
+    <div style="position:relative;z-index:2;padding:44px 32px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:rgba(255,255,255,.5);line-height:1.4;margin-bottom:10px">your highlight reel</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#fff;line-height:.95;margin-bottom:4px">isn't your trip.</div>
+      <div style="width:44px;height:2px;background:rgba(26,136,248,.5);margin:16px 0"></div>
+      <div style="font-family:'Chewy',cursive;font-size:46px;color:#1a88f8;line-height:.95">it's what survived.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sw">
+  <div class="sn">Slide 2 — Content</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="pano" style="width:1080px;left:-360px;background:radial-gradient(ellipse 440px 380px at 80px 110px,rgba(14,165,233,.65) 0%,transparent 55%),radial-gradient(ellipse 380px 520px at 480px 290px,rgba(26,136,248,.52) 0%,transparent 50%),radial-gradient(ellipse 400px 280px at 860px 200px,rgba(6,182,212,.48) 0%,transparent 45%),radial-gradient(ellipse 320px 460px at 710px 380px,rgba(15,118,110,.4) 0%,transparent 40%),radial-gradient(ellipse 560px 170px at 290px 430px,rgba(16,185,129,.4) 0%,transparent 35%),#080c1e"></div>
+    <div style="position:relative;z-index:2;padding:32px;height:100%;display:flex;flex-direction:column;justify-content:center;gap:0">
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Jost',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(52,211,153,.55);margin-bottom:10px">WHAT SURVIVED</div>
+        <div style="font-family:'Jost',sans-serif;font-size:16px;font-weight:700;color:#6ee7b7;line-height:1.4">The peaks. The hero shots.<br>The planned moments.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:12px;color:rgba(255,255,255,.38);margin-top:4px">The 10% you showed everyone.</div>
+      </div>
+      <div style="width:100%;height:1px;background:rgba(255,255,255,.08);margin-bottom:20px"></div>
+      <div>
+        <div style="font-family:'Jost',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(251,113,133,.55);margin-bottom:10px">WHAT DIDN'T</div>
+        <div style="font-family:'Jost',sans-serif;font-size:16px;font-weight:700;color:#fda4af;line-height:1.4">Everything spontaneous.<br>The in-between. The real.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:12px;color:rgba(255,255,255,.38);margin-top:4px">The 90% that made it a trip.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sw">
+  <div class="sn">Slide 3 — CTA</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide" style="background:#fff">
+    <div style="height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:32px">
+      <div style="font-family:'Jost',sans-serif;font-size:52px;font-weight:900;color:#111827;line-height:1;letter-spacing:-1px">COMMENT</div>
+      <div style="font-family:'Chewy',cursive;font-size:62px;color:#1a88f8;line-height:1.05;margin-top:4px">"BLOGGO"</div>
+      <div style="font-family:'Jost',sans-serif;font-size:16px;font-weight:500;color:#374151;margin-top:10px">for early access</div>
+    </div>
+  </div>
+</div>
+
+<script>
+async function saveAllSlides(){var btn=document.querySelector('[onclick="saveAllSlides()"]');var orig=btn.textContent;var slides=document.querySelectorAll('.slide');var title=document.title.replace(/\s+/g,'-').toLowerCase();var zip=new JSZip();btn.disabled=true;for(var i=0;i<slides.length;i++){btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';var canvas=await html2canvas(slides[i],{scale:3,useCORS:true,backgroundColor:'#ffffff'});var blob=await new Promise(function(r){canvas.toBlob(r,'image/png');});zip.file('slide-'+(i+1)+'.png',blob);}var zipBlob=await zip.generateAsync({type:'blob'});saveAs(zipBlob,title+'-slides.zip');btn.textContent=orig;btn.disabled=false;}
+function saveSlide(btn){var slide=btn.parentElement.querySelector('.slide');btn.style.opacity='0';html2canvas(slide,{scale:3,useCORS:true,backgroundColor:'#ffffff'}).then(function(canvas){var a=document.createElement('a');a.download=document.title.replace(/\s+/g,'-').toLowerCase()+'-slide.png';a.href=canvas.toDataURL('image/png');a.click();btn.style.opacity='';});}
+</script>
+</body>
+</html>

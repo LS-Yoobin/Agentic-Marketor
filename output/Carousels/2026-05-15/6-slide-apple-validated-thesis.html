@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>6-Slide — APPLE announced iOS 27. I wasn't ready for how personal it felt.</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;font-family:'Inter',sans-serif;padding:24px 16px 40px}
+
+/* page chrome */
+.brief{max-width:360px;margin:0 auto 14px;background:#0f1117;border:1px solid rgba(0,255,127,0.2);border-radius:10px;padding:14px;font-size:11px;color:rgba(255,255,255,.6);line-height:1.75}
+.brief h3{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#00FF7F;margin-bottom:8px}
+.brief b{color:#fff}
+.cap{max-width:360px;margin:0 auto 14px;background:#0f1117;border:1px solid rgba(0,255,127,0.2);border-radius:10px;padding:14px}
+.cap-lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#00FF7F;margin-bottom:6px}
+.cap-txt{font-size:11px;color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:12px}
+.sa{text-align:center;margin:0 auto 18px;max-width:360px}
+.sa button{background:#00FF7F;color:#0a0a0a;border:none;border-radius:24px;padding:10px 28px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(0,255,127,.3)}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;width:360px}
+.sn{font-family:'Inter',sans-serif;font-size:9px;color:#333;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#0D1117;position:relative;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,.7);border-radius:6px}
+.dl-btn{position:absolute;top:25px;right:8px;z-index:100;background:#00FF7F;color:#0a0a0a;border:none;border-radius:20px;padding:5px 12px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+
+/* shared decorators */
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,255,127,0.05) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;z-index:0}
+.ab{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,transparent 5%,rgba(0,255,127,.55) 35%,rgba(0,255,127,.55) 65%,transparent 95%);z-index:2}
+.rb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:220px;height:220px;background:radial-gradient(circle,rgba(0,255,127,0.07),transparent 70%);border-radius:50%;pointer-events:none}
+.wm{position:absolute;bottom:14px;left:18px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:rgba(0,255,127,0.35);letter-spacing:1px;z-index:10}
+
+/* regular content layout */
+.l{display:flex;flex-direction:column;justify-content:center;padding:32px 32px 58px 44px;height:100%;position:relative}
+.lbl{font-size:9px;font-weight:700;color:#00FF7F;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;position:relative;z-index:2}
+.mh{font-size:24px;font-weight:700;color:#FFFFFF;line-height:1.3;margin-bottom:0;position:relative;z-index:2}
+.dv{width:60%;height:1px;background:linear-gradient(to right,rgba(0,255,127,.6),rgba(0,255,127,.12));margin:16px 0;position:relative;z-index:2}
+.wb{font-size:13px;color:#6B7280;font-style:italic;line-height:1.6;position:relative;z-index:2}
+.gd{color:#00FF7F}
+
+/* TEMPLATE K — Pull Quote (hook slide) */
+.slide-k .bg-mark{position:absolute;top:-24px;right:-8px;font-size:220px;font-weight:900;color:rgba(0,255,127,0.04);line-height:1;user-select:none;pointer-events:none;font-family:'Inter',sans-serif}
+.slide-k .glow-k{position:absolute;top:0;right:0;width:220px;height:220px;background:radial-gradient(circle,rgba(0,255,127,0.06),transparent 70%);pointer-events:none}
+.slide-k .k-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:36px 32px 58px 40px;height:100%}
+.slide-k .k-lbl{font-size:9px;font-weight:700;color:#00FF7F;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+.slide-k .open-mark{font-size:64px;font-weight:900;color:#00FF7F;line-height:.75;margin-bottom:12px;text-shadow:0 0 30px rgba(0,255,127,.3)}
+.slide-k .q-body{font-size:26px;font-weight:700;color:#fff;line-height:1.2;letter-spacing:-.5px;margin-bottom:24px}
+.slide-k .attr{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.slide-k .attr-line{width:32px;height:2px;background:linear-gradient(to right,#00FF7F,rgba(0,255,127,0.3));box-shadow:0 0 8px rgba(0,255,127,.4)}
+.slide-k .attr-name{font-size:10px;font-weight:700;color:#00FF7F;letter-spacing:2px;text-transform:uppercase}
+.slide-k .k-sub{font-size:12px;color:#4B5563;font-style:italic;line-height:1.55}
+
+/* TEMPLATE H — Strikethrough Reframe */
+.slide-h .h-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:32px 32px 58px 44px;height:100%}
+.slide-h .h-lbl{font-size:9px;font-weight:700;color:#00FF7F;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px}
+.slide-h .row{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;flex-wrap:wrap;line-height:1}
+.slide-h .struck{font-size:23px;font-weight:700;color:#374151;text-decoration:line-through;text-decoration-color:#ef4444;text-decoration-thickness:2.5px}
+.slide-h .arrow{font-size:15px;color:#374151}
+.slide-h .replaced{font-size:23px;font-weight:700;color:#d1d5db}
+.slide-h .green-big{font-size:34px;font-weight:900;color:#00FF7F;line-height:1;text-shadow:0 0 24px rgba(0,255,127,.2);letter-spacing:-.5px;margin-top:8px}
+.slide-h .h-dv{width:50%;height:1px;background:linear-gradient(to right,rgba(0,255,127,.5),rgba(0,255,127,.1));margin:18px 0}
+.slide-h .h-sub{font-size:12px;color:#4B5563;font-style:italic;line-height:1.55;border-left:2px solid rgba(0,255,127,0.25);padding-left:10px}
+
+/* TEMPLATE J — Color Split */
+.slide-j{display:flex!important}
+.slide-j .left{width:48%;background:#00FF7F;display:flex;flex-direction:column;justify-content:center;padding:28px 14px 40px 22px}
+.slide-j .right{width:52%;background:#0D1117;display:flex;flex-direction:column;justify-content:center;padding:28px 18px 40px 18px;position:relative}
+.slide-j .right .dot-j{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,255,127,0.05) 1px,transparent 1px);background-size:20px 20px}
+.slide-j .right .glow-j{position:absolute;top:50%;left:0;transform:translateY(-50%);width:100px;height:100px;background:radial-gradient(circle,rgba(0,255,127,0.08),transparent 70%);pointer-events:none}
+.slide-j .divider{position:absolute;top:50%;left:48%;transform:translate(-50%,-50%);width:1.5px;height:55%;background:linear-gradient(to bottom,transparent,rgba(0,255,127,0.4),transparent);z-index:3}
+.slide-j .lbl-dark{font-size:8px;font-weight:700;color:rgba(0,0,0,0.35);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.slide-j .j-word{font-size:42px;font-weight:900;color:#0D1117;line-height:.9;letter-spacing:-2px}
+.slide-j .j-sub{font-size:11px;color:rgba(0,0,0,0.45);font-style:italic;margin-top:14px;line-height:1.45}
+.slide-j .lbl-light{font-size:8px;font-weight:700;color:#00FF7F;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;position:relative;z-index:2}
+.slide-j .j-word-r{font-size:42px;font-weight:900;color:#fff;line-height:.9;letter-spacing:-2px;position:relative;z-index:2}
+.slide-j .j-sub-r{font-size:11px;color:#6B7280;font-style:italic;margin-top:14px;line-height:1.45;position:relative;z-index:2}
+.slide-j .wm-j{position:absolute;bottom:12px;right:14px;font-size:10px;font-weight:700;color:rgba(255,255,255,0.15);letter-spacing:1px;z-index:4}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <h3>Content Brief</h3>
+  <p><b>Notion:</b> notion-personal → YOOBIN Content Engine</p>
+  <p><b>Type:</b> 6-Slide Carousel — Founder Perspective · Templates H + J + K</p>
+  <p><b>Angle:</b> Thesis Validation — iOS 27 / On-Device AI</p>
+  <p><b>Hook:</b> Template K (Pull Quote)</p>
+  <p><b>Trend Anchor:</b> Apple iOS 27 — on-device AI model choice (May 2026)</p>
+</div>
+
+<div class="cap">
+  <div class="cap-lbl">Instagram Caption</div>
+  <p class="cap-txt">Apple just made on-device AI the default expectation for a billion people.<br><br>Two years ago I was building Bloggo to run entirely on your phone — no cloud, no upload, your photos never leave your device. Most people thought that was a weird technical constraint.<br><br>iOS 27 just made it the premium feature.<br><br>The thesis didn't change. The world caught up.<br><br>More on what this means for how we build 👇<br><br>#buildingInPublic #indiefounder #ondeviceAI #iOS27 #startupjourney #yoobinseo</p>
+  <div class="cap-lbl">TikTok Caption</div>
+  <p class="cap-txt">Apple just validated the entire premise of what I've been building. Thread 👇 #ios27 #ondeviceai #founderstory #buildinginpublic</p>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides</button></div>
+
+<div class="carousel">
+
+  <!-- SLIDE 1 — Hook (Template K: Pull Quote) -->
+  <div class="sw">
+    <div class="sn">Slide 1 — Hook · Template K</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide slide-k" id="slide1">
+      <div class="dot"></div>
+      <div class="bg-mark">"</div>
+      <div class="glow-k"></div>
+      <div class="k-inner">
+        <div class="k-lbl">FOUNDER MOMENT · MAY 2026</div>
+        <div class="open-mark">"</div>
+        <div class="q-body">APPLE announced iOS 27. I wasn't ready for how personal it felt.</div>
+        <div class="attr">
+          <div class="attr-line"></div>
+          <div class="attr-name">@yoobinseo</div>
+        </div>
+        <div class="k-sub">The mainstream moment for on-device AI — and I've been building for it.</div>
+      </div>
+      <div class="wm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 — What Happened (Regular) -->
+  <div class="sw">
+    <div class="sn">Slide 2 — What Happened</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide" id="slide2">
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="lbl">WHAT HAPPENED</div>
+        <div class="mh">Apple gave everyone a choice.</div>
+        <div class="dv"></div>
+        <div class="wb">iOS 27 lets users pick which AI model runs on their phone — Anthropic, Google, or Apple's own.<br><br>On-device. Locally. Privately.<br><br>For the first time, a billion people heard "on-device AI" at a keynote.</div>
+      </div>
+      <div class="wm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 — The Bet (Template H: Strikethrough Reframe) -->
+  <div class="sw">
+    <div class="sn">Slide 3 — The Bet · Template H</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide slide-h" id="slide3">
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="h-inner">
+        <div class="h-lbl">THE BET I MADE</div>
+        <div class="row">
+          <span class="struck">niche product</span>
+          <span class="arrow">→</span>
+          <span class="replaced">right timing</span>
+        </div>
+        <div class="row">
+          <span class="struck">built too early</span>
+          <span class="arrow">→</span>
+        </div>
+        <div class="green-big">built exactly on time.</div>
+        <div class="h-dv"></div>
+        <div class="h-sub">On-device AI isn't a technical preference anymore. It's a feature Apple is selling to the world.</div>
+      </div>
+      <div class="wm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 — The Thesis (Regular) -->
+  <div class="sw">
+    <div class="sn">Slide 4 — The Thesis</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide" id="slide4">
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l">
+        <div class="lbl">THE THESIS</div>
+        <div class="mh">Your photos should <span class="gd">never leave</span> your phone.</div>
+        <div class="dv"></div>
+        <div class="wb">Bloggo's AI runs entirely on-device. No cloud. No upload. Your memories stay yours.<br><br>We bet on this before it was trendy.<br><br>Apple just made it the default expectation.</div>
+      </div>
+      <div class="wm">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 — The Validation (Template J: Color Split) -->
+  <div class="sw">
+    <div class="sn">Slide 5 — Validation · Template J</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide slide-j" id="slide5">
+      <div class="left">
+        <div class="lbl-dark">2 YEARS AGO</div>
+        <div class="j-word">then.</div>
+        <div class="j-sub">On-device AI was a trade-off. You sacrificed speed, quality. Skeptics called it niche.</div>
+      </div>
+      <div class="right">
+        <div class="dot-j"></div>
+        <div class="glow-j"></div>
+        <div class="lbl-light">TODAY</div>
+        <div class="j-word-r">now.</div>
+        <div class="j-sub-r">On-device AI is the premium choice. Apple made it official. The world caught up.</div>
+      </div>
+      <div class="divider"></div>
+      <div class="wm-j">@yoobinseo</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6 — CTA (Regular) -->
+  <div class="sw">
+    <div class="sn">Slide 6 — CTA</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide" id="slide6">
+      <div class="dot"></div>
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="l" style="align-items:flex-start">
+        <div class="lbl">BUILDING IN PUBLIC</div>
+        <div class="mh">We built Bloggo to run entirely on your device.<br><span class="gd">We still do.</span></div>
+        <div class="dv"></div>
+        <div class="wb">Follow for the full build — the bets, the mistakes, the moments where the world catches up.</div>
+        <div style="margin-top:20px;position:relative;z-index:2;display:inline-block;border:1.5px solid rgba(0,255,127,0.4);padding:6px 16px;border-radius:20px;font-size:10px;font-weight:700;color:#00FF7F;letter-spacing:2px;text-transform:uppercase">FOLLOW @yoobinseo</div>
+      </div>
+      <div class="wm">@yoobinseo</div>
+    </div>
+  </div>
+
+</div><!-- /carousel -->
+
+<script>
+async function saveSlide(btn) {
+  const sw = btn.closest('.sw');
+  const slide = sw.querySelector('.slide');
+  const canvas = await html2canvas(slide, {scale:3, useCORS:true, allowTaint:true, backgroundColor:'#0D1117'});
+  const name = slide.id + '-apple-validated-thesis.png';
+  canvas.toBlob(b => saveAs(b, name));
+}
+
+async function saveAllSlides() {
+  const zip = new JSZip();
+  const slides = document.querySelectorAll('.slide');
+  for (let i = 0; i < slides.length; i++) {
+    const canvas = await html2canvas(slides[i], {scale:3, useCORS:true, allowTaint:true, backgroundColor:'#0D1117'});
+    const blob = await new Promise(r => canvas.toBlob(r, 'image/png'));
+    zip.file(`slide-${i+1}-apple-validated-thesis.png`, blob);
+  }
+  const content = await zip.generateAsync({type:'blob'});
+  saveAs(content, '6-slide-apple-validated-thesis.zip');
+}
+</script>
+</body>
+</html>

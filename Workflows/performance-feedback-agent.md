@@ -130,3 +130,28 @@ Update the `Performance` property (type: text/rich_text) with the combined conte
 
 Confirm to the user:
 > "✅ Analysis appended to '[post title]' in Notion."
+
+---
+
+## Step 8: Feed Top Performers to Trend Brief
+
+If this post scored **above the historical average on saves OR on shares** (a top performer by either signal):
+
+Find the latest trend brief in `briefings/`:
+- Look for files matching `trend-brief-*.md`, sorted by date descending
+- Use the most recent one found
+
+Append the following block to the `## Performance Learnings` section of that file:
+
+```
+**[Post title] — [date analyzed]**
+- Format: [Reel / Carousel / LinkedIn]
+- Account: [Yoobin / Bloggo]
+- What worked: [specific hook angle, emotional trigger, or structure that drove the strong metric]
+- Reuse signal: [the exact pattern — hook formula, format structure, or angle — to repeat in future content]
+```
+
+Confirm to user:
+> "✅ Top performer pattern added to `briefings/trend-brief-[date].md` — Trend Scout will pick this up tomorrow."
+
+If the post did NOT outperform the average on saves or shares: skip Step 8 silently. Only top performers feed back into the research loop.

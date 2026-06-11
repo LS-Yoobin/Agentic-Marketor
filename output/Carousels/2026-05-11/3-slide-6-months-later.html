@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3-Slide — 6 Months Later</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111827;font-family:'Jost',sans-serif;padding:24px 16px}
+.brief{max-width:360px;margin:0 auto 14px;background:#0f172a;border:1px solid rgba(19,142,255,.25);border-radius:10px;padding:14px;font-size:11px;color:rgba(255,255,255,.7);line-height:1.75}
+.brief h3{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#138EFF;margin-bottom:8px}
+.brief p{margin-bottom:3px}
+.brief b{color:#fff}
+.cap{max-width:360px;margin:0 auto 14px;background:#0f172a;border:1px solid rgba(19,142,255,.25);border-radius:10px;padding:14px}
+.cap-lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#138EFF;margin-bottom:6px}
+.cap-txt{font-size:11px;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:12px}
+.sa{text-align:center;margin:0 auto 18px;max-width:360px}
+.sa button{background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,.3)}
+.sw{position:relative;width:360px;margin:0 auto 4px}
+.sn{font-size:9px;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;text-align:center}
+.slide{width:360px;height:450px;overflow:hidden;position:relative;background:#FFFFFF}
+.dl-btn{position:absolute;top:8px;right:8px;z-index:20;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.bm{position:absolute;bottom:14px;left:16px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:2px auto 12px;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <h3>Content Brief</h3>
+  <p><b>Notion:</b> notion → Bloggo Content Engine</p>
+  <p><b>Type:</b> 3-Slide Post — Relatable Moment</p>
+  <p><b>Angle:</b> Pain Point — Memory Loss / Photo Backlog Guilt (Monday)</p>
+  <p><b>Hook Type:</b> Relatable / Fear</p>
+  <p><b>Supporting Graphics:</b> Slide 1 — Spunky looking confused/nostalgic at blurry photo. Slide 3 — Spunky waving at camera. See gfx-notes below each slide.</p>
+</div>
+
+<div class="cap">
+  <div class="cap-lbl">Instagram Caption</div>
+  <p class="cap-txt">You got home. You said "I'll write it up later." Then 6 months passed.<br><br>This is what actually happens to your travel memories. Save this before your next trip.<br><br>Bloggo turns your existing photos into a real story — automatically, on your device, privately. Link in bio.<br><br>#travelmemories #travelblog #travelapp #bloggo #photoorganizer #iphonetravel #traveltips</p>
+  <div class="cap-lbl">TikTok Caption</div>
+  <p class="cap-txt">The number of times this has happened to me… 6 months later and the restaurant name is just GONE. Bloggo fixes this. Comment "blog" for early access. #traveltok #travelmemories #bloggo</p>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides</button></div>
+
+<!-- SLIDE 1: HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <!-- Dot pattern -->
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px 40px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-bottom:6px">you just got back from that trip.</div>
+      <div style="font-family:'Chewy',cursive;font-size:56px;color:#1A1A1A;line-height:1.0;margin-top:4px">6 months</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:2px">later.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#9CA3AF;line-height:1.4;margin-top:20px">try naming one restaurant you loved.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat mascot) holding up a blurry Polaroid photo, looking confused and nostalgic, head tilted, white background. <b>Higgsfield prompt:</b> a confused and nostalgic black cartoon cat holding up a blurry polaroid travel photo, head tilted, squinting expression trying to remember, white background, soft editorial lighting, whimsical illustration style.</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <!-- Subtle center radial glow -->
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 280px 280px at 50% 50%,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px">
+      <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:700;line-height:1.25;text-align:center;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Your memory kept<br>the feeling.</div>
+      <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin:18px auto"></div>
+      <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:700;line-height:1.25;text-align:center;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">It <b style="-webkit-text-fill-color:#138EFF">deleted</b><br>the details.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#9CA3AF;margin-top:20px;text-align:center">every single time. without asking.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: CTA -->
+<div class="sw">
+  <div class="sn">Slide 3 — CTA</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <!-- Subtle dot pattern -->
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.03) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;text-align:center">
+      <!-- Logo row -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px">
+        <div style="font-family:'Chewy',cursive;font-size:46px;color:#138EFF;line-height:1">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.15;margin-bottom:6px">Before the details</div>
+      <div style="font-family:'Chewy',cursive;font-size:42px;color:#138EFF;line-height:1;margin-bottom:22px">disappear.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#138EFF;border:1.5px solid rgba(19,142,255,0.35);padding:5px 14px;border-radius:20px">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Spunky (black cat mascot) waving enthusiastically at the camera, happy welcoming expression, white background. <b>Higgsfield prompt:</b> a happy enthusiastic black cartoon cat waving at the camera with one paw raised, big smile, welcoming expression, white background, soft studio lighting, editorial photography style.</div>
+</div>
+
+<script>
+async function saveSlide(btn) {
+  const slide = btn.closest('.sw').querySelector('.slide');
+  const label = btn.closest('.sw').querySelector('.sn').textContent.trim().replace(/\s+/g,'-').toLowerCase();
+  const canvas = await html2canvas(slide, {scale:3, useCORS:true, allowTaint:true, backgroundColor:'#ffffff'});
+  canvas.toBlob(b => saveAs(b, `3-slide-6-months-later-${label}.png`));
+}
+async function saveAllSlides() {
+  const zip = new JSZip();
+  const wrappers = document.querySelectorAll('.sw');
+  for (let i = 0; i < wrappers.length; i++) {
+    const slide = wrappers[i].querySelector('.slide');
+    if (!slide) continue;
+    const label = wrappers[i].querySelector('.sn').textContent.trim().replace(/\s+/g,'-').toLowerCase();
+    const canvas = await html2canvas(slide, {scale:3, useCORS:true, allowTaint:true, backgroundColor:'#ffffff'});
+    const blob = await new Promise(r => canvas.toBlob(r));
+    zip.file(`slide-${i+1}-${label}.png`, blob);
+  }
+  const content = await zip.generateAsync({type:'blob'});
+  saveAs(content, '3-slide-6-months-later.zip');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloggo — Other apps read your trips (Fear Hook)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#F0F0F0;font-family:'Jost',sans-serif;padding:40px 20px;display:flex;flex-direction:column;align-items:center;gap:32px}
+  h1{font-family:'Jost',sans-serif;font-size:13px;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;text-align:center}
+
+  .sw{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%}
+  .sn{font-family:'Jost',sans-serif;font-size:10px;color:#aaa;letter-spacing:1.5px;text-transform:uppercase;align-self:flex-start;max-width:360px;width:100%}
+  .slide{
+    width:360px;height:450px;background:#FFFFFF;
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    border:1px solid rgba(0,0,0,0.06);
+  }
+
+  /* Shared recurring */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+  .accent-bar{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .right-glow{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent)}
+
+  /* Content slide layout */
+  .cs{align-items:flex-start;justify-content:center;padding:0 0 0 36px}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;position:relative;z-index:2}
+  .bt{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.35;max-width:260px;position:relative;z-index:2}
+  .bt strong{font-weight:700}
+  .sub{font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:10px;line-height:1.4;max-width:240px;position:relative;z-index:2}
+
+  /* Gradient text */
+  .grad{
+    font-family:'Jost',sans-serif;font-weight:700;font-size:26px;
+    background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    background-clip:text;text-align:center;line-height:1.35;padding:0 36px
+  }
+
+  /* CTA */
+  .logo-row{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .logo-row img{width:52px;height:52px;object-fit:contain}
+  .logo-name{font-family:'Chewy',cursive;font-size:46px;color:#138EFF;line-height:1}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;text-transform:uppercase;letter-spacing:3px;margin-top:14px}
+
+  /* gfx-note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6;width:100%}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  /* brief */
+  .brief{max-width:360px;width:100%;margin-top:16px;padding:14px 16px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+  .brief h3{font-size:11px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+  .brief p{margin-bottom:4px}
+  .brief strong{color:#1A1A1A}
+</style>
+</head>
+<body>
+<h1>Bloggo Carousel — 2026-05-10 — 8-Slide Post A (Fear Hook)</h1>
+
+<!-- SLIDE 1 — HOOK (Chewy, Fear) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Fear)</div>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0"></div>
+    <div style="position:relative;z-index:2;text-align:center;padding:0 30px">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4">Other apps are</div>
+      <div style="font-family:'Chewy',cursive;font-size:68px;color:#138EFF;line-height:0.95;margin-top:4px">reading</div>
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1;margin-top:4px">your trips.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Cat staring wide-eyed at a giant floating eye icon above a phone screen, alarmed expression. Higgsfield: "Black cat mascot with wide alarmed eyes looking at a large floating eye icon hovering above a smartphone, digital surveillance metaphor, white background, subtle red-blue tension lighting, portrait style."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="grad">Here's what really happens<br>when you<br><strong>grant photo access.</strong></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide cs">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">Step 1</div>
+    <div class="bt">You open<br>a <strong>photo app.</strong></div>
+    <div class="sub">Looks harmless enough.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide cs">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">Step 2</div>
+    <div class="bt">Your photos<br><strong>upload</strong><br>to their servers.</div>
+    <div class="sub">Every. Single. One.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Cat watching photos float away into cloud servers, reaching one paw out toward them, sad expression. Higgsfield: "Black cat mascot watching photos float away into a cloud server, reaching one paw out, sad and concerned expression, photos depicted as glowing rectangles drifting upward, white background."</div>
+</div>
+
+<!-- SLIDE 5 — CONTENT (centered, no accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0"></div>
+    <div style="text-align:center;padding:0 36px;position:relative;z-index:2">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px">Step 3</div>
+      <div style="font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.35">Their AI reads<br>your <strong>location data.</strong></div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:12px;line-height:1.4">Every restaurant.<br>Every hotel. Every city.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide cs">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">Step 4</div>
+    <div class="bt">They build a<br><strong>profile</strong><br>of your trips.</div>
+    <div class="sub">Sold to advertisers.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 6 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 7 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide cs">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">Result</div>
+    <div class="bt">You get<br><strong>targeted ads.</strong><br>Forever.</div>
+    <div class="sub">Your memories = their data.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 7 — Graphic:</b> Cat surrounded by floating ad icons and notification badges, overwhelmed expression. Higgsfield: "Black cat mascot surrounded by floating advertisement icons, notification badges, and target symbols, overwhelmed expression, white background, chaotic but cute composition."</div>
+</div>
+
+<!-- SLIDE 8 — CONTENT (shift toward Bloggo) -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content (The Shift)</div>
+  <div class="slide cs">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">Different</div>
+    <div class="bt"><strong>Bloggo</strong><br>works another<br>way.</div>
+    <div class="sub">Your photos never leave your phone.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Cat holding a phone tightly to its chest, protective and proud stance. Higgsfield: "Black cat mascot hugging a smartphone tightly to its chest, protective and proud expression, soft blue glow around phone, pure white background, portrait orientation."</div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT / SAVE-BAIT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight / Save-Worthy</div>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0"></div>
+    <div style="text-align:center;padding:0 36px;position:relative;z-index:2">
+      <div style="font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;line-height:1.4;margin-bottom:10px">The only travel app where</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:34px;color:#1A1A1A;line-height:1.15">your AI never<br>leaves your<br><span style="color:#138EFF">phone.</span></div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Cat sitting next to a glowing open journal/travel blog on a phone, serene expression, radial glow. Higgsfield: "Black cat mascot sitting beside a glowing smartphone displaying a beautiful travel blog, serene and content expression, soft blue radial light, pure white background."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide">
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 28px">
+      <div class="logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <div class="logo-name">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:32px;color:#1A1A1A;line-height:1.2;margin-bottom:4px">Private by design.</div>
+      <div style="font-family:'Chewy',cursive;font-size:28px;color:#138EFF;line-height:1.2">Try it free.</div>
+      <div class="cta-link">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Cat waving excitedly, bottom-left position. Higgsfield: "Black cat mascot waving one paw in a friendly welcoming gesture, excited big eyes, pure white background, bottom-left corner composition."</div>
+</div>
+
+<div class="brief">
+  <h3>Content Brief — 8-Slide Post A (Fear Hook)</h3>
+  <p><strong>File:</strong> 8-slide-other-apps-read-your-trips.html</p>
+  <p><strong>Hook:</strong> "Other apps are reading your trips." — Fear hook on data privacy</p>
+  <p><strong>Hook Type:</strong> Fear / WTF</p>
+  <p><strong>Angle:</strong> Saturday — Privacy differentiator</p>
+  <p><strong>Notion Destination:</strong> notion → Bloggo Content Engine</p>
+  <p><strong>Caption note:</strong> "Most photo apps send your travel photos to remote servers the moment you grant access. Bloggo's AI runs entirely on your device. No upload. No data deal. No ads from your memories. Download Bloggo — link in bio."</p>
+  <p><strong>Supporting Graphics:</strong> Slide 1 — Cat alarmed by eye icon; Slide 4 — Cat watching photos float to cloud; Slide 7 — Cat surrounded by ad icons; Slide 8 — Cat hugging phone; Slide 9 — Cat next to glowing blog; Slide 10 — Cat waving</p>
+</div>
+
+</body>
+</html>

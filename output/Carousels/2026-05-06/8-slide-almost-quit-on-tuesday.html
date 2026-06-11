@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>8-Slide — I almost quit on a Tuesday</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#E5E7EB;display:flex;flex-direction:column;align-items:center;padding:40px 20px;gap:24px;font-family:'Jost',sans-serif}
+.brief{max-width:360px;background:#fff;border:1px solid #E5E7EB;border-radius:10px;padding:16px 18px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+.brief h3{font-size:12px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px}
+.brief strong{color:#1A1A1A}
+.sw{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:20px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:1.5px;max-width:360px;width:100%;text-align:left}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+
+/* Slide 1 — Hook (Chewy, centered) */
+.s1{align-items:center;justify-content:center;text-align:center;padding:40px 32px;}
+.dot-bg{position:absolute;inset:0;background-image:radial-gradient(#138EFF 1px, transparent 1px);background-size:36px 36px;opacity:0.04;pointer-events:none}
+
+/* Slide 2 — Transition (centered, gradient text) */
+.s2{align-items:center;justify-content:center;text-align:center;padding:40px 32px;}
+.grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* Content slides — left-aligned */
+.sc{justify-content:center;padding:44px 36px 44px 44px;}
+.accent-bar{position:absolute;left:0;top:0;bottom:0;width:8px;background:#138EFF;opacity:0.12}
+.right-glow{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+.label{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;position:relative;z-index:2}
+.body{font-family:'Jost',sans-serif;font-size:28px;font-weight:400;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+.sub{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:12px;line-height:1.5;position:relative;z-index:2}
+
+/* Slide 9 — Insight (centered) */
+.s9{align-items:center;justify-content:center;text-align:center;padding:44px 36px;}
+.s9-top{font-family:'Jost',sans-serif;font-size:20px;font-weight:400;color:#6B7280;line-height:1.4;}
+.s9-bot{font-family:'Jost',sans-serif;font-size:32px;font-weight:700;color:#1A1A1A;line-height:1.25;margin-top:14px;}
+
+/* Slide 10 — CTA */
+.s10{align-items:center;justify-content:center;text-align:center;padding:40px 32px;}
+
+/* Recurring */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- CONTENT BRIEF -->
+<div class="brief">
+  <h3>Content Brief</h3>
+  <strong>Type:</strong> 10-Slide Post<br>
+  <strong>Angle:</strong> Founder/Builder Story — vulnerability arc (Wednesday)<br>
+  <strong>Hook:</strong> "I almost quit on a Tuesday."<br>
+  <strong>Hook Type:</strong> Story<br>
+  <strong>Notion Destination:</strong> notion-personal → YOOBIN Content Engine<br>
+  <strong>Caption:</strong> "Three App Store rejections. No users. I opened my own camera roll and saw 470 photos from a trip I'd already half-forgotten. That's when Bloggo finally clicked. The full story ↓"<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — Spunky staring at overflowing camera roll. Slide 9 — Spunky next to glowing open journal. Slide 10 — Spunky waving.
+</div>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide s1">
+    <div class="dot-bg"></div>
+    <div style="position:relative;z-index:2;">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">I almost</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.05;margin-top:4px;">quit</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;margin-top:4px;">on a</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;margin-top:4px;">Tuesday.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat) bottom-left, staring at a phone screen showing hundreds of tiny photo thumbnails — an overflowing camera roll. Expression is tired and overwhelmed. Higgsfield AI prompt: "Cute black cat character staring at an overflowing phone screen with hundreds of tiny photo thumbnails, tired and overwhelmed expression, minimal illustration style, white background, no text."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div style="position:relative;z-index:2;font-family:'Jost',sans-serif;font-size:22px;font-weight:700;line-height:1.3;" class="grad">Here's what stopped me from walking away.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">The low point</div>
+    <div class="body">App <strong>rejected</strong>. Third time.</div>
+    <div class="sub">Different reason each time. Same gut-punch feeling.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">The reality</div>
+    <div class="body"><strong>Zero</strong> users. Zero revenue.</div>
+    <div class="sub">Just a co-founder with a lot of conviction and no proof.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">The moment</div>
+    <div class="body">I had <strong>470 photos</strong> from Tokyo.</div>
+    <div class="sub">Zero captions. Zero stories. Just thumbnails and timestamps.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">The shift</div>
+    <div class="body">I opened my own <strong>camera roll.</strong></div>
+    <div class="sub">And I saw the exact problem I was building to solve.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">The realization</div>
+    <div class="body"><strong>6 months</strong> of trips. Nothing written.</div>
+    <div class="sub">The memories were already fading, and I hadn't even launched yet.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">The click</div>
+    <div class="body">That's when Bloggo <strong>clicked.</strong></div>
+    <div class="sub">I wasn't building for a market. I was building for me.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide s9">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05),transparent 70%);pointer-events:none"></div>
+    <div class="s9-top" style="position:relative;z-index:2;">The problem wasn't motivation.</div>
+    <div class="s9-bot" style="position:relative;z-index:2;">It was <span style="color:#138EFF;">the blank page.</span></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky (black cat) bottom-right, sitting next to a glowing open journal or book, looking at it warmly. Expression is calm and resolved. Higgsfield AI prompt: "Cute black cat character sitting beside a glowing open journal or book, calm and resolved expression, soft warm glow, minimal illustration style, white background, no text."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide s10">
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px;position:relative;z-index:2;">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1;">Bloggo</div>
+    </div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.2;position:relative;z-index:2;">Your trips deserve</div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1.2;margin-top:4px;position:relative;z-index:2;">a real story.</div>
+    <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:16px;position:relative;z-index:2;">BETA — LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky (black cat) bottom-left, waving enthusiastically with a welcoming expression. Higgsfield AI prompt: "Cute black cat character waving cheerfully with an open, welcoming body posture, happy expression, white background, minimal illustration style, no text."</div>
+</div>
+
+</body>
+</html>

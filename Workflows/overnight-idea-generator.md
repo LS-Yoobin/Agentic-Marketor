@@ -1,7 +1,7 @@
 # Overnight Idea Generator
 
 ## Trigger
-Cron runs this at 5AM PST (13:00 UTC) daily.
+Cron runs this at 4AM PST (12:00 UTC) daily.
 Also runnable manually: "Run the overnight idea generator"
 
 ---
@@ -16,6 +16,21 @@ Always read these before generating ideas. They define brand voice, content pill
 - `docs/Marketing/Content Grader.md` — scoring rubric and content rules
 - `docs/Marketing/Viral Short-Form Video Playbook.md` — Reel/video formula
 - `docs/Marketing/Instagram Carousel Cheat Sheet.md` — carousel structure
+
+---
+
+## Step 0: Read Today's Trend Brief
+
+Before running any searches, read: `briefings/trend-brief-[TODAY'S DATE].md`
+
+If today's brief exists:
+- Extract the Top 5 Trend Signals, 3 Ready-to-Use Hook Angles, and Format Recommendation
+- Skip Step 1 entirely — use these signals as your research foundation instead of re-running the same searches
+- Note at top of morning briefing: "Trend brief found — using Trend Scout signals"
+
+If today's brief does NOT exist:
+- Continue to Step 1 (run searches as normal — this is the fallback)
+- Note at top of morning briefing: "⚠️ No trend brief found — running standalone searches"
 
 ---
 

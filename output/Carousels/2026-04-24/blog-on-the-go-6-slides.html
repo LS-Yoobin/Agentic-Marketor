@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog on the go — Bloggo Carousel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,700;0,14..32,900;1,14..32,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#060a12;padding:24px 16px 48px;font-family:'Inter',sans-serif}
+
+.meta{text-align:center;margin-bottom:16px}
+.meta h1{font-size:13px;color:#ccc;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#555;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(77,166,217,0.15);color:#4da6d9}
+
+.sa{text-align:center;margin:0 0 20px}
+.sa button{background:#4da6d9;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 18px rgba(77,166,217,.3)}
+
+.carousel{display:flex;flex-direction:column;align-items:center;gap:16px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;width:360px}
+.sn{font-size:9px;color:#444;text-transform:uppercase;letter-spacing:2px}
+.dl-btn{position:absolute;top:24px;right:0;z-index:20;background:#4da6d9;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+
+/* BASE SLIDE */
+.slide{width:360px;height:450px;position:relative;overflow:hidden;border-radius:8px;box-shadow:0 6px 28px rgba(0,0,0,0.6)}
+
+/* SLIDE INTERNALS */
+.bloggo-mark{position:absolute;bottom:13px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:900;color:rgba(255,255,255,0.85);letter-spacing:1px;z-index:10;white-space:nowrap}
+.bloggo-mark span{color:#4da6d9}
+.slide-counter{position:absolute;top:11px;right:12px;font-size:9px;color:rgba(255,255,255,0.35);font-weight:700;letter-spacing:0.5px;z-index:10}
+
+/* ── SLIDE 1: COVER ── */
+.s1{background:linear-gradient(150deg,#071422 0%,#0d2b4a 55%,#0a1e35 100%)}
+.s1 .right-glow{position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(to left,rgba(26,90,140,0.4),transparent);pointer-events:none}
+.s1 .content{position:absolute;inset:0;padding:36px 30px 48px;display:flex;flex-direction:column;justify-content:center}
+.cover-eyebrow{font-size:9px;font-weight:700;letter-spacing:2.5px;color:#4da6d9;text-transform:uppercase;margin-bottom:12px}
+.cover-hl{font-size:52px;font-weight:900;color:#fff;line-height:0.95;margin-bottom:16px}
+.cover-hl em{color:#4da6d9;font-style:normal}
+.cover-rule{width:36px;height:2px;background:#4da6d9;margin-bottom:16px}
+.cover-sub{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.55;max-width:190px}
+.cover-tags{display:flex;gap:7px;margin-top:20px;flex-wrap:wrap}
+.tag{font-size:9px;font-weight:700;letter-spacing:0.5px;color:#4da6d9;border:1px solid rgba(77,166,217,0.4);border-radius:20px;padding:3px 10px}
+
+/* ── STEP SLIDES (2–5) ── */
+.step-slide{background:#090f1c}
+
+/* Accent band — top 44% */
+.accent-band{position:absolute;top:0;left:0;right:0;height:44%;overflow:hidden}
+.accent-band img{width:100%;height:100%;object-fit:cover;object-position:top center;opacity:0.75}
+.accent-band .color-overlay{position:absolute;inset:0}
+.accent-band .fade-bottom{position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to bottom,transparent,#090f1c)}
+
+.step-badge{position:absolute;top:11px;left:12px;font-size:8px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(0,0,0,0.45);z-index:5}
+
+/* Step body — bottom portion */
+.step-body{position:absolute;bottom:0;left:0;right:0;top:40%;padding:14px 20px 36px;display:flex;flex-direction:column;justify-content:flex-end;gap:7px}
+.step-icon{font-size:28px;line-height:1;margin-bottom:2px}
+.step-hl{font-size:22px;font-weight:900;color:#fff;line-height:1.1}
+.step-copy{font-size:11px;color:rgba(255,255,255,0.58);line-height:1.6;max-width:240px}
+.step-pill{display:inline-block;font-size:9px;font-weight:700;padding:3px 10px;border-radius:20px;margin-top:2px;width:fit-content}
+
+/* Step color themes */
+.theme-teal .color-overlay{background:linear-gradient(135deg,rgba(10,60,85,0.7),rgba(20,110,140,0.5))}
+.theme-teal .step-badge{border:1px solid rgba(77,196,230,0.55);color:#6dd4ed}
+.theme-teal .step-pill{background:rgba(77,196,230,0.15);color:#6dd4ed}
+
+.theme-purple .color-overlay{background:linear-gradient(135deg,rgba(35,12,70,0.7),rgba(90,40,150,0.5))}
+.theme-purple .step-badge{border:1px solid rgba(180,120,255,0.55);color:#c49dff}
+.theme-purple .step-pill{background:rgba(180,120,255,0.15);color:#c49dff}
+
+.theme-green .color-overlay{background:linear-gradient(135deg,rgba(10,55,30,0.7),rgba(20,130,70,0.5))}
+.theme-green .step-badge{border:1px solid rgba(80,220,140,0.55);color:#60e09a}
+.theme-green .step-pill{background:rgba(80,220,140,0.15);color:#60e09a}
+
+.theme-amber .color-overlay{background:linear-gradient(135deg,rgba(60,28,0,0.7),rgba(140,75,10,0.5))}
+.theme-amber .step-badge{border:1px solid rgba(255,185,60,0.55);color:#ffb84a}
+.theme-amber .step-pill{background:rgba(255,185,60,0.15);color:#ffb84a}
+
+/* Phone mockup within accent band */
+.phone-wrap{position:absolute;right:16px;top:6px;bottom:6px;width:115px;z-index:3}
+.phone-frame{width:100%;height:100%;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,0.18);box-shadow:0 6px 24px rgba(0,0,0,0.6)}
+.phone-frame img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.phone-wrap .missing-screen{width:100%;height:100%;background:rgba(255,255,255,0.06);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:8px;color:rgba(255,255,255,0.3);text-align:center;padding:6px;border:1px dashed rgba(255,255,255,0.15)}
+
+/* ── SLIDE 6: CTA ── */
+.s6{background:linear-gradient(150deg,#071422 0%,#0d2b4a 60%,#071422 100%)}
+.s6 .top-glow{position:absolute;top:-40px;left:50%;transform:translateX(-50%);width:200px;height:200px;background:radial-gradient(circle,rgba(77,166,217,0.12),transparent 70%);border-radius:50%;pointer-events:none}
+.s6 .content{position:absolute;inset:0;padding:36px 30px 48px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.cta-pre{font-size:9px;font-weight:700;letter-spacing:2.5px;color:#4da6d9;text-transform:uppercase}
+.cta-hl{font-size:30px;font-weight:900;color:#fff;line-height:1.1}
+.cta-hl em{color:#4da6d9;font-style:normal}
+.cta-rule{width:36px;height:2px;background:#4da6d9}
+.cta-body{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.65}
+.cta-pill{display:inline-block;background:#4da6d9;color:#fff;font-size:10px;font-weight:800;padding:8px 18px;border-radius:20px;width:fit-content;letter-spacing:0.5px}
+
+/* NOTE CARD */
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(77,166,217,0.04);border:1px dashed rgba(77,166,217,0.2);border-radius:6px;font-size:10px;color:#3a6a88;line-height:1.6}
+.gfx-note b{color:#4da6d9;font-weight:700}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+<div class="meta">
+  <h1>Blog on the go — Bloggo In-App Camera</h1>
+  <div class="sub">Bloggo Company · Product Feature · Apr 24</div>
+  <span class="fmt">Instagram Carousel · 6 Slides · 4:5 · 1080×1350</span>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">⬇ Save All Slides</button></div>
+
+<div class="carousel">
+
+  <!-- ── SLIDE 1: COVER ── -->
+  <div class="sw">
+    <div class="sn">Slide 1 of 6 — Cover</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide s1">
+      <div class="right-glow"></div>
+      <div class="content">
+        <div class="cover-eyebrow">Bloggo · In-App Camera</div>
+        <div class="cover-hl">Blog as<br>you <em>go.</em></div>
+        <div class="cover-rule"></div>
+        <div class="cover-sub">Capture. Organize. Blog.<br>All while you travel.</div>
+        <div class="cover-tags">
+          <div class="tag">Capture</div>
+          <div class="tag">Organize</div>
+          <div class="tag">Publish</div>
+        </div>
+      </div>
+      <div class="slide-counter">1 / 6</div>
+      <div class="bloggo-mark"><span>B</span>loggo</div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 2: STEP 1 — CAPTURE ── -->
+  <div class="sw">
+    <div class="sn">Slide 2 of 6 — Step 1: Capture</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide step-slide theme-teal">
+      <div class="accent-band">
+        <!-- ⚠️ Replace camera-screen.png with your Bloggo camera UI screenshot -->
+        <img src="../../../docs/Assets/IMG_6216.png" alt="Bloggo Camera UI" style="object-position:bottom center">
+        <div class="color-overlay"></div>
+        <div class="fade-bottom"></div>
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <img src="../../../docs/Assets/IMG_6216.png" alt="Bloggo Camera UI" style="object-position:bottom center">
+          </div>
+        </div>
+      </div>
+      <div class="step-badge theme-teal">Step 01</div>
+      <div class="step-body">
+        <div class="step-icon">📸</div>
+        <div class="step-hl">Capture<br>with purpose</div>
+        <div class="step-copy">Use Bloggo's in-app camera to keep every moment organized from the first tap — no folders, no tagging later.</div>
+        <div class="step-pill theme-teal">Photos land in your trip automatically</div>
+      </div>
+      <div class="slide-counter">2 / 6</div>
+      <div class="bloggo-mark"><span>B</span>loggo</div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 3: STEP 2 — ORGANIZE ── -->
+  <div class="sw">
+    <div class="sn">Slide 3 of 6 — Step 2: Organize</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide step-slide theme-purple">
+      <div class="accent-band">
+        <img src="../../../docs/Assets/IMG_6231.png" alt="Places Visited screen" style="object-position:top center">
+        <div class="color-overlay"></div>
+        <div class="fade-bottom"></div>
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <img src="../../../docs/Assets/IMG_6231.png" alt="Places Visited" style="object-position:top center">
+          </div>
+        </div>
+      </div>
+      <div class="step-badge theme-purple">Step 02</div>
+      <div class="step-body">
+        <div class="step-icon">🗂️</div>
+        <div class="step-hl">Bloggo<br>organizes for you</div>
+        <div class="step-copy">Time, location, and context are added automatically. No manual sorting. No remembering where you were.</div>
+        <div class="step-pill theme-purple">Zero effort on your end</div>
+      </div>
+      <div class="slide-counter">3 / 6</div>
+      <div class="bloggo-mark"><span>B</span>loggo</div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 4: STEP 3 — WRITE ── -->
+  <div class="sw">
+    <div class="sn">Slide 4 of 6 — Step 3: Write</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide step-slide theme-green">
+      <div class="accent-band">
+        <img src="../../../docs/Assets/IMG_6200.png" alt="Blog narrative view" style="object-position:center 40%">
+        <div class="color-overlay"></div>
+        <div class="fade-bottom"></div>
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <img src="../../../docs/Assets/IMG_6200.png" alt="Blog narrative" style="object-position:center 40%">
+          </div>
+        </div>
+      </div>
+      <div class="step-badge theme-green">Step 03</div>
+      <div class="step-body">
+        <div class="step-icon">✍️</div>
+        <div class="step-hl">It writes<br>as you go</div>
+        <div class="step-copy">Your photos turn into a real blog draft in real time — AI writes the story on your device, privately.</div>
+        <div class="step-pill theme-green">No writing required</div>
+      </div>
+      <div class="slide-counter">4 / 6</div>
+      <div class="bloggo-mark"><span>B</span>loggo</div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 5: STEP 4 — PUBLISH ── -->
+  <div class="sw">
+    <div class="sn">Slide 5 of 6 — Step 4: Publish</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide step-slide theme-amber">
+      <div class="accent-band">
+        <img src="../../../docs/Assets/IMG_6226.png" alt="Blog cover share screen" style="object-position:center 30%">
+        <div class="color-overlay"></div>
+        <div class="fade-bottom"></div>
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <img src="../../../docs/Assets/IMG_6226.png" alt="Share blog">
+          </div>
+        </div>
+      </div>
+      <div class="step-badge theme-amber">Step 04</div>
+      <div class="step-body">
+        <div class="step-icon">✈️</div>
+        <div class="step-hl">Blog ready<br>before you land</div>
+        <div class="step-copy">Your full blog is waiting when you get home. Review it, share it, export it — or send it as-is.</div>
+        <div class="step-pill theme-amber">From trip to story in seconds</div>
+      </div>
+      <div class="slide-counter">5 / 6</div>
+      <div class="bloggo-mark"><span>B</span>loggo</div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 6: CTA ── -->
+  <div class="sw">
+    <div class="sn">Slide 6 of 6 — CTA</div>
+    <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+    <div class="slide s6">
+      <div class="top-glow"></div>
+      <div class="content">
+        <div class="cta-pre">Memories are happening now.</div>
+        <div class="cta-hl">Blog on the <em>go.</em><br>Don't wait<br>to remember.</div>
+        <div class="cta-rule"></div>
+        <div class="cta-body">Capture them. Organize them.<br>Bloggo takes care of the rest.</div>
+        <div class="cta-pill">Download Bloggo →</div>
+      </div>
+      <div class="slide-counter">6 / 6</div>
+      <div class="bloggo-mark"><span>B</span>loggo</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+async function saveSlide(btn) {
+  const sw = btn.closest('.sw');
+  const slide = sw.querySelector('.slide');
+  const label = sw.querySelector('.sn').textContent.trim().replace(/\s+/g,'-');
+  const canvas = await html2canvas(slide, {scale:3, useCORS:true, backgroundColor:null});
+  canvas.toBlob(blob => saveAs(blob, `bloggo-${label}.png`), 'image/png');
+}
+
+async function saveAllSlides() {
+  const slides = document.querySelectorAll('.slide');
+  const zip = new JSZip();
+  for (let i = 0; i < slides.length; i++) {
+    const canvas = await html2canvas(slides[i], {scale:3, useCORS:true, backgroundColor:null});
+    const blob = await new Promise(r => canvas.toBlob(r, 'image/png'));
+    zip.file(`slide-${String(i+1).padStart(2,'0')}.png`, blob);
+  }
+  const out = await zip.generateAsync({type:'blob'});
+  saveAs(out, 'bloggo-blog-on-the-go.zip');
+}
+</script>
+</body>
+</html>
