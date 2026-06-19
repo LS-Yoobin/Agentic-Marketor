@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10-Slide — Stop Trying to Write About Your Trips · 2026-06-19</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;padding:30px;font-family:'Jost',sans-serif}
+  h1{font-family:'Jost',sans-serif;font-size:13px;color:#6B7280;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
+  .sw{display:flex;flex-direction:column;align-items:center;margin-bottom:28px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;margin-bottom:6px;letter-spacing:0.5px}
+  .slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;padding:44px 36px;display:flex;flex-direction:column;justify-content:center}
+
+  /* Slide 1 — Hook centered */
+  .s1{align-items:center;text-align:center}
+  .hook-setup{font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4}
+  .hook-mid{font-family:'Chewy',cursive;font-size:46px;color:#1A1A1A;line-height:1.05;margin-top:6px}
+  .hook-hero{font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:0.95;margin-top:4px}
+  .hook-end{font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:10px}
+
+  /* Slide 2 — Transition */
+  .s2{align-items:center;text-align:center}
+  .grad-text{font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.45;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+  /* Content slides */
+  .content-slide{align-items:flex-start}
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;position:relative;z-index:2}
+  .body-text{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+  .body-text b{font-weight:700}
+  .sub-text{font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:12px;line-height:1.4;position:relative;z-index:2}
+
+  /* Slide 9 — Insight */
+  .s9{align-items:center;text-align:center}
+  .insight-top{font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;line-height:1.4;margin-bottom:14px}
+  .insight-bottom{font-family:'Jost',sans-serif;font-weight:700;font-size:30px;color:#1A1A1A;line-height:1.25}
+  .insight-bottom span{color:#138EFF}
+
+  /* Slide 10 — CTA */
+  .s10{align-items:center;text-align:center}
+  .cta-logo-row{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:18px}
+  .cta-app-name{font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1}
+  .cta-headline{font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.2;margin-bottom:6px}
+  .cta-accent{font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.2;margin-bottom:16px}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase}
+
+  /* Recurring */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  .gfx-note{max-width:360px;margin:6px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  .brief{max-width:360px;margin:10px auto 0;padding:10px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+  .brief b{color:#1A1A1A;font-weight:700}
+</style>
+</head>
+<body>
+<h1>10-Slide — Stop Trying to Write About Your Trips · 2026-06-19 · WTF Hook</h1>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (WTF)</div>
+  <div class="slide s1">
+    <div class="hook-setup">Stop trying to write</div>
+    <div class="hook-mid">about your</div>
+    <div class="hook-hero">trips.</div>
+    <div class="hook-end">Writing is the wrong tool.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky firmly raising one paw in a "stop" gesture toward a notebook, decisive and calm — not angry, just certain. Higgsfield prompt: "A small black cartoon cat holding one paw out in a calm stop gesture toward a notebook, confident and decisive expression, white background, blue accent lighting, digital illustration, composed authoritative mood."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="grad-text">Here's why writing<br>doesn't work —<br>and <b>what does.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The pattern</div>
+    <div class="body-text">You come home.<br>You open a doc.<br>You <b>stare.</b></div>
+    <div class="sub-text">Then you close it and tell yourself you'll do it later.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The numbers</div>
+    <div class="body-text">500 photos.<br>Zero words.<br><b>Every trip.</b> No exception.</div>
+    <div class="sub-text">You're not lazy. The tool doesn't fit the problem.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The myth</div>
+    <div class="body-text">You don't need<br><b>more discipline.</b><br>The tool is wrong.</div>
+    <div class="sub-text">Journals were designed before cameras existed.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">The shift</div>
+    <div class="body-text">Your <b>camera</b><br>already wrote<br>the story.</div>
+    <div class="sub-text">GPS. Timestamps. Place names. It's all there.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">How it works</div>
+    <div class="body-text">GPS + timestamps =<br>a <b>complete timeline.</b><br>Already.</div>
+    <div class="sub-text">Every photo you took is a chapter waiting to be read.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide content-slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">Bloggo</div>
+    <div class="body-text">One tap. Your photos<br>become a <b>real blog.</b><br>No writing.</div>
+    <div class="sub-text">Under 60 seconds. On your device. Privately.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight (Save-Bait)</div>
+  <div class="slide s9">
+    <div class="insight-top">The problem was never<br>the blank page.</div>
+    <div class="insight-bottom">It was starting<br>from <span>memory.</span></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting next to a glowing open journal — calm, settled, enlightened expression. A small lightbulb above the cat's head. Higgsfield prompt: "A small black cartoon cat sitting beside a glowing open journal with a tiny lightbulb floating above its head, calm enlightened expression, white background, soft blue glow, digital illustration, peaceful aha-moment mood."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide s10">
+    <div class="cta-logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div class="cta-app-name">Bloggo</div>
+    </div>
+    <div class="cta-headline">Your trip is already written.</div>
+    <div class="cta-accent">Find it.</div>
+    <div class="cta-link">Link in bio</div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky waving with both arms open, welcoming energy, next to the Bloggo app icon. Higgsfield prompt: "A small black cartoon cat waving joyfully with both arms open beside a glowing app icon, warm welcoming expression, white background, blue accent light, digital illustration, friendly inviting mood."</div>
+</div>
+
+<div class="brief">
+  <b>Brief — 8-slide-stop-trying-to-write.html</b><br>
+  <b>Angle:</b> WTF / Counterintuitive — "Stop trying to write" challenges the core assumption<br>
+  <b>Slides:</b> 10 (Hook → Transition → 6 content → Insight → CTA)<br>
+  <b>Hook type:</b> WTF<br>
+  <b>Notion:</b> notion → Bloggo Content Engine<br>
+  <b>Caption note:</b> "Stop trying to write about your trips. Not because you're lazy. Because writing is the wrong tool. You came home. You opened a doc. You stared at it and closed it. Every. Trip. Your phone already recorded everything — GPS, timestamps, place names. That's your blog. Bloggo reads it and turns it into a real story in under 60 seconds. No blank page. No writing required. Save this before your next trip. Beta in bio."<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky with stop gesture toward notebook · Slide 9 — Spunky beside glowing journal with lightbulb · Slide 10 — Spunky waving welcome
+</div>
+
+</body>
+</html>
