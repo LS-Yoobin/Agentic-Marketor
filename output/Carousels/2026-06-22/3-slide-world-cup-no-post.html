@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Slide: World Cup No Post — Bloggo</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f0f2f5;font-family:'Jost',sans-serif;padding:24px}
+  h1{font-family:'Jost',sans-serif;font-size:12px;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+
+  .sw{max-width:360px;margin:0 auto 24px}
+  .sn{font-size:10px;color:#aaa;margin-bottom:4px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase}
+
+  .slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center}
+
+  /* Recurring */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* Slide 1 — Hook (Chewy) */
+  .s1-hook{text-align:center;padding:0 36px;position:relative;z-index:2}
+
+  /* Slide 2 — Transition gradient */
+  .s2-text{
+    font-family:'Jost',sans-serif;font-weight:700;font-size:36px;
+    text-align:center;padding:0 36px;line-height:1.2;
+    background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    background-clip:text;
+    position:relative;z-index:2
+  }
+
+  /* Slide 3 — Left-aligned content */
+  .accent-bar{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+  .right-glow{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:1}
+  .s3-inner{position:relative;z-index:2;padding:0 28px 0 32px;width:100%;text-align:left}
+
+  /* Slide 4 — CTA (Chewy) */
+  .s4-inner{text-align:center;padding:0 32px;position:relative;z-index:2}
+
+  /* dot bg for slide 1 */
+  .dot-bg{position:absolute;inset:0;z-index:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px}
+
+  /* gfx note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  .brief{max-width:360px;margin:8px auto 0;padding:12px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<h1>Bloggo Carousel — June 22, 2026 — 3-Slide Post</h1>
+
+<!-- SLIDE 1 -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="dot-bg"></div>
+    <div class="s1-hook">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">You traveled for the</div>
+      <div style="font-family:'Chewy',cursive;font-size:62px;color:#1A1A1A;line-height:1.0;margin-top:4px;">World Cup.</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1.0;margin-top:6px;">Still no post.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot sitting in stadium bleachers surrounded by flags and confetti, holding a tiny camera, looking down at it with guilt. Higgsfield prompt: "A small cute black cat sitting in colorful stadium bleachers surrounded by football flags and confetti, holding a tiny camera and looking at it with a guilty, sheepish expression, photorealistic, warm stadium lighting, white clean background."</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="s2-text">The photos are there.<br>The story isn't.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="s3-inner">
+      <div style="font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">The Problem</div>
+      <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.25;">You took <b>400 photos</b>.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.25;margin-top:8px;">Zero are in a story.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;margin-top:14px;line-height:1.4;">The match deserved more than a photo dump.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 4 — CTA</div>
+  <div class="slide">
+    <div class="s4-inner">
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px;">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1;">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.1;">Write the trip.</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.1;">In 60 seconds.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:18px;">BETA IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Black cat mascot waving excitedly from the bottom-left corner, welcoming body language, cheerful expression. Higgsfield prompt: "A small cute black cat with big round eyes waving one paw excitedly at the viewer, welcoming and cheerful expression, white clean background, soft studio lighting, minimal style."</div>
+</div>
+
+<div class="brief">
+  <b>3-Slide Post — World Cup / No Post (Timely Pain Point)</b><br>
+  Hook type: Fear / Timely (World Cup tie-in)<br>
+  Pillar: Memory / Pain Point<br>
+  Notion destination: <b>notion → Bloggo Content Engine</b><br>
+  Caption idea: "World Cup 2026 is happening RIGHT NOW. If you flew to watch a match, you have 400 photos sitting in your camera roll doing nothing. Bloggo turns them into a blog in 60 seconds. Beta in bio."<br>
+  Supporting Graphics: Slide 1 — cat in stadium bleachers. Slide 4 — cat waving CTA.
+</div>
+
+</body>
+</html>
