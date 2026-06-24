@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-Slide — Your Photos Know More Than You Do</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#EFEFEF;font-family:'Jost',sans-serif;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:0}
+.sw{display:flex;flex-direction:column;align-items:center;width:360px;margin-bottom:28px}
+.sn{font-size:10px;color:#9CA3AF;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;align-self:flex-start;font-family:'Jost',sans-serif}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;border-radius:4px;box-shadow:0 4px 20px rgba(0,0,0,0.12)}
+/* Recurring */
+.wm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.ab{position:absolute;left:0;top:0;bottom:0;width:7px;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none}
+.dp{position:absolute;inset:0;background-image:radial-gradient(#138EFF 1px,transparent 1px);background-size:36px 36px;opacity:0.04;z-index:0;pointer-events:none}
+.rad{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0;pointer-events:none}
+/* Layout modes */
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 32px}
+.left{display:flex;flex-direction:column;justify-content:center;padding:32px 32px 60px 44px}
+/* Content elements */
+.lbl{font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2}
+.body{font-family:'Jost',sans-serif;font-size:27px;color:#1A1A1A;line-height:1.45;position:relative;z-index:2;margin-top:12px}
+.body b{font-weight:700}
+.ital{font-family:'Jost',sans-serif;font-size:16px;color:#6B7280;font-style:italic;position:relative;z-index:2;margin-top:10px;line-height:1.4}
+/* Gradient text for slide 2 */
+.gt{font-family:'Jost',sans-serif;font-weight:700;font-size:23px;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;line-height:1.45;position:relative;z-index:2;max-width:290px}
+/* Insight slide 9 */
+.ins-top{font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;text-align:center;line-height:1.4;position:relative;z-index:2}
+.ins-bot{font-family:'Jost',sans-serif;font-size:28px;font-weight:700;color:#1A1A1A;text-align:center;line-height:1.25;position:relative;z-index:2;margin-top:14px;max-width:280px}
+/* CTA slide 10 */
+.logo-row{display:flex;align-items:center;gap:14px;position:relative;z-index:2;margin-bottom:18px}
+.logo-text{font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1}
+.cta-h{font-family:'Chewy',cursive;font-size:30px;color:#1A1A1A;text-align:center;line-height:1.25;position:relative;z-index:2;max-width:280px}
+.cta-bio{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;position:relative;z-index:2;margin-top:12px}
+/* gfx-note */
+.gfx-note{max-width:360px;margin:4px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+/* brief */
+.brief{max-width:360px;margin:28px auto 0;padding:16px;background:#F0F7FF;border:1px solid rgba(19,142,255,0.2);border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#1A1A1A;line-height:1.8}
+.brief h3{font-size:11px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK (WTF / Curiosity) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide center">
+    <div class="dp"></div>
+    <div style="position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">Your photos</div>
+      <div style="font-family:'Chewy',cursive;font-size:56px;color:#1A1A1A;line-height:1.05;margin-top:6px">know more</div>
+      <div style="font-family:'Chewy',cursive;font-size:56px;color:#138EFF;line-height:0.95;margin-top:2px">than you do.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky surrounded by floating question marks, looking very curious and wide-eyed at tiny glowing photos spinning around her. Higgsfield AI prompt: "Small black cat surrounded by softly glowing photographs and floating question marks, curious wide-eyed expression — white background, blue accent light, 4:5 vertical frame, mysterious playful mood."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide center">
+    <div class="rad"></div>
+    <div class="gt">Here's what<br><br><strong>every photo</strong><br>is hiding.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT: TIME -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content: Time</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">TIME</div>
+    <div class="body">Every photo has<br>a <b>timestamp.</b></div>
+    <div class="ital">The exact moment. Locked in.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT: PLACE -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content: Place</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">PLACE</div>
+    <div class="body">Every photo has<br><b>GPS coordinates.</b></div>
+    <div class="ital">The exact spot. Already saved.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CENTERED PIVOT -->
+<div class="sw">
+  <div class="sn">Slide 5 — Pivot (Centered)</div>
+  <div class="slide center">
+    <div class="rad"></div>
+    <div style="position:relative;z-index:2;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.5">So what does that mean?</div>
+      <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:700;color:#1A1A1A;line-height:1.3;margin-top:14px">Bloggo connects<br>all of it.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT: TRIPS -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content: Trips</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">TRIPS</div>
+    <div class="body"><b>Trips. Days. Places.</b><br>Organized.</div>
+    <div class="ital">No folders. No tagging. Zero effort.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT: WRITING -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content: Writing</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">WRITING</div>
+    <div class="body">No typing.<br><b>Zero organizing.</b><br>Done.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT: BACKLOG -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content: Backlog</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">YOUR BACKLOG</div>
+    <div class="body">Old photos?<br><b>Already a blog.</b></div>
+    <div class="ital">Bloggo reads trips from years ago.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Spunky sitting next to a tall glowing stack of old photos, one paw on the pile, looking satisfied. Higgsfield AI prompt: "Small black cat resting one paw proudly on a glowing pile of old photographs, satisfied expression — white background, warm glow from photos, 4:5 vertical frame, nostalgic cozy mood."</div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT / SAVE-BAIT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide center">
+    <div class="rad"></div>
+    <div class="ins-top">Your photos wrote the story.</div>
+    <div class="ins-bot">You just haven't<br>read it yet.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting beside an open glowing book or journal, reading with big soft eyes. Warm, quiet energy. Higgsfield AI prompt: "Small black cat sitting beside a softly glowing open journal, looking at it peacefully — white background, warm amber-blue light, 4:5 vertical frame, thoughtful serene mood."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide center">
+    <div class="rad"></div>
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div class="logo-text">Bloggo</div>
+    </div>
+    <div class="cta-h">Blog now.</div>
+    <div style="font-family:'Chewy',cursive;font-size:26px;color:#138EFF;text-align:center;position:relative;z-index:2;margin-top:4px">Your trips are waiting.</div>
+    <div class="cta-bio">LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky waving excitedly toward camera, standing next to a glowing phone showing a finished travel blog. Higgsfield AI prompt: "Small black cat waving one paw at camera, standing next to glowing smartphone showing a beautiful travel blog — white background, bright joyful mood, 4:5 vertical frame."</div>
+</div>
+
+<div class="brief">
+  <h3>8-Slide A: Photos Smarter Than You Think</h3>
+  <strong>Hook type:</strong> WTF / Curiosity<br>
+  <strong>Angle:</strong> Product education — how Bloggo detects trips (Tuesday)<br>
+  <strong>Notion destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Caption:</strong> "Your photos have been holding a secret. Every single one has a time, a GPS coordinate, and a place name. Bloggo reads all of it and builds your travel blog automatically. No typing. No organizing. Just tap. Beta link in bio."<br>
+  <strong>Supporting Graphics:</strong><br>
+  — Slide 1: Spunky surrounded by floating question marks + glowing photos (Higgsfield prompt above)<br>
+  — Slide 8: Spunky with paw on glowing photo pile (Higgsfield prompt above)<br>
+  — Slide 9: Spunky reading glowing journal (Higgsfield prompt above)<br>
+  — Slide 10: Spunky waving next to glowing phone blog (Higgsfield prompt above)
+</div>
+
+</body>
+</html>

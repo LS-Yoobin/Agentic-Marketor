@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Slide — Photos Still Here</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#EFEFEF;font-family:'Jost',sans-serif;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:0}
+.sw{display:flex;flex-direction:column;align-items:center;width:360px;margin-bottom:28px}
+.sn{font-size:10px;color:#9CA3AF;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;align-self:flex-start;font-family:'Jost',sans-serif}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;border-radius:4px;box-shadow:0 4px 20px rgba(0,0,0,0.12)}
+/* Shared recurring */
+.wm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.ab{position:absolute;left:0;top:0;bottom:0;width:7px;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none}
+/* Slide 1 — Hook */
+.s1{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px}
+.dp{position:absolute;inset:0;background-image:radial-gradient(#138EFF 1px,transparent 1px);background-size:36px 36px;opacity:0.04;z-index:0;pointer-events:none}
+/* Slide 2 — Transition */
+.s2{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 32px}
+.gt{font-family:'Jost',sans-serif;font-weight:700;font-size:23px;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;line-height:1.45;position:relative;z-index:2;max-width:290px}
+/* Slide 3 — Content left-aligned */
+.s3{display:flex;flex-direction:column;justify-content:center;padding:32px 32px 60px 44px}
+.lbl{font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2}
+.body{font-family:'Jost',sans-serif;font-size:27px;color:#1A1A1A;line-height:1.45;position:relative;z-index:2;margin-top:12px}
+.body b{font-weight:700}
+.ital{font-family:'Jost',sans-serif;font-size:17px;color:#6B7280;font-style:italic;position:relative;z-index:2;margin-top:12px;line-height:1.4}
+/* Slide 4 — CTA */
+.s4{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px}
+.logo-row{display:flex;align-items:center;gap:14px;position:relative;z-index:2;margin-bottom:18px}
+.logo-text{font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1}
+.cta-h{font-family:'Chewy',cursive;font-size:30px;color:#1A1A1A;text-align:center;line-height:1.25;position:relative;z-index:2;max-width:280px}
+.cta-bio{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;position:relative;z-index:2;margin-top:12px}
+/* gfx-note */
+.gfx-note{max-width:360px;margin:4px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+/* brief */
+.brief{max-width:360px;margin:28px auto 0;padding:16px;background:#F0F7FF;border:1px solid rgba(19,142,255,0.2);border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#1A1A1A;line-height:1.8}
+.brief h3{font-size:11px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide s1">
+    <div class="dp"></div>
+    <div style="position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">Every trip you took</div>
+      <div style="font-family:'Chewy',cursive;font-size:50px;color:#1A1A1A;line-height:1.05;margin-top:6px">is still</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:2px">here.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky sitting very small and still on a blank white floor, looking upward with wide eyes at a glowing swirl of tiny photo thumbnails floating above. Quiet, curious energy. Higgsfield AI prompt: "Small black cat sitting on a white floor, looking up at a glowing cloud of tiny floating photographs swirling above — minimalist, clean white background, soft warm glow from photos, 4:5 vertical, hopeful mood."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0;pointer-events:none"></div>
+    <div class="gt">You took the photos.<br><br>Bloggo writes<br>the blog.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide s3">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">TIME + GPS</div>
+    <div class="body">Every photo hides<br><b>a story</b> inside.</div>
+    <div class="ital">Time. Place. Trip. Already there.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 4 — CTA</div>
+  <div class="slide s4">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.04) 0%,transparent 65%);z-index:0;pointer-events:none"></div>
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div class="logo-text">Bloggo</div>
+    </div>
+    <div class="cta-h">Blog your<br>camera roll.</div>
+    <div class="cta-bio">LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Spunky waving excitedly with both paws raised, standing next to a glowing phone screen showing a blog post. Big welcoming energy. Higgsfield AI prompt: "Small black cat waving both paws excitedly, standing beside a glowing smartphone showing a travel blog — white background, bright and welcoming, 4:5 vertical frame, joyful mood."</div>
+</div>
+
+<div class="brief">
+  <h3>3-Slide: Photos Still Here</h3>
+  <strong>Hook type:</strong> Curiosity<br>
+  <strong>Angle:</strong> Product education — how Bloggo works (Tuesday)<br>
+  <strong>Notion destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Caption:</strong> "Your trips are still in your camera roll. Every photo has time, GPS, and a story hiding inside it. Bloggo reads all of it and writes the blog for you. Zero typing. Link in bio."<br>
+  <strong>Supporting Graphics:</strong><br>
+  — Slide 1: Spunky looking up at floating photo cloud (Higgsfield prompt above)<br>
+  — Slide 4: Spunky waving next to glowing phone (Higgsfield prompt above)
+</div>
+
+</body>
+</html>
