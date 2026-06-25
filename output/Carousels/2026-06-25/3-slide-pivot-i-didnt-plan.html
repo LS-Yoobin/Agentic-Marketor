@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5-slide — Pivot I Didn't Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f2f2f2;padding:32px;font-family:'Jost',sans-serif}
+h1{font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+.sw{margin:0 auto 48px;max-width:360px}
+.sn{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.slide{width:360px;height:450px;position:relative;overflow:hidden;background:#FFFFFF}
+/* gradient text slide 2 */
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* accent bar for left-aligned content slides */
+.ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12);z-index:1}
+/* right gradient zone for content slides */
+.rg{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to left,rgba(19,142,255,0.06),transparent);z-index:0}
+/* centered radial for slides 1,2 */
+.crad{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:280px;height:280px;background:radial-gradient(circle,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0;pointer-events:none}
+/* dot pattern for slide 1 */
+.dots{position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px;z-index:0;pointer-events:none}
+/* watermark */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+/* cat paw */
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* layout helpers */
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px 32px;text-align:center;position:relative;z-index:2}
+.left{display:flex;flex-direction:column;justify-content:center;height:100%;padding:40px 28px 40px 36px;text-align:left;position:relative;z-index:2}
+.label{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.body{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.25}
+.body b{font-weight:700}
+.sub{font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:12px;line-height:1.4}
+/* CTA slide */
+.logo-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px}
+.cta-head{font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.1;text-align:center}
+.cta-acc{font-family:'Chewy',cursive;font-size:36px;color:#138EFF;text-align:center}
+.cta-link{font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:16px}
+/* gfx + brief */
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:10px auto 0;padding:10px 14px;background:#f9f9f9;border:1px solid #e0e0e0;border-radius:6px;font-family:'Jost',sans-serif;font-size:11px;color:#555;line-height:1.8}
+.brief b{color:#1A1A1A;font-weight:700}
+</style>
+</head>
+<body>
+<h1>5-Slide · Pivot I Didn't Plan · June 25, 2026</h1>
+
+<!-- SLIDE 1 — Hook -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="dots"></div>
+    <div class="crad"></div>
+    <div class="center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;position:relative;z-index:2;">I almost shipped</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.05;margin-top:4px;position:relative;z-index:2;">the wrong</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.88;position:relative;z-index:2;">app.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky holding a phone showing a generic "bad" app UI, confused expression, one eyebrow up. Higgsfield AI prompt: "Black cat mascot holding a smartphone showing a confusing cluttered app interface, puzzled expression, white background, clean editorial illustration."</div>
+</div>
+
+<!-- SLIDE 2 — Transition -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="crad"></div>
+    <div class="center">
+      <div class="gt" style="font-family:'Jost',sans-serif;font-weight:700;font-size:28px;line-height:1.25;position:relative;z-index:2;">Here's the pivot<br>that changed<br><b>everything.</b></div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — Content 1 -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="left">
+      <div class="label">The original plan</div>
+      <div class="body">I was building a <b>photo organizer.</b></div>
+      <div class="sub">Folders. Tags. Better search. Nothing that mattered.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — Content 2 -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="left">
+      <div class="label">The moment</div>
+      <div class="body">One forgotten trip <b>changed</b> everything.</div>
+      <div class="sub">3,000 photos. Zero memory of the restaurant. Zero story.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — Insight + CTA -->
+<div class="sw">
+  <div class="sn">Slide 5 — Insight / CTA</div>
+  <div class="slide">
+    <div class="center">
+      <div class="logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <span style="font-family:'Chewy',cursive;font-size:42px;color:#138EFF;line-height:1;">Bloggo</span>
+      </div>
+      <div class="cta-head">The best apps</div>
+      <div class="cta-acc">find you.</div>
+      <div class="cta-link">Link in bio</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Spunky waving excitedly from the bottom-left corner of the slide, welcoming body language, small and joyful. Higgsfield AI prompt: "Small black cat mascot waving with excitement, joyful welcoming expression, bottom corner of frame, white background, clean editorial digital art."</div>
+</div>
+
+<div class="brief">
+  <b>3-slide-pivot-i-didnt-plan.html</b> (5 slides)<br>
+  <b>Hook:</b> "I almost shipped the wrong app."<br>
+  <b>Hook Type:</b> Story / Relatable<br>
+  <b>Notion Destination:</b> notion-personal → YOOBIN Content Engine<br>
+  <b>Caption note:</b> "The pivot nobody talks about — changing direction when you're already committed. Has this happened to you?" + #indiefounder #productbuilder #buildinpublic<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky confused with bad app · Slide 5 — Spunky waving
+</div>
+
+</body>
+</html>
