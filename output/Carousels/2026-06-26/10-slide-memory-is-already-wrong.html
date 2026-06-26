@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10-Slide — Your Memory Is Already Wrong</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#EBEBEB;padding:28px;font-family:'Jost',sans-serif}
+.sw{margin:0 auto 32px;width:360px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;color:#999;text-align:center;margin-bottom:6px;letter-spacing:1.5px;text-transform:uppercase}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;border-radius:4px;box-shadow:0 2px 18px rgba(0,0,0,0.1)}
+/* Watermark + paw */
+.wm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:15px;color:rgba(19,142,255,0.6);z-index:10;letter-spacing:0.5px}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* Dot pattern for slide 1 */
+.dp{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;z-index:0}
+/* Gradient text */
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* Accent bar for left-aligned content slides */
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+/* Right gradient for content slides */
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none;z-index:0}
+/* gfx-note */
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+/* brief */
+.brief{max-width:360px;margin:20px auto 0;padding:10px 14px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#374151;line-height:1.8}
+.brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<!-- ========== SLIDE 1 — HOOK ========== -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Fear / WTF)</div>
+  <div class="slide">
+    <div class="dp"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 34px 50px">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-bottom:10px">That trip you remember?</div>
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1.05">You already</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.95;margin-top:4px">forgot it.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cartoon cat mascot looking anxiously at a phone screen showing thousands of photos with zero captions, slightly panicked expression, clean white background, minimal flat 2D illustration. Higgsfield prompt: "cute black cartoon cat looking anxiously at a glowing phone screen overflowing with thousands of tiny photos, slightly panicked worried expression, clean white background, minimal flat 2D illustration, 4:5 portrait"</div>
+</div>
+
+<!-- ========== SLIDE 2 — TRANSITION ========== -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition (Gradient)</div>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);pointer-events:none;z-index:0"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 38px 64px">
+      <div class="gt" style="font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.35">Memory fades faster</div>
+      <div class="gt" style="font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.35;margin-top:5px">than you <b>think</b>.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ========== SLIDE 3 — CONTENT: BIG MOMENTS ========== -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content: The Myth</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:28px 24px 64px 24px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">WHAT YOU THINK</div>
+      <div style="font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.45">You remember the <b style="color:#1A1A1A">big moments</b>.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;line-height:1.5;margin-top:14px">The Instagram shot. The view.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ========== SLIDE 4 — CONTENT: RESTAURANT ========== -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content: The Truth #1</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:28px 24px 64px 24px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">BUT NOT</div>
+      <div style="font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.45">The <b style="color:#1A1A1A">restaurant</b> that changed you.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;line-height:1.5;margin-top:14px">The one you swore you'd go back to.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ========== SLIDE 5 — CONTENT: THE VILLAGE ========== -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content: The Truth #2</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:28px 24px 64px 24px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">OR</div>
+      <div style="font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.45">The <b style="color:#1A1A1A">village</b> 3 stops back.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;line-height:1.5;margin-top:14px">The one you meant to explore.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ========== SLIDE 6 — CONTENT: THE SONG ========== -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content: The Truth #3</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:28px 24px 64px 24px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">NOT EVEN</div>
+      <div style="font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.45">The <b style="color:#1A1A1A">song</b> that was playing.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;line-height:1.5;margin-top:14px">The one that felt like the whole trip.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ========== SLIDE 7 — CONTENT: YOUR PHONE REMEMBERS ========== -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content: The Fix</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:28px 24px 64px 24px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">BUT YOUR PHONE</div>
+      <div style="font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.45"><b style="color:#1A1A1A">Your camera roll</b> remembers all of it.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;line-height:1.5;margin-top:14px">Time, GPS, sequence. The whole story.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 7 — Graphic:</b> Black cartoon cat mascot confidently looking at a glowing phone screen showing a beautiful travel blog with organised photos and text, satisfied expression, clean white background, minimal flat 2D illustration. Higgsfield prompt: "cute black cartoon cat looking confidently at a glowing phone screen showing a beautiful organized travel blog with photos and text, calm satisfied expression, clean white background, minimal flat 2D illustration, 4:5 portrait"</div>
+</div>
+
+<!-- ========== SLIDE 8 — CONTENT: BLOGGO TURNS ========== -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content: The Action</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:28px 24px 64px 24px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">BLOGGO</div>
+      <div style="font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.45"><b style="color:#1A1A1A">Turns</b> that data into your story.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;line-height:1.5;margin-top:14px">Automatically. On your device. In seconds.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- ========== SLIDE 9 — INSIGHT ========== -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight (Save-Worthy)</div>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.04) 0%,transparent 70%);pointer-events:none;z-index:0"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 40px 64px">
+      <div style="font-family:'Jost',sans-serif;font-size:18px;color:#6B7280;line-height:1.5;margin-bottom:12px">You lived it.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:28px;color:#1A1A1A;line-height:1.25">Let Bloggo<br>write it.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cartoon cat mascot sitting serenely beside a beautifully lit open travel journal, calm and satisfied expression, warm ambient lighting, clean white background, minimal flat 2D illustration. Higgsfield prompt: "cute black cartoon cat sitting peacefully beside a beautifully glowing open travel journal with handwritten text and photos, serene satisfied expression, warm soft lighting, clean white background, minimal flat 2D illustration, 4:5 portrait"</div>
+</div>
+
+<!-- ========== SLIDE 10 — CTA ========== -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA (Chewy)</div>
+  <div class="slide">
+    <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 36px">
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:28px">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px">
+        <span style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1">Bloggo</span>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:26px;color:#1A1A1A;line-height:1.3;margin-bottom:6px">Your trips,</div>
+      <div style="font-family:'Chewy',cursive;font-size:26px;color:#138EFF;line-height:1.3">turned into stories.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:22px">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Black cartoon cat mascot waving excitedly with both paws raised, big warm welcoming smile, clean white background, minimal flat 2D illustration. Higgsfield prompt: "cute black cartoon cat waving joyfully with both paws raised up in a big welcoming wave, happy enthusiastic smile, clean white background, minimal flat 2D illustration, 4:5 portrait"</div>
+</div>
+
+<div class="brief">
+  <b>CAROUSEL BRIEF — 10-Slide: Your Memory Is Already Wrong</b><br>
+  Hook type: Fear / WTF (different angle from 8-slide)<br>
+  Angle: Friday — Counterintuitive (memory science angle — your recall is reconstructive and already incomplete)<br>
+  Structure: Hook → Transition → 6 Content Slides → Insight → CTA<br>
+  Supporting Graphics:<br>
+  — Slide 1: Cat looking anxiously at phone overflowing with photos (panicked)<br>
+  — Slide 7: Cat looking confidently at beautiful travel blog on phone (solved)<br>
+  — Slide 9: Cat sitting beside glowing open travel journal (serene)<br>
+  — Slide 10: Cat waving excitedly (CTA)<br>
+  Caption: "The restaurant that changed you. The song that was playing. The street you swore you'd remember. You don't. But your camera roll does — and Bloggo can write it all. 📸 Save this before your next trip. #Bloggo #TravelMemory #AITravel"<br>
+  <b>Notion destination:</b> notion → Bloggo Content Engine<br>
+  <b>Post from:</b> @bloggotravelapp
+</div>
+
+</body>
+</html>
