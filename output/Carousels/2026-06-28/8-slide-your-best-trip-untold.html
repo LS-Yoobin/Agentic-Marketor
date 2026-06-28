@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloggo — 10-Slide: Your Best Trip. Untold.</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f2f2f2;padding:24px;font-family:sans-serif}
+.page-title{font-family:'Jost',sans-serif;font-size:13px;color:#555;margin-bottom:16px;max-width:520px}
+.sw{margin-bottom:22px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;color:#aaa;margin-bottom:4px;text-transform:uppercase;letter-spacing:1px;max-width:360px}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden}
+
+/* S1 — Hook */
+.s1{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.dot-bg{position:absolute;inset:0;background-image:radial-gradient(#138EFF 1.5px,transparent 1.5px);background-size:36px 36px;opacity:0.04;z-index:0}
+.hw{position:relative;z-index:2;text-align:center;padding:0 28px}
+
+/* S2 — Transition */
+.s2{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 32px}
+.grad-text{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:30px;line-height:1.2;text-align:center}
+
+/* Left-aligned content (3,4,6,7,8) */
+.sl{display:flex;flex-direction:column;justify-content:center;padding:0 28px 0 42px}
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.04),transparent);z-index:0}
+.lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;position:relative;z-index:2}
+.bt{font-family:'Jost',sans-serif;font-size:28px;color:#1A1A1A;line-height:1.3;position:relative;z-index:2}
+.bt b{font-weight:700}
+.sub{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:10px;position:relative;z-index:2;line-height:1.4}
+
+/* Centered content (S5) */
+.sc{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 36px}
+.cg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05),transparent 70%);z-index:0}
+
+/* S9 — Insight */
+.s9{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 36px}
+.ins-top{font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;line-height:1.35;position:relative;z-index:2}
+.ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:30px;color:#1A1A1A;line-height:1.1;margin-top:8px;position:relative;z-index:2}
+
+/* S10 — CTA */
+.s10{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 28px}
+.logo-row{display:flex;align-items:center;gap:10px;margin-bottom:18px;position:relative;z-index:2}
+.logo-row img{width:52px;height:52px;object-fit:contain;border-radius:12px}
+.logo-row span{font-family:'Chewy',cursive;font-size:42px;color:#138EFF}
+.cta-head{font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;position:relative;z-index:2;line-height:1.1}
+.cta-acc{font-family:'Chewy',cursive;font-size:26px;color:#138EFF;margin-top:6px;position:relative;z-index:2}
+.cta-lib{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;text-transform:uppercase;letter-spacing:3px;position:relative;z-index:2;margin-top:18px}
+
+/* Recurring */
+.bm{position:absolute;bottom:18px;left:14px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gfx-note{max-width:360px;margin:3px 0 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:16px 0 0;padding:14px 16px;background:#fafafa;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+.brief h4{font-size:12px;font-weight:700;color:#138EFF;margin-bottom:8px}
+.brief p{margin-bottom:4px}
+</style>
+</head>
+<body>
+<div class="page-title">Bloggo Carousel · 2026-06-28 · 10-Slide Post B · WTF/Curiosity Hook · Sunday: Aspirational</div>
+
+<!-- SLIDE 1 — Hook -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (WTF / Curiosity)</div>
+  <div class="slide s1">
+    <div class="dot-bg"></div>
+    <div class="hw">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;">Your best trip.</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:8px;">Untold.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat mascot) at bottom-left, surrounded by floating question marks and glowing unread polaroid photos — curious, slightly puzzled expression. Higgsfield prompt: "A sleek black cartoon cat surrounded by floating question marks and glowing unread polaroid photographs, curious and slightly puzzled expression, clean white background, flat illustration style with soft blue accent glow."</div>
+</div>
+
+<!-- SLIDE 2 — Transition -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="grad-text">The story is<br>already written.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — Content (Left) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">TRUTH #1</div>
+    <div class="bt">Every photo has a<br><b>time.</b> A <b>place.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — Content (Left) -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">TRUTH #2</div>
+    <div class="bt">Together they form your<br><b>trip timeline.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — Centered (Mini Insight) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Centered Moment</div>
+  <div class="slide sc">
+    <div class="cg"></div>
+    <div style="font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2;text-align:center;">That timeline is your story.</div>
+    <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:26px;color:#138EFF;line-height:1.2;margin-top:8px;position:relative;z-index:2;text-align:center;">Already written.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — Content (Left) -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">TRUTH #3</div>
+    <div class="bt">Bloggo reads it.<br>Then <b>writes</b> the narrative.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — Content (Left) -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">TRUTH #4</div>
+    <div class="bt">No typing. No organizing.<br><b>No blank page.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — Content (Left, Privacy) -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content (Privacy)</div>
+  <div class="slide sl">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">TRUTH #5</div>
+    <div class="bt">Your photos <b>never leave</b><br>your phone.</div>
+    <div class="sub">On-device AI. Private by design.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — Insight -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight (Save-bait)</div>
+  <div class="slide s9">
+    <div class="cg"></div>
+    <div class="ins-top">Your best trip isn't lost.</div>
+    <div class="ins-bot">It's waiting to be told.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky (black cat mascot) at bottom-right, sitting beside a glowing phone screen showing a completed travel blog page. Hopeful, gentle expression — the story has been found. Higgsfield prompt: "A sleek black cartoon cat sitting next to a glowing smartphone displaying a beautiful travel blog, hopeful and gentle expression, soft warm light, white background, flat illustration style."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide s10">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo">
+      <span>Bloggo</span>
+    </div>
+    <div class="cta-head">Start the story.</div>
+    <div class="cta-acc">One tap.</div>
+    <div class="cta-lib">Link in bio</div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky (black cat mascot) at bottom-left, sitting upright and waving one paw forward in a "come this way" gesture, confident and friendly. Higgsfield prompt: "A sleek black cartoon cat waving one paw forward in a welcoming 'come this way' gesture, confident and friendly expression, white background, flat illustration style, clean minimal design."</div>
+</div>
+
+<div class="brief">
+  <h4>Carousel Brief — 10-Slide Post B · WTF/Curiosity Hook · Aspirational</h4>
+  <p><b>Hook:</b> "Your best trip. Untold." (WTF / Curiosity)</p>
+  <p><b>Angle:</b> Aspirational / Product Education (Sunday)</p>
+  <p><b>Arc:</b> Pattern interrupt → story already written → every photo has time+place → timeline = story → Bloggo reads and writes it → no blank page → photos never leave phone → best trip waiting → start the story</p>
+  <p><b>Caption:</b> Your best trip is still in your camera roll. Untold. Every photo you took has a time stamp and a GPS coordinate. Put them together and you have a complete trip timeline — every meal, every view, every morning. Bloggo reads that timeline and writes the story. No typing. No organizing. Your photos never leave your phone. Start the story — link in bio.</p>
+  <p><b>Notion Destination:</b> notion → Bloggo Content Engine</p>
+  <p><b>Supporting Graphics:</b> Slide 1 — Spunky surrounded by question marks + unread polaroids · Slide 9 — Spunky beside glowing phone with blog · Slide 10 — Spunky waving forward</p>
+</div>
+</body>
+</html>
