@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-Slide: That Trip (WTF/Curiosity Hook)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f0f0f0; padding: 24px; font-family: sans-serif; }
+  .sw { max-width: 360px; margin: 0 auto 32px; }
+  .sn { font-family: 'Jost', sans-serif; font-size: 11px; color: #9CA3AF; text-align: center; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase; }
+  .slide { position: relative; width: 360px; height: 450px; background: #FFFFFF; overflow: hidden; }
+
+  /* Shared */
+  .bm { position: absolute; bottom: 18px; left: 18px; font-family: 'Chewy', cursive; font-size: 18px; color: rgba(19,142,255,0.6); z-index: 10; }
+  .pw { position: absolute; bottom: 8px; right: 10px; width: 36px; height: auto; z-index: 10; opacity: 0.9; }
+  .gfx-note { max-width: 360px; margin: 4px auto 0; padding: 8px 12px; background: rgba(19,142,255,0.05); border: 1px dashed rgba(19,142,255,0.25); border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 10px; color: #4a7fb5; line-height: 1.6; }
+  .gfx-note b { color: #138EFF; font-weight: 700; }
+  .brief { max-width: 360px; margin: 8px auto 0; padding: 10px 14px; background: #f8f8f8; border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 10px; color: #555; line-height: 1.7; }
+  .brief b { color: #138EFF; font-weight: 700; }
+
+  /* Slide 1 — Hook (WTF) */
+  .s1 { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .s1-dot { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(19,142,255,0.04) 1px, transparent 1px); background-size: 36px 36px; }
+  .s1-body { position: relative; z-index: 2; text-align: center; padding: 0 28px; }
+
+  /* Slide 2 — Transition */
+  .s2 { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 40px; }
+  .gt { font-family: 'Jost', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.25;
+    background: linear-gradient(135deg, #138EFF 0%, #3BBAFF 35%, #6DD5FA 65%, #59E0C5 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+  /* Content slides 3–8 */
+  .sc { display: flex; flex-direction: column; justify-content: center; padding: 0 40px 0 52px; }
+  .ab { position: absolute; left: 0; top: 0; bottom: 0; width: 8px; background: rgba(19,142,255,0.12); }
+  .rg { position: absolute; right: 0; top: 0; bottom: 0; width: 45%; background: linear-gradient(to left, rgba(19,142,255,0.05), transparent); }
+  .label { font-family: 'Jost', sans-serif; font-weight: 700; font-size: 11px; color: #138EFF; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; position: relative; z-index: 2; }
+  .bt { font-family: 'Jost', sans-serif; font-size: 26px; color: #1A1A1A; line-height: 1.35; position: relative; z-index: 2; }
+  .bt strong { font-weight: 700; }
+  .sub { font-family: 'Jost', sans-serif; font-style: italic; font-size: 14px; color: #6B7280; margin-top: 10px; line-height: 1.4; position: relative; z-index: 2; }
+
+  /* Slide 9 — Insight */
+  .s9 { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 36px; }
+  .s9-top { font-family: 'Jost', sans-serif; font-size: 20px; color: #6B7280; line-height: 1.4; margin-bottom: 12px; }
+  .s9-bot { font-family: 'Jost', sans-serif; font-weight: 700; font-size: 28px; color: #1A1A1A; line-height: 1.25; }
+
+  /* Slide 10 — CTA */
+  .s10 { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .logo-row { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+  .logo-name { font-family: 'Chewy', cursive; font-size: 44px; color: #138EFF; }
+  .cta-h { font-family: 'Chewy', cursive; font-size: 34px; color: #1A1A1A; text-align: center; line-height: 1.1; padding: 0 28px; }
+  .cta-b { font-family: 'Chewy', cursive; font-size: 34px; color: #138EFF; text-align: center; line-height: 1.1; padding: 0 28px; }
+  .cta-lnk { font-family: 'Jost', sans-serif; font-weight: 700; font-size: 11px; color: #138EFF; letter-spacing: 3px; text-transform: uppercase; margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — WTF Hook -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (WTF / Curiosity)</div>
+  <div class="slide s1">
+    <div class="s1-dot"></div>
+    <div class="s1-body">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">somewhere on your phone</div>
+      <div style="font-family:'Chewy',cursive;font-size:42px;color:#1A1A1A;line-height:1.0;margin-top:6px;">there's a trip</div>
+      <div style="font-family:'Chewy',cursive;font-size:60px;color:#138EFF;line-height:0.9;margin-top:2px;">nobody</div>
+      <div style="font-family:'Chewy',cursive;font-size:60px;color:#138EFF;line-height:0.9;">knows about.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky surrounded by floating question marks, curious and slightly mysterious expression, one paw on a glowing phone. Higgsfield AI prompt: A sleek black cat surrounded by softly glowing question mark shapes, curious intense expression, one paw resting on a glowing phone screen, deep blue accent lighting, cinematic mood.</div>
+</div>
+
+<!-- SLIDE 2 — Transition -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition (Gradient)</div>
+  <div class="slide s2">
+    <div class="gt">still in your camera roll.<br>still waiting to be told.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — Content -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide sc">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">the trip</div>
+    <div class="bt">You went<br>somewhere <strong>incredible.</strong></div>
+    <div class="sub">Somewhere that deserved more than a photo dump.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — Content -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide sc">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">the photos</div>
+    <div class="bt">You took<br><strong>hundreds of photos.</strong></div>
+    <div class="sub">GPS. Timestamps. Every location tagged automatically.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — Content -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide sc">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">the plan</div>
+    <div class="bt">You planned<br>to <strong>write about it.</strong></div>
+    <div class="sub">After you got home. When things slowed down.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — Content -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide sc">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">what happened</div>
+    <div class="bt">Life moved.<br>You <strong>never did.</strong></div>
+    <div class="sub">Six months later. The restaurant name is gone.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 6 — Graphic:</b> Spunky watching a butterfly float away, reaching out with one paw, melancholy expression. Higgsfield AI prompt: A black cat watching a glowing butterfly drift away just out of reach, one paw gently extended, soft blue-tinged light, bittersweet mood, cinematic.</div>
+</div>
+
+<!-- SLIDE 7 — Content -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide sc">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">the truth</div>
+    <div class="bt">Your photos<br><strong>remember</strong> everything.</div>
+    <div class="sub">Time, place, sequence — it's all in the metadata.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — Content -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide sc">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">the fix</div>
+    <div class="bt">Bloggo reads them.<br><strong>Writes the story.</strong></div>
+    <div class="sub">On your device. In 60 seconds. No writing required.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Spunky holding a phone showing a glowing blog page, satisfied and proud expression. Higgsfield AI prompt: A black cat holding a glowing smartphone displaying a beautiful travel blog page, proud and satisfied expression, warm accent lighting, cinematic product moment.</div>
+</div>
+
+<!-- SLIDE 9 — Insight -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight (Save-Bait)</div>
+  <div class="slide s9">
+    <div class="s9-top">your trip was already written.</div>
+    <div class="s9-bot">your camera roll<br>just holds the key.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting next to a glowing open journal, soft warm light, content expression. Higgsfield AI prompt: A black cat sitting beside a luminous open journal, golden warm glow from the pages, peaceful and satisfied expression, travel photos visible in the background, cinematic and intimate.</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide s10">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span class="logo-name">Bloggo</span>
+    </div>
+    <div class="cta-h">your next trip</div>
+    <div class="cta-b">deserves a story.</div>
+    <div class="cta-lnk">LINK IN BIO</div>
+  </div>
+</div>
+
+<div class="brief">
+  <b>Notion Destination:</b> notion → Bloggo Content Engine (Sunday · Aspirational)<br>
+  <b>Hook Type:</b> WTF / Curiosity<br>
+  <b>Slides:</b> 10<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky with question marks · Slide 6 — Spunky with butterfly · Slide 8 — Spunky with blog phone · Slide 9 — Spunky with journal
+</div>
+
+</body>
+</html>
