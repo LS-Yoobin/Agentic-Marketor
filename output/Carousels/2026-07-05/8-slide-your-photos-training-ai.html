@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bloggo Carousel — 10-Slide: Your Photos Are Training AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#e8e8e8;font-family:'Jost',sans-serif;padding:40px 20px}
+h1{font-family:'Jost',sans-serif;font-size:13px;color:#666;text-align:center;margin-bottom:6px;letter-spacing:2px;text-transform:uppercase}
+.page-meta{font-size:11px;color:#999;text-align:center;margin-bottom:30px}
+
+.sw{margin:0 auto 24px;max-width:360px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;color:#aaa;text-align:center;margin-bottom:4px;letter-spacing:1.5px;text-transform:uppercase}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden}
+
+/* S1 — Hook (Chewy) */
+.s1{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 36px}
+.dot-bg{position:absolute;inset:0;z-index:0;background-image:radial-gradient(#138EFF 1px,transparent 1px);background-size:36px 36px;opacity:0.04}
+
+/* S2 — Transition */
+.s2{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 36px}
+.grad-text{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:28px;line-height:1.3;text-align:center}
+.radial-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%)}
+
+/* Content slides (3–8) — left-aligned */
+.sc{display:flex;flex-direction:column;justify-content:center;padding:60px 36px 70px 48px;position:relative}
+.accent-bar{position:absolute;left:0;top:0;bottom:0;width:8px;background:#138EFF;opacity:0.12}
+.right-grad{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.06),transparent);z-index:0}
+.label{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;position:relative;z-index:2}
+.body-text{font-family:'Jost',sans-serif;font-size:30px;color:#1A1A1A;line-height:1.3;position:relative;z-index:2}
+.body-text b{font-weight:700}
+.italic-sub{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:10px;line-height:1.4;position:relative;z-index:2}
+
+/* S9 — Insight (centered, two-tier) */
+.s9{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px 80px}
+.radial-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%)}
+
+/* S10 — CTA (Chewy) */
+.s10{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 40px}
+.logo-row{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+
+/* Recurring */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:34px;height:auto;z-index:10;opacity:0.9}
+
+.gfx-note{max-width:360px;margin:4px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+
+.brief{max-width:360px;margin:24px auto 0;padding:14px 16px;background:#fff;border:1px solid #e5e5e5;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#444;line-height:1.7}
+.brief h3{font-size:11px;font-weight:700;color:#138EFF;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.brief p{margin-bottom:4px}
+</style>
+</head>
+<body>
+<h1>Bloggo Carousel — 10-Slide (A) · Fear Hook</h1>
+<p class="page-meta">Saturday July 5 2026 · Privacy Differentiator · Notion → <strong>notion</strong> (Bloggo Content Engine)</p>
+
+<!-- S1 — Hook -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook · Fear</div>
+  <div class="slide s1">
+    <div class="dot-bg"></div>
+    <div style="position:relative;z-index:2;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Your travel photos</div>
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1.05;margin-top:6px;">are training</div>
+      <div style="font-family:'Chewy',cursive;font-size:68px;color:#138EFF;line-height:0.95;margin-top:2px;">AI.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat mascot) bottom-left, staring at an overflowing phone screen with photos floating away into the air, worried expression. Higgsfield AI prompt: "Cute black cat staring at a phone with photos floating upward like leaves, alarmed expression, white background, soft digital illustration"</div>
+</div>
+
+<!-- S2 — Transition -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="radial-bg"></div>
+    <p class="grad-text" style="position:relative;z-index:2;">Most apps won't<br>tell you this.</p>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- S3 — Content -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="label">How it works</div>
+    <p class="body-text">Every AI photo app<br>processes photos<br><b>somewhere.</b></p>
+    <p class="italic-sub">That somewhere isn't your phone.</p>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- S4 — Content -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="label">The upload</div>
+    <p class="body-text">Your photos leave<br>your device and<br><b>hit a server.</b></p>
+    <p class="italic-sub">Stored. Logged. Sometimes indefinitely.</p>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- S5 — Content (centered, no accent bar per spec for centered slides) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px 70px;position:relative">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0"></div>
+    <p style="font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;text-align:center;line-height:1.4;position:relative;z-index:2;">Your <b>Paris trip.</b><br>Your <b>beach vacation.</b><br>Your <b>family moments.</b></p>
+    <p style="font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:16px;text-align:center;position:relative;z-index:2;">All uploaded. All stored somewhere.</p>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- S6 — Content -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="label">The trade-off</div>
+    <p class="body-text">Helping train<br><b>AI models</b><br>you'll never see.</p>
+    <p class="italic-sub">That's the cost of free AI features.</p>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- S7 — Content -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="label">The problem</div>
+    <p class="body-text">You didn't<br><b>agree</b> to that.</p>
+    <p class="italic-sub">You just wanted to blog your trip.</p>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- S8 — Content -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="label">A different way</div>
+    <p class="body-text">Bloggo was<br>built to be<br><b>different.</b></p>
+    <p class="italic-sub">From the very first line of code.</p>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- S9 — Insight (centered, save-worthy) -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide s9">
+    <div class="radial-bg"></div>
+    <p style="font-family:'Jost',sans-serif;font-size:22px;color:#6B7280;text-align:center;position:relative;z-index:2;line-height:1.4;">Bloggo's AI runs<br>entirely on your phone.</p>
+    <p style="font-family:'Jost',sans-serif;font-weight:700;font-size:32px;color:#1A1A1A;text-align:center;margin-top:14px;position:relative;z-index:2;line-height:1.2;">Your photos<br>never leave.</p>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky bottom-right, sitting beside a glowing phone showing a finished blog, content and satisfied. Higgsfield AI prompt: "Cute black cat sitting proudly beside a glowing iPhone showing a travel blog, soft warm light, white background, digital art illustration"</div>
+</div>
+
+<!-- S10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide s10">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;">Bloggo</span>
+    </div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;text-align:center;line-height:1.1;">Blog your trips.</div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF;text-align:center;line-height:1.1;margin-top:4px;">Keep your privacy.</div>
+    <p style="font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:18px;">Beta in bio</p>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky bottom-left, waving both paws in a welcoming gesture. Higgsfield AI prompt: "Cute black cat mascot waving both paws excitedly, big smile, white background, clean digital illustration"</div>
+</div>
+
+<div class="brief">
+  <h3>Content Brief</h3>
+  <p><b>Type:</b> 10-Slide Post (A) — Authority Builder</p>
+  <p><b>Angle:</b> Saturday — Privacy Differentiator</p>
+  <p><b>Hook Type:</b> Fear / WTF</p>
+  <p><b>Hook:</b> "Your travel photos are training AI."</p>
+  <p><b>Arc:</b> Expose the problem → Make it personal → Reveal the cost → Introduce Bloggo as the answer → Insight → CTA</p>
+  <p><b>Save-bait slide:</b> Slide 9 — "Your photos never leave."</p>
+  <p><b>Caption direction:</b> "I built Bloggo because I refused to upload people's private travel memories to a server. Here's the problem with every other AI photo app."</p>
+  <p><b>Notion destination:</b> notion → Bloggo Content Engine</p>
+  <p><b>Supporting Graphics:</b> Slide 1 — Spunky alarmed, photos floating away | Slide 9 — Spunky proud beside glowing blog | Slide 10 — Spunky waving both paws</p>
+</div>
+
+</body>
+</html>
