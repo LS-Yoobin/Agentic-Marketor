@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3-Slide: Tap. Wait. Blog. — Bloggo</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;padding:24px;font-family:'Jost',sans-serif;gap:24px}
+h1{font-family:'Jost',sans-serif;font-size:13px;color:#888;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px}
+
+.sw{display:flex;flex-direction:column;align-items:center;gap:2px}
+.sn{font-family:'Jost',sans-serif;font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+
+.slide{
+  width:360px;height:450px;
+  background:#FFFFFF;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  padding:40px 30px 60px;
+  margin-bottom:24px;
+}
+
+/* Dots bg for slide 1 */
+.dots{position:absolute;inset:0;z-index:0;
+  background-image:radial-gradient(circle,rgba(19,142,255,0.06) 1.5px,transparent 1.5px);
+  background-size:28px 28px;
+}
+
+/* Right-side gradient for content slides */
+.rg{position:absolute;top:0;right:0;width:45%;height:100%;
+  background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);
+  z-index:0;pointer-events:none;
+}
+
+/* Accent bar for content slides */
+.ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12);z-index:1}
+
+/* Bloggo watermark */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+
+/* Cat paw */
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+/* Gradient text for slide 2 */
+.gt{
+  font-family:'Jost',sans-serif;font-weight:700;font-size:48px;
+  background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  line-height:1.1;
+}
+
+/* Left-aligned content area */
+.la{position:relative;z-index:2;text-align:left;width:100%;padding:0 24px 0 36px}
+.label{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
+.body-text{font-family:'Jost',sans-serif;font-size:30px;color:#1A1A1A;line-height:1.25}
+.body-text b{font-weight:700}
+.sub{font-family:'Jost',sans-serif;font-size:15px;color:#6B7280;font-style:italic;margin-top:10px;line-height:1.4}
+
+/* CTA slide (slide 3) */
+.cta-wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px}
+
+/* brief + gfx-note */
+.brief{max-width:360px;margin:10px auto 0;padding:12px 16px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#4B5563;line-height:1.7}
+.brief b{color:#138EFF;font-weight:700}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+<h1>Bloggo · 3-Slide Post · July 8 2026</h1>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="dots"></div>
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.3;">You opened your camera roll.</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.95;margin-top:8px;">847</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.3;margin-top:6px;">photos. Zero stories.</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.1;margin-top:12px;">Until now.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat staring wide-eyed at an overflowing stack of floating photo thumbnails, looking overwhelmed and curious. Higgsfield prompt: "Cute black cat with wide curious eyes staring at a massive floating pile of travel photos and polaroids, soft white background, warm studio light, photorealistic editorial style."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION/CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 20px;">
+      <div class="gt">One tap.</div>
+      <div class="gt">Bloggo does</div>
+      <div class="gt">the rest.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:16px;color:#6B7280;font-style:italic;margin-top:18px;line-height:1.5;">Finds your trips. Writes your story.<br>No blank page. No typing.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> Black cat pressing a large glowing blue button with one paw, expression of calm satisfaction. Higgsfield prompt: "Cute black cat pressing a large glowing blue button with one paw, surrounded by gentle light sparks, soft white background, photorealistic, warm editorial style."</div>
+</div>
+
+<!-- SLIDE 3 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 3 — CTA</div>
+  <div class="slide">
+    <div class="dots"></div>
+    <div class="cta-wrap">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px;">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1;">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.15;margin-top:4px;">Your trips.</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.15;">Turned into stories.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:18px;">Beta — Link in Bio</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Black cat waving with an open paw, sitting beside a glowing open travel journal, welcoming expression. Higgsfield prompt: "Cute black cat waving hello with one paw, sitting beside a glowing open travel journal filled with colorful photos, soft white background, warm editorial lighting, photorealistic."</div>
+</div>
+
+<div class="brief">
+  <b>Brief — 3-slide-tap-wait-blog.html</b><br>
+  Account: Bloggo (@bloggoapp)<br>
+  Angle: Product Education (Tuesday) — How Bloggo works, one-tap simplicity<br>
+  Hook type: Fear (pain point) → Transition → CTA<br>
+  Caption: "847 photos. 3 countries. 1 tap. Bloggo turns your camera roll into a travel blog in seconds — no writing, no organizing, no blank page. Beta link in bio."<br>
+  Notion destination: <b>notion → Bloggo Content Engine</b><br>
+  Supporting Graphics: Slide 1 — cat with overflowing photos · Slide 2 — cat pressing button · Slide 3 — cat waving by journal
+</div>
+
+</body>
+</html>
