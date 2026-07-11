@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bloggo Carousel — 1-Slide: Better Photos</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Jost',sans-serif;background:#F0F0F0;padding:30px}
+h1{font-family:'Jost',sans-serif;font-size:13px;color:#888;text-transform:uppercase;letter-spacing:2px;margin-bottom:24px}
+
+/* Slide wrapper */
+.sw{margin:0 auto 40px;max-width:360px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;padding-left:2px}
+.slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center}
+
+/* 1-slide elements */
+.tb{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#138EFF,#59E0C5);z-index:10}
+.dq{position:absolute;font-size:220px;color:rgba(19,142,255,0.04);line-height:1;top:-15px;left:0;right:0;text-align:center;pointer-events:none;z-index:0;font-family:Georgia,serif;user-select:none}
+.inner{position:relative;z-index:2;text-align:center;padding:0 32px}
+.st{font-family:'Jost',sans-serif;font-size:14px;color:#9CA3AF;font-style:italic;margin-top:18px;line-height:1.5;position:relative;z-index:2;text-align:center;padding:0 32px}
+.cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+/* Graphic notes */
+.gfx-note{max-width:360px;margin:4px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+<h1>Bloggo Carousels — July 11, 2026 · 1-Slide Post</h1>
+
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Single Slide Post)</div>
+  <div class="slide">
+    <!-- Top gradient bar -->
+    <div class="tb"></div>
+
+    <!-- Ghost quote mark background -->
+    <div class="dq">"</div>
+
+    <!-- Main hook text -->
+    <div class="inner">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Better photos don't make</div>
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1.05;margin-top:4px;">better</div>
+      <div style="font-family:'Chewy',cursive;font-size:68px;color:#138EFF;line-height:0.9;">memories.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;margin-top:10px;">Stories do.</div>
+    </div>
+
+    <!-- Subtitle tagline -->
+    <div class="st">Your camera roll already has everything it needs.</div>
+
+    <!-- CTA badge -->
+    <div style="text-align:center;z-index:2;position:relative;margin-top:6px;">
+      <span class="cb">BETA IN BIO</span>
+    </div>
+
+    <!-- Bloggo watermark -->
+    <div class="bm">Bloggo</div>
+
+    <!-- Cat paw -->
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot sitting beside a tall stack of Polaroid photos, looking at the stack with a quiet, wistful expression. One photo has slipped to the floor. Minimal, centered composition. Higgsfield prompt: "A small black cartoon cat sitting beside a towering stack of Polaroid photographs, one photo fallen on the ground, wistful curious expression, soft white studio background, minimal composition, warm lighting, flat vector art style."</div>
+</div>
+
+</body>
+</html>
