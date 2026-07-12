@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloggo — We Built AI That Goes Blind</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px;font-family:'Jost',sans-serif}
+
+.brief{max-width:420px;margin:0 auto 28px;padding:14px 18px;background:#fff;border-radius:10px;border-left:4px solid #138EFF;font-size:11px;color:#4B5563;line-height:1.7}
+.brief h3{font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.brief strong{color:#1A1A1A}
+
+.sw{display:flex;flex-direction:column;align-items:center;margin-bottom:20px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;color:#9CA3AF;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px}
+
+/* Slide canvas */
+.slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden}
+
+/* Gradient text (slide 2) */
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* Recurring elements */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+/* Accent bar — left-aligned slides */
+.ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12);z-index:0}
+
+/* Right-side gradient — left-aligned content slides */
+.rg{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none}
+
+/* Centered radial gradient — slide 5 */
+.cg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0;pointer-events:none}
+
+/* Dot pattern — slide 1 */
+.dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none;z-index:0}
+
+/* Content inner — left-aligned */
+.ci{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:48px 32px 60px 36px;z-index:2}
+/* Content inner — centered */
+.cc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 36px 60px;z-index:2;text-align:center}
+
+/* gfx-note */
+.gfx-note{max-width:360px;margin:6px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <h3>Carousel Brief — 10-Slide Post (WTF Hook)</h3>
+  <strong>Hook:</strong> "We built AI that goes blind."<br>
+  <strong>Angle:</strong> Privacy differentiator / WTF (Saturday)<br>
+  <strong>Hook Type:</strong> WTF / Contrarian<br>
+  <strong>Notion:</strong> notion → Bloggo Content Engine<br>
+  <strong>Caption:</strong> We built AI that can't see your photos. That's not a bug — it's the whole point. Swipe to see how Bloggo turns your camera roll into travel stories without uploading a single image. Beta link in bio.<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — Spunky with a blindfold / eyes covered, holding an iPhone. Slide 9 — Spunky sitting next to a glowing journal with a lock symbol. Slide 10 — Spunky waving with one paw.
+</div>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (WTF)</div>
+  <div class="slide">
+    <div class="dots"></div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 36px;z-index:2;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.3;">We built AI</div>
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1.05;margin-top:8px;">that goes</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:6px;">blind.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#9CA3AF;line-height:1.4;margin-top:14px;">to your photos.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat mascot) with a playful blindfold over eyes, holding an iPhone up with both paws as if offering it, cheerful expression, clean white background. Higgsfield AI prompt: "A cute black cat mascot cartoon character wearing a white blindfold over its eyes, holding up a smartphone with both paws, happy relaxed expression, clean white background, soft lighting, simple digital illustration style, trust and privacy theme."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="cc">
+      <div class="gt" style="font-family:'Jost',sans-serif;font-weight:700;font-size:28px;line-height:1.35;">That sounds broken.<br><strong>It's the point.</strong></div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">THE STANDARD WAY</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;color:#1A1A1A;line-height:1.35;">Most apps send your photos<br>to a <strong>server</strong>.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">WHAT LEAVES YOUR PHONE</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;color:#1A1A1A;line-height:1.35;">Your face. Your home.<br><strong>Your route.</strong> Logged.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CENTERED CONTENT (no accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Centered Content</div>
+  <div class="slide">
+    <div class="cg"></div>
+    <div class="cc">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">THE UNCOMFORTABLE TRUTH</div>
+      <div style="font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.4;font-style:italic;">Big Tech treats your<br><strong>memories as data</strong>.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">THE BLOGGO DIFFERENCE</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;color:#1A1A1A;line-height:1.35;">We built Bloggo's AI<br>to run <strong>differently</strong>.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">ON-DEVICE ONLY</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;color:#1A1A1A;line-height:1.35;">Everything happens<br>on your iPhone.<br><strong>Nothing leaves.</strong></div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">THE RESULT</div>
+      <div style="font-family:'Jost',sans-serif;font-size:25px;color:#1A1A1A;line-height:1.4;">No server. No upload.<br><strong>No company sees</strong><br>your trips.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT / SAVE-BAIT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight (Save-Bait)</div>
+  <div class="slide">
+    <div class="cc">
+      <div style="font-family:'Jost',sans-serif;font-size:24px;color:#6B7280;line-height:1.3;margin-bottom:10px;">Privacy isn't a feature.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:34px;color:#1A1A1A;line-height:1.2;">It's the<br>architecture.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting beside a glowing journal with a small lock icon on the cover, paw resting on the journal protectively, soft warm light. Higgsfield AI prompt: "A cute black cat mascot sitting next to a glowing book or journal with a small gold lock on the cover, paw gently resting on the journal, warm soft lighting, clean white background, simple digital illustration, privacy and memory theme."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide">
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px;text-align:center;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px;">
+        <span style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1;">Bloggo</span>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:30px;color:#1A1A1A;line-height:1.2;margin-bottom:10px;">Your trips. Your phone.</div>
+      <div style="font-family:'Chewy',cursive;font-size:30px;color:#138EFF;line-height:1.2;margin-bottom:22px;">Your story.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;">JOIN THE BETA · LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky waving enthusiastically with one paw, cheerful welcoming expression, sitting in the bottom-left corner of the slide (outside the main content area). Higgsfield AI prompt: "A cute black cat mascot waving with one paw raised high, big friendly smile, welcoming body language, clean white background, simple digital illustration, warm and inviting energy."</div>
+</div>
+
+</body>
+</html>
