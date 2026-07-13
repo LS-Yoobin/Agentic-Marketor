@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Some Places Stay — Bloggo 1-Slide</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111827;font-family:'Jost',sans-serif;padding:24px 16px}
+.cap{max-width:360px;margin:0 auto 20px;padding:16px;background:#0f172a;border:1px solid rgba(19,142,255,.3);border-radius:10px}
+.cap-lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#138EFF;margin-bottom:6px}
+.cap-txt{font-size:11.5px;color:rgba(255,255,255,.75);line-height:1.75;margin:0 0 14px}
+.cap-txt:last-child{margin-bottom:0}
+.sa{text-align:center;margin:0 0 20px}
+.sa button{background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,.3)}
+.sw{position:relative;width:360px;margin:0 auto 8px}
+.sn{font-size:9px;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;text-align:center}
+.slide{width:360px;height:450px;overflow:hidden;position:relative;background:#FFFFFF}
+.dl-btn{position:absolute;top:8px;right:8px;z-index:20;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.tb{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#138EFF,#59E0C5);z-index:10}
+.dq{position:absolute;font-size:220px;color:rgba(19,142,255,.04);line-height:1;top:-15px;left:0;right:0;text-align:center;pointer-events:none;z-index:0;font-family:Georgia,serif;user-select:none}
+.st{font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-top:18px;line-height:1.4;text-align:center;padding:0 10px;position:relative;z-index:2}
+.cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;border:1.5px solid rgba(19,142,255,.35);padding:4px 12px;border-radius:20px;position:relative;z-index:2}
+.bm{position:absolute;bottom:14px;left:16px;font-family:'Chewy',cursive;font-size:15px;color:rgba(19,142,255,.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:.9}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,.05);border:1px dashed rgba(19,142,255,.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:20px auto;padding:14px 18px;background:#0f172a;border:1px solid rgba(19,142,255,.2);border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:rgba(255,255,255,.7);line-height:1.8}
+.brief h3{font-size:12px;color:#138EFF;margin-bottom:8px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+</style>
+</head>
+<body>
+
+<div class="cap">
+  <div class="cap-lbl">Instagram Caption</div>
+  <p class="cap-txt">Some places stay with you for years.<br><br>The restaurant you still think about. The street you can still smell. The person who gave you directions and changed the whole day.<br><br>Those moments deserve more than a camera roll. Bloggo turns them into a real travel blog — on your device, privately, in seconds.<br><br>Link in bio.<br><br>#travelblog #travelmemories #bloggo #travelapp #travelphotos #wanderlust</p>
+  <div class="cap-lbl">TikTok Caption</div>
+  <p class="cap-txt">Some places stay with you forever. None of them have stories. Bloggo changes that. Comment "stay" for early access. #traveltok #bloggo #travelblog #travelapp</p>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides as ZIP</button></div>
+
+<div class="sw">
+  <div class="sn">Slide 1 — Single Post · Sunday · Aspirational</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="tb"></div>
+    <div class="dq">"</div>
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:60px 30px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">Some places</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:.88;margin-top:6px">stay</div>
+      <div style="font-family:'Chewy',cursive;font-size:48px;color:#1A1A1A;line-height:1;margin-top:4px">with you.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;line-height:1.4;margin-top:12px">None of them have stories.</div>
+      <div class="st">That changes with Bloggo.</div>
+      <div class="cb">BETA IN BIO</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+<div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat) perched on a window ledge gazing out dreamily at a glowing city skyline in the distance — wide eyes, soft wonder, tail curled around itself. Warm ambient light. White background or very soft gradient. Higgsfield prompt: "A small expressive black cat sits on a window ledge gazing outward with wide dreamy wonder-filled eyes at a softly glowing cityscape in the distance, tail curled gently around its paws, soft warm ambient light, white or very light background, whimsical minimal illustration style, no text."</div>
+
+<div class="brief">
+  <h3>Brief — 1-Slide Post · Sunday July 13 2026</h3>
+  <p><b>Hook Type:</b> Aspirational</p>
+  <p><b>Day Angle:</b> Sunday — The trip that deserved a story</p>
+  <p><b>Notion Destination:</b> notion → Bloggo Content Engine</p>
+  <p><b>Caption:</b> Use Instagram caption above. Post as single image, not carousel.</p>
+  <p><b>Supporting Graphics:</b><br>
+  — Slide 1: Spunky on window ledge gazing at glowing cityscape (see gfx-note above). Text only if no graphic available.</p>
+</div>
+
+<script>
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;btn.disabled=true;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/[^a-z0-9]/gi,'-').toLowerCase();
+  var zip=new JSZip();
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    var canvas=await html2canvas(slides[i],{scale:3,useCORS:true,backgroundColor:'#ffffff'});
+    var blob=await new Promise(r=>canvas.toBlob(r,'image/png'));
+    zip.file(title+'-slide-'+(i+1)+'.png',blob);
+  }
+  var zb=await zip.generateAsync({type:'blob'});
+  saveAs(zb,title+'.zip');
+  btn.textContent=orig;btn.disabled=false;
+}
+async function saveSlide(btn){
+  var slide=btn.closest('.sw').querySelector('.slide');
+  var canvas=await html2canvas(slide,{scale:3,useCORS:true,backgroundColor:'#ffffff'});
+  var title=document.title.replace(/[^a-z0-9]/gi,'-').toLowerCase();
+  var idx=Array.from(document.querySelectorAll('.slide')).indexOf(slide)+1;
+  canvas.toBlob(b=>saveAs(b,title+'-slide-'+idx+'.png'),'image/png');
+}
+</script>
+</body>
+</html>
