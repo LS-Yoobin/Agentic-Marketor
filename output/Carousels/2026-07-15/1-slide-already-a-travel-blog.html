@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1-Slide — You Already Have 200 Travel Blogs</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#E8E8E8;display:flex;flex-direction:column;align-items:center;padding:24px;font-family:'Jost',sans-serif}
+  .sw{display:flex;flex-direction:column;align-items:center;margin-bottom:28px;width:360px;position:relative}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;text-align:center}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px 36px}
+
+  /* 1-slider elements */
+  .tb{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#138EFF,#59E0C5);z-index:10}
+  .dq{position:absolute;font-size:220px;color:rgba(19,142,255,0.04);line-height:1;top:-15px;left:0;right:0;text-align:center;pointer-events:none;z-index:0;font-family:Georgia,serif;user-select:none}
+  .dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
+  .st{font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-top:18px;line-height:1.4;position:relative;z-index:2}
+  .cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+
+  /* Download */
+  .dl-btn{position:absolute;top:8px;right:8px;z-index:20;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity 0.2s;pointer-events:none}
+  .sw:hover .dl-btn{opacity:1;pointer-events:auto}
+
+  /* Brief + gfx-note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  .brief{max-width:360px;margin:16px auto 0;padding:10px 14px;background:#f8f9fa;border:1px solid #e0e0e0;border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#555;line-height:1.7}
+  .brief b{color:#1A1A1A;font-weight:700}
+  .caption-block{max-width:360px;margin:16px auto 0;padding:16px;background:#F8FAFF;border:1px solid rgba(19,142,255,0.15);border-radius:10px;font-family:'Jost',sans-serif}
+  .caption-platform{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:6px}
+  .caption-text{font-size:12px;color:#374151;line-height:1.7;margin:0}
+</style>
+</head>
+<body>
+
+<div style="text-align:center;margin:0 0 16px;">
+  <button onclick="saveAllSlides()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3);">Save All Slides</button>
+</div>
+
+<!-- SLIDE 1 — 1-SLIDER -->
+<div class="sw">
+  <div class="sn">Slide 1 — Single Post</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="tb"></div>
+    <div class="dq">"</div>
+    <div class="dots"></div>
+    <div style="position:relative;z-index:2;">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">You already have</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.95;margin-top:4px;">200</div>
+      <div style="font-family:'Chewy',cursive;font-size:42px;color:#1A1A1A;line-height:1.05;">travel blogs.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:10px;">They're locked in your camera roll.</div>
+    </div>
+    <div class="st">Bloggo reads the photos. You get the story.</div>
+    <div class="cb">Beta in bio</div>
+    <div class="bm">Bloggo</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky staring wide-eyed at a massive glowing stack of photos floating above, overflowing with light. Higgsfield prompt: "A small sleek black cat with wide bright eyes looking up at a glowing tower of floating photographs, white clean background, soft cinematic light, curious and amazed expression, editorial minimal style."</div>
+</div>
+
+<!-- BRIEF -->
+<div class="brief">
+  <b>Carousel Brief — 1-slide-already-a-travel-blog</b><br>
+  <b>Angle:</b> Product Education (Tuesday) — WTF/Curiosity hook<br>
+  <b>Hook Type:</b> WTF — reframe (camera roll = travel blog)<br>
+  <b>Notion:</b> notion → Bloggo Content Engine<br>
+  <b>Supporting Graphics:</b> Slide 1 needs Spunky (amazed, staring at floating photo stack).
+</div>
+
+<!-- CAPTIONS -->
+<div class="caption-block">
+  <div class="caption-platform">Instagram</div>
+  <p class="caption-text">
+    You already have 200 travel blogs. They're locked in your camera roll.<br><br>
+    Every photo you took has a GPS coordinate, a timestamp, and a story baked in. Bloggo reads all of it — on your device — and turns your photos into a real travel blog. No typing required.<br><br>
+    Beta link in bio.<br><br>
+    #travelblog #travelphotography #bloggo
+  </p>
+  <div class="caption-platform" style="margin-top:16px;">TikTok</div>
+  <p class="caption-text">
+    Your camera roll is a travel blog you never wrote. Bloggo reads the GPS and timestamps in your photos and builds the story — totally on your phone, no cloud.<br><br>
+    Beta link in bio.<br><br>
+    #travelblogger #travelapp #bloggo
+  </p>
+</div>
+
+<script>
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/\s+/g,'-').toLowerCase();
+  var zip=new JSZip();
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    var canvas=await html2canvas(slides[i],{scale:3,useCORS:true,backgroundColor:'#ffffff'});
+    var blob=await new Promise(function(r){canvas.toBlob(r,'image/png');});
+    zip.file('slide-'+(i+1)+'.png',blob);
+  }
+  var zipBlob=await zip.generateAsync({type:'blob'});
+  saveAs(zipBlob,title+'-slides.zip');
+  btn.textContent=orig;
+  btn.disabled=false;
+}
+function saveSlide(btn){
+  var slide=btn.parentElement.querySelector('.slide');
+  btn.style.opacity='0';
+  html2canvas(slide,{scale:3,useCORS:true,backgroundColor:'#ffffff'}).then(function(canvas){
+    var a=document.createElement('a');
+    a.download=document.title.replace(/\s+/g,'-').toLowerCase()+'-slide.png';
+    a.href=canvas.toDataURL('image/png');
+    a.click();
+    btn.style.opacity='';
+  });
+}
+</script>
+</body>
+</html>
