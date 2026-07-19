@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stop uploading your memories.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111827;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:13px;color:#ccc;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#555;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(19,142,255,0.12);color:#138EFF}
+.brief{max-width:360px;margin:0 auto 14px;background:#0f172a;border:1px solid rgba(19,142,255,.25);border-radius:10px;padding:14px;font-size:11px;color:rgba(255,255,255,.7);line-height:1.75}
+.brief h3{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#138EFF;margin-bottom:8px}
+.brief p{margin-bottom:3px}
+.brief b{color:#fff}
+.cap{max-width:360px;margin:0 auto 14px;background:#0f172a;border:1px solid rgba(19,142,255,.25);border-radius:10px;padding:14px}
+.cap-lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#138EFF;margin-bottom:6px}
+.cap-txt{font-size:11px;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:12px;font-family:'Jost',sans-serif}
+.sa{text-align:center;margin:0 auto 18px;max-width:360px}
+.sa button{background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,.3)}
+.sw{position:relative;width:360px;margin:0 auto 4px}
+.sn{font-size:9px;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;text-align:center;font-family:'Jost',sans-serif}
+.slide{width:360px;height:450px;overflow:hidden;position:relative;background:#FFFFFF}
+.dl-btn{position:absolute;top:8px;right:8px;z-index:20;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.bm{position:absolute;bottom:14px;left:16px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.accent{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+.rgrad{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none}
+.gfx-note{max-width:360px;margin:2px auto 12px;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+<div class="meta">
+  <h1>Stop uploading your memories.</h1>
+  <div class="sub">10-slide · Contrarian Hook · Privacy Differentiator · Saturday · Bloggo</div>
+  <span class="fmt">8–10 Slide Post · 360×450 · notion → Bloggo Content Engine</span>
+</div>
+
+<div class="brief">
+  <h3>Content Brief</h3>
+  <p><b>Notion:</b> notion → Bloggo Content Engine</p>
+  <p><b>Type:</b> 10-Slide Post — Privacy Differentiator</p>
+  <p><b>Hook Type:</b> Contrarian — "Stop uploading your memories."</p>
+  <p><b>Angle:</b> Most AI photo apps silently upload your photos. Bloggo chose on-device AI so your memories never leave your phone — by design, not just policy.</p>
+  <p><b>Supporting Graphics:</b> Slide 1 (cat blocking an upload icon), Slide 9 (cat sitting next to a locked phone), Slide 10 (cat waving with Bloggo logo). Higgsfield prompts below each slide.</p>
+</div>
+
+<div class="cap">
+  <div class="cap-lbl">Instagram Caption</div>
+  <p class="cap-txt">Stop uploading your memories.<br><br>When you use most AI travel apps, your photos don't stay on your phone. They travel to a server somewhere so an algorithm can process them. Your face. Your location. Your moments.<br><br>Bloggo never does this. Our AI runs entirely on your iPhone — because your memories belong to you, not a data center.<br><br>Swipe to see what the travel app industry doesn't advertise.<br><br>Download Bloggo → link in bio.<br><br>#privacy #travelapp #ondeviceai #photoprivacy #bloggo #iphoneapp</p>
+  <div class="cap-lbl">TikTok Caption</div>
+  <p class="cap-txt">Most travel apps upload your photos to AI servers. Your face. Your GPS. Their database. Bloggo's AI runs on your iPhone. Nothing leaves. Comment 'private' if this matters. #bloggo #privacy #travelapp #ondeviceai</p>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides</button></div>
+
+<!-- SLIDE 1: HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 of 10 — Hook</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px;text-align:center">
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9">Stop</div>
+      <div style="font-family:'Chewy',cursive;font-size:42px;color:#1A1A1A;line-height:1.05;margin-top:6px">uploading</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:10px">your memories.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the black cat stands with one paw outstretched in a "stop" gesture, facing a glowing upload icon — firm but not aggressive. <b>Higgsfield prompt:</b> "confident black cartoon cat with one paw raised in a stop gesture, facing a glowing blue upload arrow icon, determined expression, white background, soft blue lighting, editorial illustration"</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 of 10 — Transition</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 280px 280px at 50% 50%,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:700;line-height:1.25;text-align:center;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Most travel apps never<br>mention this.</div>
+      <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin:18px auto 0"></div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: THE TRADE-OFF -->
+<div class="sw">
+  <div class="sn">Slide 3 of 10 — The Trade-Off</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">THE TRADE-OFF</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">You tap <strong>"Allow."</strong> They keep your photos.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:14px;line-height:1.5">Most photo AI apps ask for camera roll access. Then your photos travel to a remote server for processing. That's the deal — you just weren't told about it.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: THE NORM -->
+<div class="sw">
+  <div class="sn">Slide 4 of 10 — The Norm</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">THE NORM</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">Cloud AI needs <strong>your photos on their servers.</strong></div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:14px;line-height:1.5">Running AI takes serious computing power. Most companies rent that power in the cloud — which means your photos go with it. Every time.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5: CENTERED INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 5 of 10 — The Default</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 260px 260px at 50% 50%,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:18px">The default</div>
+      <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:400;color:#1A1A1A;line-height:1.3">That's how most apps work.</div>
+      <div style="width:36px;height:2px;background:rgba(19,142,255,0.2);margin:16px auto"></div>
+      <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:700;color:#138EFF;line-height:1.2">It doesn't have to be.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6: THE EXCEPTION -->
+<div class="sw">
+  <div class="sn">Slide 6 of 10 — The Exception</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">THE EXCEPTION</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">On-device AI exists. <strong>Bloggo chose it.</strong></div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:14px;line-height:1.5">Apple Silicon is powerful enough to run AI on your iPhone. We built Bloggo around that — so your memories never need to leave your pocket.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7: HOW IT WORKS -->
+<div class="sw">
+  <div class="sn">Slide 7 of 10 — How It Works</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">HOW IT WORKS</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">AI runs <strong>on your iPhone.</strong> No upload. No risk.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:14px;line-height:1.5">Trip detection, story writing, photo captions — all processed locally using Apple's on-device ML. Same AI results. Zero data exposure.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8: THE RESULT -->
+<div class="sw">
+  <div class="sn">Slide 8 of 10 — The Result</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="accent"></div>
+    <div class="rgrad"></div>
+    <div style="position:relative;z-index:2;padding:32px 22px 56px 28px;height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:14px">THE RESULT</div>
+      <div style="font-family:'Jost',sans-serif;font-size:27px;font-weight:400;color:#1A1A1A;line-height:1.35">Your stories written. <strong>Your photos untouched.</strong></div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:14px;line-height:1.5">Bloggo turns your camera roll into a polished travel blog — and never asks your photos to go anywhere to do it.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9: INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 9 of 10 — Insight</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 260px 260px at 50% 50%,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-size:26px;font-weight:400;color:#6B7280;line-height:1.35">Your camera roll</div>
+      <div style="width:36px;height:2px;background:rgba(19,142,255,0.2);margin:16px auto"></div>
+      <div style="font-family:'Jost',sans-serif;font-size:36px;font-weight:700;color:#1A1A1A;line-height:1.15">was never meant<br>to be shared.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky the black cat sits beside a glowing phone with a small padlock icon on screen — calm, protective, trustworthy. <b>Higgsfield prompt:</b> "calm black cartoon cat sitting beside a glowing smartphone with a golden padlock on the screen, protective reassuring expression, white background, soft blue ambient light, editorial illustration style"</div>
+</div>
+
+<!-- SLIDE 10: CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 of 10 — CTA</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.03) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;text-align:center">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px">
+        <div style="font-family:'Chewy',cursive;font-size:46px;color:#138EFF;line-height:1">Bloggo</div>
+      </div>
+      <div style="font-family:'Jost',sans-serif;font-size:22px;font-weight:700;color:#1A1A1A;line-height:1.25;margin-bottom:6px">Privacy by design.</div>
+      <div style="font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.1;margin-bottom:16px">Not as an afterthought.</div>
+      <div style="width:36px;height:2px;background:rgba(19,142,255,0.3);margin:0 auto 16px"></div>
+      <div style="font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase">Join the Bloggo Beta · Link in Bio</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky the black cat waves both paws in a friendly welcoming gesture, next to the Bloggo wordmark. Warm, inviting. <b>Higgsfield prompt:</b> "friendly black cartoon cat waving both paws in a welcoming gesture with a big warm smile, white background, soft studio lighting, clean editorial illustration"</div>
+</div>
+
+<script>
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/\s+/g,'-').toLowerCase();
+  var zip=new JSZip();
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    var canvas=await html2canvas(slides[i],{scale:3,useCORS:true,backgroundColor:'#ffffff'});
+    var blob=await new Promise(function(r){canvas.toBlob(r,'image/png');});
+    zip.file('slide-'+(i+1)+'.png',blob);
+  }
+  var zipBlob=await zip.generateAsync({type:'blob'});
+  saveAs(zipBlob,title+'-slides.zip');
+  btn.textContent=orig;
+  btn.disabled=false;
+}
+function saveSlide(btn){
+  var slide=btn.parentElement.querySelector('.slide');
+  btn.style.opacity='0';
+  html2canvas(slide,{scale:3,useCORS:true,backgroundColor:'#ffffff'}).then(function(canvas){
+    var a=document.createElement('a');
+    a.download=document.title.replace(/\s+/g,'-').toLowerCase()+'-slide-'+Date.now()+'.png';
+    a.href=canvas.toDataURL('image/png');
+    a.click();
+    btn.style.opacity='';
+  });
+}
+</script>
+</body>
+</html>
