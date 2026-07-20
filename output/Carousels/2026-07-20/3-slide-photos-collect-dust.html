@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Some trips just hit different.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:14px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(19,142,255,0.12);color:#0a6bcc}
+.sw{position:relative;width:360px;margin:0 auto 24px}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:4px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.07) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0}
+/* Slide 2 transition elements */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* Content slides */
+.ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none;z-index:0}
+.l{position:absolute;inset:0;padding:44px 28px 60px 44px;display:flex;flex-direction:column;justify-content:center;z-index:2}
+.lbl{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px}
+.zz{flex:1;display:flex;flex-direction:column;justify-content:center}
+/* CTA slide */
+.ctabox{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;z-index:2}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+/* gradient text for slide 2 */
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="meta">
+  <h1>Some trips just hit different.</h1>
+  <div class="sub">4-slide · Relatable / Aspirational · Sunday · Bloggo</div>
+  <span class="fmt">4-Slide Post · 360×450</span>
+</div>
+
+<!-- SLIDE 1: HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide" id="s1">
+    <div class="dot"></div>
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:260px;height:260px;background:radial-gradient(circle,rgba(19,142,255,0.06),transparent 70%);border-radius:50%;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">Some trips</div>
+      <div style="font-family:'Chewy',cursive;font-size:56px;color:#1A1A1A;line-height:1.0;margin-top:4px">just hit</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9">different.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat looking out a train window at golden sunset countryside, paw pressed against the glass, dreamy and wistful mood. Use Higgsfield AI: "black cat sitting at a train window, paw pressed against glass, golden hour countryside passing outside, warm cinematic mood, illustrated style"</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide" id="s2">
+    <div class="dot"></div>
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:260px;height:260px;background:radial-gradient(circle,rgba(19,142,255,0.05),transparent 70%);border-radius:50%;pointer-events:none"></div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:center;padding:44px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-size:26px;font-weight:700;line-height:1.3" class="gt">But the story<br>never got written.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — The Reality</div>
+  <div class="slide" id="s3">
+    <div class="ab"></div>
+    <div class="dot"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">EVERY TIME</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:20px;color:#1A1A1A;line-height:1.4;margin-bottom:14px">You took <strong>hundreds of photos.</strong></div>
+        <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin-bottom:14px"></div>
+        <div style="font-family:'Jost',sans-serif;font-size:16px;color:#6B7280;line-height:1.6">You meant to write it up.<br>You never did.<br><em>The story stayed in your camera roll.</em></div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: CTA -->
+<div class="sw">
+  <div class="sn">Slide 4 — CTA</div>
+  <div class="slide" id="s4">
+    <div style="position:absolute;inset:0;background:radial-gradient(circle at center,rgba(19,142,255,0.06),transparent 70%);pointer-events:none"></div>
+    <div class="ctabox">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <div style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.1;margin-bottom:8px">Writes the story</div>
+      <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1.1;margin-bottom:20px">for you.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase">LINK IN BIO</div>
+    </div>
+  </div>
+</div>
+
+<div class="brief">
+  <strong>Caption:</strong> "That trip from last summer. The one you photographed obsessively and never documented. Your camera roll remembers every place, every day, every moment. Bloggo reads it and writes the blog — on your device, in seconds. No writing. No organizing. No blank page. → Beta link in bio.<br><br>#travelblog #travelapp #Bloggo #travel #travelgram #memoriesforlife"<br><br>
+  <strong>Notion destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — cat at train window (Higgsfield prompt above) · Slides 2–4: text only
+</div>
+
+</body>
+</html>
