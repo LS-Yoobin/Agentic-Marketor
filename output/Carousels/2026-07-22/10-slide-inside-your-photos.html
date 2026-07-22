@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10-Slide — The data hiding inside your photos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px;font-family:'Jost',sans-serif}
+.sw{margin:0 auto 40px;max-width:360px}
+.sn{font-family:'Jost',sans-serif;font-size:11px;color:#999;text-align:center;padding:8px 0;letter-spacing:1px;text-transform:uppercase}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;border:1px solid #e8e8e8}
+/* Hook slide */
+.s1{align-items:center;text-align:center;padding:40px 36px}
+.dot-bg{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none}
+.hook-wrap{position:relative;z-index:2}
+/* Transition slide */
+.s2{align-items:center;text-align:center;padding:40px 36px}
+.grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:34px;line-height:1.3}
+/* Content slides (left-aligned) */
+.sc{align-items:flex-start;text-align:left;padding:40px 28px 40px 44px}
+.accent-bar{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+.right-grad{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+.lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;position:relative;z-index:2}
+.body-txt{font-family:'Jost',sans-serif;font-weight:400;font-size:33px;color:#1A1A1A;line-height:1.3;position:relative;z-index:2}
+.body-txt b{font-weight:700}
+.sub-txt{font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;margin-top:10px;position:relative;z-index:2;line-height:1.4}
+/* Centered content slide (s5) */
+.s5c{align-items:center;text-align:center;padding:40px 36px}
+.radial-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);pointer-events:none}
+/* Insight slide (s9) */
+.s9{align-items:center;text-align:center;padding:40px 36px}
+.insight-top{font-family:'Jost',sans-serif;font-weight:400;font-size:30px;color:#6B7280;line-height:1.3}
+.insight-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:44px;color:#1A1A1A;line-height:1.15;margin-top:10px}
+/* CTA slide */
+.s10{align-items:center;text-align:center;padding:40px 36px}
+.logo-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px}
+.cta-head{font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.15}
+.cta-accent{font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.15}
+.cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;text-transform:uppercase;letter-spacing:3px;margin-top:14px}
+/* Recurring */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* Notes */
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:20px auto 0;padding:12px 16px;background:#f9f9f9;border:1px solid #e0e0e0;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#555;line-height:1.8}
+.brief h3{font-size:12px;color:#138EFF;margin-bottom:6px;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- Notion destination: notion → Bloggo Content Engine -->
+<!-- Hook type: Curiosity -->
+<!-- Angle: Product Education — metadata inside every photo (Tuesday) -->
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide s1">
+    <div class="dot-bg"></div>
+    <div class="hook-wrap">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">There is data</div>
+      <div style="font-family:'Chewy',cursive;font-size:46px;color:#1A1A1A;line-height:1.0;margin-top:4px;">hiding inside</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.85;margin-top:2px;">every photo.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat peering into a glowing photo with tiny GPS pins, clock icons, and map coordinates floating out of it, expression of wide-eyed wonder. Higgsfield AI prompt: "A small black cat looking into a glowing photograph as tiny GPS pin icons, clock symbols, and map coordinates float magically out of it, wide curious eyes, soft white background with blue ambient particles, flat editorial illustration style"</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s2">
+    <div class="grad">Most people never<br>know it's there.<br>Bloggo reads all of it.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="lbl">Signal 1</div>
+    <div class="body-txt">Every photo has a <b>timestamp.</b></div>
+    <div class="sub-txt">It knows the exact date and time you took it.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="lbl">Signal 2</div>
+    <div class="body-txt">Every photo has a <b>GPS coordinate.</b></div>
+    <div class="sub-txt">It knows exactly where you stood.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CONTENT (centered, pivot) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content (Shift)</div>
+  <div class="slide s5c">
+    <div class="radial-bg"></div>
+    <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:30px;color:#1A1A1A;line-height:1.3;position:relative;z-index:2;">Time + GPS = a <span style="color:#138EFF;">trip timeline.</span></div>
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;margin-top:14px;position:relative;z-index:2;">Bloggo clusters photos<br>into trips automatically.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="lbl">Then it groups</div>
+    <div class="body-txt">Photos by <b>day.</b><br>Photos by <b>place.</b></div>
+    <div class="sub-txt">Restaurants. Hotels. Landmarks. Auto-labeled.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="lbl">Then it writes</div>
+    <div class="body-txt">A <b>full narrative</b> for each day and place.</div>
+    <div class="sub-txt">You don't type a single word.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide sc">
+    <div class="accent-bar"></div>
+    <div class="right-grad"></div>
+    <div class="lbl">And it's private</div>
+    <div class="body-txt">All of this runs <b>on your device.</b></div>
+    <div class="sub-txt">Photos never leave your phone.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide s9">
+    <div class="insight-top">Your camera roll was always</div>
+    <div class="insight-bot">a travel journal.<br>You just couldn't read it.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat sitting next to a glowing open journal that shows a map route on one page and a blog on the other, quiet and contemplative expression. Higgsfield AI prompt: "A small black cat sitting peacefully beside an open glowing travel journal, one page showing a map route, the other showing a written blog, soft warm white light, clean background, flat editorial illustration style"</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide s10">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;">Bloggo</span>
+    </div>
+    <div class="cta-head">Tap to Blog.</div>
+    <div class="cta-accent">Your story in 60 seconds.</div>
+    <div class="cta-link">BETA IN BIO</div>
+  </div>
+</div>
+
+<div class="brief">
+  <h3>Content Brief</h3>
+  <strong>File:</strong> 10-slide-inside-your-photos.html<br>
+  <strong>Type:</strong> 8–10 Slide Post (10 slides)<br>
+  <strong>Angle:</strong> Product Education — GPS/timestamp metadata, how detection works (Tuesday)<br>
+  <strong>Hook:</strong> "There is data hiding inside every photo." — Curiosity<br>
+  <strong>Hook Type:</strong> Curiosity<br>
+  <strong>Notion Destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Caption note:</strong> "Every photo you take has a hidden story inside it — GPS, timestamp, place. Bloggo reads all of it and writes your trip blog in seconds. On-device. Private. iOS only. Beta link in bio."<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — cat peering into glowing photo with floating metadata icons. Slide 9 — cat with open glowing travel journal. Slides 2–8, 10 — text only.
+</div>
+
+</body>
+</html>
