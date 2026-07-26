@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloggo Carousel — 8-Slide: Photos Are Not Memories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f0f0f0;font-family:'Jost',sans-serif;padding:40px 20px;display:flex;flex-direction:column;align-items:center;gap:24px}
+  h1{font-family:'Chewy',cursive;font-size:22px;color:#138EFF;letter-spacing:1px;text-align:center}
+
+  .row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+  .sw{display:flex;flex-direction:column;align-items:center;gap:0}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;text-align:center}
+
+  .slide{
+    width:360px;height:450px;background:#FFFFFF;
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:50px 36px 60px;
+  }
+
+  /* Slide 1 — Hook (Chewy, WTF) */
+  .s1-bg{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px}
+
+  /* Slide 2 — Transition gradient */
+  .gt{
+    background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    font-family:'Jost',sans-serif;font-weight:700;font-size:26px;text-align:center;line-height:1.45
+  }
+
+  /* Content slides — left-aligned */
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .rb{position:absolute;right:0;top:0;bottom:0;width:40%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent)}
+  .content-inner{width:100%;text-align:left;padding-left:22px;position:relative;z-index:2}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+  .body-text{font-family:'Jost',sans-serif;font-size:21px;color:#1A1A1A;line-height:1.45}
+  .body-text b{font-weight:700}
+  .sub-text{font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:10px;line-height:1.4}
+
+  /* Insight (centered) */
+  .insight-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%)}
+  .insight-inner{text-align:center;position:relative;z-index:2;padding:0 16px}
+
+  /* CTA */
+  .cta-inner{text-align:center;position:relative;z-index:2}
+  .logo-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px}
+  .logo-row span{font-family:'Chewy',cursive;font-size:36px;color:#138EFF}
+
+  /* Recurring */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:32px;height:auto;z-index:10;opacity:0.9}
+
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  .brief{max-width:100%;margin:20px auto 0;padding:14px 16px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<h1>Bloggo · 9-Slide (WTF Hook) · 2026-07-26</h1>
+<p style="font-family:'Jost',sans-serif;font-size:12px;color:#9CA3AF;margin-top:-20px;margin-bottom:8px;">Angle: Aspirational / Counterintuitive (Sunday) · Hook: WTF / Contrarian</p>
+
+<div class="row">
+
+  <!-- SLIDE 1 — HOOK (WTF) -->
+  <div class="sw">
+    <div class="sn">Slide 1 — Hook</div>
+    <div class="slide">
+      <div class="s1-bg"></div>
+      <div style="position:relative;z-index:2;text-align:center">
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Your photos are</div>
+        <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:6px;">not</div>
+        <div style="font-family:'Chewy',cursive;font-size:46px;color:#1A1A1A;line-height:1.05;margin-top:4px;">your memories.</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot staring at two floating images side by side — one showing a vivid glowing memory scene, one showing a dark greyed-out photo frame. Curious, slightly alarmed expression. Higgsfield prompt: "Minimalist flat illustration of a small black cat looking at two floating rectangles side by side — left side is bright glowing and colorful (a vivid memory), right side is dark grey and faded (a photo) — the cat looks surprised and curious, pure white background, simple line art style."</div>
+  </div>
+
+  <!-- SLIDE 2 — TRANSITION -->
+  <div class="sw">
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="slide">
+      <div class="gt">A memory needs<br>a <b>timeline.</b><br>A memory needs<br>a <b>story.</b><br>A photo has<br><b>neither.</b></div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 3 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 3 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="content-inner">
+        <div class="label">WHAT A PHOTO IS</div>
+        <div class="body-text">
+          A pixel grid.<br>
+          A timestamp.<br>
+          A GPS coordinate.<br>
+          <b>Not a story.</b>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 4 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 4 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="content-inner">
+        <div class="label">WHAT A MEMORY IS</div>
+        <div class="body-text">
+          A place name.<br>
+          A day. A feeling.<br>
+          A sequence of<br>
+          <b>moments with words.</b>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 5 — CONTENT (centered) -->
+  <div class="sw">
+    <div class="sn">Slide 5 — Content</div>
+    <div class="slide">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.04) 0%,transparent 70%)"></div>
+      <div style="position:relative;z-index:2;text-align:center;padding:0 20px">
+        <div style="font-family:'Jost',sans-serif;font-size:13px;color:#6B7280;font-style:italic;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">The gap</div>
+        <div style="font-family:'Jost',sans-serif;font-size:21px;color:#1A1A1A;line-height:1.5;">Your camera roll has<br><b>the raw ingredients.</b><br>It's never had<br><b>the recipe.</b></div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 6 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 6 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="content-inner">
+        <div class="label">THE BRIDGE</div>
+        <div class="body-text">
+          Bloggo reads<br>
+          the GPS and time<br>
+          in every photo.<br>
+          <b>Builds the timeline.</b>
+        </div>
+        <div class="sub-text">On your device.<br>Nothing leaves your phone.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 7 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 7 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rb"></div>
+      <div class="content-inner">
+        <div class="label">THE OUTPUT</div>
+        <div class="body-text">
+          Day by day.<br>
+          Place by place.<br>
+          <b>A complete blog.</b><br>
+          In 60 seconds.
+        </div>
+        <div class="sub-text">Export as PDF.<br>Share with anyone.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 8 — INSIGHT -->
+  <div class="sw">
+    <div class="sn">Slide 8 — Insight (Save-Worthy)</div>
+    <div class="slide">
+      <div class="insight-bg"></div>
+      <div class="insight-inner">
+        <div style="font-family:'Jost',sans-serif;font-size:17px;color:#6B7280;line-height:1.45;margin-bottom:16px;">Your camera roll<br>is already a travel journal.</div>
+        <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:27px;color:#1A1A1A;line-height:1.35;">You just<br>couldn't read it.<br><span style="color:#138EFF;">Until now.</span></div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 8 — Graphic:</b> Black cat mascot sitting at a desk in front of an open glowing laptop showing a beautiful blog page. One paw raised as if presenting the screen. Triumphant, satisfied expression. Higgsfield prompt: "Minimalist flat illustration of a small black cat sitting at a tiny desk in front of a glowing laptop screen showing a colorful travel blog page, one paw raised as if presenting the screen, triumphant satisfied expression, pure white background, simple line art style."</div>
+  </div>
+
+  <!-- SLIDE 9 — CTA -->
+  <div class="sw">
+    <div class="sn">Slide 9 — CTA</div>
+    <div class="slide">
+      <div class="cta-inner">
+        <div class="logo-row">
+          <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+          <span>Bloggo</span>
+        </div>
+        <div style="font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.25;">Your camera roll</div>
+        <div style="font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.2;margin-top:4px;">has a story to tell.</div>
+        <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:20px;">LINK IN BIO</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end row -->
+
+<div class="brief">
+  <b>Caption (copy):</b><br>
+  Taking photos doesn't preserve memories. Stories do. Your camera roll has every ingredient — GPS, timestamps, sequences — but it was never designed to write the story for you. Bloggo was. It turns your existing photos into a complete travel blog in 60 seconds. On your device. Privately. Link in bio.<br><br>
+  <b>Hashtags:</b> #travelmemories #travelstory #iOSapp #travelblog #aitravel #photographylife #traveljournal #buildingwithAI<br><br>
+  <b>Notion destination:</b> notion → Bloggo Content Engine<br><br>
+  <b>Supporting Graphics:</b> Slide 1 — cat mascot (two images: vivid vs. faded). Slide 8 — cat mascot (laptop with blog, triumphant). See gfx-notes above.
+</div>
+
+</body>
+</html>
