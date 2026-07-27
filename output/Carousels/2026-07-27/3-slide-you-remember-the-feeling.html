@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=360">
+<title>Bloggo Carousel — 5-Slide: You Remember the Feeling</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#e8e8e8;padding:20px;font-family:'Jost',sans-serif}
+.sw{max-width:360px;margin:0 auto 32px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;color:#999;text-align:center;margin-bottom:4px;text-transform:uppercase;letter-spacing:1px}
+.slide{
+  position:relative;
+  width:360px;height:450px;
+  background:#FFFFFF;
+  overflow:hidden;
+}
+/* watermark + paw (slides 2-4) */
+.bm{position:absolute;bottom:14px;left:14px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* accent bar */
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+/* gradient text */
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* gfx-note + brief */
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:4px auto 0;padding:10px 14px;background:#fafafa;border:1px solid #e0e0e0;border-radius:6px;font-size:10px;color:#555;line-height:1.7;font-family:'Jost',sans-serif}
+.brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: HOOK (Chewy + Jost italic) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide" style="
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:40px 32px 48px;
+    background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);
+    background-size:36px 36px;">
+
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">You remember</div>
+    <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1;margin-top:4px;">the feeling.</div>
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;margin-top:10px;">Not the</div>
+    <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;margin-top:4px;">details.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot staring at a camera roll on a phone screen, slightly reaching for it, curious expression. Higgsfield AI prompt: "Illustrated black cat reaching toward a glowing phone showing a grid of photos, curiosity and longing in its eyes, minimal white background, warm soft light, no text."</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION (gradient text) -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide" style="
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:40px 32px;">
+
+    <div class="gt" style="font-family:'Jost',sans-serif;font-weight:700;font-size:22px;line-height:1.4;max-width:260px;">
+      Here's what your photos actually captured.
+    </div>
+
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> Black cat sitting very small and still, quiet energy, centered in frame. Higgsfield AI prompt: "Illustrated tiny black cat sitting very still, minimal white background, quiet contemplative energy, centered composition, no text."</div>
+</div>
+
+<!-- SLIDE 3: CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide" style="
+    padding:32px 28px 60px 28px;
+    background:linear-gradient(to right,#FFFFFF 55%,rgba(19,142,255,0.05) 100%);">
+
+    <div class="ab"></div>
+
+    <div style="padding-left:20px;display:flex;flex-direction:column;justify-content:center;height:100%;">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Every stop</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:400;font-size:22px;color:#1A1A1A;line-height:1.4;">Your phone <strong>logged every place</strong> you visited.</div>
+    </div>
+
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: INSIGHT (centered) -->
+<div class="sw">
+  <div class="sn">Slide 4 — Insight</div>
+  <div class="slide" style="
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:40px 36px 60px;
+    background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);">
+
+    <div style="font-family:'Jost',sans-serif;font-weight:400;font-size:15px;color:#6B7280;line-height:1.4;margin-bottom:10px;">Your best travel day is still</div>
+    <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:22px;color:#1A1A1A;line-height:1.3;">in your <strong style="color:#138EFF;">camera roll.</strong><br>Bloggo finds it.</div>
+
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Black cat sitting next to a glowing travel journal with a small smile. Higgsfield AI prompt: "Illustrated black cat sitting beside a glowing open travel journal, gentle warm light, quiet satisfaction, minimal white background, no text."</div>
+</div>
+
+<!-- SLIDE 5: CTA (Chewy) -->
+<div class="sw">
+  <div class="sn">Slide 5 — CTA</div>
+  <div class="slide" style="
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:40px 32px;">
+
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1;">Bloggo</div>
+    </div>
+
+    <div style="font-family:'Chewy',cursive;font-size:28px;color:#1A1A1A;line-height:1.2;">Your trips.</div>
+    <div style="font-family:'Chewy',cursive;font-size:28px;color:#138EFF;line-height:1.2;">Their stories.</div>
+    <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:18px;">LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Black cat waving with welcoming body language, excited posture. Higgsfield AI prompt: "Illustrated black cat waving cheerfully, welcoming expression, minimal white background, warm friendly energy, no text."</div>
+  <div class="brief">
+    <b>Hook:</b> "You remember the feeling. Not the details." · <b>Hook Type:</b> Relatable / Aspirational · <b>Format:</b> 5-Slide<br>
+    <b>Notion:</b> notion → Bloggo Content Engine<br>
+    <b>Caption:</b> "That restaurant. That street. That perfect afternoon. You remember how it felt — but the details are already fading. Your camera roll still has them. Bloggo turns your photos into a full travel blog, automatically. Beta in bio."<br>
+    <b>Supporting Graphics:</b> Slide 1 — cat reaching for phone; Slide 2 — cat still/quiet; Slide 4 — cat beside journal; Slide 5 CTA — cat waving
+  </div>
+</div>
+
+</body>
+</html>
