@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipping my first app — 5-Slide Carousel</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;padding:30px 20px;background:#f0f0f0;font-family:'Jost',sans-serif;}
+  .brief{max-width:360px;margin:0 auto 20px;padding:14px 16px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;font-size:11px;color:#444;line-height:1.7;}
+  .brief b{color:#138EFF;font-weight:700;}
+  .sw{margin:0 auto 24px;max-width:360px;}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;text-align:center;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase;}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;box-sizing:border-box;}
+
+  /* Shared elements */
+  .wm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10;}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9;}
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1;}
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.06),transparent);z-index:0;}
+  .dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px;z-index:0;}
+
+  /* Slide 1 — Hook (Chewy) */
+  .s1c{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px;text-align:center;box-sizing:border-box;}
+
+  /* Slide 2 — Transition (Jost gradient, centered) */
+  .s2c{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px;text-align:center;box-sizing:border-box;}
+  .gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+  /* Slides 3–4 — Content (Jost, left-aligned) */
+  .scc{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;height:100%;padding:40px 40px 80px 56px;box-sizing:border-box;}
+  .lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;}
+
+  /* Slide 5 — Insight/CTA (Chewy) */
+  .s5c{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px;text-align:center;box-sizing:border-box;}
+
+  /* CTA logo row */
+  .logo-row{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:16px;}
+
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6;}
+  .gfx-note b{color:#138EFF;font-weight:700;}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <b>Type:</b> 5-Slide Carousel &nbsp;|&nbsp; <b>Angle:</b> Founder/Builder Story &nbsp;|&nbsp; <b>Date:</b> 2026-07-29<br>
+  <b>Hook:</b> "Shipping my first app taught me 3 things." &nbsp;|&nbsp; <b>Hook Type:</b> Relatable / Story<br>
+  <b>Notion:</b> notion-personal → YOOBIN Content Engine<br>
+  <b>Supporting Graphics:</b> Slide 1 (hook) — cat looking at a phone with a proud/nervous expression; Slide 5 (CTA) — cat waving.
+</div>
+
+<!-- Slide 1 — Hook -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="dots"></div>
+    <div class="s1c">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Shipping my first app</div>
+      <div style="font-family:'Chewy',cursive;font-size:40px;color:#1A1A1A;line-height:1.05;margin-top:8px;">taught me</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:4px;">3</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;margin-top:8px;line-height:1.4;">things no book covers.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot, bottom-left corner, looking at a glowing phone screen with a mix of pride and nerves — paws slightly trembling. Higgsfield AI prompt: "Cute black cartoon cat in the bottom-left of a white frame, staring at a glowing smartphone with a proud and slightly nervous expression, minimal illustration style, soft shadows, white background."</div>
+</div>
+
+<!-- Slide 2 — Transition -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="s2c">
+      <div class="gt" style="font-family:'Jost',sans-serif;font-weight:700;font-size:28px;line-height:1.3;">No one tells you<br>these before you launch.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- Slide 3 — Truth 1 -->
+<div class="sw">
+  <div class="sn">Slide 3 — Truth 1</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="scc">
+      <div class="lbl">Truth 1</div>
+      <div style="font-family:'Jost',sans-serif;font-size:34px;font-weight:400;color:#1A1A1A;line-height:1.25;">Nobody cares.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:34px;font-weight:700;color:#1A1A1A;line-height:1.25;">Until suddenly</div>
+      <div style="font-family:'Jost',sans-serif;font-size:34px;font-weight:700;color:#138EFF;line-height:1.25;">they do.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- Slide 4 — Truth 2 -->
+<div class="sw">
+  <div class="sn">Slide 4 — Truth 2</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="scc">
+      <div class="lbl">Truth 2</div>
+      <div style="font-family:'Jost',sans-serif;font-size:34px;font-weight:700;color:#1A1A1A;line-height:1.25;">Done</div>
+      <div style="font-family:'Jost',sans-serif;font-size:34px;font-weight:400;color:#1A1A1A;line-height:1.25;">beats perfect.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;margin-top:16px;line-height:1.4;">Every. Single. Time.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- Slide 5 — CTA (Chewy) -->
+<div class="sw">
+  <div class="sn">Slide 5 — CTA</div>
+  <div class="slide">
+    <div class="s5c">
+      <div class="logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <div style="font-family:'Chewy',cursive;font-size:42px;color:#138EFF;line-height:1;">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.2;">Ship it.</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.2;">Learn after.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:20px;">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Black cat mascot, bottom-left, waving enthusiastically with one paw — welcoming, energetic, launch energy. Higgsfield AI prompt: "Cute black cartoon cat in the bottom-left corner, waving enthusiastically with one paw raised, big friendly energy, white background, minimal illustration style, clean graphic, soft drop shadow."</div>
+</div>
+
+</body>
+</html>
