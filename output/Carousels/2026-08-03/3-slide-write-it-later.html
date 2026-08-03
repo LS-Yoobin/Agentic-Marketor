@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3-Slide — Write It Later — Bloggo</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;gap:24px;padding:32px 16px;font-family:'Jost',sans-serif}
+  .sw{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;border-radius:4px;box-shadow:0 2px 12px rgba(0,0,0,0.12)}
+  /* Watermark & paw */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+  /* Slide 2 gradient text */
+  .gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  /* Content slides (3-8) */
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0}
+  .cl{position:relative;z-index:2;padding:32px 28px 60px 28px;display:flex;flex-direction:column;justify-content:center;height:100%}
+  .lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+  .body-txt{font-family:'Jost',sans-serif;font-size:28px;color:#1A1A1A;line-height:1.3}
+  .sub{font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:10px;line-height:1.4}
+  /* CTA slide */
+  .cta-c{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px 32px 60px;text-align:center}
+  .logo-row{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- Slide 1 — Hook -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px 60px;">
+    <div style="background:rgba(19,142,255,0.025);position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;"></div>
+    <div style="position:relative;z-index:2;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;">"I'll write the caption</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1;margin-top:4px;">later."</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#9CA3AF;line-height:1.5;margin-top:14px;">Said 3 years ago.<br>Still waiting.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the black cat looking at a phone screen with a long list of "Draft" labels on photos, looking guilty and avoidant. Higgsfield prompt: "A small black cat sitting beside a phone showing a long list of unsaved draft photos, looking sheepish and guilty, soft white studio background, cinematic lighting, photorealistic."</div>
+</div>
+
+<!-- Slide 2 — Transition -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide" style="display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 32px 60px;">
+    <div style="position:relative;z-index:2">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:30px;line-height:1.25;" class="gt">Your backlog isn't<br>laziness. It's the wrong tool.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- Slide 3 — Content -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="cl">
+      <div class="lbl">The truth</div>
+      <div class="body-txt">Writing requires <b>starting</b> from nothing.<br><br>Bloggo starts from <b>your photos.</b></div>
+      <div class="sub">Your trip is already there. Just unread.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- Slide 4 — Insight/CTA -->
+<div class="sw">
+  <div class="sn">Slide 4 — CTA</div>
+  <div class="slide">
+    <div class="cta-c">
+      <div class="logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <div style="font-family:'Chewy',cursive;font-size:48px;color:#138EFF;line-height:1;">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.2;margin-bottom:8px;">Stop waiting.</div>
+      <div style="font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.2;margin-bottom:16px;">Your stories are ready.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;">BETA IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Spunky the black cat waving excitedly at the viewer, standing next to a glowing open travel journal with photos flying out. Higgsfield prompt: "A small black cat waving cheerfully beside an open glowing travel journal with colorful photos emerging from its pages, bright and welcoming energy, white background, cinematic quality."</div>
+</div>
+
+</body>
+</html>
