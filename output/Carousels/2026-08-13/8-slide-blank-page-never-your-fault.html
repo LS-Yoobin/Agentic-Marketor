@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloggo Carousel — 8-Slide | Blank Page Was Never Your Fault</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f3f4f6;font-family:'Jost',sans-serif;padding:32px 20px}
+.cw{max-width:500px;margin:0 auto}
+.pt{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9ca3af;margin-bottom:24px}
+.sw{max-width:360px;margin:0 auto 28px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9ca3af;margin-bottom:6px}
+/* SLIDE base */
+.slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;box-shadow:0 4px 28px rgba(0,0,0,0.10)}
+/* Recurring */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* Accent bar */
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+/* Right gradient */
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none}
+/* Dot pattern for hook */
+.dp{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none}
+/* Radial gradient for centered content slide (slide 5) */
+.rdg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0;pointer-events:none}
+/* Gradient text */
+.gr{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* Left-aligned content layout */
+.lc{position:relative;z-index:2;padding:36px 28px 60px 36px;height:100%;display:flex;flex-direction:column;justify-content:center}
+.lbl{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
+/* Gfx note */
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+/* Brief box */
+.brief{max-width:360px;margin:24px auto 0;padding:14px 16px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.8}
+.brief h3{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#138EFF;margin-bottom:8px}
+.brief p{margin-bottom:4px}
+.brief strong{color:#1a1a1a}
+</style>
+</head>
+<body>
+<div class="cw">
+<p class="pt">Bloggo Carousel · 8–10 Slide Post (B — Contrarian Hook) · 2026-08-13</p>
+
+<!-- SLIDE 1 — HOOK (Contrarian) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Contrarian)</div>
+  <div class="slide" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+    <div class="dp"></div>
+    <div style="position:relative;z-index:2;padding:0 36px">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">Stop blaming yourself</div>
+      <div style="font-family:'Chewy',cursive;font-size:46px;color:#1A1A1A;line-height:1.05;margin-top:6px">for never</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;margin-top:2px">writing.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky sitting with arms crossed, looking defensive but also slightly guilty in front of a blank notebook. Higgsfield AI prompt: "Black cartoon cat sitting with arms crossed, slightly defensive expression, blank open notebook in front of it, clean white background, minimal style, soft light."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION (gradient, paw, watermark) -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+    <div style="position:relative;z-index:2;padding:0 36px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:21px;line-height:1.4" class="gr">The blank page was<br>always the problem.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — typography only.</div>
+</div>
+
+<!-- SLIDE 3 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lc">
+      <div class="lbl">The Real Problem</div>
+      <div style="font-family:'Jost',sans-serif;font-size:20px;color:#1A1A1A;line-height:1.5">Writing takes <strong>time</strong><br>you don't have.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Spunky looking at a clock, paws raised in a helpless shrug, scattered travel photos around. Higgsfield AI prompt: "Black cartoon cat looking up at a large clock, paws raised in a helpless shrug, scattered polaroid photos around it, clean white background, minimal playful style."</div>
+</div>
+
+<!-- SLIDE 4 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lc">
+      <div class="lbl">The Design Flaw</div>
+      <div style="font-family:'Jost',sans-serif;font-size:20px;color:#1A1A1A;line-height:1.5"><strong>Blank pages</strong> are<br>intimidating by design.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Spunky staring at a giant blank white page, looking tiny and overwhelmed in comparison. Higgsfield AI prompt: "Tiny black cartoon cat sitting in front of an enormous blank white page, looking up at it with a small, intimidated expression, lots of white space, clean minimal background."</div>
+</div>
+
+<!-- SLIDE 5 — CONTENT (CENTERED, radial gradient, NO accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content (Centered)</div>
+  <div class="slide" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+    <div class="rdg"></div>
+    <div style="position:relative;z-index:2;padding:0 36px">
+      <div style="font-family:'Jost',sans-serif;font-size:20px;color:#1A1A1A;line-height:1.5">Your photos <strong>already have</strong><br>every detail.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Spunky holding a phone showing a photo with metadata overlaid (date, location, time), looking pleasantly surprised. Higgsfield AI prompt: "Black cartoon cat holding a glowing phone with a travel photo on screen, small metadata labels visible on the photo — date, location pin, time — cat looking pleasantly surprised, clean white background."</div>
+</div>
+
+<!-- SLIDE 6 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lc">
+      <div class="lbl">What's In There</div>
+      <div style="font-family:'Jost',sans-serif;font-size:20px;color:#1A1A1A;line-height:1.5">GPS. Timestamps.<br><strong>Place names.</strong> All there.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 6 — Graphic:</b> Spunky with a magnifying glass examining a photo, small icons floating out — location pin, clock, map marker. Higgsfield AI prompt: "Black cartoon cat holding a magnifying glass over a photo, small floating icons visible — location pin, clock, map — cat looking delighted at the discovery, clean white background."</div>
+</div>
+
+<!-- SLIDE 7 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lc">
+      <div class="lbl">How It Works</div>
+      <div style="font-family:'Jost',sans-serif;font-size:20px;color:#1A1A1A;line-height:1.5">Bloggo <strong>reads</strong><br>your camera roll.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 7 — Graphic:</b> Spunky looking at a glowing phone screen showing a trip blog being assembled in real-time, eyes wide with delight. Higgsfield AI prompt: "Black cartoon cat watching a glowing smartphone screen where photos are assembling themselves into a beautiful blog layout, wide excited eyes, clean white background, soft blue glow."</div>
+</div>
+
+<!-- SLIDE 8 — CONTENT (left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lc">
+      <div class="lbl">Your Only Job</div>
+      <div style="font-family:'Jost',sans-serif;font-size:20px;color:#1A1A1A;line-height:1.5">You just <strong>tap.</strong><br>It writes.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Spunky pressing a large glowing button on a phone with one paw, looking satisfied. Higgsfield AI prompt: "Black cartoon cat pressing a large glowing blue button on a smartphone with one confident paw, satisfied expression, clean white background, simple minimal style."</div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT (centered, two-tier typography, paw, watermark) -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight (Save-Worthy)</div>
+  <div class="slide" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+    <div style="position:relative;z-index:2;padding:0 40px">
+      <div style="font-family:'Jost',sans-serif;font-size:17px;color:#6B7280;line-height:1.4;margin-bottom:10px">You're not bad at writing.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:23px;color:#1A1A1A;line-height:1.3">The blank page is.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting confidently next to a filled journal, looking self-assured and proud. Higgsfield AI prompt: "Black cartoon cat sitting proudly next to a beautifully filled travel journal with colorful photos and handwriting visible, confident and self-assured expression, clean white background, warm light."</div>
+</div>
+
+<!-- SLIDE 10 — CTA (Chewy, app icon, no paw, no watermark) -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+    <div style="position:relative;z-index:2;padding:0 32px;display:flex;flex-direction:column;align-items:center">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px">
+        <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:26px;color:#1A1A1A;line-height:1.25;margin-bottom:6px">Stop starting from zero.</div>
+      <div style="font-family:'Chewy',cursive;font-size:26px;color:#138EFF;line-height:1.2;margin-bottom:20px">Your story's already there.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase">Link in bio</div>
+    </div>
+  </div>
+</div>
+
+<!-- BRIEF BOX -->
+<div class="brief">
+  <h3>Content Brief</h3>
+  <p><strong>Format:</strong> 8–10 Slide Post (Deep authority builder, save-worthy)</p>
+  <p><strong>Hook Type:</strong> Contrarian — "Stop blaming yourself for never writing"</p>
+  <p><strong>Slide Count:</strong> 10 slides</p>
+  <p><strong>Notion Destination:</strong> notion → Bloggo Content Engine</p>
+  <p><strong>Caption CTA:</strong> "Save this for the next time you feel guilty about unwritten trips. The blank page was never the right starting point. Your camera roll is. Beta in bio."</p>
+  <p><strong>Supporting Graphics:</strong> Slide 1 — Spunky + blank notebook; Slide 3 — Spunky + clock; Slide 4 — Spunky + giant blank page; Slide 5 — Spunky + phone metadata; Slide 6 — Spunky + magnifying glass; Slide 7 — Spunky + blog screen; Slide 8 — Spunky + tap button; Slide 9 — Spunky + filled journal</p>
+</div>
+
+</div>
+</body>
+</html>
