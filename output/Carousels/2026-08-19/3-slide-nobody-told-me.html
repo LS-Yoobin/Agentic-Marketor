@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Slide — Nobody Told Me</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#F0F0F0;display:flex;flex-direction:column;align-items:center;padding:20px;font-family:'Jost',sans-serif;gap:0}
+  .sw{display:flex;flex-direction:column;align-items:center;margin-bottom:20px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+  .slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 36px}
+
+  /* Slide 1 — Hook */
+  .dot-bg{position:absolute;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px;z-index:0;pointer-events:none}
+
+  /* Slide 2 — Transition */
+  .gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:32px;line-height:1.2;text-align:center}
+
+  /* Slides 3+ — Content */
+  .ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12)}
+  .rg{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;position:relative;z-index:2}
+  .body{font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.35;margin-top:10px;position:relative;z-index:2}
+
+  /* Watermark & paw */
+  .bm{position:absolute;bottom:14px;left:14px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* CTA slide */
+  .cta-logo{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px;position:relative;z-index:2}
+
+  /* gfx-note & brief */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  .brief{max-width:360px;margin:8px auto 0;padding:10px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:10px;color:#374151;line-height:1.7}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="dot-bg"></div>
+    <div style="position:relative;z-index:2;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Nobody told me</div>
+      <div style="font-family:'Chewy',cursive;font-size:58px;color:#1A1A1A;line-height:1.0;margin-top:4px;">building is</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;">lonely.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Cat sitting alone at a tiny desk with a glowing laptop, empty room around it, small warm lamp. Higgsfield prompt: "A small black cat sitting alone at a tiny desk with a glowing laptop, late night, warm desk lamp, quiet empty room, cinematic illustration."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div style="position:relative;z-index:2;text-align:center;padding:0 16px">
+      <div class="gt">Three things I learned<br>building alone.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT 1 -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;width:100%;padding-left:24px">
+      <div class="label">01 / DOUBT</div>
+      <div class="body">The <strong>silence</strong> is the hardest part.<br>No team to validate you.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT 2 -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;width:100%;padding-left:24px">
+      <div class="label">02 / TRUTH</div>
+      <div class="body"><strong>Shipping</strong> beats<br>perfecting. Every time.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — INSIGHT + CTA -->
+<div class="sw">
+  <div class="sn">Slide 5 — Insight / CTA</div>
+  <div class="slide">
+    <div style="position:relative;z-index:2;text-align:center;padding:0 20px">
+      <div style="font-family:'Jost',sans-serif;font-size:16px;color:#6B7280;font-style:italic;margin-bottom:12px;">The lonely builder becomes</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.05;">the founder</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:0.95;">everyone follows.</div>
+      <div style="margin-top:22px">
+        <div class="cta-logo">
+          <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+          <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF">Bloggo</div>
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase">LINK IN BIO</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="brief">
+  <b>File:</b> 3-slide-nobody-told-me.html<br>
+  <b>Type:</b> 5-Slide Post<br>
+  <b>Hook:</b> "Nobody told me building is lonely."<br>
+  <b>Hook Type:</b> Relatable / Contrarian<br>
+  <b>Angle:</b> Wednesday — Founder/Builder Story<br>
+  <b>Notion Destination:</b> notion-personal → YOOBIN Content Engine<br>
+  <b>Supporting Graphics:</b> Slide 1 — cat alone at desk with glowing laptop (see gfx-note)
+</div>
+
+</body>
+</html>
