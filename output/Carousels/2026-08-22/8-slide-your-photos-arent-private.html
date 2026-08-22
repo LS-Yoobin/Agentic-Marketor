@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your photos aren't as private as you think — Bloggo</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;padding:24px;font-family:'Jost',sans-serif;gap:24px}
+h1{font-family:'Jost',sans-serif;font-size:13px;color:#555;text-align:center;margin-bottom:4px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%}
+.sn{font-family:'Jost',sans-serif;font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1px;align-self:flex-start;max-width:360px}
+.slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+/* Watermark & paw */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* Layout: center vs left */
+.center{align-items:center;text-align:center}
+.left{align-items:flex-start;text-align:left}
+/* Accent bar (left-aligned slides) */
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+/* Right ambient glow */
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to right,transparent,rgba(19,142,255,0.05))}
+/* Gradient text */
+.grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* Content inner */
+.ci{position:relative;z-index:2;padding:0 32px}
+.ci-l{position:relative;z-index:2;padding:0 32px 0 28px}
+/* Label */
+.lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+/* Body */
+.bd{font-family:'Jost',sans-serif;font-size:34px;color:#1A1A1A;line-height:1.25}
+/* Sub */
+.sub{font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:12px;line-height:1.5}
+/* Slide 9 insight */
+.ins-top{font-family:'Jost',sans-serif;font-size:30px;color:#6B7280;line-height:1.2}
+.ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:40px;color:#1A1A1A;line-height:1.15;margin-top:8px}
+/* CTA */
+.cta-row{display:flex;align-items:center;gap:14px;justify-content:center;margin-bottom:16px}
+/* gfx note */
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+<h1>Bloggo — 8-Slide Carousel (WTF/Fear Hook) | 2026-08-22 | Privacy Differentiator</h1>
+
+<!-- SLIDE 1 — HOOK (WTF/Fear) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (WTF/Fear)</div>
+  <div class="slide center">
+    <div style="position:absolute;inset:0;background:radial-gradient(circle at center,rgba(19,142,255,0.04) 0%,transparent 70%)"></div>
+    <div class="ci">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;">Your travel photos</div>
+      <div style="font-family:'Chewy',cursive;font-size:48px;color:#1A1A1A;line-height:1.0;margin-top:6px;">aren't as</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;">private</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;margin-top:8px;">as you think.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot (Spunky) looking sideways with one eyebrow raised, suspicious expression, silhouette of a cloud with an eye on it in background. Higgsfield AI prompt: "Cartoon black cat with skeptical raised eyebrow looking at a floating cloud with a subtle eye symbol, soft blue background glow, white studio setting, watchful and concerned expression, minimal flat illustration."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide center">
+    <div class="ci">
+      <div class="grad" style="font-family:'Jost',sans-serif;font-weight:700;font-size:40px;line-height:1.15;">Here's what most<br>travel apps<br>don't tell you.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci-l">
+      <div class="lbl">THE REALITY</div>
+      <div class="bd">They <b>upload</b><br>your photos<br>to process them.</div>
+      <div class="sub">Cloud AI needs to see your images<br>before it can write anything.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci-l">
+      <div class="lbl">WHAT THAT MEANS</div>
+      <div class="bd">Your <b>trip data</b><br>lives on<br>someone else's server.</div>
+      <div class="sub">Your hotel. Your restaurant.<br>Your private moments.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CONTENT (centered) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content (Shift)</div>
+  <div class="slide center">
+    <div style="position:absolute;inset:0;background:radial-gradient(circle at center,rgba(19,142,255,0.05) 0%,transparent 70%)"></div>
+    <div class="ci">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;">But what if there was</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.0;margin-top:6px;">another</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;">way?</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci-l">
+      <div class="lbl">BLOGGO IS DIFFERENT</div>
+      <div class="bd">Every AI runs<br><b>on your phone.</b><br>Not the cloud.</div>
+      <div class="sub">Same intelligence. Zero compromise.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci-l">
+      <div class="lbl">THE RESULT</div>
+      <div class="bd">Your photos<br><b>never leave</b><br>your device.</div>
+      <div class="sub">Bloggo writes your story.<br>No one else sees your photos.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="ci-l">
+      <div class="lbl">PRIVACY BY DESIGN</div>
+      <div class="bd">Trip detected.<br>Blog written.<br><b>No upload. Ever.</b></div>
+      <div class="sub">This is how on-device AI should work.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight / Save-Worthy</div>
+  <div class="slide center">
+    <div class="ci">
+      <div class="ins-top">Privacy isn't a setting.</div>
+      <div class="ins-bot">It's the foundation<br>Bloggo was built on.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat mascot (Spunky) sitting next to a glowing padlock icon, serene and confident expression. Higgsfield AI prompt: "Calm cartoon black cat sitting beside a large glowing gold padlock, soft blue ambient light, white background, peaceful confident expression, clean minimal illustration style."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide center">
+    <div class="cta-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div style="font-family:'Chewy',cursive;font-size:48px;color:#138EFF;line-height:1;">Bloggo</div>
+    </div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.1;padding:0 28px;text-align:center;">Your photos.<br>Your stories.</div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF;margin-top:6px;">Your privacy.</div>
+    <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:20px;">JOIN THE BETA — LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Black cat mascot (Spunky) waving enthusiastically from bottom-left corner. Higgsfield AI prompt: "Cheerful cartoon black cat waving one paw with big welcoming smile, white clean background, friendly and energetic pose, simple flat illustration style."</div>
+</div>
+
+<div style="max-width:360px;padding:12px;background:#fff;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#555;line-height:1.7;border:1px solid #e5e5e5;">
+  <b style="color:#138EFF;">Account:</b> Bloggo company page → notion MCP → Bloggo Content Engine<br><br>
+  <b style="color:#138EFF;">Caption:</b> Most travel apps send your photos to the cloud before they can do anything with them.<br><br>
+  You just don't see it happening.<br><br>
+  Bloggo's AI works entirely on your device. No upload. No server. No exceptions.<br><br>
+  Your stories — written privately on your phone.<br><br>
+  Beta in bio. 🔒<br><br>
+  <b>Supporting Graphics:</b> Slides 1, 9, 10 need Spunky — see gfx-note blocks above.
+</div>
+
+</body>
+</html>
