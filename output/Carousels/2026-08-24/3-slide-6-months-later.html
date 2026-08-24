@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bloggo 3-Slide — 6 Months Later</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f0f2f5;font-family:'Jost',sans-serif;padding:40px 20px;display:flex;flex-direction:column;align-items:center;gap:24px}
+
+/* Brief box */
+.brief{max-width:360px;width:100%;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7;margin-bottom:8px}
+.brief h3{font-size:12px;font-weight:700;color:#138EFF;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px}
+.brief b{color:#1A1A1A}
+
+/* Slide wrapper */
+.sw{display:flex;flex-direction:column;align-items:center;gap:4px;width:100%;max-width:360px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:1.5px;width:100%;margin-bottom:2px}
+.slide{
+  position:relative;
+  width:360px;
+  height:450px;
+  background:#FFFFFF;
+  overflow:hidden;
+  border-radius:4px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:40px 44px 60px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Recurring elements */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+/* Gradient text utility */
+.grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* Accent bar for left-aligned slides */
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+/* Right gradient for content slides */
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0}
+
+/* gfx-note */
+.gfx-note{max-width:360px;width:100%;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6;margin-top:2px}
+.gfx-note b{color:#138EFF;font-weight:700}
+
+/* CTA slide logo row */
+.logo-row{display:flex;align-items:center;gap:18px;margin-bottom:16px}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <h3>3–5 Slide Post Brief — 2026-08-24</h3>
+  <b>Angle:</b> Pain point — "6 months later" relatable moment (Monday)<br>
+  <b>Destination:</b> notion → Bloggo Content Engine<br>
+  <b>Hook Type:</b> Story / Relatable<br>
+  <b>Slides:</b> 5 (Hook → Transition → Content × 2 → CTA)<br>
+  <b>CTA:</b> Join the beta. Link in bio.<br>
+  <b>Supporting Graphics:</b> Slide 1 — cat mascot; see gfx-notes below.
+</div>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <!-- Subtle dot pattern -->
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,#138EFF 1px,transparent 1px);background-size:36px 36px;opacity:0.04;z-index:0"></div>
+    <div style="position:relative;z-index:2;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">It's been</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:4px;">6 months.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;margin-top:10px;">You still haven't done<br>anything with those photos.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot (Spunky) sitting quietly, staring at a phone with a large camera roll icon, ears drooped slightly, looking guilty. Higgsfield AI prompt: "A cute black cartoon cat sitting still looking at a glowing phone screen showing a camera roll full of photos, slightly guilty expression, soft white background, minimalist illustration style"</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div style="position:relative;z-index:2;text-align:center;padding:0 10px">
+      <div class="grad" style="font-family:'Jost',sans-serif;font-weight:700;font-size:38px;line-height:1.15;">You can't even<br>remember the<br><b>restaurant name.</b></div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;width:100%;padding-left:20px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px">THE REALITY</div>
+      <div style="font-family:'Jost',sans-serif;font-size:34px;color:#1A1A1A;line-height:1.2">You have <b style="color:#138EFF">847 photos</b><br>from that trip.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;margin-top:12px">And zero words written.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT / INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content / Insight</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div style="position:relative;z-index:2;width:100%;padding-left:20px">
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px">THE SHIFT</div>
+      <div style="font-family:'Jost',sans-serif;font-size:34px;color:#1A1A1A;line-height:1.2">Those photos already<br>have the <b>story inside.</b></div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;margin-top:12px">Bloggo reads it for you.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 5 — CTA</div>
+  <div class="slide">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div style="font-family:'Chewy',cursive;font-size:46px;color:#138EFF;line-height:1">Bloggo</div>
+    </div>
+    <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;text-align:center;line-height:1.15">Turn old trips into<br>beautiful blogs.</div>
+    <div style="font-family:'Chewy',cursive;font-size:32px;color:#138EFF;text-align:center;margin-top:10px">Right now.</div>
+    <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:18px">LINK IN BIO</div>
+  </div>
+</div>
+
+</body>
+</html>
