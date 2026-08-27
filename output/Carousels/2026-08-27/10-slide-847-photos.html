@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- Notion destination: notion-personal → YOOBIN Content Engine -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloggo Carousel — 10-Slide — 847-photos — 2026-08-27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;background:#F0F0F0;padding:24px}
+.brief{max-width:360px;margin:0 auto 20px;padding:12px 16px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;font-size:11px;color:#555;line-height:1.9}
+.brief h2{font-size:13px;font-weight:700;color:#138EFF;margin-bottom:8px}
+.brief code{background:#f0f7ff;color:#138EFF;padding:1px 5px;border-radius:3px;font-size:10px}
+.sw{width:360px;margin:0 auto 24px}
+.sn{font-size:10px;color:#aaa;margin-bottom:6px;font-family:sans-serif;letter-spacing:.5px;text-transform:uppercase}
+/* Base slide */
+.slide{width:360px;height:450px;position:relative;background:#FFFFFF;overflow:hidden}
+.slide.center{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.slide.left{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:22px 18px 50px 20px}
+/* Accent bar */
+.ab{position:absolute;left:0;top:0;bottom:0;width:4px;background:rgba(19,142,255,0.12);z-index:0}
+.content-left{padding-left:12px;position:relative;z-index:1}
+/* Backgrounds */
+.dot-bg{position:absolute;inset:0;background-image:radial-gradient(rgba(19,142,255,0.04) 1px,transparent 1px);background-size:18px 18px;z-index:0;pointer-events:none}
+.bg-right{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.06),transparent);z-index:0;pointer-events:none}
+.bg-radial{position:absolute;inset:0;background:radial-gradient(circle at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0;pointer-events:none}
+.bg-content-right{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.04),transparent);z-index:0;pointer-events:none}
+/* Typography */
+.lbl{font-family:'Jost',sans-serif;font-size:9px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.body{font-family:'Jost',sans-serif;font-size:15px;color:#1A1A1A;line-height:1.5}
+.body b{font-weight:700}
+.sub{font-family:'Jost',sans-serif;font-style:italic;font-size:12px;color:#6B7280;margin-top:9px;line-height:1.4}
+/* Gradient text */
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:18px;line-height:1.45;padding:0 28px;text-align:center}
+/* Insight */
+.insight-top{font-family:'Jost',sans-serif;font-size:14px;color:#6B7280;line-height:1.4;padding:0 28px;text-align:center}
+.insight-bot{font-family:'Jost',sans-serif;font-size:22px;font-weight:700;color:#1A1A1A;line-height:1.2;margin-top:10px;padding:0 24px;text-align:center}
+/* CTA */
+.cta-logo-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px}
+.cta-title{font-family:'Chewy',cursive;font-size:28px;color:#138EFF}
+.cta-head{font-family:'Chewy',cursive;font-size:22px;color:#1A1A1A;line-height:1.25;text-align:center;padding:0 24px}
+.cta-accent{font-family:'Chewy',cursive;font-size:22px;color:#138EFF;line-height:1.25;text-align:center}
+.cta-link{font-family:'Jost',sans-serif;font-size:9px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:14px}
+/* Recurring */
+.wm{position:absolute;bottom:14px;left:14px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* gfx-note */
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <h2>10-Slide Post — "847-photos" (Story Hook)</h2>
+  <p><b>Date:</b> 2026-08-27 (Thursday)</p>
+  <p><b>Angle:</b> Relatable Moment — founder personal story / blank page anxiety</p>
+  <p><b>Hook Type:</b> Story</p>
+  <p><b>Account:</b> Yoobin personal → <code>notion-personal</code> → YOOBIN Content Engine</p>
+  <p><b>Caption draft:</b> I took 847 photos on my last big trip. Planned to blog about it. Too tired after. A month later, the details were fuzzy. 6 months later, I couldn't remember which hike was which. I opened Bloggo. Tapped to Blog. 60 seconds later — a complete story. Link in bio.</p>
+  <p><b>Supporting Graphics:</b> Slide 1 (cat with phone), Slide 6 (cat looking confused), Slide 7 (cat looking at glowing phone blog), Slide 9 (cat with time machine journal).</p>
+</div>
+
+<!-- Slide 1 — Hook -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Story)</div>
+  <div class="slide center">
+    <div class="dot-bg"></div>
+    <div style="position:relative;z-index:2;text-align:center;padding:0 28px">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4">I took</div>
+      <div style="font-family:'Chewy',cursive;font-size:56px;color:#1A1A1A;line-height:1;margin-top:6px">847 photos.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:8px">I forgot the whole trip.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat holding a phone with a massive camera roll visible on screen, looking slightly overwhelmed. Higgsfield AI prompt: "Cute black cartoon cat holding a smartphone with hundreds of travel photo thumbnails visible on the screen, slightly overwhelmed expression, white background, illustrative style, no text."</div>
+</div>
+
+<!-- Slide 2 — Transition -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition (gradient)</div>
+  <div class="slide center">
+    <div class="bg-right"></div>
+    <div class="gt">Sound familiar?<br>Here's what happened.</div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> Text-only gradient slide. No mascot.</div>
+</div>
+
+<!-- Slide 3 — Content (left-aligned) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content (left)</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="bg-content-right"></div>
+    <div class="content-left">
+      <div class="lbl">THE TRIP</div>
+      <div class="body">The trip was <b>incredible</b>.<br>Every moment.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Text-forward slide. No mascot needed.</div>
+</div>
+
+<!-- Slide 4 — Content (left-aligned) -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content (left)</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="bg-content-right"></div>
+    <div class="content-left">
+      <div class="lbl">THE PLAN</div>
+      <div class="body">I planned a blog.<br>Too <b>tired</b> to start.</div>
+      <div class="sub">"I'll do it this weekend."</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Text-forward slide. No mascot needed.</div>
+</div>
+
+<!-- Slide 5 — Content (centered, no accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content (centered)</div>
+  <div class="slide center">
+    <div class="bg-radial"></div>
+    <div style="position:relative;z-index:1;padding:0 32px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-size:15px;color:#1A1A1A;line-height:1.7">A month later,<br>the details were <b>fuzzy</b>.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> Text-forward centered slide. No mascot needed.</div>
+</div>
+
+<!-- Slide 6 — Content (left-aligned) -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content (left)</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="bg-content-right"></div>
+    <div class="content-left">
+      <div class="lbl">6 MONTHS LATER</div>
+      <div class="body">Which hike was which?<br><b>No idea.</b></div>
+      <div class="sub">The photos were there. The story wasn't.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 6 — Graphic:</b> Black cat looking confused at two identical-looking hiking photos side by side, head tilted. Higgsfield AI prompt: "Cute black cartoon cat sitting looking confused at two similar mountain landscape photos laid side by side, head tilted, question marks floating above, white background, illustrative style, no text."</div>
+</div>
+
+<!-- Slide 7 — Content (left-aligned) -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content (left)</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="bg-content-right"></div>
+    <div class="content-left">
+      <div class="lbl">THEN I TRIED BLOGGO</div>
+      <div class="body">Tapped to Blog.<br><b>60 seconds</b>. Done.</div>
+      <div class="sub">A complete story. Every place. Every day.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 7 — Graphic:</b> Black cat looking at glowing phone screen showing a complete travel blog with sections and photos, satisfied and delighted expression. Higgsfield AI prompt: "Adorable black cartoon cat looking at a glowing phone screen displaying a beautiful formatted travel blog, wide delighted eyes, warm light, white background, illustrative style, no text."</div>
+</div>
+
+<!-- Slide 8 — Content (left-aligned) -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content (left)</div>
+  <div class="slide left">
+    <div class="ab"></div>
+    <div class="bg-content-right"></div>
+    <div class="content-left">
+      <div class="lbl">HOW IT WORKS</div>
+      <div class="body">GPS + time =<br>your trip, <b>already organized</b>.</div>
+      <div class="sub">Photos never leave your phone. On-device AI.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> Text-forward slide. No mascot needed.</div>
+</div>
+
+<!-- Slide 9 — Insight -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight (save-bait)</div>
+  <div class="slide center">
+    <div class="bg-radial"></div>
+    <div style="position:relative;z-index:1">
+      <div class="insight-top">Your camera roll is a time machine.</div>
+      <div class="insight-bot">You just need<br>someone to read it.</div>
+    </div>
+    <div class="wm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat sitting beside a glowing open journal with tiny travel photos and location pins floating out in a time-machine swirl. Higgsfield AI prompt: "Cute black cartoon cat sitting beside a glowing journal with travel photos, maps, and golden timestamps swirling up from the pages like a time machine, warm magical light, white background, illustrative style, no text."</div>
+</div>
+
+<!-- Slide 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA (Chewy)</div>
+  <div class="slide center">
+    <div class="cta-logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div class="cta-title">Bloggo</div>
+    </div>
+    <div class="cta-head">Let Bloggo read yours.</div>
+    <div class="cta-accent">Join the beta.</div>
+    <div class="cta-link">LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> App icon in logo row. No mascot placeholder on CTA slide.</div>
+</div>
+
+</body>
+</html>
