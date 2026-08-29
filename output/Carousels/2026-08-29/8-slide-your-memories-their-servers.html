@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your memories. Their servers.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:13px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(19,142,255,0.12);color:#0a6bcc}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{position:relative;width:360px;margin:0 auto}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:4px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative}
+.l{display:flex;flex-direction:column;justify-content:center;padding:32px 32px 64px 44px;height:100%;position:relative}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.07) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0}
+.rb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:220px;height:220px;background:radial-gradient(circle,rgba(19,142,255,0.07),transparent 70%);border-radius:50%;pointer-events:none}
+.rg{position:absolute;right:0;top:0;bottom:0;width:42%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+.ab{position:absolute;left:0;top:0;bottom:0;width:6px;background:rgba(19,142,255,0.12)}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lbl{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px;position:relative;z-index:2}
+.zz{position:relative;z-index:2}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+<div class="meta">
+  <h1>Your memories. Their servers.</h1>
+  <div class="sub">10-slide · Fear/Curiosity Hook · Privacy · Saturday</div>
+  <span class="fmt">Instagram Carousel · 10 Slides · 360×450</span>
+</div>
+
+<div style="text-align:center;margin:0 0 16px">
+  <button onclick="saveAll()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3)">Save All Slides</button>
+</div>
+
+<div class="carousel">
+
+<!-- SLIDE 1: HOOK (FEAR) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Fear)</div>
+  <div class="slide" id="s1">
+    <div class="dot"></div>
+    <div class="rb"></div>
+    <div class="c">
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4">Your memories.</div>
+        <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.0;margin-top:8px">Their</div>
+        <div style="font-family:'Chewy',cursive;font-size:68px;color:#138EFF;line-height:0.88;margin-top:2px">servers.</div>
+      </div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat looking nervously at a large server rack in the distance, photo frames floating toward it with unease. Worried, slightly alarmed expression. Higgsfield AI prompt: "cute black cat looking nervously at a large glowing server rack in the distance, photo frames floating toward it, worried protective expression, cool blue light, illustrated style"</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide" id="s2">
+    <div class="dot"></div>
+    <div class="rb"></div>
+    <div class="c">
+      <div class="lbl">MOST TRAVEL APPS</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:22px;font-weight:700;line-height:1.35" class="gt">Work this way.<br>Bloggo doesn't.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: CONTENT — THE REALITY -->
+<div class="sw">
+  <div class="sn">Slide 3 — The Reality</div>
+  <div class="slide" id="s3">
+    <div class="ab"></div>
+    <div class="dot"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">THE REALITY</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:21px;color:#1A1A1A;line-height:1.4;margin-bottom:14px">You take <strong>500 photos</strong><br>on every trip.</div>
+        <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin-bottom:14px"></div>
+        <div style="font-family:'Jost',sans-serif;font-size:14px;font-style:italic;color:#6B7280;line-height:1.6">Your whole trip is documented.<br>Right there on your phone.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: CONTENT — WHAT HAPPENS NEXT -->
+<div class="sw">
+  <div class="sn">Slide 4 — What Happens Next</div>
+  <div class="slide" id="s4">
+    <div class="ab"></div>
+    <div class="dot"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">WHAT HAPPENS NEXT</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:21px;color:#1A1A1A;line-height:1.4;margin-bottom:14px">Most apps send them<br>to <strong>the cloud</strong> to read them.</div>
+        <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin-bottom:14px"></div>
+        <div style="font-family:'Jost',sans-serif;font-size:14px;font-style:italic;color:#6B7280;line-height:1.6">Caption generation. Trip detection.<br>All on their servers.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5: CONTENT — WHAT THEY KNOW -->
+<div class="sw">
+  <div class="sn">Slide 5 — What They Know</div>
+  <div class="slide" id="s5">
+    <div class="ab"></div>
+    <div class="dot"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">WHAT THEY KNOW</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:21px;color:#1A1A1A;line-height:1.4;margin-bottom:14px">Your <strong>GPS.</strong> Your face.<br>Your daily route.</div>
+        <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin-bottom:14px"></div>
+        <div style="font-family:'Jost',sans-serif;font-size:14px;font-style:italic;color:#6B7280;line-height:1.6">Metadata baked into every photo.<br>Readable the moment it leaves your phone.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6: CONTENT — BLOGGO IS DIFFERENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Bloggo Is Different</div>
+  <div class="slide" id="s6">
+    <div class="ab"></div>
+    <div class="dot"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">BLOGGO IS DIFFERENT</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:21px;color:#1A1A1A;line-height:1.4;margin-bottom:14px">We read your photos<br><strong>on your device.</strong></div>
+        <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin-bottom:14px"></div>
+        <div style="font-family:'Jost',sans-serif;font-size:14px;font-style:italic;color:#6B7280;line-height:1.6">Not on our servers.<br>Not anywhere else. Just your phone.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7: CONTENT — THE AI -->
+<div class="sw">
+  <div class="sn">Slide 7 — The AI</div>
+  <div class="slide" id="s7">
+    <div class="ab"></div>
+    <div class="dot"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">THE AI</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:21px;color:#1A1A1A;line-height:1.4;margin-bottom:14px">Runs <strong>locally.</strong> Writes locally.<br>Stays locally.</div>
+        <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin-bottom:14px"></div>
+        <div style="font-family:'Jost',sans-serif;font-size:14px;font-style:italic;color:#6B7280;line-height:1.6">Photos never leave your phone.<br>Not one pixel. Not ever.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8: CONTENT — THE RESULT -->
+<div class="sw">
+  <div class="sn">Slide 8 — The Result</div>
+  <div class="slide" id="s8">
+    <div class="ab"></div>
+    <div class="dot"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">THE RESULT</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:21px;color:#1A1A1A;line-height:1.4;margin-bottom:14px">A <strong>beautiful blog.</strong><br>No server saw a pixel.</div>
+        <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin-bottom:14px"></div>
+        <div style="font-family:'Jost',sans-serif;font-size:14px;font-style:italic;color:#6B7280;line-height:1.6">Fast. Private. Shareable.<br>100% on your device.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9: INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide" id="s9">
+    <div class="dot"></div>
+    <div class="rb"></div>
+    <div class="c">
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:22px;color:#6B7280;line-height:1.3;margin-bottom:10px">Your trips should only</div>
+        <div style="width:36px;height:2px;background:rgba(19,142,255,0.25);margin:0 auto 10px"></div>
+        <div style="font-family:'Jost',sans-serif;font-size:40px;font-weight:700;color:#1A1A1A;line-height:1.1">be yours.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat sitting peacefully with travel photos arranged around it inside a glowing circle — contained, private, untouched. Higgsfield AI prompt: "cute black cat sitting peacefully surrounded by glowing photo frames inside a soft blue protective circle, calm and content expression, illustrated style, privacy and ownership mood"</div>
+</div>
+
+<!-- SLIDE 10: CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide" id="s10">
+    <div class="dot"></div>
+    <div class="rb"></div>
+    <div class="c">
+      <div class="zz">
+        <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:22px">
+          <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+          <div style="font-family:'Chewy',cursive;font-size:48px;color:#138EFF;line-height:1">Bloggo</div>
+        </div>
+        <div style="font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.1;margin-bottom:6px">Private by design.</div>
+        <div style="font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.1;margin-bottom:22px">Beautiful by default.</div>
+        <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase">LINK IN BIO!</div>
+      </div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Black cat waving with a glowing phone in the other paw, welcoming and happy. Higgsfield AI prompt: "cute black cat waving one paw enthusiastically while holding a glowing smartphone in the other paw, happy welcoming expression, bright clean background, illustrated style"</div>
+</div>
+
+</div><!-- end carousel -->
+
+<div class="brief">
+  <strong>Caption:</strong> "Here's what happens to your travel photos with most apps: they leave your phone the moment the app processes them. Your GPS, your faces, your entire trip — on a server you don't own. Bloggo is built differently. On-device AI means every photo stays on your device. Always. → Beta link in bio.<br><br>#bloggo #privacyfirst #ondeviceAI #travelapp #yourdatayours"<br><br>
+  <strong>Notion destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — cat nervously watching server rack (Higgsfield prompt) · Slide 9 — cat with travel photos in protective circle (Higgsfield prompt) · Slide 10 — cat waving with phone (Higgsfield prompt) · Slides 2–8 — text only
+</div>
+
+<script>
+var ids=['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10'];
+function saveAll(){
+  ids.forEach(function(id,i){
+    setTimeout(function(){
+      html2canvas(document.getElementById(id),{scale:3,useCORS:true,backgroundColor:'#ffffff'}).then(function(c){
+        c.toBlob(function(b){saveAs(b,'8-servers-'+String(i+1).padStart(2,'0')+'.png')});
+      });
+    },i*700);
+  });
+}
+</script>
+</body>
+</html>
