@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Slide — 6 Months Later</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;padding:20px;gap:0}
+  .sw{display:flex;flex-direction:column;align-items:center;margin-bottom:24px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+  .slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;padding:44px 40px 48px}
+  .slide.center{align-items:center;justify-content:center;text-align:center}
+  /* Slide 1 hook */
+  .hook-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
+  /* Slide 2 gradient */
+  .grad-text{font-family:'Jost',sans-serif;font-weight:700;font-size:36px;line-height:1.2;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center}
+  /* Content slides */
+  .accent-bar{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .right-glow{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.06),transparent)}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;padding-left:20px}
+  .body-text{font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.45;padding-left:20px}
+  .body-text b{font-weight:700}
+  .sub{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:10px;padding-left:20px;line-height:1.4}
+  /* Shared footer elements */
+  .bm{position:absolute;bottom:14px;left:16px;font-family:'Chewy',cursive;font-size:16px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+  /* Dot pattern slide 1 */
+  .dots{position:absolute;inset:0;background-image:radial-gradient(#138EFF 1px,transparent 1px);background-size:36px 36px;opacity:0.04;pointer-events:none}
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  .brief{max-width:360px;margin:12px auto 0;padding:12px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide center">
+    <div class="dots"></div>
+    <div class="hook-wrap">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;">You took 600 photos.</div>
+      <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1.05;margin-top:8px;">That was</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;">6 months ago.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:14px;">Do you remember any of it?</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the black cat staring sadly at an overflowing stack of unsorted photos, one paw resting on a calendar showing months passing. Higgsfield prompt: "Minimalist black cat mascot sitting next to a tall pile of scattered photos, one paw touching a wall calendar with multiple months crossed out, melancholy but soft expression, clean white background, subtle warm lighting"</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide center">
+    <div class="grad-text">Your photos already<br>have the story.<br>You just need<br><b>to tell it.</b></div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: INSIGHT + CTA -->
+<div class="sw">
+  <div class="sn">Slide 3 — Insight + CTA</div>
+  <div class="slide" style="justify-content:center;padding-left:48px;padding-right:32px;">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="label">BLOGGO DOES IT</div>
+    <div class="body-text">
+      Tap once.<br>
+      Bloggo finds your <b>trips</b>.<br>
+      Writes your <b>story</b>.<br>
+      In <b>60 seconds</b>.
+    </div>
+    <div class="sub">No writing. No blank page.<br>Just your trip, finally told.</div>
+    <div style="margin-top:22px;padding-left:20px">
+      <span style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;border:1.5px solid rgba(19,142,255,0.35);padding:5px 14px;border-radius:20px;">BETA IN BIO</span>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Spunky holding up a glowing phone showing a completed travel blog, proud and excited posture. Higgsfield prompt: "Minimalist black cat mascot holding up a glowing smartphone showing a beautiful travel blog page, proud expression, soft blue light from screen, clean white background"</div>
+</div>
+
+<div class="brief">
+  <b>Caption (Instagram):</b><br>
+  600 photos from that trip. Still sitting in your camera roll six months later. Sound familiar? Bloggo finds your trips, writes the story, and turns your photos into a beautiful travel blog — in under 60 seconds. No writing. No blank page. Just the trip you meant to document, finally done.<br><br>
+  <b>Notion Destination:</b> notion → Bloggo Content Engine<br>
+  <b>Supporting Graphics:</b> Slide 1 — Spunky with photo pile + calendar · Slide 3 — Spunky holding phone with blog
+</div>
+
+</body>
+</html>
