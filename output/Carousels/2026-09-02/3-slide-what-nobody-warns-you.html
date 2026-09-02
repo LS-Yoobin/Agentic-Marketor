@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3–5 Slide — What Nobody Warns You About Building</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #EFEFEF; font-family: 'Jost', sans-serif; padding: 40px 20px 80px; }
+
+.page-header { text-align: center; margin-bottom: 20px; }
+.page-header h1 { font-size: 13px; font-weight: 700; color: #138EFF; letter-spacing: 0.08em; text-transform: uppercase; }
+.page-header p { font-size: 11px; color: #6B7280; margin-top: 4px; }
+
+.slides { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+
+.slide-unit { display: flex; flex-direction: column; align-items: center; }
+.sn { font-size: 10px; color: #9CA3AF; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; margin-bottom: 4px; }
+
+.sw { width: 360px; position: relative; }
+.slide { width: 360px; height: 450px; position: relative; overflow: hidden; background: #FFFFFF; border-radius: 6px; box-shadow: 0 4px 24px rgba(0,0,0,0.12); }
+
+/* Bloggo watermark */
+.bm { position: absolute; bottom: 18px; left: 18px; font-family: 'Chewy', cursive; font-size: 18px; color: rgba(19,142,255,0.6); z-index: 10; }
+
+/* Cat paw */
+.pw { position: absolute; bottom: 8px; right: 10px; width: 36px; height: auto; z-index: 10; opacity: 0.9; }
+
+/* Accent bar — left content slides */
+.ab { position: absolute; left: 0; top: 0; bottom: 0; width: 8px; background: rgba(19,142,255,0.12); z-index: 1; }
+
+/* Right gradient */
+.rg { position: absolute; right: 0; top: 0; bottom: 0; width: 45%; background: linear-gradient(to right, transparent, rgba(19,142,255,0.05)); z-index: 0; }
+
+/* Dot pattern for slide 1 */
+.dp { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(circle, rgba(19,142,255,0.04) 1px, transparent 1px); background-size: 36px 36px; z-index: 0; }
+
+/* Gradient text — slide 2 */
+.grad { background: linear-gradient(135deg, #138EFF 0%, #3BBAFF 35%, #6DD5FA 65%, #59E0C5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; }
+
+/* Graphic note */
+.gfx-note { max-width: 360px; margin: 2px auto 0; padding: 8px 12px; background: rgba(19,142,255,0.05); border: 1px dashed rgba(19,142,255,0.25); border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 10px; color: #4a7fb5; line-height: 1.6; }
+.gfx-note b { color: #138EFF; font-weight: 700; }
+
+/* Production brief */
+.brief { max-width: 760px; margin: 40px auto 0; padding: 16px 20px; background: rgba(19,142,255,0.04); border: 1px solid rgba(19,142,255,0.15); border-radius: 8px; font-family: 'Jost', sans-serif; font-size: 11px; color: #6B7280; line-height: 1.8; }
+.brief h3 { font-size: 11px; font-weight: 700; color: #138EFF; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+.brief p { margin: 0 0 4px; }
+.brief strong { color: #1A1A1A; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Bloggo — 5-Slide Post · Founder Story</h1>
+  <p>Wednesday · Angle: Building in Public · @yoobinseo · Instagram 4:5 · 360×450px</p>
+</div>
+
+<div class="slides">
+
+  <!-- SLIDE 1 — HOOK -->
+  <div class="slide-unit">
+    <div class="sn">Slide 1 — Hook</div>
+    <div class="sw">
+      <div class="slide">
+        <div class="dp"></div>
+        <!-- Centered hook -->
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px;z-index:2;text-align:center;">
+          <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.3;margin-bottom:6px;">No one warned me</div>
+          <div style="font-family:'Chewy',cursive;font-size:44px;color:#1A1A1A;line-height:1.05;margin-bottom:4px;">what it feels like</div>
+          <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;">to build.</div>
+        </div>
+      </div>
+      <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky the black cat mascot bottom-left, seated small and still, looking out of frame with a quiet, uncertain expression — like waiting for something hard to begin. Higgsfield prompt: "Black cartoon cat Spunky seated lower-left, small and quiet, looking forward with cautious wide eyes, white background, soft minimal illustration, 4:5 portrait"</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 — TRANSITION -->
+  <div class="slide-unit">
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="sw">
+      <div class="slide">
+        <!-- Centered radial gradient bg -->
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center, rgba(19,142,255,0.05) 0%, transparent 70%);z-index:0;"></div>
+
+        <!-- Centered gradient text -->
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px;z-index:2;text-align:center;">
+          <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:700;line-height:1.25;">
+            <span class="grad">Here's what</span><br>
+            <span class="grad">actually</span><br>
+            <span class="grad">breaks you.</span>
+          </div>
+        </div>
+
+        <div class="bm">Bloggo</div>
+        <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 — CONTENT: Reality -->
+  <div class="slide-unit">
+    <div class="sn">Slide 3 — Content</div>
+    <div class="sw">
+      <div class="slide">
+        <div class="ab"></div>
+        <div class="rg"></div>
+
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding:40px 28px 50px 32px;z-index:2;">
+          <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;">REALITY</div>
+          <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:400;color:#1A1A1A;line-height:1.3;">
+            You fall <strong style="font-weight:700;">in love</strong><br>with the idea.
+          </div>
+          <div style="font-family:'Jost',sans-serif;font-size:16px;font-style:italic;color:#6B7280;line-height:1.5;margin-top:14px;">Then you break<br>under its weight.</div>
+        </div>
+
+        <div class="bm">Bloggo</div>
+        <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 — CONTENT: The Turn -->
+  <div class="slide-unit">
+    <div class="sn">Slide 4 — Content</div>
+    <div class="sw">
+      <div class="slide">
+        <div class="ab"></div>
+        <div class="rg"></div>
+
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding:40px 28px 50px 32px;z-index:2;">
+          <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;">THE TURN</div>
+          <div style="font-family:'Jost',sans-serif;font-size:28px;font-weight:400;color:#1A1A1A;line-height:1.3;">
+            Then you <strong style="font-weight:700;">ship it</strong><br>anyway.
+          </div>
+          <div style="font-family:'Jost',sans-serif;font-size:16px;font-style:italic;color:#6B7280;line-height:1.5;margin-top:14px;">And it changes<br>who you are.</div>
+        </div>
+
+        <div class="bm">Bloggo</div>
+        <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 — CTA (Chewy) -->
+  <div class="slide-unit">
+    <div class="sn">Slide 5 — CTA</div>
+    <div class="sw">
+      <div class="slide">
+        <!-- Centered layout -->
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px;text-align:center;">
+          <!-- Logo row -->
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+            <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+            <span style="font-family:'Chewy',cursive;font-size:48px;color:#138EFF;line-height:1;">Bloggo</span>
+          </div>
+          <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.15;margin-bottom:6px;">Follow the build.</div>
+          <div style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.15;margin-bottom:20px;">It's still happening.</div>
+          <div style="font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;">LINK IN BIO</div>
+        </div>
+      </div>
+      <div class="gfx-note"><b>Slide 5 — Graphic:</b> Spunky the black cat mascot bottom-left, one paw raised in a friendly wave, looking directly at the viewer with a warm open expression. Celebratory but calm energy. Higgsfield prompt: "Black cartoon cat Spunky bottom-left, one front paw raised in a wave, smiling softly, white background, minimal clean illustration, 4:5 portrait"</div>
+    </div>
+  </div>
+
+</div><!-- /slides -->
+
+<!-- BRIEF -->
+<div class="brief">
+  <h3>Production Brief</h3>
+  <p><strong>Format:</strong> 5-Slide Post · Wednesday Founder Angle · Personal Brand (@yoobinseo → YOOBIN Content Engine)</p>
+  <p><strong>Hook type:</strong> Relatable moment / Story</p>
+  <p><strong>Notion destination:</strong> notion-personal → YOOBIN Content Engine</p>
+  <p><strong>Caption:</strong> "Nobody warned me building would feel like this. Love it. Break under it. Ship it anyway. That's the whole job. 🐱 Follow for the real build. Beta in bio."</p>
+  <p><strong>Supporting Graphics:</strong> Slide 1 — Spunky seated quietly, bottom-left (see .gfx-note) · Slide 5 — Spunky waving bottom-left (see .gfx-note)</p>
+</div>
+
+</body>
+</html>
