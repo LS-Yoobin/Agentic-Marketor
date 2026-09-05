@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloggo — 3-Slide — They Train on Yours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f2f4f6;padding:30px;font-family:'Jost',sans-serif}
+h2{font-family:'Jost',sans-serif;font-size:12px;color:#666;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px}
+.sw{max-width:360px;margin:0 auto 28px}
+.sn{font-family:'Jost',sans-serif;font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+.slide{width:360px;height:450px;background:#ffffff;position:relative;overflow:hidden}
+/* Watermark & paw */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* Accent bar (left-aligned slides) */
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+/* Right gradient zone (content slides) */
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0}
+/* Centered inner */
+.ci{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px 70px;text-align:center;z-index:2}
+/* Left-aligned inner */
+.li{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:40px 36px 70px 52px;z-index:2}
+/* Gradient text (slide 2) */
+.grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* Slide label */
+.lbl{font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;line-height:1}
+.gfx-note{max-width:360px;margin:4px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:30px auto 0;padding:14px 18px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.8}
+.brief h3{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#138EFF;margin-bottom:8px;font-weight:700}
+</style>
+</head>
+<body>
+<h2>Bloggo — 3-Slide Post · September 5, 2026 · Privacy Differentiator</h2>
+
+<!-- SLIDE 1: HOOK (Chewy, centered, no paw, no logo) -->
+<div class="sw">
+  <div class="sn">Slide 1 of 4 — Hook</div>
+  <div class="slide" style="background:radial-gradient(circle at 50% 50%,rgba(19,142,255,0.04) 0%,transparent 70%);">
+    <div class="ci">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">They train AI</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;margin-top:6px;">on your</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#1A1A1A;line-height:0.9;">trips.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#9CA3AF;margin-top:14px;line-height:1.4;">Keep swiping.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat staring at a swirling vortex of photos floating away from a phone. Higgsfield prompt: "Cartoon black cat looking alarmed at photos floating away from an iPhone into a dark cloud server, white background, flat illustration, dramatic contrast between warm phone glow and cold cloud."</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION (Jost, gradient text, paw + logo) -->
+<div class="sw">
+  <div class="sn">Slide 2 of 4 — Transition</div>
+  <div class="slide">
+    <div class="ci">
+      <div class="grad" style="font-family:'Jost',sans-serif;font-weight:700;font-size:36px;line-height:1.2;text-align:center;">Most apps never<br>mention this.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: CONTENT (Jost, left-aligned, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 3 of 4 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="li">
+      <div class="lbl">The truth</div>
+      <div style="font-family:'Jost',sans-serif;font-size:38px;font-weight:400;color:#1A1A1A;line-height:1.2;">Your <b>photos</b><br>fuel their<br><b>model</b>.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:14px;line-height:1.4;">Bloggo's AI never<br>leaves your phone.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: CTA (Chewy, centered, app icon, no paw) -->
+<div class="sw">
+  <div class="sn">Slide 4 of 4 — CTA</div>
+  <div class="slide">
+    <div class="ci">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px;">
+        <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1;">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.1;">Privacy by</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.1;">design.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:14px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:18px;">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Black cat waving with a welcoming expression, small phone shield icon nearby. Higgsfield prompt: "Cute black cartoon cat waving both paws with happy expression, small blue shield icon beside it, white background, flat vector illustration, warm inviting mood."</div>
+</div>
+
+<div class="brief">
+  <h3>Carousel Brief — 3–4 Slide Post</h3>
+  <b>Angle:</b> Privacy Differentiator (Saturday rotation)<br>
+  <b>Hook:</b> "They train AI on your trips." (WTF/Fear)<br>
+  <b>Format:</b> Compressed — Hook → Transition → Content → CTA<br>
+  <b>Notion Destination:</b> <code>notion</code> → Bloggo Content Engine<br>
+  <b>Caption:</b> Most travel AI apps send your photos to their servers to train their next model. Bloggo is different — our AI runs entirely on your iPhone. Your memories stay exactly where they belong. Beta link in bio. #Bloggo #PrivacyFirst #TravelApp #iOS<br>
+  <b>Supporting Graphics:</b> Slide 1 — cat watching photos fly to server (see gfx-note) · Slide 4 — cat waving (see gfx-note)
+</div>
+</body>
+</html>
