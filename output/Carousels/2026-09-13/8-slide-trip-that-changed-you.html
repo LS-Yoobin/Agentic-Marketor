@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>8-Slide: The Trip That Changed You (Curiosity Hook)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f0f0f0;font-family:'Jost',sans-serif;padding:24px}
+
+.brief{max-width:360px;margin:0 auto 20px;padding:12px 14px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;font-size:11px;color:#333;line-height:1.7}
+.brief b{color:#138EFF}
+
+.sw{max-width:360px;margin:0 auto 28px}
+.sn{font-size:10px;color:#888;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase}
+
+/* Base slide */
+.slide{
+  position:relative;
+  width:360px;
+  height:450px;
+  background:#FFFFFF;
+  overflow:hidden;
+  border-radius:4px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  padding:28px 28px 60px;
+}
+
+/* Slide 1 dot bg */
+.dot-bg{position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(#138EFF 1px,transparent 1px);background-size:36px 36px;opacity:0.04;z-index:0}
+
+/* Gradient text (Slide 2) */
+.grad-text{
+  background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* Content slides (3–8) */
+.slide.left{
+  align-items:flex-start;
+  justify-content:center;
+  text-align:left;
+  padding:28px 24px 60px 36px;
+}
+.accent-bar{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+.right-glow{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0}
+.lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;position:relative;z-index:2;margin-bottom:10px}
+.body{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.3;position:relative;z-index:2}
+.sub{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:10px;position:relative;z-index:2;line-height:1.4}
+
+/* Centered radial bg for non-left centered slides */
+.radial-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:260px;height:260px;background:radial-gradient(ellipse,rgba(19,142,255,0.05),transparent 70%);z-index:0}
+
+/* Recurring */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+/* CTA */
+.cta-logo-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px;position:relative;z-index:2}
+.cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:12px;position:relative;z-index:2}
+
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <b>8-Slide Post A — Aspirational / Curiosity Hook (Sunday Angle)</b><br>
+  Hook type: Curiosity — "There's a trip that changed you."<br>
+  Destination: <b>notion</b> → Bloggo Content Engine<br>
+  Caption: "You remember how that trip felt. But 6 months later, the details fade. The restaurant name is gone. The street disappears. Your photos already hold the whole story — Bloggo just reads it for you. On your device. Privately. Beta link in bio."<br><br>
+  <b>Supporting Graphics:</b><br>
+  Slide 1 — Spunky watching a butterfly float away (memory fading). Higgsfield prompt below.<br>
+  Slide 9 — Spunky sitting next to a glowing journal/blog. Higgsfield prompt below.<br>
+  Slide 10 — Spunky waving (CTA energy). Higgsfield prompt below.<br>
+  Slides 2–8 — No mascot art needed.
+</div>
+
+<!-- SLIDE 1 — HOOK (Curiosity) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="dot-bg"></div>
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;">There's a trip</div>
+      <div style="font-family:'Chewy',cursive;font-size:60px;color:#1A1A1A;line-height:0.95;margin-top:6px;">that changed</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:2px;">you.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;margin-top:14px;line-height:1.4;">You never wrote it down.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat) standing small and still, watching a glowing butterfly float away — slight reach of one paw toward it. Memory fading visual. Higgsfield AI prompt: "A small stylized black cat standing quietly, one paw gently reaching toward a glowing blue butterfly floating upward, soft dreamy light, minimal illustration style, white background, bittersweet expression, 4:5 portrait."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION (gradient text, centered) -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div style="position:relative;z-index:2;">
+      <div class="grad-text" style="font-family:'Jost',sans-serif;font-weight:700;font-size:26px;line-height:1.4;">Your memory is<br>already fading.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — gradient text only.</div>
+</div>
+
+<!-- SLIDE 3 — CONTENT (left, accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide left">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="lbl">The Problem</div>
+    <div class="body">You took <strong>500 photos.</strong></div>
+    <div class="sub">You wrote zero words about them.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide left">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="lbl">6 Months Later</div>
+    <div class="body"><strong>Restaurant name?</strong><br>Gone.</div>
+    <div class="sub">The vibe? Still vivid. The details? Faded.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 5 — CONTENT (centered, radial bg — no accent bar per spec) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content (centered)</div>
+  <div class="slide">
+    <div class="radial-bg"></div>
+    <div style="position:relative;z-index:2;">
+      <div style="font-family:'Jost',sans-serif;font-size:24px;color:#1A1A1A;line-height:1.4;">A year later, the <strong>street</strong> disappears.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:12px;">The trip is real. The story is gone.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide left">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="lbl">The Shift</div>
+    <div class="body">Your photos <strong>already hold</strong><br>the story.</div>
+    <div class="sub">You just can't read it yet.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 6 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 7 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide left">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="lbl">How It Works</div>
+    <div class="body"><strong>GPS + timestamp</strong><br>= your trip, organized.</div>
+    <div class="sub">Every photo already knows where and when.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 7 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 8 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide left">
+    <div class="accent-bar"></div>
+    <div class="right-glow"></div>
+    <div class="lbl">Bloggo</div>
+    <div class="body">Reads what your<br><strong>camera already</strong><br>captured.</div>
+    <div class="sub">On your device. Photos never leave.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT (save-worthy, centered two-tier) -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide">
+    <div class="radial-bg"></div>
+    <div style="position:relative;z-index:2;text-align:center;">
+      <div style="font-family:'Jost',sans-serif;font-size:22px;color:#6B7280;line-height:1.4;">The story was always there.</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:34px;color:#1A1A1A;line-height:1.2;margin-top:6px;">Bloggo<br>finds it.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting beside a glowing open journal/blog, warm expression, paw resting on page. Higgsfield AI prompt: "A calm stylized black cat sitting next to a glowing open book or blog, one paw resting gently on the page, warm soft light, minimal illustration style, white background, peaceful and proud expression, 4:5 portrait."</div>
+</div>
+
+<!-- SLIDE 10 — CTA (Chewy, logo row) -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide">
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;">
+      <div class="cta-logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <div style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:32px;color:#1A1A1A;line-height:1.2;">Your trips,</div>
+      <div style="font-family:'Chewy',cursive;font-size:32px;color:#138EFF;line-height:1.2;margin-top:4px;">turned into stories.</div>
+      <div class="cta-link">Beta in bio</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky waving excitedly, welcoming body language, bottom-left. Higgsfield AI prompt: "A cheerful stylized black cat waving with one paw raised high, big excited expression, minimal illustration style, white background, warm friendly energy, 4:5 portrait, placed bottom-left of frame."</div>
+</div>
+
+</body>
+</html>
