@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-Slide — Clock Ticking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  body{background:#F3F4F6;font-family:'Jost',sans-serif;padding:24px;margin:0}
+  .brief{max-width:360px;margin:0 auto 24px;background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;font-size:11px;color:#374151;line-height:1.8}
+  .brief b{color:#138EFF}
+  .sw{max-width:360px;margin:0 auto 32px}
+  .sn{font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+  .slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.10)}
+  .gfx-note{max-width:360px;margin:4px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  .slide-center{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 28px;text-align:center}
+  .slide-left{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding:36px 36px 64px 32px}
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none;z-index:0}
+  .lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:10px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;position:relative;z-index:2}
+  .bdy{font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+  .bdy b{font-weight:700}
+  .sub{font-family:'Jost',sans-serif;font-size:14px;color:#6B7280;font-style:italic;margin-top:12px;line-height:1.4;position:relative;z-index:2}
+  .grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:22px;line-height:1.35;text-align:center}
+  .ins-top{font-family:'Jost',sans-serif;font-size:16px;color:#6B7280;line-height:1.4;text-align:center;position:relative;z-index:2}
+  .ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:26px;color:#1A1A1A;line-height:1.25;text-align:center;margin-top:8px;position:relative;z-index:2}
+  .bm{position:absolute;bottom:16px;left:16px;font-family:'Chewy',cursive;font-size:17px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+  .logo-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .cta-head{font-family:'Chewy',cursive;font-size:30px;color:#1A1A1A;line-height:1.1}
+  .cta-accent{font-family:'Chewy',cursive;font-size:30px;color:#138EFF;line-height:1.1}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:3px;margin-top:16px}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <b>Carousel Brief — Monday Pain Point</b><br>
+  Type: 8-slide (10 slides) · Angle: Pain point — memories fading over time<br>
+  Hook Type: Story / Curiosity (timeline format) · Notion: <b>notion</b> → Bloggo Content Engine<br>
+  Caption note: "This is your camera roll on a timeline. Recover your trips before it's too late."<br><br>
+  <b>Supporting Graphics:</b><br>
+  Slide 1 — Cat surrounded by floating question marks, curious expression<br>
+  Slide 9 (Insight) — Cat sitting beside a glowing journal<br>
+  Slide 10 (CTA) — Cat waving excitedly, bottom-left
+</div>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="slide-center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;">Every day,</div>
+      <div style="font-family:'Chewy',cursive;font-size:54px;color:#1A1A1A;line-height:0.95;margin-top:6px;">your trip</div>
+      <div style="font-family:'Chewy',cursive;font-size:62px;color:#138EFF;line-height:0.9;margin-top:2px;">memories fade.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot surrounded by softly dissolving photos floating around it, curious and slightly worried expression. Minimal white background. Higgsfield AI prompt: "A small cute black cat sitting surrounded by small faded polaroid photos slowly floating away, curious and slightly worried expression, minimalist white background, gentle dreamy light, product mascot illustration"</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="slide-center">
+      <div class="grad">Here's what's actually<br>happening to your <b>photos</b>.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — gradient text only.</div>
+</div>
+
+<!-- SLIDE 3 — CONTENT: WEEK 1 -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="slide-left">
+      <div class="lbl">Week 1</div>
+      <div class="bdy">You swear you'll write it<br>this <b>weekend</b>.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 4 — CONTENT: MONTH 1 -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="slide-left">
+      <div class="lbl">Month 1</div>
+      <div class="bdy">The folder is <b>still</b><br>sitting there.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 5 — CONTENT: MONTH 3 -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="slide-left">
+      <div class="lbl">Month 3</div>
+      <div class="bdy">You can't remember<br>half the <b>restaurant names</b>.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 6 — CONTENT: MONTH 6 -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="slide-left">
+      <div class="lbl">Month 6</div>
+      <div class="bdy">The photos feel like<br><b>someone else's</b> life.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 6 — Graphic:</b> Cat staring at a phone screen with a faded, ghosted photo, slightly disconnected expression. Higgsfield AI prompt: "A small cute black cat staring at a phone screen showing a faded, ghostly photo, looking slightly confused and disconnected, minimalist white background, melancholic atmosphere, product mascot illustration"</div>
+</div>
+
+<!-- SLIDE 7 — CONTENT: THE FIX -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="slide-left">
+      <div class="lbl">The fix</div>
+      <div class="bdy">Bloggo writes the blog<br>while you <b>still remember</b>.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 7 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 8 — CONTENT: HOW -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="slide-left">
+      <div class="lbl">How it works</div>
+      <div class="bdy">Photos in.<br><b>Story out.</b><br>In 60 seconds.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide">
+    <div class="slide-center">
+      <div class="ins-top">Your photos remember everything.</div>
+      <div class="ins-bot">You just haven't read them yet.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat sitting next to a glowing open journal, one paw resting on the page, content and calm. Higgsfield AI prompt: "A small cute black cat sitting peacefully beside a softly glowing open travel journal, one paw resting on the open page, warm golden candlelight, minimalist white background, cozy atmosphere, product mascot illustration"</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide">
+    <div class="slide-center">
+      <div class="logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <span style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;">Bloggo</span>
+      </div>
+      <div class="cta-head">Recover your trips.</div>
+      <div class="cta-accent">Beta in bio!</div>
+      <div class="cta-link">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Black cat mascot waving with both paws raised, joyful and welcoming, positioned bottom-left. Higgsfield AI prompt: "A small cute black cat waving both paws raised high, joyful and welcoming expression, bright clean white background, energetic mood, product mascot illustration"</div>
+</div>
+
+</body>
+</html>

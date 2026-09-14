@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Slide — Camera Roll Guilt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  body{background:#F3F4F6;font-family:'Jost',sans-serif;padding:24px;margin:0}
+  .brief{max-width:360px;margin:0 auto 24px;background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;font-size:11px;color:#374151;line-height:1.8}
+  .brief b{color:#138EFF}
+  .sw{max-width:360px;margin:0 auto 32px}
+  .sn{font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+  .slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.10)}
+  .gfx-note{max-width:360px;margin:4px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  /* slide-center: slides 1, 2, 9, 10 */
+  .slide-center{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 28px;text-align:center}
+  /* slide-left: slides 3-8 */
+  .slide-left{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding:36px 36px 64px 32px}
+  /* accent bar */
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+  /* right gradient */
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none;z-index:0}
+  /* label */
+  .lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:10px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;position:relative;z-index:2}
+  /* body text */
+  .bdy{font-family:'Jost',sans-serif;font-size:22px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+  .bdy b{font-weight:700}
+  /* italic sub */
+  .sub{font-family:'Jost',sans-serif;font-size:14px;color:#6B7280;font-style:italic;margin-top:12px;line-height:1.4;position:relative;z-index:2}
+  /* gradient text (slide 2) */
+  .grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:22px;line-height:1.35;text-align:center}
+  /* watermark + paw */
+  .bm{position:absolute;bottom:16px;left:16px;font-family:'Chewy',cursive;font-size:17px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+  /* CTA slide */
+  .logo-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .cta-head{font-family:'Chewy',cursive;font-size:32px;color:#1A1A1A;line-height:1.1}
+  .cta-accent{font-family:'Chewy',cursive;font-size:32px;color:#138EFF;line-height:1.1}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:3px;margin-top:16px}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <b>Carousel Brief — Monday Pain Point</b><br>
+  Type: 3-slide post · Angle: Pain point — camera roll guilt<br>
+  Hook Type: Curiosity → Resolution · Notion: <b>notion</b> → Bloggo Content Engine<br>
+  Caption note: "How many trips are sitting in your camera roll right now?"<br><br>
+  <b>Supporting Graphics:</b><br>
+  Slide 1 — Cat sitting quietly beside an untouched phone, looking at it with guilt<br>
+  Slide 3 — None (text only)
+</div>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="slide-center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Why do you still feel</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:0.95;margin-top:6px;">guilty about</div>
+      <div style="font-family:'Chewy',cursive;font-size:58px;color:#138EFF;line-height:0.9;margin-top:2px;">that trip?</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot sitting very small and still, staring at a closed phone on a table, guilty expression, soft natural light, minimal white background. Higgsfield AI prompt: "A small cute black cat sitting beside a face-down smartphone on a white table, looking at it with a guilty expression, soft daylight, minimalist studio background, product mascot illustration"</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="slide-center">
+      <div class="grad">Because the photos are sitting<br>there, <b>unloved</b>.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — gradient text only.</div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="slide-left">
+      <div class="lbl">The fix</div>
+      <div class="bdy">Bloggo turns that <b>guilt</b><br>into a <b>story</b>.</div>
+      <div class="sub">Automatically. No writing required.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 4 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 4 — CTA</div>
+  <div class="slide">
+    <div class="slide-center">
+      <div class="logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <span style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;">Bloggo</span>
+      </div>
+      <div class="cta-head">Tap to Blog.</div>
+      <div class="cta-accent">Beta in bio.</div>
+      <div class="cta-link">LINK IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Black cat mascot waving excitedly, welcoming body language, positioned bottom-left. Higgsfield AI prompt: "A small cute black cat waving cheerfully with one paw raised, excited expression, clean white background, minimal illustration style, product mascot"</div>
+</div>
+
+</body>
+</html>
