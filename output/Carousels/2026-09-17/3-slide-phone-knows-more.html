@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4-slide — phone-knows-more</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F0F4F8;padding:24px;font-family:'Jost',sans-serif}
+h1{font-size:14px;font-weight:700;color:#1A1A1A;margin-bottom:4px}
+.meta{font-size:11px;color:#6B7280;margin-bottom:20px}
+
+.sw{margin-bottom:28px}
+.sn{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;max-width:360px;margin-left:auto;margin-right:auto}
+
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;margin:0 auto;border-radius:4px;box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+
+/* Watermark + paw (slides 2–9) */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+/* Accent bar (left-aligned content slides) */
+.ab{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12);z-index:1}
+
+/* Gradient text (slide 2 only) */
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+.gfx-note{max-width:360px;margin:4px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+
+.brief{max-width:360px;margin:24px auto 0;padding:12px 16px;background:#fff;border:1px solid #E5E7EB;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#374151;line-height:1.7}
+.brief h2{font-size:11px;font-weight:700;color:#138EFF;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px}
+</style>
+</head>
+<body>
+
+<h1>3-slide-phone-knows-more.html (4 slides)</h1>
+<div class="meta">Date: 2026-09-17 · Hook: WTF / Relatable · Notion: notion → Bloggo Content Engine</div>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px 28px 40px;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4">your phone knows</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.05;margin-top:6px">more about</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;margin-top:4px">your trip</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:10px">than you do.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky cat holding a glowing phone, surrounded by small GPS pins and clock icons floating around her, curious/surprised expression. Higgsfield prompt: "Cute black cartoon cat holding a smartphone with floating location pins and timestamps around it, wide curious eyes, playful illustration style, white background."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px 28px;text-align:center">
+      <div class="gt" style="font-family:'Jost',sans-serif;font-weight:700;font-size:30px;line-height:1.2">your photos saved<br><strong>every detail.</strong></div>
+      <div style="font-family:'Jost',sans-serif;font-size:15px;color:#6B7280;font-style:italic;margin-top:16px">your brain didn't.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <!-- Right-side subtle gradient -->
+    <div style="position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to left,rgba(19,142,255,0.04),transparent);z-index:0"></div>
+
+    <div style="position:relative;z-index:2;padding:40px 28px 56px 28px;display:flex;flex-direction:column;justify-content:center;height:100%">
+      <div style="font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">the truth</div>
+      <div style="font-family:'Jost',sans-serif;font-size:28px;color:#1A1A1A;line-height:1.3">GPS logged every<br><strong>street you walked.</strong></div>
+      <div style="font-family:'Jost',sans-serif;font-size:28px;color:#1A1A1A;line-height:1.3;margin-top:10px">Timestamps logged<br><strong>every moment.</strong></div>
+      <div style="font-family:'Jost',sans-serif;font-size:16px;color:#6B7280;font-style:italic;margin-top:14px">Your story was always there.</div>
+    </div>
+
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 4 — Insight + CTA</div>
+  <div class="slide">
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px 28px;text-align:center">
+      <!-- App icon + name row -->
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:14px">
+        <div style="font-family:'Chewy',cursive;font-size:46px;color:#138EFF;line-height:1">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.15">reads your camera roll.</div>
+      <div style="font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.15;margin-top:6px">writes the story.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:12px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:22px">LINK IN BIO</div>
+    </div>
+  </div>
+</div>
+
+<div class="brief">
+  <h2>Content Brief</h2>
+  <strong>Hook:</strong> "Your phone knows more about your trip than you do."<br>
+  <strong>Angle:</strong> WTF / Relatable — flip the frame: your phone as the better memory keeper<br>
+  <strong>Slides:</strong> Hook (WTF) → Transition (truth) → Content (GPS + timestamps) → CTA (Bloggo reads it)<br>
+  <strong>Notion:</strong> notion → Bloggo Content Engine<br>
+  <strong>Caption direction:</strong> "Your camera roll has GPS. Timestamps. Every location. Your brain has none of that anymore. Bloggo turns what your phone already saved into the story you never wrote. Beta → link in bio."<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — Spunky holding phone with GPS pins floating around her
+</div>
+
+</body>
+</html>
