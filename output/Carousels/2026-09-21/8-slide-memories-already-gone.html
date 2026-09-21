@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10-Slide — Memories Already Gone (Fear/WTF)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f0f0f0;font-family:'Jost',sans-serif;padding:24px}
+  h1{font-family:'Jost',sans-serif;font-size:14px;color:#555;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
+
+  .sw{max-width:360px;margin:0 auto 32px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+
+  /* Slide canvas */
+  .slide{
+    position:relative;width:360px;height:450px;
+    background:#FFFFFF;overflow:hidden;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    padding:48px 36px 60px
+  }
+
+  /* Recurring elements */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* Background textures */
+  .bg-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0}
+  .bg-right{position:absolute;top:0;right:0;width:45%;bottom:0;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0}
+  .bg-center{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(19,142,255,0.05),transparent 70%);z-index:0}
+
+  /* Accent bar for left-aligned slides */
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+
+  /* Left-aligned content */
+  .slide-content{width:100%;text-align:left;position:relative;z-index:2;padding-left:24px}
+  .label{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+  .body-text{font-family:'Jost',sans-serif;font-size:28px;font-weight:400;color:#1A1A1A;line-height:1.35}
+  .body-text b{font-weight:700}
+  .sub{font-family:'Jost',sans-serif;font-size:15px;font-style:italic;color:#6B7280;margin-top:10px;line-height:1.4}
+
+  /* Gradient text (slide 2 only) */
+  .gt{
+    font-family:'Jost',sans-serif;font-weight:700;font-size:28px;line-height:1.35;text-align:center;
+    background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text
+  }
+
+  /* Insight slide (slide 9) */
+  .insight-slide{
+    position:relative;width:360px;height:450px;
+    background:#FFFFFF;overflow:hidden;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    text-align:center;padding:40px 36px 60px
+  }
+  .insight-top{font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;line-height:1.5}
+  .insight-bottom{font-family:'Jost',sans-serif;font-weight:700;font-size:28px;color:#1A1A1A;line-height:1.25;margin-top:12px}
+
+  /* CTA slide */
+  .cta-slide{
+    position:relative;width:360px;height:450px;
+    background:#FFFFFF;overflow:hidden;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    text-align:center;padding:40px 28px
+  }
+  .logo-row{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+  .cta-h{font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.2}
+  .cta-accent{font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1.2;margin-top:4px}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:14px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:16px}
+
+  /* Graphics note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  .brief{max-width:360px;margin:0 auto 16px;padding:14px 16px;background:#f7f9ff;border:1px solid #dde8ff;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#333;line-height:1.7}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+<h1>10-Slide · Memories Already Gone · Fear/WTF Hook · 2026-09-21</h1>
+
+<div class="brief">
+  <b>Type:</b> 10-Slide Post<br>
+  <b>Hook type:</b> Fear / WTF<br>
+  <b>Angle:</b> Monday — Pain point / photo backlog guilt<br>
+  <b>Notion destination:</b> notion → Bloggo Content Engine<br>
+  <b>Caption idea:</b> The trip happened. The photos exist. The story is already gone. Bloggo writes your travel story before your memory does the forgetting. Link in bio. #travelblog #travelmemories #bloggo #aitravel<br>
+  <b>Supporting Graphics:</b> Slide 1 — Cat staring at overflowing camera roll; Slide 9 — Cat next to glowing journal
+</div>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook (Fear)</div>
+  <div class="slide">
+    <div class="bg-dots"></div>
+    <div style="position:relative;z-index:2;text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Every unsaved memory</div>
+      <div style="font-family:'Chewy',cursive;font-size:68px;color:#138EFF;line-height:0.9;margin-top:4px;">is already</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.0;margin-top:2px;">gone.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat staring at an overflowing phone screen showing hundreds of unsorted photo thumbnails, expression of quiet dread. Higgsfield prompt: "Cute black cartoon cat staring at a phone screen overflowing with thousands of tiny photo thumbnails, overwhelmed but quiet expression, moody blue-white lighting, clean white background, editorial illustration style."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div class="bg-center"></div>
+    <div style="position:relative;z-index:2;text-align:center;padding:0 10px">
+      <div class="gt">You just don't<br>know it yet.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="bg-right"></div>
+    <div class="slide-content">
+      <div class="label">The Reality</div>
+      <div class="body-text">You took <b>500 photos</b><br>last trip.</div>
+      <div class="sub">Every single one still sitting in your camera roll.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="bg-right"></div>
+    <div class="slide-content">
+      <div class="label">Also The Reality</div>
+      <div class="body-text">You wrote <b>zero words</b><br>about any of them.</div>
+      <div class="sub">Not because you're lazy. Because starting is hard.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="bg-right"></div>
+    <div class="slide-content">
+      <div class="label">6 Months Later</div>
+      <div class="body-text">The street name?<br><b>You can't recall it.</b></div>
+      <div class="sub">The map shows where you went. Not what it felt like.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="bg-right"></div>
+    <div class="slide-content">
+      <div class="label">1 Year Later</div>
+      <div class="body-text">The view from that<br><b>cliff? Blurry now.</b></div>
+      <div class="sub">Photos without context are just pixels.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="bg-right"></div>
+    <div class="slide-content">
+      <div class="label">5 Years Later</div>
+      <div class="body-text">The whole trip<br><b>feels like a dream.</b></div>
+      <div class="sub">You were really there. You just can't prove it to yourself.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="bg-right"></div>
+    <div class="slide-content">
+      <div class="label">The Truth</div>
+      <div class="body-text">The photos stayed.<br><b>The story didn't.</b></div>
+      <div class="sub">Your camera roll saved the evidence. Nothing saved the meaning.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight (Save-Bait)</div>
+  <div class="insight-slide">
+    <div class="bg-center"></div>
+    <div style="position:relative;z-index:2">
+      <div class="insight-top">Your camera roll is already<br>a travel journal.</div>
+      <div class="insight-bottom">Bloggo just learns<br>how to read it.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat sitting next to a softly glowing open journal, paw resting on page, warm and calm expression. Higgsfield prompt: "Cute black cartoon cat sitting beside a glowing open travel journal, one paw gently resting on the page, soft warm editorial light, white background, serene and peaceful mood, illustration style."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="cta-slide">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF">Bloggo</span>
+    </div>
+    <div class="cta-h">Blog your trips</div>
+    <div class="cta-accent">before they disappear.</div>
+    <div class="cta-link">LINK IN BIO</div>
+  </div>
+</div>
+
+</body>
+</html>
