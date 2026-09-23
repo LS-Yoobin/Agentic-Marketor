@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>10-Slide: I almost shut Bloggo down.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:14px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(19,142,255,0.1);color:#138EFF}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+/* centered layout */
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px;text-align:center;height:100%;position:relative}
+/* left-aligned layout */
+.la{display:flex;flex-direction:column;justify-content:center;padding:40px 36px 40px 44px;height:100%;position:relative}
+.acc{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.06) 1.5px,transparent 1.5px);background-size:28px 28px;pointer-events:none;z-index:0}
+.crad{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(19,142,255,0.05) 0%,transparent 70%);pointer-events:none}
+.lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;position:relative;z-index:2}
+.body{font-family:'Jost',sans-serif;font-weight:400;font-size:27px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+.body b{font-weight:700}
+.sub2{font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:10px;line-height:1.4;position:relative;z-index:2}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* gradient text for slide 2 */
+.grd{font-family:'Jost',sans-serif;font-weight:700;font-size:30px;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.3;position:relative;z-index:2}
+/* insight slide typography */
+.ins-top{font-family:'Jost',sans-serif;font-weight:400;font-size:24px;color:#6B7280;line-height:1.4;margin-bottom:10px;position:relative;z-index:2}
+.ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:36px;color:#1A1A1A;line-height:1.2;position:relative;z-index:2}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head><body>
+<div style="text-align:center;margin:0 0 16px;">
+  <button onclick="saveAllSlides()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3);">Save All Slides</button>
+</div>
+<div class="meta">
+  <h1>I almost shut Bloggo down.</h1>
+  <div class="sub">Wednesday — Founder Story · 2026-09-23</div>
+  <div class="fmt">10-Slide Authority Builder · Personal Brand</div>
+</div>
+<div class="carousel">
+
+  <!-- SLIDE 1: HOOK (Story hook) -->
+  <div class="sw">
+    <div class="sn">Slide 1 — Hook</div>
+    <div class="slide" id="s1">
+      <div class="dot"></div>
+      <div class="c">
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;position:relative;z-index:2;">I almost</div>
+        <div style="font-family:'Chewy',cursive;font-size:64px;color:#1A1A1A;line-height:1.0;margin-top:4px;position:relative;z-index:2;">shut it</div>
+        <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.95;position:relative;z-index:2;">down.</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Cat staring at a glowing phone screen showing an app icon, one paw on a power button, conflicted expression. Higgsfield prompt: "Black cartoon cat mascot looking at glowing phone screen with an app icon displayed, one paw hovering over a power off button, conflicted and sad expression, clean white background, minimal illustration style"</div>
+  </div>
+
+  <!-- SLIDE 2: TRANSITION -->
+  <div class="sw">
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="slide" id="s2">
+      <div class="c">
+        <div class="grd">Here's the moment<br>that pulled me back.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 3: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 3 — Content</div>
+    <div class="slide" id="s3">
+      <div class="acc"></div>
+      <div class="rg"></div>
+      <div class="la">
+        <div class="lbl">THE REJECTION</div>
+        <div class="body">The App Store rejected Bloggo.<br><b>Twice.</b></div>
+        <div class="sub2">Different reasons each time.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 4: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 4 — Content</div>
+    <div class="slide" id="s4">
+      <div class="acc"></div>
+      <div class="rg"></div>
+      <div class="la">
+        <div class="lbl">THE DELAY</div>
+        <div class="body">The launch slipped.<br><b>By six months.</b></div>
+        <div class="sub2">The roadmap became a suggestion.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 5: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 5 — Content</div>
+    <div class="slide" id="s5">
+      <div class="acc"></div>
+      <div class="rg"></div>
+      <div class="la">
+        <div class="lbl">THE SPIRAL</div>
+        <div class="body">I had 200 trip photos.<br><b>Zero words written</b> about any of them.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 6: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 6 — Content</div>
+    <div class="slide" id="s6">
+      <div class="acc"></div>
+      <div class="rg"></div>
+      <div class="la">
+        <div class="lbl">THE SHIFT</div>
+        <div class="body">I opened my own app.<br>The story <b>wrote itself.</b></div>
+        <div class="sub2">In under 60 seconds.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 7: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 7 — Content</div>
+    <div class="slide" id="s7">
+      <div class="acc"></div>
+      <div class="rg"></div>
+      <div class="la">
+        <div class="lbl">THE REMINDER</div>
+        <div class="body">I remembered <b>why I built it.</b><br>Not for users. For me, first.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 8: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 8 — Content</div>
+    <div class="slide" id="s8">
+      <div class="acc"></div>
+      <div class="rg"></div>
+      <div class="la">
+        <div class="lbl">THE LESSON</div>
+        <div class="body">Build what you'd <b>miss</b><br>if it didn't exist.</div>
+        <div class="sub2">That's your signal to keep going.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+  </div>
+
+  <!-- SLIDE 9: INSIGHT / SAVE-BAIT -->
+  <div class="sw">
+    <div class="sn">Slide 9 — Insight</div>
+    <div class="slide" id="s9">
+      <div class="crad"></div>
+      <div class="c">
+        <div class="ins-top">The best products are built</div>
+        <div class="ins-bot">by people who need them.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 9 — Graphic:</b> Cat sitting next to a glowing open journal, one paw resting gently on the page, peaceful expression. Higgsfield prompt: "Black cartoon cat mascot sitting beside a glowing open journal, one paw resting on the page, calm and content expression, soft warm light, clean white background, minimal illustration style"</div>
+  </div>
+
+  <!-- SLIDE 10: CTA -->
+  <div class="sw">
+    <div class="sn">Slide 10 — CTA</div>
+    <div class="slide" id="s10">
+      <div class="c">
+        <div style="display:flex;align-items:center;gap:14px;justify-content:center;margin-bottom:22px;">
+          <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+          <div style="font-family:'Chewy',cursive;font-size:48px;color:#138EFF;line-height:1;">Bloggo</div>
+        </div>
+        <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.1;">Follow the</div>
+        <div style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.0;">journey.</div>
+        <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:16px;">LINK IN BIO</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 10 — Graphic:</b> Cat waving enthusiastically with open arms, welcoming body language, big smile. Higgsfield prompt: "Black cartoon cat mascot waving both paws enthusiastically in a welcoming gesture, big smile, bright energy, clean white background, minimal illustration style"</div>
+  </div>
+
+  <div class="brief">
+    <strong>Content Brief</strong><br>
+    Format: 10-Slide Authority Builder<br>
+    Angle: Founder story — vulnerability, almost quitting, rediscovering purpose<br>
+    Hook Type: Story<br>
+    Notion: <strong>notion-personal → YOOBIN Content Engine</strong><br>
+    Caption: "I almost deleted the app, fired the roadmap, and walked away from Bloggo. Here's the exact moment I didn't →"<br>
+    Supporting Graphics: Slide 1 — cat at power button (gfx-note), Slide 9 — cat with glowing journal (gfx-note), Slide 10 — cat waving (gfx-note)
+  </div>
+
+</div>
+<script>
+async function saveAllSlides(){
+  const zip=new JSZip();
+  const slides=document.querySelectorAll('.slide');
+  for(let i=0;i<slides.length;i++){
+    const canvas=await html2canvas(slides[i],{scale:3,useCORS:true,allowTaint:true,backgroundColor:'#ffffff'});
+    const data=canvas.toDataURL('image/png').split(',')[1];
+    zip.file('slide-'+(i+1)+'.png',data,{base64:true});
+  }
+  const blob=await zip.generateAsync({type:'blob'});
+  saveAs(blob,'8-slide-almost-quit.zip');
+}
+</script>
+</body></html>
