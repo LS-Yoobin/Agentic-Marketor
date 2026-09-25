@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-Slide — Blogging Isn't Dead. Writing Is.</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#E8E8E8;display:flex;flex-direction:column;align-items:center;padding:24px;font-family:'Jost',sans-serif}
+  .sw{display:flex;flex-direction:column;align-items:center;margin-bottom:28px;width:360px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;text-align:center}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+  .s-hook{align-items:center;text-align:center;padding:44px 32px}
+  .s-trans{align-items:center;text-align:center;padding:44px 32px}
+  .s-content{align-items:flex-start;text-align:left;padding:40px 32px 40px 44px}
+  .s-pivot{align-items:center;text-align:center;padding:44px 32px}
+  .s-insight{align-items:center;text-align:center;padding:44px 32px}
+  .s-cta{align-items:center;text-align:center;padding:40px 32px}
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+  .dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
+  .crad{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(19,142,255,0.05),transparent 70%);pointer-events:none}
+  .gt{font-family:'Jost',sans-serif;font-weight:700;font-size:22px;line-height:1.45;background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .bm{position:absolute;bottom:16px;left:16px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+  .lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;position:relative;z-index:2}
+  .body{font-family:'Jost',sans-serif;font-weight:400;font-size:22px;color:#1A1A1A;line-height:1.4;position:relative;z-index:2}
+  .body b{font-weight:700}
+  .sub{font-family:'Jost',sans-serif;font-style:italic;font-size:14px;color:#6B7280;margin-top:10px;line-height:1.4;position:relative;z-index:2}
+  .ins-top{font-family:'Jost',sans-serif;font-weight:400;font-size:20px;color:#6B7280;line-height:1.35}
+  .ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:28px;color:#1A1A1A;line-height:1.2;margin-top:10px}
+  .logo-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;justify-content:center}
+  .cta-h{font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.2;margin-bottom:4px}
+  .cta-acc{font-family:'Chewy',cursive;font-size:34px;color:#138EFF;line-height:1.2}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:16px}
+  .pivot-big{font-family:'Chewy',cursive;font-size:56px;color:#138EFF;line-height:0.95}
+  .pivot-sub{font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:12px;line-height:1.4}
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  .brief{max-width:360px;margin:16px auto 0;padding:10px 14px;background:#f8f9fa;border:1px solid #e0e0e0;border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#555;line-height:1.7}
+  .brief b{color:#1A1A1A;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK (WTF) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook · WTF</div>
+  <div class="slide s-hook">
+    <div class="dots"></div>
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;">Blogging isn't dead.</div>
+    <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;margin-top:8px;">Writing</div>
+    <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.0;margin-top:4px;">is.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky standing next to a gravestone shaped like a pen or pencil, looking solemn but with a knowing glint. Higgsfield prompt: "A sleek black cat standing solemnly next to a small gravestone shaped like a fountain pen, slight knowing expression, clean white background, soft cinematic light, editorial style."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide s-trans">
+    <div class="crad"></div>
+    <div class="gt">Here's what's <b>actually</b> killing<br>your travel memories.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT (left + accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide s-content">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">The ritual</div>
+    <div class="body">You took <b>400 photos</b> on that trip.</div>
+    <div class="sub">Every restaurant. Every sunset. Every weird street sign.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT (left + accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide s-content">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">The truth</div>
+    <div class="body">You wrote <b>zero words</b> about any of them.</div>
+    <div class="sub">The blank page opens. You close it. "I'll do it later."</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Spunky staring at an empty notebook page with a slightly guilty, defeated look. Higgsfield prompt: "A black cat sitting in front of an open blank notebook with a guilty, defeated expression, soft warm cinematic light, clean white background, editorial style."</div>
+</div>
+
+<!-- SLIDE 5 — PIVOT (centered, no accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Pivot</div>
+  <div class="slide s-pivot">
+    <div class="crad"></div>
+    <div class="pivot-big">6 months</div>
+    <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.1;margin-top:4px;">later.</div>
+    <div class="pivot-sub">You can't name the restaurant. Or the street. Or the hotel.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT (left + accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide s-content">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">The insight</div>
+    <div class="body">Your photos have <b>time</b> and <b>place</b> already inside them.</div>
+    <div class="sub">GPS. Timestamps. Every shot tagged, just waiting.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT (left + accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide s-content">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">The mechanism</div>
+    <div class="body">GPS + timestamp = a <b>complete</b> timeline.</div>
+    <div class="sub">Every stop. Every day. In order. Already there.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT (left + accent bar) -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide s-content">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="lbl">The fix</div>
+    <div class="body">Bloggo <b>reads</b> it. In seconds.</div>
+    <div class="sub">Narratives, captions, places — written automatically, on your device.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT (centered, save-bait) -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight · Save-Bait</div>
+  <div class="slide s-insight">
+    <div class="crad"></div>
+    <div class="ins-top">The story was written</div>
+    <div class="ins-bot">the moment you pressed shutter.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky sitting next to a glowing open journal or book, soft light emanating from the pages, content and peaceful expression. Higgsfield prompt: "A black cat sitting peacefully beside a glowing open book with light radiating from its pages, serene expression, soft warm light, clean white background, editorial photography."</div>
+</div>
+
+<!-- SLIDE 10 — CTA (Chewy, no paw) -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide s-cta">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <span style="font-family:'Chewy',cursive;font-size:46px;color:#138EFF;line-height:1;">Bloggo</span>
+    </div>
+    <div class="cta-h">Your trip. Already told.</div>
+    <div class="cta-acc">Start for free.</div>
+    <div class="cta-link">LINK IN BIO</div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky waving excitedly from the bottom-left corner. Higgsfield prompt: "A black cat waving one paw enthusiastically, big welcoming smile, clean white background, editorial style, warm cinematic light."</div>
+</div>
+
+<div class="brief">
+  <b>Carousel Brief — 10-Slide · Friday WTF Hook A</b><br>
+  Angle: Blogging isn't dead — writing is. Your photos already wrote the blog.<br>
+  Hook type: WTF / Counterintuitive<br>
+  Notion destination: <b>notion → Bloggo Content Engine</b><br><br>
+  <b>Supporting Graphics:</b><br>
+  • Slide 1: Spunky with pen gravestone (see gfx-note)<br>
+  • Slide 4: Spunky staring at blank notebook (see gfx-note)<br>
+  • Slide 9: Spunky beside glowing book (see gfx-note)<br>
+  • Slide 10: Spunky waving (see gfx-note)
+</div>
+
+</body>
+</html>
