@@ -1,0 +1,15 @@
+{
+  "simulation_start": "2026-09-26",
+  "last_updated": "2026-09-26",
+  "day": 1,
+  "starting_capital": 10000,
+  "current_total": 10255,
+  "positions": {
+    "META": { "entry_price": 744.00, "shares": 4.48, "cost_basis": 3333 },
+    "NVDA": { "entry_price": 220.00, "shares": 15.15, "cost_basis": 3333 },
+    "AAPL": { "entry_price": 332.00, "shares": 10.04, "cost_basis": 3334 }
+  },
+  "cash": 0,
+  "daily_returns": [0.0255],
+  "graduation_threshold": { "days_positive": 1, "target": 30, "sharpe_target": 1.0 }
+}
