@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>8-Slide: Your Trip Is Already Written</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:14px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(19,142,255,0.12);color:#138EFF}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative}
+.l{display:flex;flex-direction:column;justify-content:center;padding:40px 36px 60px 48px;height:100%;position:relative}
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.07) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0}
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;position:relative;z-index:2}
+.body{font-family:'Jost',sans-serif;font-size:34px;color:#1A1A1A;line-height:1.25;position:relative;z-index:2}
+.sub{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:12px;position:relative;z-index:2;line-height:1.4}
+/* Slide 9 insight */
+.ins-top{font-family:'Jost',sans-serif;font-size:26px;color:#6B7280;line-height:1.3;text-align:center;position:relative;z-index:2}
+.ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:38px;color:#1A1A1A;line-height:1.15;text-align:center;position:relative;z-index:2;margin-top:10px}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:12px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.6}
+.brief strong{color:#b38a00}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head><body>
+<div style="text-align:center;margin:0 0 16px;">
+  <button onclick="saveAllSlides()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3);">Save All Slides</button>
+</div>
+<div class="meta">
+  <h1>Your trip is already written.</h1>
+  <div class="sub">Sunday · Aspirational · WTF Hook · Bloggo Company</div>
+  <span class="fmt">8 Slides</span>
+</div>
+<div class="carousel">
+
+  <!-- SLIDE 1 — HOOK (WTF) -->
+  <div class="sw">
+    <div class="sn">Slide 1 — Hook (WTF)</div>
+    <div class="slide">
+      <div class="dot"></div>
+      <div class="c">
+        <div style="position:relative;z-index:2;text-align:center;">
+          <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Your travel blog</div>
+          <div style="font-family:'Chewy',cursive;font-size:46px;color:#1A1A1A;line-height:1.0;margin-top:6px;">is already</div>
+          <div style="font-family:'Chewy',cursive;font-size:68px;color:#138EFF;line-height:0.9;margin-top:2px;">written.</div>
+          <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:12px;line-height:1.4;">You just can't read it yet.</div>
+        </div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat looking at a camera roll full of photos with a magnifying glass, curious detective energy. Higgsfield AI prompt: "black cat holding a tiny magnifying glass, looking at a wall of glowing travel photos, curious detective expression, white minimal background, soft blue light"</div>
+  </div>
+
+  <!-- SLIDE 2 — TRANSITION -->
+  <div class="sw">
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="slide">
+      <div class="c">
+        <div style="position:relative;z-index:2;text-align:center;">
+          <div class="gt" style="font-family:'Jost',sans-serif;font-weight:700;font-size:30px;line-height:1.3;padding:0 10px;">Here's what's actually <strong>hiding</strong> in your camera roll.</div>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — gradient text slide.</div>
+  </div>
+
+  <!-- SLIDE 3 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 3 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="l">
+        <div class="lbl">Fact 01</div>
+        <div class="body">Every photo has a <strong>timestamp.</strong></div>
+        <div class="sub">A complete timeline. Already recorded.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 3 — Graphic:</b> None — text only.</div>
+  </div>
+
+  <!-- SLIDE 4 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 4 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="l">
+        <div class="lbl">Fact 02</div>
+        <div class="body">Every photo has a <strong>location.</strong></div>
+        <div class="sub">Every restaurant. Every landmark. Already tagged.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 4 — Graphic:</b> None — text only.</div>
+  </div>
+
+  <!-- SLIDE 5 — CONTENT (centered, no accent bar) -->
+  <div class="sw">
+    <div class="sn">Slide 5 — Content</div>
+    <div class="slide">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(19,142,255,0.05),transparent 70%);pointer-events:none;z-index:0"></div>
+      <div class="c">
+        <div style="position:relative;z-index:2;text-align:center;">
+          <div style="font-family:'Jost',sans-serif;font-size:26px;color:#6B7280;line-height:1.3;">Time + location</div>
+          <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:38px;color:#1A1A1A;line-height:1.2;margin-top:8px;">= a complete <strong style="color:#138EFF;">timeline</strong></div>
+          <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;margin-top:14px;line-height:1.4;">Your trip is already organized. You just can't see it.</div>
+        </div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 5 — Graphic:</b> None — text only.</div>
+  </div>
+
+  <!-- SLIDE 6 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 6 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="l">
+        <div class="lbl">The problem</div>
+        <div class="body">The <strong>blank page</strong> stops everyone.</div>
+        <div class="sub">Not the photos. Not the memories. The starting.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 6 — Graphic:</b> Black cat staring at a blank screen, paw hovering, hesitant to type. Higgsfield AI prompt: "black cat staring at a blank white screen, paw raised hesitantly, anxious expression, minimal white background, soft warm light"</div>
+  </div>
+
+  <!-- SLIDE 7 — CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 7 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="l">
+        <div class="lbl">The fix</div>
+        <div class="body"><strong>Bloggo</strong> removes the blank page.</div>
+        <div class="sub">Tap once. Your trip becomes a story. In seconds.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 7 — Graphic:</b> None — text only.</div>
+  </div>
+
+  <!-- SLIDE 8 — INSIGHT (save-worthy) -->
+  <div class="sw">
+    <div class="sn">Slide 8 — Insight</div>
+    <div class="slide">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(19,142,255,0.05),transparent 70%);pointer-events:none;z-index:0"></div>
+      <div class="c">
+        <div class="ins-top">The story was never<br>missing.</div>
+        <div class="ins-bot">You were starting<br>from the wrong place.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 8 — Graphic:</b> Black cat sitting next to an open glowing journal, calm and wise. Higgsfield AI prompt: "black cat sitting beside a glowing open journal book, wise calm expression, soft warm light, white background, cozy minimal aesthetic"</div>
+  </div>
+
+  <!-- SLIDE 9 — CTA -->
+  <div class="sw">
+    <div class="sn">Slide 9 — CTA</div>
+    <div class="slide">
+      <div class="c">
+        <div style="position:relative;z-index:2;text-align:center;">
+          <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px;">
+            <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:14px;">
+            <div style="font-family:'Chewy',cursive;font-size:48px;color:#138EFF;line-height:1;">Bloggo</div>
+          </div>
+          <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.15;">Your trip is waiting.</div>
+          <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1.1;margin-top:2px;">Start the story.</div>
+          <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:16px;">Link in bio</div>
+        </div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 9 — Graphic:</b> None — CTA slide, app icon + text only.</div>
+  </div>
+
+</div>
+<div class="brief">
+  <strong>Caption CTA:</strong> Your travel blog isn't missing. It's in your camera roll — time-stamped, GPS-tagged, organized by day. Bloggo reads it and writes the story for you. No blank page. No typing. Just tap. Beta link in bio.<br><br>
+  <strong>Hook type:</strong> WTF / Counterintuitive — challenges the belief that writing a blog requires writing<br>
+  <strong>Target emotion:</strong> Curiosity → insight → action<br>
+  <strong>Notion destination:</strong> notion → Bloggo Content Engine<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — Cat with magnifying glass + camera roll. Slide 6 — Cat at blank screen. Slide 8 — Cat by glowing journal.
+</div>
+<script>
+async function captureSlide(slide){
+  var canvas=await html2canvas(slide,{scale:4,backgroundColor:'#ffffff',logging:false});
+  return canvas;
+}
+async function saveAllSlides(){
+  var btn=document.querySelector('[onclick="saveAllSlides()"]');
+  var orig=btn.textContent;
+  var slides=document.querySelectorAll('.slide');
+  var title=document.title.replace(/\s+/g,'-').toLowerCase().substring(0,50);
+  btn.disabled=true;
+  for(var i=0;i<slides.length;i++){
+    btn.textContent='Saving '+(i+1)+'/'+slides.length+'...';
+    var canvas=await captureSlide(slides[i]);
+    var link=document.createElement('a');
+    link.download=title+'-slide-'+(i+1)+'.png';
+    link.href=canvas.toDataURL('image/png');
+    link.click();
+    await new Promise(r=>setTimeout(r,400));
+  }
+  btn.textContent=orig;
+  btn.disabled=false;
+}
+</script>
+</body></html>
