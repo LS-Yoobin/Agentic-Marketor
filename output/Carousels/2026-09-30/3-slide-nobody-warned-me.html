@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nobody Warned Me</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;padding:20px;font-family:'Jost',sans-serif}
+.sw{width:360px;margin:0 auto 28px}
+.sn{font-family:'Jost',sans-serif;font-size:11px;color:#888;text-align:center;margin-bottom:6px;letter-spacing:1px;text-transform:uppercase}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:48px 40px 60px}
+.slide.centered{align-items:center;text-align:center}
+/* Watermark & paw */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* Slide 1 — hook */
+.hook-bg{position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 50% 50%,rgba(19,142,255,0.04) 0%,transparent 70%)}
+/* Slide 2 — gradient text */
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:30px;line-height:1.3;text-align:center}
+/* Content slides */
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent)}
+.label{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;position:relative;z-index:2}
+.body-text{font-family:'Jost',sans-serif;font-size:26px;color:#1A1A1A;line-height:1.35;position:relative;z-index:2}
+.body-text b{font-weight:700}
+.sub{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:10px;line-height:1.4;position:relative;z-index:2}
+/* CTA slide */
+.logo-row{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:18px}
+.cta-headline{font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.15;text-align:center}
+.cta-accent{font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.15;text-align:center}
+.cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:12px;text-align:center}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide centered">
+    <div class="hook-bg"></div>
+    <div style="position:relative;z-index:2">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">Nobody warned me</div>
+      <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.1;margin-top:6px;">about the day</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;margin-top:4px;">after.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat staring at a sunrise through a window, silhouette-style, slightly tired but awake. Higgsfield prompt: "Black cat silhouette sitting on a windowsill at early morning, looking at sunrise through glass, soft orange and blue sky, minimalist interior, cinematic mood."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide centered">
+    <div class="gt">The launch is the easy part.<br>Here's what comes next.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide">
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="label">Day 1</div>
+    <div class="body-text">You <b>ship</b>.<br>You feel <b>invincible</b>.</div>
+    <div class="sub">Then nobody notices.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 4 — CTA</div>
+  <div class="slide centered">
+    <div class="logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div style="font-family:'Chewy',cursive;font-size:40px;color:#138EFF;">Bloggo</div>
+    </div>
+    <div class="cta-headline">You keep building</div>
+    <div class="cta-accent">anyway.</div>
+    <div class="cta-link">Follow the build!</div>
+  </div>
+</div>
+
+<div style="font-family:'Jost',sans-serif;font-size:11px;color:#888;text-align:center;margin-top:8px;max-width:360px;">
+  <b>Supporting Graphics:</b> Slide 1 needs Higgsfield cat (see note above). Slides 2–4: text only.<br>
+  <b>Notion:</b> notion-personal → YOOBIN Content Engine
+</div>
+
+</body>
+</html>
