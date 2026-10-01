@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-Slide — The blank page always wins</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#E8E8E8;display:flex;flex-direction:column;align-items:center;padding:24px;font-family:'Jost',sans-serif}
+  .sw{display:flex;flex-direction:column;align-items:center;margin-bottom:24px;width:360px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;text-align:center}
+  .slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden}
+
+  .center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px}
+  .left{display:flex;flex-direction:column;justify-content:center;padding:40px 40px}
+
+  .dot-bg::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px;z-index:0;pointer-events:none}
+  .ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12)}
+  .rg::after{content:'';position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none}
+  .radial::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05),transparent 70%);z-index:0;pointer-events:none}
+
+  .gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:'Jost',sans-serif;font-weight:700;font-size:24px;line-height:1.4;text-align:center}
+
+  .ct{position:relative;z-index:2;width:100%}
+  .lbl{font-family:'Jost',sans-serif;font-weight:700;font-size:12px;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px}
+  .bd{font-family:'Jost',sans-serif;font-size:30px;color:#1A1A1A;line-height:1.3}
+  .sub{font-family:'Jost',sans-serif;font-style:italic;font-size:15px;color:#6B7280;margin-top:10px;line-height:1.4}
+
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  .ins-top{font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;margin-bottom:12px;text-align:center}
+  .ins-bot{font-family:'Jost',sans-serif;font-weight:700;font-size:34px;color:#1A1A1A;line-height:1.2;text-align:center}
+
+  .logo-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:18px}
+  .logo-row span{font-family:'Chewy',cursive;font-size:48px;color:#138EFF}
+  .cta-line1{font-family:'Chewy',cursive;font-size:34px;color:#1A1A1A;line-height:1.2;text-align:center}
+  .cta-line2{font-family:'Chewy',cursive;font-size:30px;color:#138EFF;text-align:center;margin-top:4px}
+  .cta-link{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:16px;text-align:center}
+
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+  .brief{max-width:360px;margin:24px auto;padding:16px;background:rgba(19,142,255,0.04);border:1px solid rgba(19,142,255,0.15);border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#4a7fb5;line-height:1.8}
+  .brief-title{font-weight:700;color:#138EFF;font-size:12px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK (Fear) -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide center dot-bg">
+    <div class="ct" style="text-align:center">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">The blank page</div>
+      <div style="font-family:'Chewy',cursive;font-size:68px;color:#1A1A1A;line-height:0.9;margin-top:6px;">always</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;">wins.</div>
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;margin-top:14px;line-height:1.4;">Until now.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Spunky (black cat) staring at a blank glowing screen or empty notebook, wide anxious eyes, slight tension. Higgsfield prompt: "A sleek black cat with wide anxious eyes staring at a blank glowing screen, dim atmospheric cinematic lighting, clean minimal background, slight tension in posture, editorial photography style."</div>
+</div>
+
+<!-- SLIDE 2 — TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide center">
+    <div class="ct" style="text-align:center">
+      <div class="gt">Here's why you never<br>write about your trips.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3 — CONTENT (Reason 1) -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide left ab rg">
+    <div class="ct">
+      <div class="lbl">Reason 1</div>
+      <div class="bd">Opening a doc<br>feels like <strong>work.</strong></div>
+      <div class="sub">You just got back from vacation. You're tired.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4 — CONTENT (Reason 2) -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <div class="slide left ab rg">
+    <div class="ct">
+      <div class="lbl">Reason 2</div>
+      <div class="bd">You can't <strong>remember</strong><br>the details.</div>
+      <div class="sub">6 months later. Restaurant names. Gone.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5 — CONTENT (Reason 3, centered for visual break) -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <div class="slide center radial">
+    <div class="ct" style="text-align:center">
+      <div class="lbl" style="text-align:center">Reason 3</div>
+      <div class="bd" style="text-align:center;font-size:32px;">500 photos.<br>No <strong>structure.</strong><br>No start.</div>
+      <div class="sub" style="text-align:center">Where do you even begin?</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 6 — CONTENT (The Shift) -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <div class="slide left ab rg">
+    <div class="ct">
+      <div class="lbl">The Shift</div>
+      <div class="bd">Every photo knows<br><strong>where</strong> you were.</div>
+      <div class="sub">GPS + timestamp. Already a complete timeline.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 7 — CONTENT (The Fix) -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <div class="slide left ab rg">
+    <div class="ct">
+      <div class="lbl">The Fix</div>
+      <div class="bd">Bloggo <strong>reads</strong> it.<br>Writes the story.</div>
+      <div class="sub">No writing required. Not even a title.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 8 — CONTENT (The Result) -->
+<div class="sw">
+  <div class="sn">Slide 8 — Content</div>
+  <div class="slide left ab rg">
+    <div class="ct">
+      <div class="lbl">The Result</div>
+      <div class="bd">A <strong>beautiful</strong> blog.<br>Under 60 seconds.</div>
+      <div class="sub">No blank page. No guilt. Ever again.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 9 — INSIGHT / SAVE-BAIT -->
+<div class="sw">
+  <div class="sn">Slide 9 — Insight</div>
+  <div class="slide center radial">
+    <div class="ct" style="text-align:center">
+      <div class="ins-top">The problem was never<br>the writing.</div>
+      <div class="ins-bot">It was<br>the <strong>starting.</strong></div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Spunky (black cat) sitting next to a glowing open journal, calm and content, soft golden light emanating from the pages. Higgsfield prompt: "A sleek black cat sitting peacefully next to a glowing open travel journal with warm golden light radiating from its pages, serene expression, clean white background, warm cinematic lighting, editorial photography style."</div>
+</div>
+
+<!-- SLIDE 10 — CTA -->
+<div class="sw">
+  <div class="sn">Slide 10 — CTA</div>
+  <div class="slide center">
+    <div class="ct" style="text-align:center">
+      <div class="logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <span>Bloggo</span>
+      </div>
+      <div class="cta-line1">Tap to Blog.</div>
+      <div class="cta-line2">Your next trip is waiting.</div>
+      <div class="cta-link">Link in bio</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 10 — Graphic:</b> Spunky (black cat) with open welcoming paws, bright curious eyes, joyful energy. Higgsfield prompt: "A sleek black cat with both paws open in a warm welcoming gesture, bright joyful eyes, clean white background, soft cinematic lighting, editorial photography style, playful and inviting energy."</div>
+</div>
+
+<div class="brief">
+  <div class="brief-title">Supporting Graphics</div>
+  Slide 1 — Spunky staring at blank screen, anxious (Higgsfield prompt above).<br>
+  Slide 9 — Spunky beside glowing journal, serene (Higgsfield prompt above).<br>
+  Slide 10 — Spunky welcoming with open paws (Higgsfield prompt above).<br>
+  <br>
+  <b>Hook type:</b> Fear<br>
+  <b>Notion destination:</b> notion → Bloggo Content Engine<br>
+  <b>Account:</b> Post from Bloggo's Instagram account<br>
+  <b>Caption note:</b> "The blank page wins every time. Until now. Save this for the next time you come home with 500 photos and zero words written. 🐾 Beta link in bio."
+</div>
+
+</body>
+</html>
