@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bloggo Carousel — You Don't Write It</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#F0F2F5;font-family:'Jost',sans-serif;padding:24px}
+.brief{max-width:780px;margin:0 auto 28px;padding:14px 18px;background:#fff;border:1px solid #e0e7ef;border-radius:10px;font-size:12px;color:#374151}
+.brief h1{font-family:'Chewy',cursive;font-size:20px;color:#138EFF;margin-bottom:8px}
+.brief table{width:100%;border-collapse:collapse}
+.brief td{padding:3px 6px;border-bottom:1px solid #f0f0f0;vertical-align:top}
+.brief td:first-child{font-weight:700;color:#1A1A1A;width:130px}
+.slides-container{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;max-width:1200px;margin:0 auto}
+.sw{display:flex;flex-direction:column;align-items:center}
+.sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.1);border-radius:4px}
+.gfx-note{max-width:360px;margin:4px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+/* Shared */
+.wm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.dp{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:36px 36px;z-index:0;pointer-events:none}
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);z-index:0;pointer-events:none}
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lbl{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+</style>
+</head>
+<body>
+
+<div class="brief">
+  <h1>You Don't Write It — 5-Slide Carousel</h1>
+  <table>
+    <tr><td>Date</td><td>2026-10-02</td></tr>
+    <tr><td>Type</td><td>3–5 slide (5 slides)</td></tr>
+    <tr><td>Hook</td><td>"You don't write a travel blog. You tap one."</td></tr>
+    <tr><td>Hook Type</td><td>Contrarian / WTF</td></tr>
+    <tr><td>Angle</td><td>Friday — Counterintuitive</td></tr>
+    <tr><td>Notion Destination</td><td>notion → Bloggo Content Engine</td></tr>
+    <tr><td>Supporting Graphics</td><td>Slide 1 — Cat sitting at blank notebook, looking up with curious expression (Higgsfield prompt below). Slide 5 — Cat waving, welcoming energy (Higgsfield prompt below).</td></tr>
+  </table>
+</div>
+
+<div class="slides-container">
+
+  <!-- Slide 1 — Hook -->
+  <div class="sw">
+    <div class="sn">Slide 1 — Hook</div>
+    <div class="slide">
+      <div class="dp"></div>
+      <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 28px 52px;text-align:center">
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4">You don't write</div>
+        <div style="font-family:'Chewy',cursive;font-size:48px;color:#1A1A1A;line-height:1.05;margin-top:4px">a travel blog.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#9CA3AF;line-height:1.4;margin-top:10px">You</div>
+        <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9">tap one.</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat sitting at a tiny wooden desk with a blank open notebook, looking up with wide curious eyes. Simple, charming. Higgsfield prompt: "Cute black cat sitting at a tiny wooden desk staring at blank open notebook, looking up with wide curious expression, minimal illustration style, white background"</div>
+  </div>
+
+  <!-- Slide 2 — Transition (gradient text) -->
+  <div class="sw">
+    <div class="sn">Slide 2 — Transition</div>
+    <div class="slide">
+      <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 32px;text-align:center">
+        <div style="font-family:'Jost',sans-serif;font-size:22px;font-weight:700;line-height:1.3" class="gt">Here's what's hiding<br>in your camera roll.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — gradient text is the visual. Text-only slide.</div>
+  </div>
+
+  <!-- Slide 3 — Content -->
+  <div class="sw">
+    <div class="sn">Slide 3 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:36px 28px 52px 36px">
+        <div class="lbl">THE TRUTH</div>
+        <div style="font-family:'Jost',sans-serif;font-size:30px;color:#1A1A1A;line-height:1.25">You took <strong>hundreds of photos.</strong></div>
+        <div style="font-family:'Jost',sans-serif;font-size:16px;color:#6B7280;font-style:italic;margin-top:12px;line-height:1.5">Not a single word written.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 3 — Graphic:</b> None — text-only content slide.</div>
+  </div>
+
+  <!-- Slide 4 — Content -->
+  <div class="sw">
+    <div class="sn">Slide 4 — Content</div>
+    <div class="slide">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:36px 28px 52px 36px">
+        <div class="lbl">THE PROBLEM</div>
+        <div style="font-family:'Jost',sans-serif;font-size:30px;color:#1A1A1A;line-height:1.25"><strong>Blank pages</strong> stop everyone.</div>
+        <div style="font-family:'Jost',sans-serif;font-size:16px;color:#6B7280;font-style:italic;margin-top:12px;line-height:1.5">Bloggo removes the blank page.</div>
+      </div>
+      <div class="wm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 4 — Graphic:</b> None — text-only content slide.</div>
+  </div>
+
+  <!-- Slide 5 — CTA -->
+  <div class="sw">
+    <div class="sn">Slide 5 — CTA</div>
+    <div class="slide">
+      <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 32px;text-align:center">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
+          <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+          <span style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1">Bloggo</span>
+        </div>
+        <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.1">Your trips deserve</div>
+        <div style="font-family:'Chewy',cursive;font-size:44px;color:#138EFF;line-height:1;margin-top:2px">a story.</div>
+        <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:18px">LINK IN BIO</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 5 — Graphic:</b> Black cat waving excitedly from bottom-left corner, welcoming expression. Higgsfield prompt: "Cute black cat waving its paw in a friendly welcoming gesture, sitting on white background, simple illustration style, minimal, charming"</div>
+  </div>
+
+</div>
+</body>
+</html>
