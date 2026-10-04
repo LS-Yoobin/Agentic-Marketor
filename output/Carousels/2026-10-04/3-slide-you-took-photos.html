@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Slide — You Took the Photos</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;display:flex;flex-direction:column;align-items:center;padding:32px 16px;font-family:'Jost',sans-serif;gap:20px}
+h1{font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#666;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:8px}
+.sn{font-family:'Jost',sans-serif;font-size:11px;color:#999;letter-spacing:1.5px;text-transform:uppercase;align-self:flex-start}
+.slide{position:relative;width:360px;height:450px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #e8e8e8}
+/* Shared */
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+/* Slide 1 — Hook (Chewy) */
+.dots{position:absolute;inset:0;z-index:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1.5px,transparent 1.5px);background-size:36px 36px}
+.s1-content{position:relative;z-index:2;text-align:center;padding:0 36px}
+/* Slide 2 — Transition (gradient text, Jost) */
+.s2-content{position:relative;z-index:2;text-align:center;padding:0 40px}
+.grad{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Jost',sans-serif;font-weight:700;font-size:42px;line-height:1.15}
+/* Slide 3 — CTA (Chewy) */
+.s3-content{position:relative;z-index:2;text-align:center;padding:0 36px}
+.logo-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px}
+.cta-label{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:16px}
+.brief{max-width:360px;background:#fff;border:1px solid #e0e8ff;border-radius:8px;padding:16px;font-family:'Jost',sans-serif;font-size:12px;color:#333;line-height:1.7}
+.brief b{color:#138EFF}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+<h1>Bloggo Carousel — 3-Slide — Oct 4, 2026</h1>
+<p style="font-size:12px;color:#888;margin-bottom:8px;">Angle: Aspirational relatable moment. Screenshot each slide at 360×450px.</p>
+
+<!-- SLIDE 1 -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide">
+    <div class="dots"></div>
+    <div class="s1-content">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">you took 400 photos.</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1;margin-top:8px;">wrote</div>
+      <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;">zero words.</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat mascot sits bottom-left, staring at a tiny empty notebook on the ground next to a huge overflowing pile of tiny photo thumbnails. Curious, slightly overwhelmed expression. Higgsfield prompt: "A small black cartoon cat sits bottom-left, staring at a tiny open blank notebook surrounded by a chaotic pile of colorful photo thumbnails, white background, soft blue shadow accents, graphic illustration style, slightly overwhelmed but curious cat expression."</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.05) 0%,transparent 70%);z-index:0"></div>
+    <div class="s2-content">
+      <div class="grad">the trip is still there.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:18px;color:#6B7280;font-style:italic;margin-top:14px;line-height:1.5;">Your camera roll remembers<br>everything you've forgotten.</div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> No mascot on this slide — gradient text and copy carry the visual weight. No graphic needed.</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="sw">
+  <div class="sn">Slide 3 — CTA</div>
+  <div class="slide">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(19,142,255,0.04) 0%,transparent 60%);z-index:0"></div>
+    <div class="s3-content">
+      <div class="logo-row">
+        <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+        <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1;">Bloggo</div>
+      </div>
+      <div style="font-family:'Chewy',cursive;font-size:40px;color:#1A1A1A;line-height:1.1;">start the story.</div>
+      <div class="cta-label">BETA IN BIO</div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> Black cat mascot bottom-left, waving with welcoming body language, tail up. Higgsfield prompt: "A small black cartoon cat stands bottom-left, waving enthusiastically with one paw raised, tail up in a welcoming curve, white background, blue accent highlights, graphic illustration style, friendly and inviting."</div>
+</div>
+
+<div class="brief">
+  <b>3-Slide Post Brief</b><br>
+  <b>Hook:</b> "you took 400 photos. wrote zero words."<br>
+  <b>Angle:</b> Sunday Aspirational — relatable traveler guilt → resolution<br>
+  <b>Audience:</b> Bloggo company account<br>
+  <b>Caption direction:</b> "Sound familiar? Every trip lives in your camera roll. Bloggo turns those photos into a real story — no writing, no organizing. Tap to blog. → Beta in bio."<br>
+  <b>Supporting Graphics:</b> Slide 1 — cat with overflowing photos + empty notebook. Slide 3 — cat waving.
+</div>
+</body>
+</html>
