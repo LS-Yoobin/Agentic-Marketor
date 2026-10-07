@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One trip changed everything.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;padding:24px 16px 40px}
+.meta{text-align:center;margin-bottom:16px;font-family:'Jost',sans-serif}
+.meta h1{font-size:13px;color:#333;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#aaa;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(19,142,255,0.12);color:#0a6bcc}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{position:relative;width:360px;margin:0 auto}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:4px}
+.slide{width:360px;height:450px;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-radius:6px}
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;height:100%;position:relative}
+.l{display:flex;flex-direction:column;justify-content:center;padding:32px 32px 64px 44px;height:100%;position:relative}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.08) 1.5px,transparent 1.5px);background-size:24px 24px;pointer-events:none;z-index:0}
+.rg{position:absolute;right:0;top:0;bottom:0;width:42%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none}
+.rb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:200px;height:200px;background:radial-gradient(circle,rgba(19,142,255,0.07),transparent 70%);border-radius:50%;pointer-events:none}
+.ab{position:absolute;left:0;top:0;bottom:0;width:6px;background:rgba(19,142,255,0.12)}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lbl{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px;position:relative;z-index:2}
+.zz{position:relative;z-index:2}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.brief{max-width:360px;margin:6px auto 0;padding:10px 14px;background:#fffbe6;border:1px solid #f5d300;border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#666;line-height:1.5}
+.brief strong{color:#b38a00}
+.dl-btn{position:absolute;top:25px;right:8px;z-index:100;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity 0.2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+<div class="meta">
+  <h1>One trip changed everything.</h1>
+  <div class="sub">8-slide · Story Hook · Founder Origin · Wednesday</div>
+  <span class="fmt">Instagram Carousel · 8 Slides · 360×450</span>
+</div>
+
+<div style="text-align:center;margin:0 0 16px">
+  <button onclick="saveAllSlides()" style="background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(19,142,255,0.3)">Save All Slides</button>
+</div>
+
+<div class="carousel">
+
+<!-- SLIDE 1: HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="dot"></div>
+    <div class="rb"></div>
+    <div class="c">
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;">One trip</div>
+        <div style="font-family:'Chewy',cursive;font-size:62px;color:#138EFF;line-height:0.9;margin-top:4px;">changed</div>
+        <div style="font-family:'Chewy',cursive;font-size:62px;color:#1A1A1A;line-height:0.9;">everything.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;line-height:1.4;margin-top:10px;">This is how Bloggo started.</div>
+      </div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat sitting on a mountain overlook, staring into the distance with a sense of wonder, small backpack beside it. Higgsfield AI: "black cat sitting on a mountain peak overlook, small backpack beside it, looking out at a vast landscape with wonder, golden hour light, illustrated style, clean white background"</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="dot"></div>
+    <div class="rb"></div>
+    <div class="c">
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:22px;font-weight:700;line-height:1.4;" class="gt">847 photos.<br>Zero words written.<br>Six months later.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — gradient text slide.</div>
+</div>
+
+<!-- SLIDE 3: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="dot"></div>
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">THE MOMENT</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">I took <strong>847 photos</strong>.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;margin-top:12px;line-height:1.5;">Six months later.<br>I'd written <strong>zero words</strong>.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 3 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 4: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Content</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="dot"></div>
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">THE GUILT</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">The <strong>guilt</strong><br>never left.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;margin-top:12px;line-height:1.5;">Every scroll past those photos<br>felt like <strong>failure</strong>.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 4 — Graphic:</b> Black cat watching a butterfly float away, slightly reaching toward it with one paw. Higgsfield AI: "black cat watching a butterfly slowly floating away, gently reaching out one paw toward it, melancholy expression, soft morning light, illustrated style, clean white background"</div>
+</div>
+
+<!-- SLIDE 5: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 5 — Content</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="dot"></div>
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">WHAT I TRIED</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">Every journal app<br>felt like <strong>more work</strong>.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;margin-top:12px;line-height:1.5;">The <strong>blank page</strong><br>was always there.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 5 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 6: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 6 — Content</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="dot"></div>
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">THE INSIGHT</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">The story was <strong>already there</strong>.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;margin-top:12px;line-height:1.5;">GPS. Timestamps.<br><strong>847 photos</strong>. A full story.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 6 — Graphic:</b> None — text only.</div>
+</div>
+
+<!-- SLIDE 7: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 7 — Content</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="dot"></div>
+    <div class="ab"></div>
+    <div class="rg"></div>
+    <div class="l">
+      <div class="lbl">WHAT I BUILT</div>
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.3;">On-device AI.<br><strong>No writing.</strong> Just photos.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:17px;color:#6B7280;margin-top:12px;line-height:1.5;">Your <strong>trips write themselves</strong>.<br>No blank page. Ever.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 7 — Graphic:</b> Black cat looking at glowing phone screen showing a beautiful travel blog, pawing at it in delight. Higgsfield AI: "black cat looking at glowing phone screen showing beautiful travel blog with photos, pawing at the screen in delight, warm screen glow illuminating face, illustrated style, clean white background"</div>
+</div>
+
+<!-- SLIDE 8: INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 8 — Insight</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="dot"></div>
+    <div class="rb"></div>
+    <div class="c">
+      <div class="zz">
+        <div style="font-family:'Jost',sans-serif;font-size:20px;color:#6B7280;font-style:italic;line-height:1.4;margin-bottom:10px;">Every camera roll is</div>
+        <div style="font-family:'Jost',sans-serif;font-size:36px;font-weight:700;color:#1A1A1A;line-height:1.2;">a story<br>waiting.</div>
+      </div>
+    </div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 8 — Graphic:</b> None — typography save-bait slide.</div>
+</div>
+
+<!-- SLIDE 9: CTA -->
+<div class="sw">
+  <div class="sn">Slide 9 — CTA</div>
+  <button class="dl-btn" onclick="saveSlide(this)">Save PNG</button>
+  <div class="slide">
+    <div class="dot"></div>
+    <div class="rb"></div>
+    <div class="c">
+      <div class="zz">
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px;">
+          <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+          <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1;">Bloggo</div>
+        </div>
+        <div style="font-family:'Chewy',cursive;font-size:38px;color:#1A1A1A;line-height:1.2;margin-bottom:8px;">Tell your trips.</div>
+        <div style="font-family:'Chewy',cursive;font-size:38px;color:#138EFF;line-height:1.2;margin-bottom:16px;">Effortlessly!</div>
+        <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;">BETA · LINK IN BIO</div>
+      </div>
+    </div>
+  </div>
+  <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat waving with one paw raised, excited welcoming expression, small travel stickers around it. Higgsfield AI: "black cat waving enthusiastically with one paw raised high, huge excited smile, small travel stickers and maps floating around it, illustrated style, clean white background"</div>
+</div>
+
+</div><!-- end carousel -->
+
+<div class="brief">
+  <strong>📋 Notion Destination:</strong> notion-personal → YOOBIN Content Engine<br>
+  <strong>Angle:</strong> Founder/Builder Story — Story Hook — Origin Narrative<br>
+  <strong>Caption note:</strong> "I took 847 photos on a solo trip and wrote zero words about it. That guilt became Bloggo." — 3 sentences. CTA: beta link in bio.<br>
+  <strong>Supporting Graphics:</strong> Slide 1 — cat on mountain overlook · Slide 4 — cat watching butterfly · Slide 7 — cat with glowing blog screen · Slide 9 — cat waving with travel stickers
+</div>
+
+<script>
+async function saveSlide(btn){
+  const sw=btn.closest('.sw');
+  const slide=sw.querySelector('.slide');
+  const canvas=await html2canvas(slide,{scale:3,useCORS:true,allowTaint:true,backgroundColor:'#ffffff'});
+  const sn=sw.querySelector('.sn')?.textContent||'slide';
+  const a=document.createElement('a');
+  a.download=sn.trim().replace(/[^a-z0-9]+/gi,'-').toLowerCase()+'.png';
+  a.href=canvas.toDataURL('image/png');
+  a.click();
+}
+async function saveAllSlides(){
+  const zip=new JSZip();
+  const slides=document.querySelectorAll('.sw');
+  for(let i=0;i<slides.length;i++){
+    const slide=slides[i].querySelector('.slide');
+    if(!slide)continue;
+    const canvas=await html2canvas(slide,{scale:3,useCORS:true,allowTaint:true,backgroundColor:'#ffffff'});
+    const sn=slides[i].querySelector('.sn')?.textContent||`slide-${i+1}`;
+    const name=sn.trim().replace(/[^a-z0-9]+/gi,'-').toLowerCase()+'.png';
+    const data=canvas.toDataURL('image/png').split(',')[1];
+    zip.file(name,data,{base64:true});
+  }
+  const blob=await zip.generateAsync({type:'blob'});
+  saveAs(blob,'8-slide-trip-became-app.zip');
+}
+</script>
+</body>
+</html>
