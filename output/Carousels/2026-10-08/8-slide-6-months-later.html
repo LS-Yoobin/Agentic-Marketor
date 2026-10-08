@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>6 Months Later — 8-Slide Carousel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111;padding:24px 16px 40px;font-family:'Jost',sans-serif}
+.meta{text-align:center;margin-bottom:16px}
+.meta h1{font-size:14px;color:#ccc;font-weight:700;margin-bottom:2px}
+.meta .sub{font-size:10px;color:#555;letter-spacing:2px;text-transform:uppercase}
+.fmt{display:inline-block;padding:2px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;background:rgba(19,142,255,0.15);color:#138EFF}
+.carousel{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;width:360px}
+.sn{font-family:'Jost',sans-serif;font-size:9px;color:#444;text-transform:uppercase;letter-spacing:2px}
+.slide{width:360px;height:450px;background:#FFFFFF;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.4);border-radius:6px}
+.c{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 32px 64px;text-align:center;height:100%;position:relative;z-index:2}
+.l{display:flex;flex-direction:column;justify-content:center;padding:32px 32px 64px 44px;height:100%;position:relative;z-index:2}
+.ab{position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(19,142,255,0.12);z-index:1}
+.rg{position:absolute;top:0;right:0;bottom:0;width:45%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none;z-index:0}
+.dot{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;z-index:0}
+.rgl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:240px;height:240px;background:radial-gradient(circle,rgba(19,142,255,0.05),transparent 70%);border-radius:50%;pointer-events:none;z-index:0}
+.gt{background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+.pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+.lbl{font-family:'Jost',sans-serif;font-size:11px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
+.gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+.gfx-note b{color:#138EFF;font-weight:700}
+.dl-btn{position:absolute;top:24px;right:0;z-index:20;background:#138EFF;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none}
+.sw:hover .dl-btn{opacity:1;pointer-events:auto}
+.sa{text-align:center;margin:0 0 16px}
+.sa button{background:#138EFF;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 18px rgba(19,142,255,.3)}
+.brief{max-width:360px;margin:20px auto 0;padding:14px 16px;background:rgba(19,142,255,0.04);border:1px solid rgba(19,142,255,0.15);border-radius:8px;font-family:'Jost',sans-serif;font-size:11px;color:#6B7280;line-height:1.8}
+.brief b{color:#138EFF}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="meta">
+  <h1>6 months later, you can't remember her name.</h1>
+  <div class="sub">Bloggo · Fear Hook · Thursday Oct 8</div>
+  <span class="fmt">Instagram · 8-Slide · 1080×1350</span>
+</div>
+
+<div class="sa"><button onclick="saveAllSlides()">Save All Slides</button></div>
+
+<div class="carousel">
+
+  <!-- SLIDE 1: HOOK (FEAR) -->
+  <div class="sw">
+    <div class="sn">Slide 1 of 8 — Hook</div>
+    <button class="dl-btn" onclick="saveSlide(this,'8s-6mo-s1')">Save PNG</button>
+    <div class="slide" id="slide-1">
+      <div class="dot"></div>
+      <div class="rgl"></div>
+      <div class="c">
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:20px;color:#6B7280;line-height:1.4;position:relative;z-index:2;">It's been</div>
+        <div style="font-family:'Chewy',cursive;font-size:76px;color:#138EFF;line-height:0.9;position:relative;z-index:2;">6 months.</div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;margin-top:12px;position:relative;z-index:2;">Do you still remember the details?</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 1 — Graphic:</b> Black cat staring at a blurry, faded photograph. Expression is sad and wistful. Higgsfield AI prompt: "Cute black cat holding a blurry faded photograph, looking at it with a nostalgic sad expression, soft warm light, 3D cartoon style, white background"</div>
+  </div>
+
+  <!-- SLIDE 2: TRANSITION -->
+  <div class="sw">
+    <div class="sn">Slide 2 of 8 — Transition</div>
+    <button class="dl-btn" onclick="saveSlide(this,'8s-6mo-s2')">Save PNG</button>
+    <div class="slide" id="slide-2">
+      <div class="rgl"></div>
+      <div class="c">
+        <div style="font-family:'Jost',sans-serif;font-size:16px;color:#9CA3AF;margin-bottom:16px;position:relative;z-index:2;">Most people forget. It happens to everyone.</div>
+        <div class="gt" style="font-family:'Jost',sans-serif;font-weight:700;font-size:40px;line-height:1.25;position:relative;z-index:2;">Here's what's<br>happening to<br>your memories.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 2 — Graphic:</b> None — gradient text slide.</div>
+  </div>
+
+  <!-- SLIDE 3: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 3 of 8 — Content</div>
+    <button class="dl-btn" onclick="saveSlide(this,'8s-6mo-s3')">Save PNG</button>
+    <div class="slide" id="slide-3">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="l">
+        <div class="lbl">THE TRIP</div>
+        <div style="font-family:'Jost',sans-serif;font-size:36px;font-weight:400;color:#1A1A1A;line-height:1.3;margin-bottom:12px;">
+          You took <b style="color:#1A1A1A;">500 photos</b><br>on that trip.
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;">Every meal. Every view.<br>Every unplanned moment.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 3 — Graphic:</b> None — typography only slide.</div>
+  </div>
+
+  <!-- SLIDE 4: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 4 of 8 — Content</div>
+    <button class="dl-btn" onclick="saveSlide(this,'8s-6mo-s4')">Save PNG</button>
+    <div class="slide" id="slide-4">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="l">
+        <div class="lbl">THE REALITY</div>
+        <div style="font-family:'Jost',sans-serif;font-size:36px;font-weight:400;color:#1A1A1A;line-height:1.3;margin-bottom:12px;">
+          You wrote <b style="color:#138EFF;">zero words</b><br>about any of them.
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;">Not even a caption.<br>Not even a note.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 4 — Graphic:</b> None — typography only slide.</div>
+  </div>
+
+  <!-- SLIDE 5: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 5 of 8 — Content</div>
+    <button class="dl-btn" onclick="saveSlide(this,'8s-6mo-s5')">Save PNG</button>
+    <div class="slide" id="slide-5">
+      <!-- centered slide, no accent bar -->
+      <div class="rgl"></div>
+      <div class="c">
+        <div style="font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;position:relative;z-index:2;">6 MONTHS LATER</div>
+        <div style="font-family:'Jost',sans-serif;font-size:34px;font-weight:400;color:#1A1A1A;line-height:1.3;position:relative;z-index:2;">
+          The <b style="color:#138EFF;">details</b> are<br>already fading.
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#9CA3AF;margin-top:14px;position:relative;z-index:2;">This is how memories die.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 5 — Graphic:</b> None — typography only slide.</div>
+  </div>
+
+  <!-- SLIDE 6: CONTENT -->
+  <div class="sw">
+    <div class="sn">Slide 6 of 8 — Content</div>
+    <button class="dl-btn" onclick="saveSlide(this,'8s-6mo-s6')">Save PNG</button>
+    <div class="slide" id="slide-6">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="l">
+        <div class="lbl">THE QUESTION</div>
+        <div style="font-family:'Jost',sans-serif;font-size:36px;font-weight:400;color:#1A1A1A;line-height:1.3;margin-bottom:12px;">
+          What was the <b style="color:#138EFF;">restaurant</b><br>on night two?
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;">The good one. With the view.<br>What was it <b style="color:#6B7280;">called?</b></div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 6 — Graphic:</b> None — typography only slide.</div>
+  </div>
+
+  <!-- SLIDE 7: CONTENT (SHIFT) -->
+  <div class="sw">
+    <div class="sn">Slide 7 of 8 — Content (Shift)</div>
+    <button class="dl-btn" onclick="saveSlide(this,'8s-6mo-s7')">Save PNG</button>
+    <div class="slide" id="slide-7">
+      <div class="ab"></div>
+      <div class="rg"></div>
+      <div class="l">
+        <div class="lbl">YOUR PHONE KNOWS</div>
+        <div style="font-family:'Jost',sans-serif;font-size:36px;font-weight:400;color:#1A1A1A;line-height:1.3;margin-bottom:12px;">
+          GPS. Timestamps.<br>Every <b style="color:#138EFF;">stop you made.</b>
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:16px;color:#6B7280;">Your photos didn't forget.<br>They're waiting.</div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 7 — Graphic:</b> None — typography only slide.</div>
+  </div>
+
+  <!-- SLIDE 8: INSIGHT / SAVE-BAIT -->
+  <div class="sw">
+    <div class="sn">Slide 8 of 8 — Insight (Save-Bait)</div>
+    <button class="dl-btn" onclick="saveSlide(this,'8s-6mo-s8')">Save PNG</button>
+    <div class="slide" id="slide-8">
+      <div class="rgl"></div>
+      <div class="c">
+        <div style="font-family:'Jost',sans-serif;font-size:24px;font-weight:400;color:#9CA3AF;line-height:1.35;margin-bottom:14px;position:relative;z-index:2;">Your camera roll is already<br>a travel journal.</div>
+        <div style="font-family:'Jost',sans-serif;font-size:38px;font-weight:700;color:#1A1A1A;line-height:1.2;position:relative;z-index:2;">You just can't<br>read it <b style="color:#138EFF;">yet.</b></div>
+      </div>
+      <div class="bm">Bloggo</div>
+      <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+    </div>
+    <div class="gfx-note"><b>Slide 8 — Graphic:</b> Black cat sitting next to a glowing open journal, looking peaceful and satisfied. Higgsfield AI prompt: "Cute black cat sitting next to a softly glowing open journal book, looking content and peaceful, warm golden light, 3D cartoon style, white background"</div>
+  </div>
+
+  <!-- SLIDE 9: CTA (Chewy) -->
+  <div class="sw">
+    <div class="sn">Slide 9 — CTA</div>
+    <button class="dl-btn" onclick="saveSlide(this,'8s-6mo-s9')">Save PNG</button>
+    <div class="slide" id="slide-9">
+      <div class="rgl"></div>
+      <div class="c">
+        <!-- App icon + Bloggo title row -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:24px;position:relative;z-index:2;">
+          <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;border-radius:12px;">
+          <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1;">Bloggo</div>
+        </div>
+        <div style="font-family:'Chewy',cursive;font-size:40px;color:#1A1A1A;line-height:1.2;position:relative;z-index:2;">Stop forgetting.</div>
+        <div style="font-family:'Chewy',cursive;font-size:40px;color:#138EFF;line-height:1.1;position:relative;z-index:2;">Start remembering!</div>
+        <div style="font-family:'Jost',sans-serif;font-size:13px;font-weight:700;color:#138EFF;letter-spacing:3px;text-transform:uppercase;margin-top:18px;position:relative;z-index:2;">LINK IN BIO</div>
+      </div>
+    </div>
+    <div class="gfx-note"><b>Slide 9 — Graphic:</b> Black cat waving excitedly, tail up, happy energy. Higgsfield AI prompt: "Cute black cat waving its paw in a friendly welcoming gesture, tail raised up, big happy expression, soft light, 3D cartoon style, white background"</div>
+  </div>
+
+</div>
+
+<div class="brief">
+  <b>Notion Destination:</b> notion → Bloggo Content Engine<br>
+  <b>Angle:</b> Thursday — Relatable Moment (Fear Hook)<br>
+  <b>Format:</b> 8-Slide Post<br>
+  <b>Hook Type:</b> Fear — memory loss after a trip<br>
+  <b>Caption CTA:</b> "You took 500 photos. You remember maybe 10% of what actually happened. Your camera roll has GPS, timestamps, and every stop you made — Bloggo turns it into a real blog before you forget. Beta link in bio."<br>
+  <b>Supporting Graphics:</b><br>
+  — Slide 1: Black cat + faded photo (Higgsfield)<br>
+  — Slide 8: Black cat + glowing journal (Higgsfield)<br>
+  — Slide 9: Black cat waving (Higgsfield)
+</div>
+
+<script>
+function saveSlide(btn, name) {
+  const slide = btn.closest('.sw').querySelector('.slide');
+  html2canvas(slide, {scale:3, useCORS:true, backgroundColor:'#FFFFFF'}).then(canvas => {
+    const a = document.createElement('a');
+    a.href = canvas.toDataURL('image/png');
+    a.download = (name||'slide')+'.png';
+    a.click();
+  });
+}
+function saveAllSlides() {
+  document.querySelectorAll('.slide').forEach((slide, i) => {
+    html2canvas(slide, {scale:3, useCORS:true, backgroundColor:'#FFFFFF'}).then(canvas => {
+      const a = document.createElement('a');
+      a.href = canvas.toDataURL('image/png');
+      a.download = `8-slide-6-months-later-s${i+1}.png`;
+      a.click();
+    });
+  });
+}
+</script>
+
+</body>
+</html>
