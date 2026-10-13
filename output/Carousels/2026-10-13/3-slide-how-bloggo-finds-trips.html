@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3-Slide — How Bloggo finds your trips</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f0f0f0;font-family:'Jost',sans-serif;padding:20px}
+  h2{font-family:'Jost',sans-serif;font-size:13px;color:#666;margin-bottom:8px;letter-spacing:1px;text-transform:uppercase}
+
+  .sw{margin:0 auto 32px;max-width:360px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}
+
+  .slide{
+    position:relative;
+    width:360px;height:450px;
+    background:#FFFFFF;
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    text-align:center;
+    padding:40px 36px;
+  }
+
+  /* Slide 1 — Hook */
+  .slide-hook{align-items:center;text-align:center}
+
+  /* Slide 2 — Transition gradient text */
+  .grad{
+    font-family:'Jost',sans-serif;font-weight:700;font-size:38px;line-height:1.2;
+    background:linear-gradient(135deg,#138EFF 0%,#3BBAFF 35%,#6DD5FA 65%,#59E0C5 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    text-align:center;position:relative;z-index:2;
+  }
+
+  /* Content slides 3–4 — left-aligned */
+  .slide-content{align-items:flex-start;text-align:left;padding-left:28px;padding-right:28px}
+  .accent-bar{position:absolute;top:0;left:0;width:8px;height:100%;background:rgba(19,142,255,0.12)}
+  .slide-label{font-family:'Jost',sans-serif;font-weight:700;font-size:13px;color:#138EFF;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;position:relative;z-index:2}
+  .slide-body{font-family:'Jost',sans-serif;font-size:32px;color:#1A1A1A;line-height:1.25;position:relative;z-index:2}
+
+  /* CTA slide */
+  .slide-cta{align-items:center;text-align:center}
+  .cta-logo-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px;position:relative;z-index:2}
+  .cta-label{font-family:'Jost',sans-serif;font-weight:700;font-size:11px;color:#138EFF;text-transform:uppercase;letter-spacing:3px;margin-top:16px;position:relative;z-index:2}
+
+  /* Recurring */
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* Right-side gradient zone on content slides */
+  .rg{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(to left,rgba(19,142,255,0.05),transparent);pointer-events:none;z-index:1}
+
+  /* Dot pattern on hook slide */
+  .dots{
+    position:absolute;top:0;left:0;right:0;bottom:0;
+    background-image:radial-gradient(circle,rgba(19,142,255,0.04) 1px,transparent 1px);
+    background-size:36px 36px;
+    pointer-events:none;z-index:0;
+  }
+
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+
+  .brief{max-width:360px;margin:8px auto 0;padding:10px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#374151;line-height:1.7}
+  .brief b{color:#138EFF}
+</style>
+</head>
+<body>
+<h2>Bloggo — 3-Slide Post — Product Education · Oct 13 2026</h2>
+
+<!-- SLIDE 1: HOOK -->
+<div class="sw">
+  <div class="sn">Slide 1 — Hook</div>
+  <div class="slide slide-hook">
+    <div class="dots"></div>
+    <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:19px;color:#6B7280;line-height:1.4;position:relative;z-index:2;">Bloggo finds trips</div>
+    <div style="font-family:'Chewy',cursive;font-size:42px;color:#1A1A1A;line-height:1.05;margin-top:4px;position:relative;z-index:2;">you forgot</div>
+    <div style="font-family:'Chewy',cursive;font-size:72px;color:#138EFF;line-height:0.9;position:relative;z-index:2;">you took.</div>
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Cat looking over its shoulder with wide curious eyes, a glowing timeline of photos floating in the air behind it. Higgsfield prompt: "Fluffy black cat looking backward over its shoulder with wide eyes, a glowing horizontal timeline of travel photos floating in the air behind it, white background, soft cinematic light"</div>
+</div>
+
+<!-- SLIDE 2: TRANSITION -->
+<div class="sw">
+  <div class="sn">Slide 2 — Transition</div>
+  <div class="slide" style="align-items:center;justify-content:center;">
+    <div class="grad">Here's exactly<br>how it works.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 3: CONTENT -->
+<div class="sw">
+  <div class="sn">Slide 3 — Content</div>
+  <div class="slide slide-content">
+    <div class="accent-bar"></div>
+    <div class="rg"></div>
+    <div class="slide-label">The Signal</div>
+    <div class="slide-body">Every photo has <strong>GPS + time</strong>.<br><br>Bloggo reads them both.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 4: INSIGHT -->
+<div class="sw">
+  <div class="sn">Slide 4 — Insight</div>
+  <div class="slide slide-content">
+    <div class="accent-bar"></div>
+    <div class="rg"></div>
+    <div class="slide-label">The Result</div>
+    <div class="slide-body">GPS + time = a <strong>trip you didn't</strong> know was there.</div>
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+</div>
+
+<!-- SLIDE 5: CTA -->
+<div class="sw">
+  <div class="sn">Slide 5 — CTA</div>
+  <div class="slide slide-cta">
+    <div class="cta-logo-row">
+      <img src="../../../docs/Assets/Frame%20427320199Bloggo%20Rounded%20Corners%20logo.png" alt="Bloggo" style="width:52px;height:52px;object-fit:contain;">
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#138EFF;line-height:1;position:relative;z-index:2;">Bloggo</div>
+    </div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#1A1A1A;line-height:1.2;position:relative;z-index:2;">Your trips are waiting.</div>
+    <div style="font-family:'Chewy',cursive;font-size:36px;color:#138EFF;line-height:1.2;position:relative;z-index:2;">Tap to Blog.</div>
+    <div class="cta-label">Link in bio</div>
+  </div>
+</div>
+
+<!-- BRIEF -->
+<div class="brief">
+  <b>Carousel Brief: How Bloggo Finds Your Trips</b><br>
+  Format: 3–5 slides · Product Education · Tuesday angle<br>
+  Hook type: Curiosity<br>
+  Notion destination: <b>notion → Bloggo Content Engine</b><br>
+  Caption: "Your camera roll has been a travel journal this whole time. Bloggo just reads it. Tap to Blog — link in bio."<br>
+  <b>Supporting Graphics:</b> Slide 1 needs cat mascot (see gfx-note)
+</div>
+</body>
+</html>

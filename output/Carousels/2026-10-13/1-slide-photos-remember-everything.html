@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1-Slide — Your photos remember everything</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f0f0f0;font-family:'Jost',sans-serif;padding:20px}
+  h2{font-family:'Jost',sans-serif;font-size:13px;color:#666;margin-bottom:8px;letter-spacing:1px;text-transform:uppercase}
+
+  /* Slide wrapper */
+  .sw{margin:0 auto 32px;max-width:360px}
+  .sn{font-family:'Jost',sans-serif;font-size:11px;color:#9CA3AF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}
+
+  /* Slide canvas */
+  .slide{
+    position:relative;
+    width:360px;height:450px;
+    background:#FFFFFF;
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    text-align:center;
+    padding:40px 36px;
+  }
+
+  /* 1-slider specific elements */
+  .tb{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#138EFF,#59E0C5);z-index:10}
+  .dq{position:absolute;font-size:220px;color:rgba(19,142,255,0.04);line-height:1;top:-15px;left:0;right:0;text-align:center;pointer-events:none;z-index:0;font-family:Georgia,serif;user-select:none}
+  .st{font-family:'Jost',sans-serif;font-size:15px;color:#9CA3AF;font-style:italic;margin-top:18px;line-height:1.4;position:relative;z-index:2}
+  .cb{display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;color:#138EFF;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:2;border:1.5px solid rgba(19,142,255,0.35);padding:4px 12px;border-radius:20px}
+  .bm{position:absolute;bottom:18px;left:18px;font-family:'Chewy',cursive;font-size:18px;color:rgba(19,142,255,0.6);z-index:10}
+  .pw{position:absolute;bottom:8px;right:10px;width:36px;height:auto;z-index:10;opacity:0.9}
+
+  /* Main quote text */
+  .main-quote{position:relative;z-index:2;text-align:center}
+
+  /* Graphic note */
+  .gfx-note{max-width:360px;margin:2px auto 0;padding:8px 12px;background:rgba(19,142,255,0.05);border:1px dashed rgba(19,142,255,0.25);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;color:#4a7fb5;line-height:1.6}
+  .gfx-note b{color:#138EFF;font-weight:700}
+</style>
+</head>
+<body>
+<h2>Bloggo — 1-Slide Post — Product Education · Oct 13 2026</h2>
+
+<div class="sw">
+  <div class="sn">Slide 1 — Single Statement</div>
+  <div class="slide">
+    <div class="tb"></div>
+    <div class="dq">"</div>
+
+    <div class="main-quote">
+      <div style="font-family:'Jost',sans-serif;font-style:italic;font-size:18px;color:#6B7280;line-height:1.4;position:relative;z-index:2;">Every photo you've ever taken</div>
+      <div style="font-family:'Chewy',cursive;font-size:52px;color:#1A1A1A;line-height:1.0;margin-top:6px;position:relative;z-index:2;">remembers</div>
+      <div style="font-family:'Chewy',cursive;font-size:64px;color:#138EFF;line-height:0.9;position:relative;z-index:2;">everything.</div>
+
+      <div class="st">GPS. Time. Place. Bloggo reads it all and writes your story.</div>
+      <div class="cb">BETA IN BIO</div>
+    </div>
+
+    <div class="bm">Bloggo</div>
+    <img class="pw" src="../../../docs/Assets/Black%20cat%20paw%20pointing%20right%201.png" alt="">
+  </div>
+  <div class="gfx-note"><b>Slide 1 — Graphic:</b> Cat sitting still, looking down at a glowing phone screen. Small GPS pins float upward from the screen like sparks. Quiet, curious energy. Higgsfield prompt: "Black cat sitting peacefully, gazing at a glowing smartphone, small golden GPS location pins drifting upward from the screen, soft white studio background, warm light, cinematic still"</div>
+</div>
+
+</body>
+</html>
